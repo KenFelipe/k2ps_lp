@@ -3,14 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./normalize.css">
+  <link rel="stylesheet" href="./style.css">
   <title>Porto Seguro Consórcio - Quem faz planos com o Porto Seguro Consórcio, tem o tempo certo para alcançar o que deseja</title>
 </head>
 <body>
   <div class="wrapper">
-    <div class="container">
-      <section class="banner-request">
+
+    <section class="banner-request">
+      <div class="container">
         <div class="banner">
-          <img src="./img/banner-auto-imovel.jpg" alt="">
+          <img src="./img/banner-auto-imovel.jpg" alt="" />
+          <div class="banner__bg"></div>
         </div>
 
         <div class="request-container">
@@ -36,30 +40,87 @@
           </div>
 
           <div class="termo">
-            <input id="consentimento" class="termo__checkbox" type="checkbox" name="consentimento" value="sim">
-            <label class="termo__label" for="consentimento">
-              Li e concordo com o Termos de Uso e
-              <a href="https://www.portoseguro.com.br/politica-de-privacidade" target="_blank"> Política de Privacidade</a>.
-            </label>
+            <div>
+              <input id="consentimento" class="termo__checkbox" type="checkbox" name="consentimento" value="sim">
+              <label class="termo__label" for="consentimento">
+                Li e concordo com o Termos de Uso e
+                <a href="https://www.portoseguro.com.br/politica-de-privacidade" target="_blank"> Política de Privacidade</a>.
+              </label>
+            </div>
 
-            <input id="compartilhamento" class="termo__checkbox" type="checkbox" name="compartilhamento" value="sim">
-            <label class="termo__label" for="compartilhamento">
-              Concordo em compartilhar minhas informações com o Grupo Porto Seguro e com o Corretor parceiro para orçamento e comercialização de Produtos e Serviços.
-            </label>
+            <div>
+              <input id="compartilhamento" class="termo__checkbox" type="checkbox" name="compartilhamento" value="sim">
+              <label class="termo__label" for="compartilhamento">
+                Concordo em compartilhar minhas informações com o Grupo Porto Seguro e com o Corretor parceiro para orçamento e comercialização de Produtos e Serviços.
+              </label>
+            </div>
 
-            <input id="comunicacao" class="termo__checkbox" type="checkbox" name="comunicacao" value="não">
-            <label class="termo__label" for="comunicacao">
-              Aceito receber comunicação sobre ofertas e promoções do Corretor Parceiro.
-            </label>
+            <div>
+              <input id="comunicacao" class="termo__checkbox" type="checkbox" name="comunicacao" value="não">
+              <label class="termo__label" for="comunicacao">
+                Aceito receber comunicação sobre ofertas e promoções do Corretor Parceiro.
+              </label>
+            </div>
           </div>
 
-          <div class="res-block block-contact-details">
+          <div class="request-container__button">
             <button type="submit" id="btn_continuar" disabled>Solicitar</button>
           </div>
 
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+  
+    <section class="plan">
+      <div class="container">
+        <h3>Quem faz planos com o Porto Seguro Consórcio, tem o tempo certo para alcançar o que deseja.</h3>
+        <p>Porque o plano é ser feliz.</p>
+      </div>
+    </section>
+
+    <section class="topics">
+      <div class="container">
+        <div class="topics__items">
+          <div class="topics__item">
+            <img src="./img/ico-sack.png" alt="">
+            <p>As parcelas são sem juros</p>
+          </div>
+          <div class="topics__item">
+            <img src="./img/ico-coin.png" alt="">
+            <p>Planos que encaixam no seu bolso</p>
+          </div>
+          <div class="topics__item">
+            <img src="./img/ico-paper.png" alt="">
+            <p>Facilidade de contratação</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="values">
+      <div class="container">
+        <div class="values__header">
+          <h4>Confira o valor do seu consórcio</h4>
+          <p>Escolha o valor que melhor atende à sua necessidade.</p>
+          <strong>Comece escolhendo o tipo de consórcio abaixo</strong>
+        </div>
+
+        <div class="type-select">
+          <button class="type-select__button">
+            Consorcio imovel
+          </button>
+          <button class="type-select__button">
+            Consorcio imovel
+          </button>
+          <button class="type-select__button">
+            Consorcio imovel
+          </button>
+        </div>
+        <div class="tab-button">
+        </div>
+      </div>
+    </section>
+
   </div>
   
 </body>
