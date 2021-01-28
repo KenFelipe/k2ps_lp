@@ -3,13 +3,14 @@ body{ padding-bottom: 600px;}
     box-sizing: border-box;
 }
 
-input:focus, textarea:focus {
+input:focus, textarea:focus, button:focus {
     outline: none;
 }
 
 .container {
     max-width: 1260px;
     margin: 0 auto;
+    padding: 0 30px;
 }
 
 .banner-request .container {
@@ -94,4 +95,78 @@ input:focus, textarea:focus {
 
 .type-select__button {
     width: 25%;
+
+    height: 40px;
+    background: #00adef;
+    border: 3px solid #00adef;
+    font-size: 13px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    color: white;
+    line-height: 1.343;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 2px;
+
+    transition: all 0.4s ease;
+}
+
+.type-select__button:hover {
+    background: #FFFFFF;
+    color: #00adef;
+    border: 3px solid #00adef;
+}
+
+.tabs {
+    position: relative;
+}
+
+.tab {
+    margin: 20px 0;
+    position: relative;
+}
+
+.values .tabs::after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    position: absolute;
+    bottom: 0px;
+    left: 0px
+}
+
+.tab-select__button {
+    width: 25%;
+
+    height: 40px;
+    background: #eeeeee;
+    border: 1px solid #dddddd;
+    font-size: 11px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    color: #00adef;
+    line-height: 1.2;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 2px;
+    transition: all 0.4s ease;
+
+    position: relative;
+    z-index: 10;
+}
+
+.tab-select__button:hover {
+    position: relative;
+    z-index: 10;
+    background: #FFFFFF;
+    color: #004e70;
+    border: 1px solid #dddddd;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.tab-select__button span {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
 }
