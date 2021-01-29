@@ -1,5 +1,62 @@
 "use strict";
 
+/*****  Configura os dados de tabela aqui *****/
+
+/* Formato */
+// const TABLES_DATA = {
+//     "nome_do_botao": {
+//         "nome_da_aba": {
+//             head: [...],
+//             body: [
+//                 [...],
+//             ]
+//         },
+//     },
+//     ...
+// }
+var TABLES_DATA = {
+  "imovel": {
+    "Ate 240mil": {
+      head: ["thead", "thead"],
+      body: [["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"]]
+    },
+    "Ate 580mil": {
+      head: ["500mil", "thead"],
+      body: [["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"]]
+    },
+    "Ate 100mil": {
+      head: ["thead", "thead"],
+      body: [["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"]]
+    }
+  } // "automovel": { "Ate 240mil": { head: ["thead", "thead"], body: [ ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ], }, "Ate 580mil": { head: ["500mil", "thead"], body: [ ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ], }, "Ate 100mil": { head: ["thead", "thead"], body: [ ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ] } },
+  // automovel: { 
+  //     auto: "100$" 
+  // }
+
+};
+/**********************************************************************/
+
+function initTables() {
+  var tablesContainer = document.getElementById('tables'); // Types: imovel, automovel, ...
+
+  var tableTypes = Object.keys(TABLES_DATA);
+  tableTypes.forEach(function (tableType, tableTypeIdx) {
+    var tableTypeSection = document.createElement('div'); // Tabs: ate 240mil, partir de 250mil, ...
+
+    var tableTabs = Object.keys(TABLES_DATA[tableType]);
+    tableTabs.forEach(function (tableTab, tableTabIdx) {
+      var table = document.createElement('table');
+      var thead = createTableHead(TABLES_DATA[tableType][tableTab]);
+      var tbody = createTableBody(TABLES_DATA[tableType][tableTab]);
+      table.appendChild(thead);
+      table.appendChild(tbody);
+      tableTypeSection.appendChild(table);
+    });
+    tablesContainer.appendChild(tableTypeSection);
+  });
+  console.log(tablesContainer);
+}
+
 function createTableHead(table) {
   var thead = document.createElement('thead');
   var tr = document.createElement('tr');
@@ -12,127 +69,18 @@ function createTableHead(table) {
   return thead;
 }
 
-function createTableBody(row, column) {
+function createTableBody(table) {
   var tbody = document.createElement('tbody');
-
-  for (var r = 1; r < row; r++) {
+  table.body.forEach(function (tbodyRow) {
     var tr = document.createElement('tr');
-
-    for (var c = 0; c < column; c++) {
-      var td = document.createElement('td'); // mudar aqui
-
-      td.innerHTML = "td-column-".concat(c);
+    tbodyRow.forEach(function (tbodyRowTd) {
+      var td = document.createElement('td');
+      td.innerHTML = tbodyRowTd;
       tr.appendChild(td);
-      thead.appendChild(tr);
-    }
-
+    });
     tbody.appendChild(tr);
-  }
-
+  });
   return tbody;
 }
 
-function init(config) {
-  var tablesContainer = document.getElementById('tables'); // return config length
-
-  var tableTypes = Object.keys(TABLES_CONFIG); // sep types
-
-  tableTypes.forEach(function (tableType, tableTypeIdx) {
-    var tableTypeSection = document.createElement('div');
-    console.log(tableType);
-    console.log(Object.keys(TABLES_DATA[tableType]));
-    Object.keys(TABLES_DATA[tableType]).forEach(function (tabName, tabIdx) {
-      var table = document.createElement('table'); // const thead = createTableHead(tableType, tabName)
-
-      var thead = createTableHead(TABLES_DATA[tableType][tabName]);
-      table.appendChild(thead);
-      tableTypeSection.appendChild(table);
-    });
-    tablesContainer.appendChild(tableTypeSection);
-  }); // for(let typeIdx = 0; typeIdx < tableTypesQty; typeIdx++) {}
-  // for config length {
-  //     table_section = document.createElement('div')
-  //     // sep tabs
-  //     for tabs {
-  //         const table = document.createElement('table')
-  //         const thead = createTableHead(.column)
-  // 
-  //         // need get row
-  //         // const row = getrow(array)
-  //         const tbody = createTableBody(.column)
-  //         table.appendChild(thead)
-  //         table.appendChild(tbody)
-  //         table_section.appendChild(table)
-  //     }
-  //     tables_container.appendChild(table_section)
-  // }
-
-  console.log(tablesContainer);
-}
-
-var TABLES_DATA = {
-  imovel: {
-    'Ate 240mil': {
-      head: ['thead', 'thead'],
-      body: [['R$55.000,00', 'R$349.00'], ['R$55.000,00', 'R$349.00'], ['R$55.000,00', 'R$349.00'], ['R$55.000,00', 'R$349.00'], ['R$55.000,00', 'R$349.00']]
-    },
-    'Ate 580mil': {
-      head: ['500mil', 'thead'],
-      body: [['R$55.000,00', 'R$349.00'], ['R$55.000,00', 'R$349.00'], ['R$55.000,00', 'R$349.00'], ['R$55.000,00', 'R$349.00'], ['R$55.000,00', 'R$349.00']]
-    },
-    'Ate 100mil': {
-      head: ['thead', 'thead'],
-      body: [['R$55.000,00', 'R$349.00'], ['R$55.000,00', 'R$349.00'], ['R$55.000,00', 'R$349.00'], ['R$55.000,00', 'R$349.00'], ['R$55.000,00', 'R$349.00']]
-    }
-  } // automovel: { 
-  //     auto: '100$' 
-  // }
-
-};
-var TABLES_CONFIG = {
-  imovel: {
-    tabs: 3,
-    columns: 2
-  } // automovel: {
-  //     tabs: 3,
-  //     columns: 5
-  // }
-
-};
-init(); // const imovel = [
-//     [ 
-//         ['thead', 'thead'],
-//         ['R$55.000,00', 'R$349.00'],
-//         ['R$55.000,00', 'R$349.00'],
-//         ['R$55.000,00', 'R$349.00'],
-//         ['R$55.000,00', 'R$349.00'],
-//         ['R$55.000,00', 'R$349.00'],
-//     ],
-//     [
-//         ['thead', 'thead'],
-//         ['R$55.000,00', 'R$349.00'],
-//         ['R$55.000,00', 'R$349.00'],
-//         ['R$55.000,00', 'R$349.00'],
-//         ['R$55.000,00', 'R$349.00'],
-//         ['R$55.000,00', 'R$349.00'],
-//     ],
-//     [
-//         ['thead', 'thead'],
-//         ['R$55.000,00', 'R$349.00'],
-//         ['R$55.000,00', 'R$349.00'],
-//         ['R$55.000,00', 'R$349.00'],
-//         ['R$55.000,00', 'R$349.00'],
-//         ['R$55.000,00', 'R$349.00'],
-//     ]
-// ]
-// const tables_container = document.getElementById('tables')
-// ////////////////////////////////////////
-// const table_section = document.createElement('div')
-// table_section.id = 'imovel-table'
-// const table = document.createElement('table')
-// const thead = createTableHead(2)
-// const tbody = createTableBody(5, 2)
-// table.appendChild(thead)
-// table.appendChild(tbody)
-// table_section.appendChild(table)
-// tables_container.appendChild(table_section)
+initTables();
