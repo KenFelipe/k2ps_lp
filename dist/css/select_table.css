@@ -1,0 +1,68 @@
+.select-table__button {
+  width: 25%;
+  height: 40px;
+  color: white;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  line-height: 1.343;
+  border: 3px solid #00adef;
+  background-color: #00adef;
+  cursor: pointer;
+  margin: 0 2px;
+  transition: all 0.4s ease;
+}
+.select-table__button:hover {
+  color: #00adef;
+  border: 3px solid #00adef;
+  background-color: #FFFFFF;
+}
+
+.select-tab {
+  margin: 20px 0;
+  position: relative;
+}
+.select-tab__tab {
+  width: 25%;
+  height: 40px;
+  color: #00adef;
+  font-size: 11px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+  border: 1px solid #dddddd;
+  background-color: #eeeeee;
+  cursor: pointer;
+  margin: 0 2px;
+  position: relative;
+  z-index: 10;
+  transition: all 0.4s ease;
+}
+.select-tab__tab:hover {
+  color: #004e70;
+  border: 1px solid #dddddd;
+  border-bottom: 1px solid #FFFFFF;
+  background-color: #FFFFFF;
+  position: relative;
+  z-index: 10;
+}
+.select-tab__tab span {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.container.tabs {
+  position: relative;
+}
+.container.tabs::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+/*# sourceMappingURL=select_table.css.map */

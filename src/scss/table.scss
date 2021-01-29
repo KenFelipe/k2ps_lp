@@ -1,3 +1,55 @@
-.button {
-    background-color: #fff;
+table {
+    width: calc(50% - 15px);
+    border-collapse: collapse;
+    border-spacing: 0px;
+
+    thead {
+        color: #272727;
+        font-size: 14px;
+        font-family: "Open Sans", sans-serif;
+        line-height: 2.143;
+
+        border-bottom: 1px solid #cecece;
+        background-color: #dcdcdc;
+
+        text-align: left;
+        // text-transform: uppercase;
+
+        td {
+            padding: 0 0 0 20px;
+            height: 50px;
+        }
+    }
+
+    tbody {
+        tr {
+            height: 40px;
+
+            &:nth-child(odd) {
+                background-color: #e8e8e8;
+            }
+
+            &:nth-child(even) {
+                background-color: #eee;
+            }
+        }
+
+        td {
+            color: #272727;
+            font-size: 14px;
+            font-family: "PT Sans", sans-serif;
+            line-height: 2.143;
+            text-align: left;
+
+            padding: 0 0 0 20px;
+        }
+    }
+
+    .table-left {
+        float: left;
+
+    }
+    .table-right {
+        float: right;
+    }
 }

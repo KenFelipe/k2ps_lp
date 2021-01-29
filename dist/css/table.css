@@ -1,5 +1,43 @@
-.button {
-  background-color: #fff;
+table {
+  width: calc(50% - 15px);
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+table thead {
+  color: #272727;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 2.143;
+  border-bottom: 1px solid #cecece;
+  background-color: #dcdcdc;
+  text-align: left;
+}
+table thead td {
+  padding: 0 0 0 20px;
+  height: 50px;
+}
+table tbody tr {
+  height: 40px;
+}
+table tbody tr:nth-child(odd) {
+  background-color: #e8e8e8;
+}
+table tbody tr:nth-child(even) {
+  background-color: #eee;
+}
+table tbody td {
+  color: #272727;
+  font-size: 14px;
+  font-family: "PT Sans", sans-serif;
+  line-height: 2.143;
+  text-align: left;
+  padding: 0 0 0 20px;
+}
+table .table-left {
+  float: left;
+}
+table .table-right {
+  float: right;
 }
 
 /*# sourceMappingURL=table.css.map */
