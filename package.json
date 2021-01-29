@@ -1,10 +1,11 @@
 {
-  "name": "_porto",
+  "name": "porto",
   "version": "1.0.0",
   "description": "portseg",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "babel": "babel --watch ./src/js -d ./dist/js",
+    "sass": "sass --watch ./src/scss:./dist/css"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "devDependencies": {
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11"
+    "@babel/preset-env": "^7.12.11",
+    "sass": "^1.32.5"
   }
 }

@@ -1,19 +1,32 @@
-/*****  Configura os dados de tabela aqui *****/
+/*****  Configura os dados de tabelas aqui *****/
 
 /* Formato */
 // const TABLES_DATA = {
 //     "nome_do_botao": {
 //         "nome_da_aba": {
-//             head: [...],
+//             head: [ ... ],
 //             body: [
-//                 [...],
+//                 [ ... ],
 //             ]
 //         },
-//     },
-//     ...
+//     }, ...
 // }
 
 const TABLES_DATA = { 
+    "automovel": {
+        "FLEX 50MESES": {
+            head: ["BEN OBJETO", "PLANO", "CREDITO", "PARCELA"],
+            body: [
+                ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"],
+                ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"],
+                ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"],
+                ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"],
+                ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"],
+                ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"],
+                ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"],
+            ]
+        }
+    },
     "imovel": {
         "Ate 240mil": {
             head: ["thead", "thead"],
@@ -66,6 +79,7 @@ function initTables() {
 
     tableTypes.forEach((tableType, tableTypeIdx) => {
         const tableTypeSection = document.createElement('div')
+        tableTypeSection.id = `table--${tableType}`
 
         // Tabs: ate 240mil, partir de 250mil, ...
         const tableTabs = Object.keys(TABLES_DATA[tableType])
