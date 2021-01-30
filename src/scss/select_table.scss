@@ -25,14 +25,17 @@
     }
 }
 
-.select-tab {
-    margin: 20px 0;
-    position: relative;
-    // display: none;
+.tab-section {
+    display: none;
 
     &.active {
         display: block;
     }
+}
+
+.select-tab {
+    margin: 20px 0;
+    position: relative;
 
     &__tab {
         width: 25%;

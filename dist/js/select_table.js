@@ -7,84 +7,73 @@ function initActiveTable() {
   initSelectTabTable();
 
   function initSelectTypeTable() {
-    var selectTableButtons = document.getElementsByClassName('select-table__button');
+    var buttons = document.getElementsByClassName('select-table__button');
     var tableSections = document.getElementsByClassName('table-section');
-    var tableTabs = document.getElementsByClassName('select-tab'); // pode ser ~
+    var tableTabs = document.getElementsByClassName('tab-section'); // pode ser ~
     // for(let button of typeSelectButtons) { ... }
     // mas nao functiona no IE de versao baixo
 
     var _loop = function _loop(i) {
-      selectTableButtons.item(i).addEventListener('click', function () {
-        removeClass(selectTableButtons, 'active', i);
+      buttons.item(i).addEventListener('click', function () {
+        removeClass(buttons, 'active', i);
         removeClass(tableSections, 'active', i);
         removeClass(tableTabs, 'active', i);
-        selectTableButtons.item(i).classList.add('active');
+        buttons.item(i).classList.add('active');
         tableSections.item(i).classList.add('active');
-        tableTabs.item(i).classList.add('active'); // for debug
+        tableTabs.item(i).classList.add('active'); // debug
 
         console.log('CLICKED!!!');
       });
     };
 
-    for (var i = 0; i < selectTableButtons.length; i++) {
+    for (var i = 0; i < buttons.length; i++) {
       _loop(i);
     }
   }
 
   function initSelectTabTable() {
-    var selectTabs = document.getElementsByClassName('select-tab__tab');
-    var tableTabSections = document.getElementsByClassName('table-tab');
-    var tableTabs = document.getElementsByClassName('select-tab');
-    console.log(selectTabs);
-    console.log(tableTabSections);
-    console.log(tableTabs); // console.log(tableTabs[0].childElementCount);
-    // console.log(tableTabs.length)
+    var tabs = document.getElementsByClassName('select-tab__tab');
+    var tabSections = document.getElementsByClassName('tab-section');
+    console.log(tabs);
+    console.log(tabSections);
+    var tableTabs = document.getElementsByClassName('table-tab');
+    console.log(tableTabs);
 
-    var count = 0;
+    var _loop2 = function _loop2(i, _count) {
+      var sectionChilds = tabSections.item(i).childElementCount; // debug
+      // console.log(`sectionChilds: ${sectionChilds}, count: ${count}`)
 
-    var _loop2 = function _loop2(i) {
       var _loop3 = function _loop3(j) {
-        console.log(j, selectTabs.item(j));
-        selectTabs.item(j).addEventListener('click', function () {
-          // problem in remove class process
-          for (var f = count; f < count + tableTabs[i].childElementCount; f++) {
-            console.log(j, f); // console.log(selectTabs);
-            // console.log(selectTabs.item(f))
-            // j !== f ? selectTabs.item(f).classList.remove('active') : ''
-            // j !== f ? tableTabSections.item(f).classList.remove('active') : ''
+        // debug
+        // console.log(`j: ${j}, count: ${count}, tab:`, tabs.item(j));
+        var startIdx = _count;
+        tabs.item(j).addEventListener('click', function () {
+          for (var f = startIdx; f < startIdx + sectionChilds; f++) {
+            // debug
+            // console.log(`j: ${j}, f: ${f}, startIdx: ${startIdx}`);
+            j !== f ? tabs.item(f).classList.remove('active') : '';
+            j !== f ? tableTabs.item(f).classList.remove('active') : '';
           }
 
-          selectTabs.item(j).classList.add('active');
-          console.log(selectTabs);
-          tableTabSections.item(j).classList.add('active');
-          console.log('***********************');
-          console.log(selectTabs);
-          console.log(tableTabSections);
-          console.log(tableTabs);
+          tabs.item(j).classList.add('active');
+          tableTabs.item(j).classList.add('active');
         });
       };
 
-      // console.log(tableTabs[i].childElementCount, count);
-      for (var j = count; j < count + tableTabs[i].childElementCount; j++) {
+      for (var j = _count; j < _count + sectionChilds; j++) {
         _loop3(j);
       }
 
-      count += tableTabs[i].childElementCount; // console.log(count);
+      _count += sectionChilds; // debug
+      // console.log('count:', count)
+      // console.log('**********************************************************************************')
+
+      count = _count;
     };
 
-    for (var i = 0; i < tableTabs.length; i++) {
-      _loop2(i);
-    } // for(let i = 0; i < selectTabs.length; i++) {
-    //     selectTabs.item(i).addEventListener('click', () => {
-    //         removeClass(selectTabs, 'active', i)
-    //         removeClass(tableTabSections, 'active', i)
-    //         selectTabs.item(i).classList.add('active')
-    //         tableTabSections.item(i).classList.add('active')
-    //         // for debug
-    //         console.log('CLICKED!!!')
-    //     })
-    // }
-
+    for (var i = 0, count = 0; i < tabSections.length; i++) {
+      _loop2(i, count);
+    }
   }
 
   function removeClass(nodes, className, index) {
