@@ -1,7 +1,7 @@
 /* ******************* Configurar os dados das tabelas aqui ************************ */
 
 /* Formato */
-// const TABLES_DATA = {        
+// const TABLES_DATA = { 
 //     "nome_do_botao": {           *nome do botao nao pode repetir*
 //         "nome_da_aba(tab)": {    *nome do aba nao pode repetir*
 //             head: [ ... ],
@@ -83,66 +83,69 @@ const TABLES_DATA = {
 }
 /* ********************************************************************************* */
 
+initTables()
+
+function initTables() {
+    createButtons()
+    createtabs()
+    createTables()
+}
+
+
 /* ********************************************************************************* */
 function createButtons() {
-    const buttonsContainer = document.getElementsByClassName('select-table').item(0)
-    console.log(buttonsContainer);
+    const buttonsContainer = document.getElementById('select-table')
+
     const tableTypes = Object.keys(TABLES_DATA)
-    tableTypes.forEach(buttonLabel => {
+    tableTypes.forEach(tableType => {
         const button = document.createElement('button')
         button.classList.add('select-table__button')
-        button.innerHTML = buttonLabel
+        button.innerHTML = tableType
+
         buttonsContainer.appendChild(button)
     })
+
+    // active primeiro botao
     buttonsContainer.childNodes.item(0).classList.add('active')
-    console.log(buttonsContainer.childNodes)
-    console.log(buttonsContainer);
 }
+
 function createtabs() {
-    const tabsContainer = document.getElementsByClassName('select-tab').item(0)
-    console.log(tabsContainer);
+    const tabsContainer = document.getElementById('select-tab')
+
     const tableTypes = Object.keys(TABLES_DATA)
-    tableTypes.forEach(tableName => {
+    tableTypes.forEach(tableType => {
         const tabSection = document.createElement('div')
         tabSection.classList.add('tab-section')
 
-        const tableTabs = Object.keys(TABLES_DATA[tableName])
+        const tableTabs = Object.keys(TABLES_DATA[tableType])
         tableTabs.forEach(tabName => {
             const tab = document.createElement('button')
             tab.classList.add('select-tab__tab')
 
             const span = document.createElement('span')
             span.innerHTML = tabName
+
             tab.appendChild(span)
             tabSection.appendChild(tab)
         })
+
         tabsContainer.appendChild(tabSection)
     })
-    console.log(tabsContainer.childNodes)
-    for(let i = 0; i < tabsContainer.childElementCount; i++) {
-        tabsContainer.childNodes.item(i).childNodes.item(0).classList.add('active')
+
+    // active primeiro section
+    const tabSection = tabsContainer.childNodes
+    tabSection.item(0).classList.add('active')
+
+    // active todos primeiro botao do section
+    for(let i = 0; i < tabSection.length; i++) {
+        tabSection.item(i).childNodes.item(0).classList.add('active')
     }
-    tabsContainer.childNodes.item(0).classList.add('active')
-    console.log(tabsContainer)
-    console.log(tabsContainer.childNodes.item(0).childNodes.item(0))
-    tabsContainer.childNodes.item(0).childNodes.item(0).classList.add('active')
-    console.log(tabsContainer)
-    console.log('***************************************')
+
+    //debug
+    // console.log(tabsContainer)
+    // console.log('***************************************')
 }
-createButtons()
-createtabs()
-/* ********************************************************************************* */
 
-
-createTables()
-
-// debug active
-const tableSections = document.getElementsByClassName('table-section')
-tableSections.item(0).classList.add('active')
-for(let i = 0; i < tableSections.length; i++) {
-    console.log(tableSections.item(i).childNodes)
-    tableSections.item(i).childNodes.item(0).classList.add('active')
-}
 
 
 /* ********************************************************************************* */
@@ -174,9 +177,18 @@ function createTables() {
         tablesContainer.appendChild(tableTypeSection)
     })
 
-    console.log(tablesContainer)
+    // active primeiro section
+    const tableSections = document.getElementsByClassName('table-section')
+    tableSections.item(0).classList.add('active')
 
-    // function createTableHead(table) {
+    // active todos primeira tabela do section
+    for(let i = 0; i < tableSections.length; i++) {
+        tableSections.item(i).childNodes.item(0).classList.add('active')
+    }
+
+    // debug
+    // console.log(tablesContainer)
+
     function createTableHead(table) {
         const thead = document.createElement('thead')
         const tr = document.createElement('tr')
@@ -188,6 +200,7 @@ function createTables() {
             tr.appendChild(td)
             thead.appendChild(tr)
         })
+
         return thead
     }
 
@@ -203,9 +216,10 @@ function createTables() {
 
                 tr.appendChild(td)
             })
+
             tbody.appendChild(tr)
         })
+
         return tbody
     }
 }
-/* ********************************************************************************* */

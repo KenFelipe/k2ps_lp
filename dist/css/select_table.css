@@ -1,3 +1,4 @@
+/************************ button **************************/
 .select-table__button {
   width: 25%;
   height: 40px;
@@ -18,6 +19,12 @@
   background-color: #FFFFFF;
 }
 
+/************************* tab ***************************/
+#select-tab {
+  margin: 20px 0;
+  position: relative;
+}
+
 .tab-section {
   display: none;
 }
@@ -25,10 +32,6 @@
   display: block;
 }
 
-.select-tab {
-  margin: 20px 0;
-  position: relative;
-}
 .select-tab__tab {
   width: 25%;
   height: 40px;

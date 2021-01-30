@@ -2,8 +2,6 @@
 
 initActiveTable();
 
-var _btns = document.getElementsByClassName('select-table_button');
-
 function initActiveTable() {
   initSelectTable();
   initSelectTableTab();

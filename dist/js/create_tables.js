@@ -3,7 +3,7 @@
 /* ******************* Configurar os dados das tabelas aqui ************************ */
 
 /* Formato */
-// const TABLES_DATA = {        
+// const TABLES_DATA = { 
 //     "nome_do_botao": {           *nome do botao nao pode repetir*
 //         "nome_da_aba(tab)": {    *nome do aba nao pode repetir*
 //             head: [ ... ],
@@ -53,31 +53,36 @@ var TABLES_DATA = {
 };
 /* ********************************************************************************* */
 
+initTables();
+
+function initTables() {
+  createButtons();
+  createtabs();
+  createTables();
+}
 /* ********************************************************************************* */
 
+
 function createButtons() {
-  var buttonsContainer = document.getElementsByClassName('select-table').item(0);
-  console.log(buttonsContainer);
+  var buttonsContainer = document.getElementById('select-table');
   var tableTypes = Object.keys(TABLES_DATA);
-  tableTypes.forEach(function (buttonLabel) {
+  tableTypes.forEach(function (tableType) {
     var button = document.createElement('button');
     button.classList.add('select-table__button');
-    button.innerHTML = buttonLabel;
+    button.innerHTML = tableType;
     buttonsContainer.appendChild(button);
-  });
+  }); // active primeiro botao
+
   buttonsContainer.childNodes.item(0).classList.add('active');
-  console.log(buttonsContainer.childNodes);
-  console.log(buttonsContainer);
 }
 
 function createtabs() {
-  var tabsContainer = document.getElementsByClassName('select-tab').item(0);
-  console.log(tabsContainer);
+  var tabsContainer = document.getElementById('select-tab');
   var tableTypes = Object.keys(TABLES_DATA);
-  tableTypes.forEach(function (tableName) {
+  tableTypes.forEach(function (tableType) {
     var tabSection = document.createElement('div');
     tabSection.classList.add('tab-section');
-    var tableTabs = Object.keys(TABLES_DATA[tableName]);
+    var tableTabs = Object.keys(TABLES_DATA[tableType]);
     tableTabs.forEach(function (tabName) {
       var tab = document.createElement('button');
       tab.classList.add('select-tab__tab');
@@ -87,33 +92,17 @@ function createtabs() {
       tabSection.appendChild(tab);
     });
     tabsContainer.appendChild(tabSection);
-  });
-  console.log(tabsContainer.childNodes);
+  }); // active primeiro section
 
-  for (var i = 0; i < tabsContainer.childElementCount; i++) {
-    tabsContainer.childNodes.item(i).childNodes.item(0).classList.add('active');
-  }
+  var tabSection = tabsContainer.childNodes;
+  tabSection.item(0).classList.add('active'); // active todos primeiro botao do section
 
-  tabsContainer.childNodes.item(0).classList.add('active');
-  console.log(tabsContainer);
-  console.log(tabsContainer.childNodes.item(0).childNodes.item(0));
-  tabsContainer.childNodes.item(0).childNodes.item(0).classList.add('active');
-  console.log(tabsContainer);
-  console.log('***************************************');
-}
+  for (var i = 0; i < tabSection.length; i++) {
+    tabSection.item(i).childNodes.item(0).classList.add('active');
+  } //debug
+  // console.log(tabsContainer)
+  // console.log('***************************************')
 
-createButtons();
-createtabs();
-/* ********************************************************************************* */
-
-createTables(); // debug active
-
-var tableSections = document.getElementsByClassName('table-section');
-tableSections.item(0).classList.add('active');
-
-for (var i = 0; i < tableSections.length; i++) {
-  console.log(tableSections.item(i).childNodes);
-  tableSections.item(i).childNodes.item(0).classList.add('active');
 }
 /* ********************************************************************************* */
 
@@ -137,8 +126,16 @@ function createTables() {
       tableTypeSection.appendChild(table);
     });
     tablesContainer.appendChild(tableTypeSection);
-  });
-  console.log(tablesContainer); // function createTableHead(table) {
+  }); // active primeiro section
+
+  var tableSections = document.getElementsByClassName('table-section');
+  tableSections.item(0).classList.add('active'); // active todos primeira tabela do section
+
+  for (var i = 0; i < tableSections.length; i++) {
+    tableSections.item(i).childNodes.item(0).classList.add('active');
+  } // debug
+  // console.log(tablesContainer)
+
 
   function createTableHead(table) {
     var thead = document.createElement('thead');
@@ -166,4 +163,3 @@ function createTables() {
     return tbody;
   }
 }
-/* ********************************************************************************* */
