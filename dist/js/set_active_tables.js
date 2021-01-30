@@ -1,12 +1,12 @@
 "use strict";
 
-initActiveTable();
+// seta as funcoes "onclick" do botoes e tabs
+// pra mostrar tabela respectivo dinamicamente
+function setActiveTables() {
+  setActiveButtons();
+  setActiveTabs();
 
-function initActiveTable() {
-  initSelectTable();
-  initSelectTableTab();
-
-  function initSelectTable() {
+  function setActiveButtons() {
     var buttons = document.getElementsByClassName('select-table__button');
     var tabSections = document.getElementsByClassName('tab-section');
     var tableSections = document.getElementsByClassName('table-section'); // pode ser ~
@@ -37,7 +37,7 @@ function initActiveTable() {
     }
   }
 
-  function initSelectTableTab() {
+  function setActiveTabs() {
     var tabs = document.getElementsByClassName('select-tab__tab');
     var tabSections = document.getElementsByClassName('tab-section');
     var tableTabs = document.getElementsByClassName('table-tab'); // debug

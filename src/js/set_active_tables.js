@@ -1,10 +1,10 @@
-initActiveTable()
+// seta as funcoes "onclick" do botoes e tabs
+// pra mostrar tabela respectivo dinamicamente
+function setActiveTables() {
+    setActiveButtons()
+    setActiveTabs()
 
-function initActiveTable() {
-    initSelectTable()
-    initSelectTableTab()
-
-    function initSelectTable() {
+    function setActiveButtons() {
         const buttons = document.getElementsByClassName('select-table__button')
         const tabSections = document.getElementsByClassName('tab-section')
 
@@ -35,7 +35,7 @@ function initActiveTable() {
         }
     }
 
-    function initSelectTableTab() {
+    function setActiveTabs() {
         const tabs = document.getElementsByClassName('select-tab__tab')
         const tabSections = document.getElementsByClassName('tab-section')
 

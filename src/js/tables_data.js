@@ -1,4 +1,20 @@
-export default TABLES_DATA = { 
+/* ******************* Configurar os dados das tabelas aqui ************************ */
+
+/* Formato */
+// const TABLES_DATA = { 
+//     "nome_do_botao": {           *nome do botao nao pode repetir*
+//         "nome_da_aba(tab)": {    *nome do aba nao pode repetir*
+//             head: [ ... ],
+//             body: [
+//                 [ ... ],
+//                 [ ... ],
+//                 [ ... ],
+//             ]
+//         },
+//     }, ...
+// }
+
+const TABLES_DATA = { 
     "automovel": {
         "FLEX 50MESES": {
             head: ["BEN OBJETO", "PLANO", "CREDITO", "PARCELA"],
@@ -65,3 +81,5 @@ export default TABLES_DATA = {
         }
     }
 }
+
+/* ********************************************************************************* */

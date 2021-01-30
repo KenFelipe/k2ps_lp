@@ -1,11 +1,21 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
+/* ******************* Configurar os dados das tabelas aqui ************************ */
 
-var _default = TABLES_DATA = {
+/* Formato */
+// const TABLES_DATA = { 
+//     "nome_do_botao": {           *nome do botao nao pode repetir*
+//         "nome_da_aba(tab)": {    *nome do aba nao pode repetir*
+//             head: [ ... ],
+//             body: [
+//                 [ ... ],
+//                 [ ... ],
+//                 [ ... ],
+//             ]
+//         },
+//     }, ...
+// }
+var TABLES_DATA = {
   "automovel": {
     "FLEX 50MESES": {
       head: ["BEN OBJETO", "PLANO", "CREDITO", "PARCELA"],
@@ -41,5 +51,4 @@ var _default = TABLES_DATA = {
     }
   }
 };
-
-exports["default"] = _default;
+/* ********************************************************************************* */
