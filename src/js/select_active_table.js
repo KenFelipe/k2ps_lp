@@ -16,6 +16,7 @@ function initActiveTable() {
         for(let buttonIndex = 0; buttonIndex < buttons.length; buttonIndex++) {
 
             buttons.item(buttonIndex).addEventListener('click', () => {
+
                 for(let evalButtonIndex = 0; evalButtonIndex < buttons.length; evalButtonIndex++) {
                     // nao vai remover classe do proprio elemento clicado
                     if(evalButtonIndex === buttonIndex) {

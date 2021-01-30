@@ -79,10 +79,17 @@ const TABLES_DATA = {
             head: [1, 3, 4],
             body: [[11, 22, 33]]
         }
+    },
+    "test2": {
+        "tab1": {
+            head: [1, 3, 4],
+            body: [[11, 22, 33]]
+        }
     }
 }
 /* ********************************************************************************* */
 
+// import TABLES_DATA from './data.js'
 initTables()
 
 function initTables() {
