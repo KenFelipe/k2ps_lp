@@ -28,6 +28,11 @@
 .select-tab {
     margin: 20px 0;
     position: relative;
+    // display: none;
+
+    &.active {
+        display: block;
+    }
 
     &__tab {
         width: 25%;

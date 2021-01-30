@@ -18,6 +18,10 @@ var TABLES_DATA = {
     "FLEX 50MESES": {
       head: ["BEN OBJETO", "PLANO", "CREDITO", "PARCELA"],
       body: [["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"], ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"], ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"], ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"], ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"], ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"], ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"]]
+    },
+    "2 50MESES": {
+      head: ["BEN OBJETO", "PLANO", "CREDITO", "PARCELA"],
+      body: [["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"]]
     }
   },
   "imovel": {

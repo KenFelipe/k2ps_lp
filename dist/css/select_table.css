@@ -22,6 +22,9 @@
   margin: 20px 0;
   position: relative;
 }
+.select-tab.active {
+  display: block;
+}
 .select-tab__tab {
   width: 25%;
   height: 40px;
