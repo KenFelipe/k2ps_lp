@@ -1,4 +1,6 @@
 initActiveTable()
+const _btns = document.getElementsByClassName('select-table_button')
+
 
 function initActiveTable() {
     initSelectTable()
@@ -14,6 +16,7 @@ function initActiveTable() {
         // for(let button of typeSelectButtons) { ... }
         // mas directive "of" nao functiona no IE de versao baixo
         for(let buttonIndex = 0; buttonIndex < buttons.length; buttonIndex++) {
+
             buttons.item(buttonIndex).addEventListener('click', () => {
                 for(let evalButtonIndex = 0; evalButtonIndex < buttons.length; evalButtonIndex++) {
                     // nao vai remover classe do proprio elemento clicado

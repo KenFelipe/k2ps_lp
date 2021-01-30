@@ -53,10 +53,72 @@ var TABLES_DATA = {
 };
 /* ********************************************************************************* */
 
-initTables();
 /* ********************************************************************************* */
 
-function initTables() {
+function createButtons() {
+  var buttonsContainer = document.getElementsByClassName('select-table').item(0);
+  console.log(buttonsContainer);
+  var tableTypes = Object.keys(TABLES_DATA);
+  tableTypes.forEach(function (buttonLabel) {
+    var button = document.createElement('button');
+    button.classList.add('select-table__button');
+    button.innerHTML = buttonLabel;
+    buttonsContainer.appendChild(button);
+  });
+  buttonsContainer.childNodes.item(0).classList.add('active');
+  console.log(buttonsContainer.childNodes);
+  console.log(buttonsContainer);
+}
+
+function createtabs() {
+  var tabsContainer = document.getElementsByClassName('select-tab').item(0);
+  console.log(tabsContainer);
+  var tableTypes = Object.keys(TABLES_DATA);
+  tableTypes.forEach(function (tableName) {
+    var tabSection = document.createElement('div');
+    tabSection.classList.add('tab-section');
+    var tableTabs = Object.keys(TABLES_DATA[tableName]);
+    tableTabs.forEach(function (tabName) {
+      var tab = document.createElement('button');
+      tab.classList.add('select-tab__tab');
+      var span = document.createElement('span');
+      span.innerHTML = tabName;
+      tab.appendChild(span);
+      tabSection.appendChild(tab);
+    });
+    tabsContainer.appendChild(tabSection);
+  });
+  console.log(tabsContainer.childNodes);
+
+  for (var i = 0; i < tabsContainer.childElementCount; i++) {
+    tabsContainer.childNodes.item(i).childNodes.item(0).classList.add('active');
+  }
+
+  tabsContainer.childNodes.item(0).classList.add('active');
+  console.log(tabsContainer);
+  console.log(tabsContainer.childNodes.item(0).childNodes.item(0));
+  tabsContainer.childNodes.item(0).childNodes.item(0).classList.add('active');
+  console.log(tabsContainer);
+  console.log('***************************************');
+}
+
+createButtons();
+createtabs();
+/* ********************************************************************************* */
+
+createTables(); // debug active
+
+var tableSections = document.getElementsByClassName('table-section');
+tableSections.item(0).classList.add('active');
+
+for (var i = 0; i < tableSections.length; i++) {
+  console.log(tableSections.item(i).childNodes);
+  tableSections.item(i).childNodes.item(0).classList.add('active');
+}
+/* ********************************************************************************* */
+
+
+function createTables() {
   var tablesContainer = document.getElementById('tables'); // Types: imovel, automovel, ...
 
   var tableTypes = Object.keys(TABLES_DATA);

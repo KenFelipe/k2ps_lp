@@ -83,12 +83,70 @@ const TABLES_DATA = {
 }
 /* ********************************************************************************* */
 
+/* ********************************************************************************* */
+function createButtons() {
+    const buttonsContainer = document.getElementsByClassName('select-table').item(0)
+    console.log(buttonsContainer);
+    const tableTypes = Object.keys(TABLES_DATA)
+    tableTypes.forEach(buttonLabel => {
+        const button = document.createElement('button')
+        button.classList.add('select-table__button')
+        button.innerHTML = buttonLabel
+        buttonsContainer.appendChild(button)
+    })
+    buttonsContainer.childNodes.item(0).classList.add('active')
+    console.log(buttonsContainer.childNodes)
+    console.log(buttonsContainer);
+}
+function createtabs() {
+    const tabsContainer = document.getElementsByClassName('select-tab').item(0)
+    console.log(tabsContainer);
+    const tableTypes = Object.keys(TABLES_DATA)
+    tableTypes.forEach(tableName => {
+        const tabSection = document.createElement('div')
+        tabSection.classList.add('tab-section')
+
+        const tableTabs = Object.keys(TABLES_DATA[tableName])
+        tableTabs.forEach(tabName => {
+            const tab = document.createElement('button')
+            tab.classList.add('select-tab__tab')
+
+            const span = document.createElement('span')
+            span.innerHTML = tabName
+            tab.appendChild(span)
+            tabSection.appendChild(tab)
+        })
+        tabsContainer.appendChild(tabSection)
+    })
+    console.log(tabsContainer.childNodes)
+    for(let i = 0; i < tabsContainer.childElementCount; i++) {
+        tabsContainer.childNodes.item(i).childNodes.item(0).classList.add('active')
+    }
+    tabsContainer.childNodes.item(0).classList.add('active')
+    console.log(tabsContainer)
+    console.log(tabsContainer.childNodes.item(0).childNodes.item(0))
+    tabsContainer.childNodes.item(0).childNodes.item(0).classList.add('active')
+    console.log(tabsContainer)
+    console.log('***************************************')
+}
+createButtons()
+createtabs()
+/* ********************************************************************************* */
 
 
-initTables()
+createTables()
+
+// debug active
+const tableSections = document.getElementsByClassName('table-section')
+tableSections.item(0).classList.add('active')
+for(let i = 0; i < tableSections.length; i++) {
+    console.log(tableSections.item(i).childNodes)
+    tableSections.item(i).childNodes.item(0).classList.add('active')
+}
+
 
 /* ********************************************************************************* */
-function initTables() {
+function createTables() {
     const tablesContainer = document.getElementById('tables')
 
     // Types: imovel, automovel, ...
