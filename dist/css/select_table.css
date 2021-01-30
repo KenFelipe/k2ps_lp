@@ -12,7 +12,7 @@
   margin: 0 2px;
   transition: all 0.4s ease;
 }
-.select-table__button:hover {
+.select-table__button:hover, .select-table__button.active {
   color: #00adef;
   border: 3px solid #00adef;
   background-color: #FFFFFF;
@@ -38,7 +38,7 @@
   z-index: 10;
   transition: all 0.4s ease;
 }
-.select-tab__tab:hover {
+.select-tab__tab:hover, .select-tab__tab.active {
   color: #004e70;
   border: 1px solid #dddddd;
   border-bottom: 1px solid #FFFFFF;

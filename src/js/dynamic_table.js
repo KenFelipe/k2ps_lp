@@ -49,7 +49,7 @@ const TABLES_DATA = {
             ],
         },
         "Ate 100mil": {
-            head: ["thead", "thead"],
+            head: ["1000mil", "thead"],
             body: [
                 ["R$55.000,00", "R$349.00"],
                 ["R$55.000,00", "R$349.00"],
@@ -57,8 +57,14 @@ const TABLES_DATA = {
                 ["R$55.000,00", "R$349.00"],
                 ["R$55.000,00", "R$349.00"],
             ]
-        }
+        },
     },
+    "test": {
+        "tab1": {
+            head: [1, 3, 4],
+            body: [[11, 22, 33]]
+        }
+    }
 
     // "automovel": { "Ate 240mil": { head: ["thead", "thead"], body: [ ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ], }, "Ate 580mil": { head: ["500mil", "thead"], body: [ ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ], }, "Ate 100mil": { head: ["thead", "thead"], body: [ ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ] } },
 
@@ -68,9 +74,9 @@ const TABLES_DATA = {
 }
 
 
+initTables()
 
 /**********************************************************************/
-
 function initTables() {
     const tablesContainer = document.getElementById('tables')
 
@@ -79,13 +85,14 @@ function initTables() {
 
     tableTypes.forEach((tableType, tableTypeIdx) => {
         const tableTypeSection = document.createElement('div')
-        tableTypeSection.id = `table--${tableType}`
+        tableTypeSection.className = 'table-section'
 
         // Tabs: ate 240mil, partir de 250mil, ...
         const tableTabs = Object.keys(TABLES_DATA[tableType])
 
         tableTabs.forEach((tableTab, tableTabIdx) => {
             const table = document.createElement('table')
+            table.className = 'table-tab'
 
             const thead = createTableHead(TABLES_DATA[tableType][tableTab])
             const tbody = createTableBody(TABLES_DATA[tableType][tableTab])
@@ -99,40 +106,36 @@ function initTables() {
     })
 
     console.log(tablesContainer)
-}
 
-function createTableHead(table) {
-    const thead = document.createElement('thead')
-    const tr = document.createElement('tr')
-
-    table.head.forEach(theadTd => {
-        const td = document.createElement('td')
-        td.innerHTML = theadTd
-
-        tr.appendChild(td)
-        thead.appendChild(tr)
-    })
-
-    return thead
-}
-
-function createTableBody(table) {
-    const tbody = document.createElement('tbody')
-
-    table.body.forEach(tbodyRow => {
+    // function createTableHead(table) {
+    function createTableHead(table) {
+        const thead = document.createElement('thead')
         const tr = document.createElement('tr')
 
-        tbodyRow.forEach(tbodyRowTd => {
+        table.head.forEach(theadTd => {
             const td = document.createElement('td')
-            td.innerHTML = tbodyRowTd
+            td.innerHTML = theadTd
 
             tr.appendChild(td)
+            thead.appendChild(tr)
         })
+        return thead
+    }
 
-        tbody.appendChild(tr)
-    })
+    function createTableBody(table) {
+        const tbody = document.createElement('tbody')
 
-    return tbody
+        table.body.forEach(tbodyRow => {
+            const tr = document.createElement('tr')
+
+            tbodyRow.forEach(tbodyRowTd => {
+                const td = document.createElement('td')
+                td.innerHTML = tbodyRowTd
+
+                tr.appendChild(td)
+            })
+            tbody.appendChild(tr)
+        })
+        return tbody
+    }
 }
-
-initTables()

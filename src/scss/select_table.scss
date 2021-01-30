@@ -17,7 +17,7 @@
 
         transition: all 0.4s ease;
 
-        &:hover {
+        &:hover, &.active {
             color: #00adef;
             border: 3px solid #00adef;
             background-color: #FFFFFF;
@@ -49,7 +49,7 @@
 
         transition: all 0.4s ease;
 
-        &:hover {
+        &:hover, &.active {
             color: #004e70;
             border: 1px solid #dddddd;
             border-bottom: 1px solid #FFFFFF;

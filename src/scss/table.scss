@@ -1,5 +1,14 @@
+.table-section {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
 table {
-    width: calc(50% - 15px);
+    // width: calc(50% - 15px);
+    width: 100%;
     border-collapse: collapse;
     border-spacing: 0px;
 
