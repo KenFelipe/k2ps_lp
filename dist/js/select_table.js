@@ -3,84 +3,88 @@
 initActiveTable();
 
 function initActiveTable() {
-  initSelectTypeTable();
-  initSelectTabTable();
+  initSelectTable();
+  initSelectTableTab();
 
-  function initSelectTypeTable() {
+  function initSelectTable() {
     var buttons = document.getElementsByClassName('select-table__button');
-    var tableSections = document.getElementsByClassName('table-section');
-    var tableTabs = document.getElementsByClassName('tab-section'); // pode ser ~
+    var tabSections = document.getElementsByClassName('tab-section');
+    var tableSections = document.getElementsByClassName('table-section'); // pode ser ~
     // for(let button of typeSelectButtons) { ... }
-    // mas nao functiona no IE de versao baixo
+    // mas directive "of" nao functiona no IE de versao baixo
 
-    var _loop = function _loop(i) {
-      buttons.item(i).addEventListener('click', function () {
-        removeClass(buttons, 'active', i);
-        removeClass(tableSections, 'active', i);
-        removeClass(tableTabs, 'active', i);
-        buttons.item(i).classList.add('active');
-        tableSections.item(i).classList.add('active');
-        tableTabs.item(i).classList.add('active'); // debug
+    var _loop = function _loop(buttonIndex) {
+      buttons.item(buttonIndex).addEventListener('click', function () {
+        for (var evalButtonIndex = 0; evalButtonIndex < buttons.length; evalButtonIndex++) {
+          // nao vai remover classe do proprio elemento clicado
+          if (evalButtonIndex === buttonIndex) {
+            continue;
+          }
 
-        console.log('CLICKED!!!');
+          buttons.item(evalButtonIndex).classList.remove('active');
+          tabSections.item(evalButtonIndex).classList.remove('active');
+          tableSections.item(evalButtonIndex).classList.remove('active');
+        }
+
+        buttons.item(buttonIndex).classList.add('active');
+        tabSections.item(buttonIndex).classList.add('active');
+        tableSections.item(buttonIndex).classList.add('active');
       });
     };
 
-    for (var i = 0; i < buttons.length; i++) {
-      _loop(i);
+    for (var buttonIndex = 0; buttonIndex < buttons.length; buttonIndex++) {
+      _loop(buttonIndex);
     }
   }
 
-  function initSelectTabTable() {
+  function initSelectTableTab() {
     var tabs = document.getElementsByClassName('select-tab__tab');
     var tabSections = document.getElementsByClassName('tab-section');
-    console.log(tabs);
-    console.log(tabSections);
-    var tableTabs = document.getElementsByClassName('table-tab');
-    console.log(tableTabs);
+    var tableTabs = document.getElementsByClassName('table-tab'); // debug
+    // console.log('select-tab__tab:',tabs);
+    // console.log('tab-section:', tabSections);
+    // console.log('table-tab', tableTabs)
+    // console.log('**********************************************')
 
-    var _loop2 = function _loop2(i, _count) {
-      var sectionChilds = tabSections.item(i).childElementCount; // debug
-      // console.log(`sectionChilds: ${sectionChilds}, count: ${count}`)
+    var _loop2 = function _loop2(tabSection, _tabIndexCount) {
+      var sectionChilds = tabSections.item(tabSection).childElementCount; // debug
+      // console.log(`sectionChilds: ${sectionChilds}, tabIndexCount: ${tabIndexCount}`)
 
-      var _loop3 = function _loop3(j) {
+      var _loop3 = function _loop3(tabIndex) {
         // debug
-        // console.log(`j: ${j}, count: ${count}, tab:`, tabs.item(j));
-        var startIdx = _count;
-        tabs.item(j).addEventListener('click', function () {
-          for (var f = startIdx; f < startIdx + sectionChilds; f++) {
+        // console.log(`tabIndex: ${tabIndex}, tabIndexCount: ${tabIndexCount}, tab:`, tabs.item(tabIndex));
+        var evalStartTabIndex = _tabIndexCount;
+        tabs.item(tabIndex).addEventListener('click', function () {
+          for (var evalTabIndex = evalStartTabIndex; evalTabIndex < evalStartTabIndex + sectionChilds; evalTabIndex++) {
             // debug
-            // console.log(`j: ${j}, f: ${f}, startIdx: ${startIdx}`);
-            j !== f ? tabs.item(f).classList.remove('active') : '';
-            j !== f ? tableTabs.item(f).classList.remove('active') : '';
+            // console.log(`tabIndex: ${tabIndex}, evalTabIndex: ${evalTabIndex}, evalStartTabIndex: ${evalStartTabIndex}`);
+            // nao vai remover classe do proprio elemento clicado
+            if (evalTabIndex === tabIndex) {
+              continue;
+            }
+
+            tabs.item(evalTabIndex).classList.remove('active');
+            tableTabs.item(evalTabIndex).classList.remove('active');
           }
 
-          tabs.item(j).classList.add('active');
-          tableTabs.item(j).classList.add('active');
+          tabs.item(tabIndex).classList.add('active');
+          tableTabs.item(tabIndex).classList.add('active');
         });
       };
 
-      for (var j = _count; j < _count + sectionChilds; j++) {
-        _loop3(j);
+      for (var tabIndex = _tabIndexCount; tabIndex < _tabIndexCount + sectionChilds; tabIndex++) {
+        _loop3(tabIndex);
       }
 
-      _count += sectionChilds; // debug
-      // console.log('count:', count)
-      // console.log('**********************************************************************************')
+      _tabIndexCount += sectionChilds; // debug
+      // console.log('tabIndexCount:', tabIndexCount)
+      // console.log('**********************************************')
 
-      count = _count;
+      tabIndexCount = _tabIndexCount;
     };
 
-    for (var i = 0, count = 0; i < tabSections.length; i++) {
-      _loop2(i, count);
-    }
-  }
-
-  function removeClass(nodes, className, index) {
-    for (var i = 0; i < nodes.length; i++) {
-      // vai remover classe 
-      // se nao for o proprio elemento
-      i !== index ? nodes.item(i).classList.remove(className) : '';
+    for (var tabSection = 0, tabIndexCount = 0; tabSection < tabSections.length; tabSection++) {
+      _loop2(tabSection, tabIndexCount);
     }
   }
 }

@@ -1,9 +1,9 @@
-/*****  Configura os dados de tabelas aqui *****/
+/* ******************* Configurar os dados das tabelas aqui ************************ */
 
 /* Formato */
-// const TABLES_DATA = {
-//     "nome_do_botao": {
-//         "nome_da_aba": {
+// const TABLES_DATA = {        
+//     "nome_do_botao": {           *nome do botao nao pode repetir*
+//         "nome_da_aba(tab)": {    *nome do aba nao pode repetir*
 //             head: [ ... ],
 //             body: [
 //                 [ ... ],
@@ -32,6 +32,13 @@ const TABLES_DATA = {
             head: ["BEN OBJETO", "PLANO", "CREDITO", "PARCELA"],
             body: [
                 ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"],
+            ]
+        },
+        "250MESES": {
+            head: ["BEN OBJETO", "PLANO", "CREDITO", "PARCELA"],
+            body: [
+                ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"],
+                ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"]
             ]
         }
     },
@@ -73,18 +80,14 @@ const TABLES_DATA = {
             body: [[11, 22, 33]]
         }
     }
-
-    // "automovel": { "Ate 240mil": { head: ["thead", "thead"], body: [ ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ], }, "Ate 580mil": { head: ["500mil", "thead"], body: [ ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ], }, "Ate 100mil": { head: ["thead", "thead"], body: [ ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ] } },
-
-    // automovel: { 
-    //     auto: "100$" 
-    // }
 }
+/* ********************************************************************************* */
+
 
 
 initTables()
 
-/**********************************************************************/
+/* ********************************************************************************* */
 function initTables() {
     const tablesContainer = document.getElementById('tables')
 
@@ -147,3 +150,4 @@ function initTables() {
         return tbody
     }
 }
+/* ********************************************************************************* */

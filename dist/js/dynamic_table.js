@@ -1,11 +1,11 @@
 "use strict";
 
-/*****  Configura os dados de tabelas aqui *****/
+/* ******************* Configurar os dados das tabelas aqui ************************ */
 
 /* Formato */
-// const TABLES_DATA = {
-//     "nome_do_botao": {
-//         "nome_da_aba": {
+// const TABLES_DATA = {        
+//     "nome_do_botao": {           *nome do botao nao pode repetir*
+//         "nome_da_aba(tab)": {    *nome do aba nao pode repetir*
 //             head: [ ... ],
 //             body: [
 //                 [ ... ],
@@ -24,6 +24,10 @@ var TABLES_DATA = {
     "2 50MESES": {
       head: ["BEN OBJETO", "PLANO", "CREDITO", "PARCELA"],
       body: [["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"]]
+    },
+    "250MESES": {
+      head: ["BEN OBJETO", "PLANO", "CREDITO", "PARCELA"],
+      body: [["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"], ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"]]
     }
   },
   "imovel": {
@@ -45,14 +49,12 @@ var TABLES_DATA = {
       head: [1, 3, 4],
       body: [[11, 22, 33]]
     }
-  } // "automovel": { "Ate 240mil": { head: ["thead", "thead"], body: [ ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ], }, "Ate 580mil": { head: ["500mil", "thead"], body: [ ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ], }, "Ate 100mil": { head: ["thead", "thead"], body: [ ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ] } },
-  // automovel: { 
-  //     auto: "100$" 
-  // }
-
+  }
 };
+/* ********************************************************************************* */
+
 initTables();
-/**********************************************************************/
+/* ********************************************************************************* */
 
 function initTables() {
   var tablesContainer = document.getElementById('tables'); // Types: imovel, automovel, ...
@@ -102,3 +104,4 @@ function initTables() {
     return tbody;
   }
 }
+/* ********************************************************************************* */
