@@ -3,7 +3,8 @@
 // iniciar primeiros elementos(botao, tabs, tabelas) ativado
 function initActiveNodes() {
   // botao
-  var buttonsContainer = document.getElementById('select-table');
+  var selectTablesContainerClass = CLASS_ID_CONFIG["class"].selectTablesContainer;
+  var buttonsContainer = document.getElementsByClassName(selectTablesContainerClass).item(0);
   buttonsContainer.childNodes.item(0).classList.add('active'); // primeiro tab section
 
   var tabsContainer = document.getElementById('select-tab');

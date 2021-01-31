@@ -7,9 +7,10 @@ function setActiveTables() {
   setActiveTabs();
 
   function setActiveButtons() {
-    var tablesSectionClass = CLASS_ID_CONFIG["class"].tablesSection;
-    var buttons = document.getElementsByClassName('select-table__button');
+    var selectTablesButtonClass = CLASS_ID_CONFIG["class"].selectTablesButton;
+    var buttons = document.getElementsByClassName(selectTablesButtonClass);
     var tabSections = document.getElementsByClassName('tab-section');
+    var tablesSectionClass = CLASS_ID_CONFIG["class"].tablesSection;
     var tableSections = document.getElementsByClassName(tablesSectionClass); // pode ser ~
     // for(let button of typeSelectButtons) { ... }
     // mas directive "of" nao functiona no IE de versao baixo

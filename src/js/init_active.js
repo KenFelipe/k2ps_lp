@@ -2,8 +2,12 @@
 
 function initActiveNodes() {
     // botao
-    const buttonsContainer = document.getElementById('select-table')
+    const selectTablesContainerClass = CLASS_ID_CONFIG.class.selectTablesContainer
+
+    const buttonsContainer = document.getElementsByClassName(selectTablesContainerClass).item(0)
     buttonsContainer.childNodes.item(0).classList.add('active')
+
+
 
     // primeiro tab section
     const tabsContainer = document.getElementById('select-tab')
@@ -16,6 +20,7 @@ function initActiveNodes() {
         tabSection.item(i).childNodes.item(0).classList.add('active')
     }
     
+
 
     // tables
     // primeiro tables section

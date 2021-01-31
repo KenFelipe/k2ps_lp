@@ -5,11 +5,12 @@ function setActiveTables() {
     setActiveTabs()
 
     function setActiveButtons() {
-        const tablesSectionClass = CLASS_ID_CONFIG.class.tablesSection
+        const selectTablesButtonClass = CLASS_ID_CONFIG.class.selectTablesButton
+        const buttons = document.getElementsByClassName(selectTablesButtonClass)
 
-        const buttons = document.getElementsByClassName('select-table__button')
         const tabSections = document.getElementsByClassName('tab-section')
 
+        const tablesSectionClass = CLASS_ID_CONFIG.class.tablesSection
         const tableSections = document.getElementsByClassName(tablesSectionClass)
 
         // pode ser ~
