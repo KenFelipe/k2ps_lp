@@ -1,5 +1,5 @@
 /************************ button **************************/
-.select-table__button {
+.tables-select__button {
   width: 25%;
   height: 40px;
   color: white;
@@ -13,7 +13,7 @@
   margin: 0 2px;
   transition: all 0.4s ease;
 }
-.select-table__button:hover, .select-table__button.active {
+.tables-select__button:hover, .tables-select__button.active {
   color: #00adef;
   border: 3px solid #00adef;
   background-color: #FFFFFF;

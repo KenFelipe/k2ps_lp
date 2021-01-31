@@ -7,8 +7,8 @@ var CLASS_ID_CONFIG = {
   },
   "class": {
     // button
-    selectTablesContainer: "select-table",
-    selectTablesButton: "select-table__button",
+    selectTablesContainer: "tables-select",
+    selectTablesButton: "tables-select__button",
     // table
     tablesSection: "tables-section",
     tablesSectionTable: "tables-section__table"
