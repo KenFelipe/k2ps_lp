@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+input:focus, textarea:focus, button:focus {
+  outline: none;
+}
+
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/*# sourceMappingURL=main.css.map */

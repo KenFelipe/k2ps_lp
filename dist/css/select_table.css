@@ -62,10 +62,10 @@
   font-weight: bold;
 }
 
-.container.tabs {
+#tabs {
   position: relative;
 }
-.container.tabs::after {
+#tabs::after {
   content: "";
   height: 1px;
   width: 100%;
