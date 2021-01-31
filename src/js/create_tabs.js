@@ -2,27 +2,34 @@
 // configurado em 'config/data.js'
 
 function createTabs() {
-    const tabsContainer = document.getElementById('select-tab')
+    const tabBarsContainerClass = CLASS_ID_CONFIG.class.tabBarsContainer
+
+    const tabBarClass = CLASS_ID_CONFIG.class.tabBar
+    const tabClass = CLASS_ID_CONFIG.class.tab
+
+    const tabBarsContainer = document.getElementsByClassName(tabBarsContainerClass).item(0)
 
     Object.keys(TABLES_DATA).forEach(tableName => {
-        const tabSection = document.createElement('div')
-        tabSection.classList.add('tab-section')
+        const tabBar = document.createElement('div')
+        tabBar.classList.add(tabBarClass)
 
         Object.keys(TABLES_DATA[tableName]).forEach(tabName => {
             const tab = document.createElement('button')
-            tab.classList.add('select-tab__tab')
+            tab.classList.add(tabClass)
 
             const span = document.createElement('span')
             span.innerHTML = tabName
 
+            // ***************************************************
+            // PRECISA INSERIR LOGICA PARA
+            // PROCESSAMENTO DE TEXT APOS DA <SPAN> 
+            // (LABEL DO TAB)
+            // ***************************************************
+
             tab.appendChild(span)
-            tabSection.appendChild(tab)
+            tabBar.appendChild(tab)
         })
 
-        tabsContainer.appendChild(tabSection)
+        tabBarsContainer.appendChild(tabBar)
     })
-
-    //debug
-    // console.log(tabsContainer)
-    // console.log('***************************************')
 }

@@ -9,15 +9,18 @@ function initActiveNodes() {
 
 
 
+    // tab
     // primeiro tab section
-    const tabsContainer = document.getElementById('select-tab')
+    const tabBarsContainerClass = CLASS_ID_CONFIG.class.tabBarsContainer
 
-    const tabSection = tabsContainer.childNodes
-    tabSection.item(0).classList.add('active')
+    const tabBarsContainer = document.getElementsByClassName(tabBarsContainerClass).item(0)
+
+    const tabBars = tabBarsContainer.childNodes
+    tabBars.item(0).classList.add('active')
 
     // ativar todos primeiros tabs de cada section
-    for(let i = 0; i < tabSection.length; i++) {
-        tabSection.item(i).childNodes.item(0).classList.add('active')
+    for(let i = 0; i < tabBars.length; i++) {
+        tabBars.item(i).childNodes.item(0).classList.add('active')
     }
     
 

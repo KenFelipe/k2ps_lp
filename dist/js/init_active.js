@@ -5,14 +5,16 @@ function initActiveNodes() {
   // botao
   var selectTablesContainerClass = CLASS_ID_CONFIG["class"].selectTablesContainer;
   var buttonsContainer = document.getElementsByClassName(selectTablesContainerClass).item(0);
-  buttonsContainer.childNodes.item(0).classList.add('active'); // primeiro tab section
+  buttonsContainer.childNodes.item(0).classList.add('active'); // tab
+  // primeiro tab section
 
-  var tabsContainer = document.getElementById('select-tab');
-  var tabSection = tabsContainer.childNodes;
-  tabSection.item(0).classList.add('active'); // ativar todos primeiros tabs de cada section
+  var tabBarsContainerClass = CLASS_ID_CONFIG["class"].tabBarsContainer;
+  var tabBarsContainer = document.getElementsByClassName(tabBarsContainerClass).item(0);
+  var tabBars = tabBarsContainer.childNodes;
+  tabBars.item(0).classList.add('active'); // ativar todos primeiros tabs de cada section
 
-  for (var i = 0; i < tabSection.length; i++) {
-    tabSection.item(i).childNodes.item(0).classList.add('active');
+  for (var i = 0; i < tabBars.length; i++) {
+    tabBars.item(i).childNodes.item(0).classList.add('active');
   } // tables
   // primeiro tables section
 

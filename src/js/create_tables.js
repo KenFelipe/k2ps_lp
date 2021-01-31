@@ -32,8 +32,6 @@ function createTables() {
 
         tablesContainer.appendChild(tablesSection)
     })
-    // debug
-    // console.log(tablesContainer)
 
     function createTableHead(table) {
         const thead = document.createElement('thead')

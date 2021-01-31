@@ -23,8 +23,7 @@ function createTables() {
       tablesSection.appendChild(table);
     });
     tablesContainer.appendChild(tablesSection);
-  }); // debug
-  // console.log(tablesContainer)
+  });
 
   function createTableHead(table) {
     var thead = document.createElement('thead');
