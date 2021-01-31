@@ -5,10 +5,12 @@ function setActiveTables() {
     setActiveTabs()
 
     function setActiveButtons() {
+        const tablesSectionClass = CLASS_ID_CONFIG.class.tablesSection
+
         const buttons = document.getElementsByClassName('select-table__button')
         const tabSections = document.getElementsByClassName('tab-section')
 
-        const tableSections = document.getElementsByClassName('table-section')
+        const tableSections = document.getElementsByClassName(tablesSectionClass)
 
         // pode ser ~
         // for(let button of typeSelectButtons) { ... }
@@ -36,10 +38,12 @@ function setActiveTables() {
     }
 
     function setActiveTabs() {
+        const tablesSectionTableClass = CLASS_ID_CONFIG.class.tablesSectionTable
+
         const tabs = document.getElementsByClassName('select-tab__tab')
         const tabSections = document.getElementsByClassName('tab-section')
 
-        const tableTabs = document.getElementsByClassName('table-tab')
+        const tableTabs = document.getElementsByClassName(tablesSectionTableClass)
 
         // debug
         // console.log('select-tab__tab:',tabs);

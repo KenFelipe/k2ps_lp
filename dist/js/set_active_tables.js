@@ -7,9 +7,10 @@ function setActiveTables() {
   setActiveTabs();
 
   function setActiveButtons() {
+    var tablesSectionClass = CLASS_ID_CONFIG["class"].tablesSection;
     var buttons = document.getElementsByClassName('select-table__button');
     var tabSections = document.getElementsByClassName('tab-section');
-    var tableSections = document.getElementsByClassName('table-section'); // pode ser ~
+    var tableSections = document.getElementsByClassName(tablesSectionClass); // pode ser ~
     // for(let button of typeSelectButtons) { ... }
     // mas directive "of" nao functiona no IE de versao baixo
 
@@ -38,9 +39,10 @@ function setActiveTables() {
   }
 
   function setActiveTabs() {
+    var tablesSectionTableClass = CLASS_ID_CONFIG["class"].tablesSectionTable;
     var tabs = document.getElementsByClassName('select-tab__tab');
     var tabSections = document.getElementsByClassName('tab-section');
-    var tableTabs = document.getElementsByClassName('table-tab'); // debug
+    var tableTabs = document.getElementsByClassName(tablesSectionTableClass); // debug
     // console.log('select-tab__tab:',tabs);
     // console.log('tab-section:', tabSections);
     // console.log('table-tab', tableTabs)

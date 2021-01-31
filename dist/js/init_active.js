@@ -1,6 +1,6 @@
 "use strict";
 
-// iniciar primeiros elementos(botao, tabs, tabelas) ativedo
+// iniciar primeiros elementos(botao, tabs, tabelas) ativado
 function initActiveNodes() {
   // botao
   var buttonsContainer = document.getElementById('select-table');
@@ -12,11 +12,13 @@ function initActiveNodes() {
 
   for (var i = 0; i < tabSection.length; i++) {
     tabSection.item(i).childNodes.item(0).classList.add('active');
-  } // primeiro table section
+  } // tables
+  // primeiro tables section
 
 
-  var tableSections = document.getElementsByClassName('table-section');
-  tableSections.item(0).classList.add('active'); // ativar todas primeiras tabelas do section
+  var tablesSectionClass = CLASS_ID_CONFIG["class"].tablesSection;
+  var tableSections = document.getElementsByClassName(tablesSectionClass);
+  tableSections.item(0).classList.add('active'); // ativar todas primeiros tables do section
 
   for (var _i = 0; _i < tableSections.length; _i++) {
     tableSections.item(_i).childNodes.item(0).classList.add('active');

@@ -1,29 +1,36 @@
 function createTables() {
-    const tablesContainer = document.getElementById('tables')
+    // config in "class_id_config.js"
+    const tablesContainerId = CLASS_ID_CONFIG.id.tablesContainer
+
+    const tablesSectionClass = CLASS_ID_CONFIG.class.tablesSection
+    const tablesSectionTableClass = CLASS_ID_CONFIG.class.tablesSectionTable
+
+    const tablesContainer = document.getElementById(tablesContainerId)
 
     // Types: imovel, automovel, ...
-    const tableTypes = Object.keys(TABLES_DATA)
+    const tableNames = Object.keys(TABLES_DATA)
 
-    tableTypes.forEach((tableType, tableTypeIdx) => {
-        const tableTypeSection = document.createElement('div')
-        tableTypeSection.className = 'table-section'
+    tableNames.forEach(tableName => {
+        const tablesSection = document.createElement('div')
+        tablesSection.className = tablesSectionClass
 
         // Tabs: ate 240mil, partir de 250mil, ...
-        const tableTabs = Object.keys(TABLES_DATA[tableType])
+        const tableTabNames = Object.keys(TABLES_DATA[tableName])
 
-        tableTabs.forEach((tableTab, tableTabIdx) => {
+        tableTabNames.forEach(tableTabName => {
             const table = document.createElement('table')
-            table.className = 'table-tab'
+            table.className = tablesSectionTableClass
 
-            const thead = createTableHead(TABLES_DATA[tableType][tableTab])
-            const tbody = createTableBody(TABLES_DATA[tableType][tableTab])
+            const thead = createTableHead(TABLES_DATA[tableName][tableTabName])
+            const tbody = createTableBody(TABLES_DATA[tableName][tableTabName])
             
             table.appendChild(thead)
             table.appendChild(tbody)
-            tableTypeSection.appendChild(table)
+
+            tablesSection.appendChild(table)
         })
 
-        tablesContainer.appendChild(tableTypeSection)
+        tablesContainer.appendChild(tablesSection)
     })
     // debug
     // console.log(tablesContainer)
@@ -32,9 +39,9 @@ function createTables() {
         const thead = document.createElement('thead')
         const tr = document.createElement('tr')
 
-        table.head.forEach(theadTd => {
+        table.head.forEach(theadData => {
             const td = document.createElement('td')
-            td.innerHTML = theadTd
+            td.innerHTML = theadData
 
             tr.appendChild(td)
             thead.appendChild(tr)
@@ -49,9 +56,9 @@ function createTables() {
         table.body.forEach(tbodyRow => {
             const tr = document.createElement('tr')
 
-            tbodyRow.forEach(tbodyRowTd => {
+            tbodyRow.forEach(tbodyRowData => {
                 const td = document.createElement('td')
-                td.innerHTML = tbodyRowTd
+                td.innerHTML = tbodyRowData
 
                 tr.appendChild(td)
             })

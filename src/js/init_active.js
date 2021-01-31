@@ -1,4 +1,4 @@
-// iniciar primeiros elementos(botao, tabs, tabelas) ativedo
+// iniciar primeiros elementos(botao, tabs, tabelas) ativado
 
 function initActiveNodes() {
     // botao
@@ -16,11 +16,15 @@ function initActiveNodes() {
         tabSection.item(i).childNodes.item(0).classList.add('active')
     }
     
-    // primeiro table section
-    const tableSections = document.getElementsByClassName('table-section')
+
+    // tables
+    // primeiro tables section
+    const tablesSectionClass = CLASS_ID_CONFIG.class.tablesSection
+
+    const tableSections = document.getElementsByClassName(tablesSectionClass)
     tableSections.item(0).classList.add('active')
 
-    // ativar todas primeiras tabelas do section
+    // ativar todas primeiros tables do section
     for(let i = 0; i < tableSections.length; i++) {
         tableSections.item(i).childNodes.item(0).classList.add('active')
     }
