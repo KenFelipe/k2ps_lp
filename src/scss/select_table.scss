@@ -1,5 +1,5 @@
 /************************ button **************************/
-.select-table__button {
+.tables-select__button {
     width: 25%;
     height: 40px;
 
@@ -27,12 +27,12 @@
 
 
 /************************* tab ***************************/
-#select-tab {
+.tabbar-container {
     margin: 20px 0;
     position: relative;
 }
 
-.tab-section {
+.tabbar {
     display: none;
 
     &.active {
@@ -40,7 +40,7 @@
     }
 }
 
-.select-tab__tab {
+.tabbar__tab {
     width: 25%;
     height: 40px;
 

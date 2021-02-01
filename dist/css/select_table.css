@@ -1,5 +1,5 @@
 /************************ button **************************/
-.select-table__button {
+.tables-select__button {
   width: 25%;
   height: 40px;
   color: white;
@@ -13,26 +13,26 @@
   margin: 0 2px;
   transition: all 0.4s ease;
 }
-.select-table__button:hover, .select-table__button.active {
+.tables-select__button:hover, .tables-select__button.active {
   color: #00adef;
   border: 3px solid #00adef;
   background-color: #FFFFFF;
 }
 
 /************************* tab ***************************/
-#select-tab {
+.tabbar-container {
   margin: 20px 0;
   position: relative;
 }
 
-.tab-section {
+.tabbar {
   display: none;
 }
-.tab-section.active {
+.tabbar.active {
   display: block;
 }
 
-.select-tab__tab {
+.tabbar__tab {
   width: 25%;
   height: 40px;
   color: #00adef;
@@ -48,7 +48,7 @@
   z-index: 10;
   transition: all 0.4s ease;
 }
-.select-tab__tab:hover, .select-tab__tab.active {
+.tabbar__tab:hover, .tabbar__tab.active {
   color: #004e70;
   border: 1px solid #dddddd;
   border-bottom: 1px solid #FFFFFF;
@@ -56,7 +56,7 @@
   position: relative;
   z-index: 10;
 }
-.select-tab__tab span {
+.tabbar__tab span {
   display: block;
   font-size: 13px;
   font-weight: bold;

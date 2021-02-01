@@ -108,55 +108,40 @@
     </section>
 
 
-    <!------------ START DYNAMIC_TABLE MANIPULATED FOR JAVASCRIPT ------------->
     <section class="values">
-      <div class="values__header container">
+      <div id="values__header" class="container">
         <h4>Confira o valor do seu consórcio</h4>
         <p>Escolha o valor que melhor atende à sua necessidade.</p>
         <strong>Comece escolhendo o tipo de consórcio abaixo</strong>
       </div>
 
-      <div id="select-table" class="container"></div>
-      <!-- innerHTML #select-table -->
-      <!-- <button class="select-table__button">Consorcio imovel</button>
-      <button class="select-table__button">Consorcio imovel</button>
-      <button class="select-table__button">Consorcio imovel</button> -->
+      <!-- criado pelo javascript -->
+      <div class="tables-select container"></div>
 
+      <!-- criado pelo javascript -->
       <div id="tabs" class="container">
-        <div id="select-tab"></div>
-        <!-- innerHTML #select-tab -->
-        <!-- <div class="tab-section">
-          <button class="select-tab__tab"><span>Test1</span>test1</button>
-          <button class="select-tab__tab"><span>Test2</span>test2</button>
-          <button class="select-tab__tab"><span>Test3</span>test3</button>
-        </div>
-        <div class="tab-section">
-          <button class="select-tab__tab"><span>Ate 240 MIL</span>(200 meses)</button>
-          <button class="select-tab__tab"><span>Ate 540 MIL</span>(200 meses)</button>
-          <button class="select-tab__tab"><span>Ate 1040 MIL</span>(200 meses)</button>
-        </div>
-        <div class="tab-section">
-          <button class="select-tab__tab"><span>3000</span>test3000</button>
-        </div> -->
+        <div class="tabbar-container"></div>
       </div>
 
-      <div id="tables" class="container">
-        <!-- here javascript -->
-      </div>
-
+      <!-- criado pelo javascript -->
+      <div id="tables" class="container"></div>
     </section>
-    <!------------ END DYNAMIC_TABLE MANIPULATED FOR JAVASCRIPT ------------>
+
 
   </div>
   
   <!-- script js precisa ser nessa sequencia -->
   <script src="./js/tables_data.js"></script>
+  <script src="./js/classname_config.js"></script>
 
   <script src="./js/create_buttons.js""></script>
   <script src="./js/create_tabs.js""></script>
   <script src="./js/create_tables.js""></script>
-  <script src="./js/set_active_tables.js"></script>
-  <script src="./js/init_active.js"></script>
+
+  <script src="./js/init_active_buttons.js"></script>
+  <script src="./js/init_active_tabs.js"></script>
+
+  <script src="./js/set_active.js"></script>
 
   <script src="./js/init_tables.js"></script>
 </body>

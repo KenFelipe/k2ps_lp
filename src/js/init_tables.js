@@ -3,8 +3,10 @@ function initTables() {
     createTabs()
     createTables()
 
-    setActiveTables()
-    initActiveNodes()
+    initActiveButtons()
+    initActiveTabs()
+
+    setActive()
 }
 
 // debug
