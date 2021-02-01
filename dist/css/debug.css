@@ -6,4 +6,12 @@ body {
   display: none;
 }
 
+.values {
+  margin-top: 40px;
+}
+
+#values__header {
+  display: none;
+}
+
 /*# sourceMappingURL=debug.css.map */

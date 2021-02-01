@@ -1,0 +1,55 @@
+.tabs {
+  position: relative;
+}
+.tabs::after {
+  content: "";
+  height: 1px;
+  border-bottom: 1px solid #ddd;
+  position: absolute;
+  bottom: 0px;
+  width: calc(100% - 40px);
+  right: calc(40px / 2);
+}
+
+.tabbar-container {
+  margin: 20px 0;
+  position: relative;
+}
+
+.tabbar {
+  display: none;
+}
+.tabbar.active {
+  display: block;
+}
+.tabbar__tab {
+  width: 25%;
+  height: 40px;
+  margin: 0 4px;
+  cursor: pointer;
+  color: #00adef;
+  font-size: 11px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+  position: relative;
+  z-index: 10;
+  border: 1px solid #dddddd;
+  background-color: #eeeeee;
+  transition: all 0.4s ease;
+}
+.tabbar__tab:hover, .tabbar__tab.active {
+  color: #004e70;
+  border: 1px solid #dddddd;
+  border-bottom: 1px solid #FFFFFF;
+  background-color: #FFFFFF;
+  position: relative;
+  z-index: 10;
+}
+.tabbar__tab span {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=tabBar.css.map */
