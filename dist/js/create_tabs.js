@@ -3,9 +3,9 @@
 // criar abas(tabs) atraves de dados
 // configurado em 'config/data.js'
 function createTabs() {
-  var tabBarsContainerClass = CLASS_ID_CONFIG["class"].tabBarsContainer;
-  var tabBarClass = CLASS_ID_CONFIG["class"].tabBar;
-  var tabClass = CLASS_ID_CONFIG["class"].tab;
+  var tabBarsContainerClass = CLASSNAME_CONFIG.tabBarsContainer;
+  var tabBarClass = CLASSNAME_CONFIG.tabBar;
+  var tabClass = CLASSNAME_CONFIG.tab;
   var tabBarsContainer = document.getElementsByClassName(tabBarsContainerClass).item(0);
   Object.keys(TABLES_DATA).forEach(function (tableName) {
     var tabBar = document.createElement('div');

@@ -2,20 +2,20 @@
 
 function createTables() {
   // config in "class_id_config.js"
-  var tablesContainerId = CLASS_ID_CONFIG.id.tablesContainer;
-  var tablesSectionClass = CLASS_ID_CONFIG["class"].tablesSection;
-  var tablesSectionTableClass = CLASS_ID_CONFIG["class"].tablesSectionTable;
-  var tablesContainer = document.getElementById(tablesContainerId); // Types: imovel, automovel, ...
+  var tablesContainerClass = CLASSNAME_CONFIG.tablesContainer;
+  var tablesContainer = document.getElementById(tablesContainerClass);
+  var tablesSectionClass = CLASSNAME_CONFIG.tablesSection;
+  var tableClass = CLASSNAME_CONFIG.table; // tableNames: imovel, automovel, ...
 
   var tableNames = Object.keys(TABLES_DATA);
   tableNames.forEach(function (tableName) {
     var tablesSection = document.createElement('div');
-    tablesSection.className = tablesSectionClass; // Tabs: ate 240mil, partir de 250mil, ...
+    tablesSection.className = tablesSectionClass; // tableTabNames: ate 240mil, a partir de 250mil, ...
 
-    var tableTabNames = Object.keys(TABLES_DATA[tableName]);
-    tableTabNames.forEach(function (tableTabName) {
+    var tableTabsNames = Object.keys(TABLES_DATA[tableName]);
+    tableTabsNames.forEach(function (tableTabName) {
       var table = document.createElement('table');
-      table.className = tablesSectionTableClass;
+      table.className = tableClass;
       var thead = createTableHead(TABLES_DATA[tableName][tableTabName]);
       var tbody = createTableBody(TABLES_DATA[tableName][tableTabName]);
       table.appendChild(thead);

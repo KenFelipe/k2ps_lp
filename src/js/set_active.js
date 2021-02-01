@@ -1,17 +1,17 @@
 // iniciar primeiros elementos(botao, tabs, tabelas) ativado
+// (atribui class ".active")
 
-function initActiveNodes() {
+function setActive() {
     // botao
-    const selectTablesContainerClass = CLASS_ID_CONFIG.class.selectTablesContainer
+    const selectTablesContainerClass = CLASSNAME_CONFIG.selectTablesContainer
 
     const buttonsContainer = document.getElementsByClassName(selectTablesContainerClass).item(0)
     buttonsContainer.childNodes.item(0).classList.add('active')
 
 
-
     // tab
     // primeiro tab section
-    const tabBarsContainerClass = CLASS_ID_CONFIG.class.tabBarsContainer
+    const tabBarsContainerClass = CLASSNAME_CONFIG.tabBarsContainer
 
     const tabBarsContainer = document.getElementsByClassName(tabBarsContainerClass).item(0)
 
@@ -24,16 +24,15 @@ function initActiveNodes() {
     }
     
 
-
     // tables
     // primeiro tables section
-    const tablesSectionClass = CLASS_ID_CONFIG.class.tablesSection
+    const tablesSectionClass = CLASSNAME_CONFIG.tablesSection
 
-    const tableSections = document.getElementsByClassName(tablesSectionClass)
-    tableSections.item(0).classList.add('active')
+    const tablesSections = document.getElementsByClassName(tablesSectionClass)
+    tablesSections.item(0).classList.add('active')
 
     // ativar todas primeiros tables do section
-    for(let i = 0; i < tableSections.length; i++) {
-        tableSections.item(i).childNodes.item(0).classList.add('active')
+    for(let i = 0; i < tablesSections.length; i++) {
+        tablesSections.item(i).childNodes.item(0).classList.add('active')
     }
 }

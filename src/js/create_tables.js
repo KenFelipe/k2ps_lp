@@ -1,25 +1,24 @@
 function createTables() {
     // config in "class_id_config.js"
-    const tablesContainerId = CLASS_ID_CONFIG.id.tablesContainer
+    const tablesContainerClass = CLASSNAME_CONFIG.tablesContainer
+    const tablesContainer = document.getElementById(tablesContainerClass)
 
-    const tablesSectionClass = CLASS_ID_CONFIG.class.tablesSection
-    const tablesSectionTableClass = CLASS_ID_CONFIG.class.tablesSectionTable
+    const tablesSectionClass = CLASSNAME_CONFIG.tablesSection
+    const tableClass = CLASSNAME_CONFIG.table
 
-    const tablesContainer = document.getElementById(tablesContainerId)
-
-    // Types: imovel, automovel, ...
+    // tableNames: imovel, automovel, ...
     const tableNames = Object.keys(TABLES_DATA)
 
     tableNames.forEach(tableName => {
         const tablesSection = document.createElement('div')
         tablesSection.className = tablesSectionClass
 
-        // Tabs: ate 240mil, partir de 250mil, ...
-        const tableTabNames = Object.keys(TABLES_DATA[tableName])
+        // tableTabNames: ate 240mil, a partir de 250mil, ...
+        const tableTabsNames = Object.keys(TABLES_DATA[tableName])
 
-        tableTabNames.forEach(tableTabName => {
+        tableTabsNames.forEach(tableTabName => {
             const table = document.createElement('table')
-            table.className = tablesSectionTableClass
+            table.className = tableClass
 
             const thead = createTableHead(TABLES_DATA[tableName][tableTabName])
             const tbody = createTableBody(TABLES_DATA[tableName][tableTabName])

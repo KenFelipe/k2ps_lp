@@ -4,8 +4,9 @@ function initTables() {
   createButtons();
   createTabs();
   createTables();
-  setActiveTables();
-  initActiveNodes();
+  initActiveButtons();
+  initActiveTabs();
+  setActive();
 } // debug
 // console.log(TABLES_DATA);
 

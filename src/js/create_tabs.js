@@ -2,10 +2,10 @@
 // configurado em 'config/data.js'
 
 function createTabs() {
-    const tabBarsContainerClass = CLASS_ID_CONFIG.class.tabBarsContainer
+    const tabBarsContainerClass = CLASSNAME_CONFIG.tabBarsContainer
 
-    const tabBarClass = CLASS_ID_CONFIG.class.tabBar
-    const tabClass = CLASS_ID_CONFIG.class.tab
+    const tabBarClass = CLASSNAME_CONFIG.tabBar
+    const tabClass = CLASSNAME_CONFIG.tab
 
     const tabBarsContainer = document.getElementsByClassName(tabBarsContainerClass).item(0)
 

@@ -2,8 +2,8 @@
 // configurado em 'config/data.js'
 
 function createButtons() {
-    const selectTablesContainerClass = CLASS_ID_CONFIG.class.selectTablesContainer
-    const selectTablesButtonClass = CLASS_ID_CONFIG.class.selectTablesButton
+    const selectTablesContainerClass = CLASSNAME_CONFIG.selectTablesContainer
+    const selectTablesButtonClass = CLASSNAME_CONFIG.selectTablesButton
 
     const buttonsContainer = document.getElementsByClassName(selectTablesContainerClass).item(0)
 

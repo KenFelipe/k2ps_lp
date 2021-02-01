@@ -1,14 +1,15 @@
 "use strict";
 
 // iniciar primeiros elementos(botao, tabs, tabelas) ativado
-function initActiveNodes() {
+// (atribui class ".active")
+function setActive() {
   // botao
-  var selectTablesContainerClass = CLASS_ID_CONFIG["class"].selectTablesContainer;
+  var selectTablesContainerClass = CLASSNAME_CONFIG.selectTablesContainer;
   var buttonsContainer = document.getElementsByClassName(selectTablesContainerClass).item(0);
   buttonsContainer.childNodes.item(0).classList.add('active'); // tab
   // primeiro tab section
 
-  var tabBarsContainerClass = CLASS_ID_CONFIG["class"].tabBarsContainer;
+  var tabBarsContainerClass = CLASSNAME_CONFIG.tabBarsContainer;
   var tabBarsContainer = document.getElementsByClassName(tabBarsContainerClass).item(0);
   var tabBars = tabBarsContainer.childNodes;
   tabBars.item(0).classList.add('active'); // ativar todos primeiros tabs de cada section
@@ -19,11 +20,11 @@ function initActiveNodes() {
   // primeiro tables section
 
 
-  var tablesSectionClass = CLASS_ID_CONFIG["class"].tablesSection;
-  var tableSections = document.getElementsByClassName(tablesSectionClass);
-  tableSections.item(0).classList.add('active'); // ativar todas primeiros tables do section
+  var tablesSectionClass = CLASSNAME_CONFIG.tablesSection;
+  var tablesSections = document.getElementsByClassName(tablesSectionClass);
+  tablesSections.item(0).classList.add('active'); // ativar todas primeiros tables do section
 
-  for (var _i = 0; _i < tableSections.length; _i++) {
-    tableSections.item(_i).childNodes.item(0).classList.add('active');
+  for (var _i = 0; _i < tablesSections.length; _i++) {
+    tablesSections.item(_i).childNodes.item(0).classList.add('active');
   }
 }
