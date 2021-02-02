@@ -1,8 +1,15 @@
+$margin_button: 4px;
+
+@function buttonWidth($col_btn_n) {
+   @return calc(100% / #{$col_btn_n} - #{$margin_button} * 2);
+}
+
 .tables-select {
     &__button {
-        width: 25%;
+        min-width: 224px;
+        margin: 4px $margin_button;
+
         height: 40px;
-        margin: 0 4px;
         cursor: pointer;
 
         color: white;
@@ -20,6 +27,54 @@
             color: #00adef;
             border: 3px solid #00adef;
             background-color: #FFFFFF;
+        }
+
+        // quando tem apenas 4 buttons
+        // aplica esse responsividade pra
+        // nao ficar um btn so em nova linha
+        &.buttons-2-column {
+            width: buttonWidth(4);
+            min-width: 0px;
+
+            @media(max-width: 774px) {
+                width: buttonWidth(2);
+            }
+
+            @media(max-width: 490px) {
+                width: 100%;
+            }
+        }
+
+        // quando tem 5 btn certo
+        &.buttons-3-column {
+            width: buttonWidth(3);
+            min-width: 0px;
+
+            @media(max-width: 774px) {
+                width: buttonWidth(2);
+            }
+
+            @media(max-width: 490px) {
+                width: 100%;
+            }
+        }
+
+        // padrao
+        &.buttons-4-column {
+            width: buttonWidth(4);
+            min-width: 0px;
+
+            @media(max-width: 1006px) {
+                width: buttonWidth(3);
+            }
+
+            @media(max-width: 754px) {
+                width: buttonWidth(2);
+            }
+
+            @media(max-width: 490px) {
+                width: 100%;
+            }
         }
     }
 }

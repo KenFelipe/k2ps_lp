@@ -1,7 +1,7 @@
 .tables-select__button {
-  width: 25%;
+  min-width: 224px;
+  margin: 4px 4px;
   height: 40px;
-  margin: 0 4px;
   cursor: pointer;
   color: white;
   font-size: 13px;
@@ -16,6 +16,53 @@
   color: #00adef;
   border: 3px solid #00adef;
   background-color: #FFFFFF;
+}
+.tables-select__button.buttons-2-column {
+  width: calc(100% / 4 - 4px * 2);
+  min-width: 0px;
+}
+@media (max-width: 774px) {
+  .tables-select__button.buttons-2-column {
+    width: calc(100% / 2 - 4px * 2);
+  }
+}
+@media (max-width: 490px) {
+  .tables-select__button.buttons-2-column {
+    width: 100%;
+  }
+}
+.tables-select__button.buttons-3-column {
+  width: calc(100% / 3 - 4px * 2);
+  min-width: 0px;
+}
+@media (max-width: 774px) {
+  .tables-select__button.buttons-3-column {
+    width: calc(100% / 2 - 4px * 2);
+  }
+}
+@media (max-width: 490px) {
+  .tables-select__button.buttons-3-column {
+    width: 100%;
+  }
+}
+.tables-select__button.buttons-4-column {
+  width: calc(100% / 4 - 4px * 2);
+  min-width: 0px;
+}
+@media (max-width: 1006px) {
+  .tables-select__button.buttons-4-column {
+    width: calc(100% / 3 - 4px * 2);
+  }
+}
+@media (max-width: 754px) {
+  .tables-select__button.buttons-4-column {
+    width: calc(100% / 2 - 4px * 2);
+  }
+}
+@media (max-width: 490px) {
+  .tables-select__button.buttons-4-column {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=tables_select.css.map */
