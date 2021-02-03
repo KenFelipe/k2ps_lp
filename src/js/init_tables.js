@@ -7,8 +7,8 @@ function initTables() {
     initActiveTabs()
 
     setActive()
+
+    setResponsiveTabs()
 }
 
-// debug
-// console.log(TABLES_DATA);
 initTables()
