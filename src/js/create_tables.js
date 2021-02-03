@@ -1,7 +1,7 @@
 function createTables() {
     // config in "class_id_config.js"
     const tablesContainerClass = CLASSNAME_CONFIG.tablesContainer
-    const tablesContainer = document.getElementById(tablesContainerClass)
+    const tablesContainer = document.getElementsByClassName(tablesContainerClass).item(0)
 
     const tablesSectionClass = CLASSNAME_CONFIG.tablesSection
     const tableClass = CLASSNAME_CONFIG.table

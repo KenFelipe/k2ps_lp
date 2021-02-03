@@ -1,0 +1,15 @@
+$bp_tablet: 774px;
+$bp_smartphone: 490px;
+
+@mixin tablet_response {
+    @media(max-width: $bp_tablet) {
+        @content;
+    }
+}
+
+@mixin smartphone_response {
+    @media(max-width: $bp_smartphone) {
+        @content;
+    }
+}
+

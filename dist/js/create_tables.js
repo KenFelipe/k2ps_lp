@@ -3,7 +3,7 @@
 function createTables() {
   // config in "class_id_config.js"
   var tablesContainerClass = CLASSNAME_CONFIG.tablesContainer;
-  var tablesContainer = document.getElementById(tablesContainerClass);
+  var tablesContainer = document.getElementsByClassName(tablesContainerClass).item(0);
   var tablesSectionClass = CLASSNAME_CONFIG.tablesSection;
   var tableClass = CLASSNAME_CONFIG.table; // tableNames: imovel, automovel, ...
 

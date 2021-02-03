@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- normalize -->
   <link rel="stylesheet" href="./css/_normalize.css">
 
+  <!-- my -->
   <link rel="stylesheet" href="./css/_style.css">
 
   <link rel="stylesheet" href="./css/main.css">
 
+  <link rel="stylesheet" href="./css/tables_select.css">
+  <link rel="stylesheet" href="./css/tabBar.css">
   <link rel="stylesheet" href="./css/table.css">
-  <link rel="stylesheet" href="./css/select_table.css">
 
   <!-- DEBUG!!!!!! -->
   <link rel="stylesheet" href="./css/debug.css">
@@ -119,30 +122,37 @@
       <div class="tables-select container"></div>
 
       <!-- criado pelo javascript -->
-      <div id="tabs" class="container">
+      <div class="tabs container">
         <div class="tabbar-container"></div>
+        <div class="tabs__bottom-bar"></div>
       </div>
 
       <!-- criado pelo javascript -->
-      <div id="tables" class="container"></div>
+      <div class="tables container"></div>
     </section>
 
 
   </div>
   
-  <!-- script js precisa ser nessa sequencia -->
+  <!-- script js precisa estar nessa sequencia -->
   <script src="./js/tables_data.js"></script>
   <script src="./js/classname_config.js"></script>
 
   <script src="./js/create_buttons.js""></script>
   <script src="./js/create_tabs.js""></script>
   <script src="./js/create_tables.js""></script>
-
+  
   <script src="./js/init_active_buttons.js"></script>
   <script src="./js/init_active_tabs.js"></script>
-
+  
   <script src="./js/set_active.js"></script>
 
+  <script src="./js/set_responsive_tabs.js"></script>
+  <script src="./js/set_responsive_buttons.js"></script>
+  
   <script src="./js/init_tables.js"></script>
+
+  <!-- debug -->
+  <script src="./js/config.js"></script>
 </body>
 </html>
