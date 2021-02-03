@@ -8,6 +8,7 @@ function initTables() {
   initActiveTabs();
   setActive();
   setResponsiveTabs();
+  setResponsiveButtons();
 }
 
 initTables();

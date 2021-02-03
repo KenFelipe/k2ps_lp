@@ -2,6 +2,7 @@ function setResponsiveTabs() {
     const tabBars = document.getElementsByClassName(CLASSNAME_CONFIG.tabBar)
     const buttons = document.getElementsByClassName(CLASSNAME_CONFIG.tablesSelectButton)
 
+    //
     const getTabClassName = tabs => {
         if(tabs === 5) {
             return 'tabs-5'

@@ -98,8 +98,17 @@ var TABLES_DATA = {
     // "tab9": { head: [1, 3, 4], body: [[11, 22, 33]] },
     // "tab10": { head: [1, 3, 4], body: [[11, 22, 33]] },
 
-  } // "TEST2": { "TAB1": { head: ["1000mil", "thead"], body: [ ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ] }, "TAB2": { head: ["BEN OBJETO", "PLANO", "CREDITO", "PARCELA"], body: [ ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"], ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"] ] } },
-  // "TEST3": { "TAB1": { head: ["1000mil", "thead"], body: [ ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ] }, "TAB2": { head: ["BEN OBJETO", "PLANO", "CREDITO", "PARCELA"], body: [ ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"], ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"] ] } },
+  },
+  "TEST2": {
+    "TAB1": {
+      head: ["1000mil", "thead"],
+      body: [["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"]]
+    },
+    "TAB2": {
+      head: ["BEN OBJETO", "PLANO", "CREDITO", "PARCELA"],
+      body: [["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"], ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"]]
+    }
+  } // "TEST3": { "TAB1": { head: ["1000mil", "thead"], body: [ ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ] }, "TAB2": { head: ["BEN OBJETO", "PLANO", "CREDITO", "PARCELA"], body: [ ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"], ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"] ] } },
   // "TEST4": { "TAB1": { head: ["1000mil", "thead"], body: [ ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ] }, "TAB2": { head: ["BEN OBJETO", "PLANO", "CREDITO", "PARCELA"], body: [ ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"], ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"] ] } },
   // "TEST5": { "TAB1": { head: ["1000mil", "thead"], body: [ ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ] }, "TAB2": { head: ["BEN OBJETO", "PLANO", "CREDITO", "PARCELA"], body: [ ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"], ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"] ] } },
   // "TEST6": { "TAB1": { head: ["1000mil", "thead"], body: [ ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ] }, "TAB2": { head: ["BEN OBJETO", "PLANO", "CREDITO", "PARCELA"], body: [ ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"], ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"] ] } },

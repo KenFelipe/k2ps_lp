@@ -1,13 +1,27 @@
+@use 'media';
+
 $margin_button: 4px;
 
-@function buttonWidth($col_btn_n) {
-   @return calc(100% / #{$col_btn_n} - #{$margin_button} * 2);
+@function button_width($button_limits) {
+   @return calc(100% / #{$button_limits} - #{$margin_button} * 2);
 }
 
+@mixin button_response {
+    @include media.tablet_response {
+        width: button_width(2);
+    }
+
+    @include media.smartphone_response {
+        width: 100%;
+    }
+}
+
+////////////////////////////////////////////////////
 .tables-select {
     &__button {
-        min-width: 224px;
-        margin: 4px $margin_button;
+        margin: 0px $margin_button;
+        margin-top: 4px;
+        // min-width: 224px;
 
         height: 40px;
         cursor: pointer;
@@ -26,67 +40,19 @@ $margin_button: 4px;
         &:hover, &.active {
             color: #00adef;
             border: 3px solid #00adef;
-            background-color: #FFFFFF;
+            background-color: #fff;
         }
 
-        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
-        // AGRUPAR MEDIA (EXTENDS, MIXIN, FUNCTION, ALGULS DESSE
-        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
-        // quando tem apenas 4 buttons
-        // aplica esse responsividade pra
-        // nao ficar um btn so em nova linha
-        &.column-buttons-2 {
-            width: buttonWidth(4);
-            min-width: 0px;
+        // responsive
+        // quando q tem menos q 5tabs
+        width: button_width(4);
+        @include button_response;
 
-            @media(max-width: 774px) {
-                width: buttonWidth(2);
-            }
-
-            @media(max-width: 490px) {
-                width: 100%;
-            }
+        // quando tem 5buttons certo
+        // pra nao ficar um button separado na nova linha
+        &.buttons-5 {
+            width: button_width(3);
+            @include button_response;
         }
-
-        // quando tem 5 btn certo
-        &.column-buttons-3 {
-            width: buttonWidth(3);
-            min-width: 0px;
-
-            @media(max-width: 774px) {
-                width: buttonWidth(2);
-            }
-
-            @media(max-width: 490px) {
-                width: 100%;
-            }
-        }
-
-        // padrao
-        &.column-buttons-4 {
-            width: buttonWidth(4);
-            min-width: 0px;
-
-            @media(max-width: 1006px) {
-                width: buttonWidth(3);
-            }
-
-            @media(max-width: 774px) {
-                width: buttonWidth(2);
-            }
-
-            @media(max-width: 490px) {
-                width: 100%;
-            }
-        }
-
-        @media(max-width: 774px) {
-            width: buttonWidth(2);
-        }
-
-        @media(max-width: 490px) {
-            width: 100%;
-        }
-
     }
 }

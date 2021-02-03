@@ -1,4 +1,5 @@
 remainder:
+- table limit size to scroll(x, y)
 - 2column table
 - tab before <span>
 - rangeBar

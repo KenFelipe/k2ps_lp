@@ -2,8 +2,8 @@
 
 $margin_tab: 4px;
 
-@function tab_width($button_limits) {
-   @return calc(100% / #{$button_limits} - #{$margin_tab} * 2);
+@function tab_width($tab_limits) {
+   @return calc(100% / #{$tab_limits} - #{$margin_tab} * 2);
 }
 
 @mixin tab_response {
@@ -15,7 +15,6 @@ $margin_tab: 4px;
         width: 100%;
     }
 }
-
 
 ////////////////////////////////////////////////////
 .tabbar {

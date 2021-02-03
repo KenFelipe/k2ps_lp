@@ -1,6 +1,6 @@
 .tables-select__button {
-  min-width: 224px;
-  margin: 4px 4px;
+  margin: 0px 4px;
+  margin-top: 4px;
   height: 40px;
   cursor: pointer;
   color: white;
@@ -11,66 +11,33 @@
   border: 3px solid #00adef;
   background-color: #00adef;
   transition: all 0.4s ease;
+  width: calc(100% / 4 - 4px * 2);
 }
 .tables-select__button:hover, .tables-select__button.active {
   color: #00adef;
   border: 3px solid #00adef;
-  background-color: #FFFFFF;
-}
-.tables-select__button.column-buttons-2 {
-  width: calc(100% / 4 - 4px * 2);
-  min-width: 0px;
+  background-color: #fff;
 }
 @media (max-width: 774px) {
-  .tables-select__button.column-buttons-2 {
+  .tables-select__button {
     width: calc(100% / 2 - 4px * 2);
   }
 }
 @media (max-width: 490px) {
-  .tables-select__button.column-buttons-2 {
+  .tables-select__button {
     width: 100%;
   }
 }
-.tables-select__button.column-buttons-3 {
+.tables-select__button.buttons-5 {
   width: calc(100% / 3 - 4px * 2);
-  min-width: 0px;
 }
 @media (max-width: 774px) {
-  .tables-select__button.column-buttons-3 {
+  .tables-select__button.buttons-5 {
     width: calc(100% / 2 - 4px * 2);
   }
 }
 @media (max-width: 490px) {
-  .tables-select__button.column-buttons-3 {
-    width: 100%;
-  }
-}
-.tables-select__button.column-buttons-4 {
-  width: calc(100% / 4 - 4px * 2);
-  min-width: 0px;
-}
-@media (max-width: 1006px) {
-  .tables-select__button.column-buttons-4 {
-    width: calc(100% / 3 - 4px * 2);
-  }
-}
-@media (max-width: 774px) {
-  .tables-select__button.column-buttons-4 {
-    width: calc(100% / 2 - 4px * 2);
-  }
-}
-@media (max-width: 490px) {
-  .tables-select__button.column-buttons-4 {
-    width: 100%;
-  }
-}
-@media (max-width: 774px) {
-  .tables-select__button {
-    width: calc(100% / 2 - 4px * 2);
-  }
-}
-@media (max-width: 490px) {
-  .tables-select__button {
+  .tables-select__button.buttons-5 {
     width: 100%;
   }
 }
