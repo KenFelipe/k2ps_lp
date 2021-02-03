@@ -29,10 +29,13 @@ $margin_button: 4px;
             background-color: #FFFFFF;
         }
 
+        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
+        // AGRUPAR MEDIA (EXTENDS, MIXIN, FUNCTION, ALGULS DESSE
+        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
         // quando tem apenas 4 buttons
         // aplica esse responsividade pra
         // nao ficar um btn so em nova linha
-        &.buttons-2-column {
+        &.column-buttons-2 {
             width: buttonWidth(4);
             min-width: 0px;
 
@@ -46,7 +49,7 @@ $margin_button: 4px;
         }
 
         // quando tem 5 btn certo
-        &.buttons-3-column {
+        &.column-buttons-3 {
             width: buttonWidth(3);
             min-width: 0px;
 
@@ -60,7 +63,7 @@ $margin_button: 4px;
         }
 
         // padrao
-        &.buttons-4-column {
+        &.column-buttons-4 {
             width: buttonWidth(4);
             min-width: 0px;
 
@@ -68,7 +71,7 @@ $margin_button: 4px;
                 width: buttonWidth(3);
             }
 
-            @media(max-width: 754px) {
+            @media(max-width: 774px) {
                 width: buttonWidth(2);
             }
 
@@ -76,5 +79,14 @@ $margin_button: 4px;
                 width: 100%;
             }
         }
+
+        @media(max-width: 774px) {
+            width: buttonWidth(2);
+        }
+
+        @media(max-width: 490px) {
+            width: 100%;
+        }
+
     }
 }

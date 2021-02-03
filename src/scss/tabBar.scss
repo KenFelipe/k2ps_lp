@@ -1,28 +1,26 @@
-.tabs {
-    position: relative;
+@use 'media';
 
-    // tabBar bottom line
-    &::after {
-        content: '';
-        height: 1px;
-        border-bottom: 1px solid #ddd;
+$margin_tab: 4px;
 
-        position: absolute;
-        bottom: 0px;
+@function tab_width($button_limits) {
+   @return calc(100% / #{$button_limits} - #{$margin_tab} * 2);
+}
 
-        // width: 100%;
-        // left: 0px;
-        width: calc(100% - 40px);
-        right: calc(40px / 2);
+@mixin tab_response {
+    @include media.tablet_response {
+        width: tab_width(2);
+    }
+
+    @include media.smartphone_response {
+        width: 100%;
     }
 }
 
-.tabbar-container {
-    margin: 20px 0;
-    position: relative;
-}
 
+////////////////////////////////////////////////////
 .tabbar {
+    // exibir apenas quando for atribuido 
+    // clase ".active"
     display: none;
 
     &.active {
@@ -30,9 +28,11 @@
     }
 
     &__tab {
-        width: 25%;
+        margin: 0px $margin_tab;
+        margin-top: 4px;
+        // min-width: 224px;
+
         height: 40px;
-        margin: 0 4px;
         cursor: pointer;
 
         color: #00adef;
@@ -41,27 +41,84 @@
         font-weight: bold;
         line-height: 1.2;
 
-        position: relative;
-        z-index: 10;
-
-        border: 1px solid #dddddd;
-        background-color: #eeeeee;
+        border: 1px solid #ddd;
+        background-color: #eee;
 
         transition: all 0.4s ease;
 
         &:hover, &.active {
             color: #004e70;
-            border: 1px solid #dddddd;
-            border-bottom: 1px solid #FFFFFF;
-            background-color: #FFFFFF;
+            background-color: #fff;
+            // apagar line bottom
+            // pra visual aparecer como tab
+            border-bottom: 1px solid #fff;
+
             position: relative;
             z-index: 10;
+
+            @include media.tablet_response {
+                border-bottom: 1px solid #ddd;
+            }
         }
 
+        // responsive
+        // quando q tem menos q 5tabs
+        width: tab_width(4);
+        @include tab_response;
+
+        // quando tem 5tabs certo
+        // pra nao ficar um tab separado na nova linha
+        &.tabs-5 {
+            width: tab_width(3);
+            @include tab_response;
+        }
+
+        // acima de 6tabs
+        &.tabs-5, &.tabs-more-5 {
+            // como nao vai ser exibido border-bottom 
+            // do tabBar, exibir border-bottom do tab
+            &:hover, &.active {
+                border-bottom: 1px solid #ddd;  // !important 
+            }
+        }
+
+        // label do tab
         span {
             display: block;
             font-size: 13px;
             font-weight: bold;
         }
+    }
+}
+
+
+////////////////////////////////////////////////////
+.tabs {
+    position: relative;
+
+    // tabBar bottom line
+    &__bottom-bar {
+        height: 1px;
+        border-bottom: 1px solid #ddd;
+
+        position: absolute;
+        bottom: 0px;
+
+        width: calc(100% - 40px);
+        right: calc(40px / 2);
+
+        // responsive
+        @include media.tablet_response {
+            display: none;
+        }
+
+        // quando tem mais que 5 tabs
+        &.tabs-5, &.tabs-more-5 {
+            display: none;
+        }
+    }
+
+    .tabbar-container {
+        margin: 20px 0;
     }
 }
