@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="./css/tabBar.css">
   <link rel="stylesheet" href="./css/table.css">
 
+  <link rel="stylesheet" href="./css/rangeBar.css">
+
   <!-- DEBUG!!!!!! -->
   <link rel="stylesheet" href="./css/debug.css">
 
@@ -118,6 +120,8 @@
         <strong>Comece escolhendo o tipo de consórcio abaixo</strong>
       </div>
 
+
+      <!-- Tables -->
       <!-- criado pelo javascript -->
       <div class="tables-select container"></div>
 
@@ -129,10 +133,27 @@
 
       <!-- criado pelo javascript -->
       <div class="tables container"></div>
+
+
+      <!-- RangeBar -->
+      <div class="range-bar container">
+        
+      </div>
+
+      <!-- RANGE TEST -->
+      <div class="container test">
+        <span id="rs-bullet" class="rs-label">0</span>
+        <div class="rb">
+          <input id="rs-range-line" class="rs-range"
+            type="range" value="0" min="0" max="200">
+            <div class="progress"></div>
+        </div>
+      </div>
     </section>
 
 
   </div>
+  <script src="./js/rangeBar.js"></script>
   
   <!-- script js precisa estar nessa sequencia -->
   <script src="./js/tables_data.js"></script>

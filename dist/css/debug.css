@@ -6,8 +6,8 @@ body {
   display: none;
 }
 
-.values {
-  margin-top: 40px;
+.tables-select, .tabs, .tables {
+  display: none;
 }
 
 #values__header {

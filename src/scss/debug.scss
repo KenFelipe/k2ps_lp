@@ -4,8 +4,9 @@ body{ padding-bottom: 600px }
     display: none;
 }
 
-.values {
-    margin-top: 40px;
+.tables-select, .tabs, .tables {
+    display: none;
+    // margin-top: 40px;
 }
 
 #values__header {
