@@ -17,10 +17,6 @@
   border-radius: 1px;
 }
 
-span {
-  display: block;
-}
-
 .rs-range {
   -webkit-appearance: none;
   width: 600px;
@@ -56,6 +52,138 @@ span {
   margin-bottom: 12px;
   margin-left: calc(-49px + 11px);
   position: relative;
+}
+
+.range-bar-container {
+  margin-top: 100px;
+}
+
+.valor-display input, .toggle-range button {
+  border: 1px solid #33beff;
+  background-color: transparent;
+  padding: 10px;
+}
+
+.valor-display input, .valor-display span, .toggle-range button {
+  line-height: 21px;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+  font: 600 90% "Open Sans", Sans-serif, arial, tahoma, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.toggle-range {
+  text-align: center;
+}
+.toggle-range button {
+  display: inline-block;
+  width: 150px;
+  cursor: pointer;
+  font-size: 11px;
+}
+.toggle-range button:focus, .toggle-range button.active {
+  outline: none;
+  background-color: #33beff;
+}
+.toggle-range button#parcela {
+  border-radius: 8px 0 0 8px;
+}
+.toggle-range button#credito {
+  border-radius: 0 8px 8px 0;
+}
+
+.valor-display {
+  margin-top: 18px;
+}
+.valor-display span {
+  font-size: 11px;
+}
+.valor-display input {
+  border-radius: 4px;
+  text-align: center;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.range-limit {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 22px;
+  text-align: left;
+}
+.range-limit span {
+  display: inline-block;
+  height: 100%;
+  position: relative;
+}
+.range-limit span#range-start {
+  float: none;
+}
+.range-limit span#range-end {
+  float: right;
+}
+
+.range {
+  margin-top: 16px;
+  text-align: center;
+}
+.range #range-bar {
+  -webkit-appearance: none;
+  width: 80%;
+  margin: 0 10px;
+}
+.range #range-bar::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 1px;
+}
+.range #range-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 40px;
+  height: 40px;
+  background: #000;
+  margin-top: -20px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 20;
+}
+
+.range-bar-container-test::after, .range-bar-container-test::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 10;
+}
+
+.range-bar-container-test {
+  position: relative;
+}
+.range-bar-container-test::before {
+  margin-left: 10%;
+  bottom: 6px;
+}
+.range-bar-container-test::after {
+  margin-right: 10%;
+  bottom: 6px;
+  right: 0px;
+}
+
+#range-bar-progress {
+  content: "";
+  margin-left: 10%;
+  width: 0%;
+  height: 2px;
+  background-color: blue;
+  display: block;
+  position: relative;
+  bottom: 6px;
+  z-index: 50;
+  border-radius: 1px;
 }
 
 /*# sourceMappingURL=rangeBar.css.map */

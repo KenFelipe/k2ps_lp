@@ -136,7 +136,26 @@
 
 
       <!-- RangeBar -->
-      <div class="range-bar container">
+      <div class="range-bar-container container">
+        <div class="toggle-range">
+          <button id="parcela">PARCELA</button><button id="credito">CREDITO</button>
+          <div>
+            <div class="valor-display">
+              <span id="display-description">CREDITO PRETENDIDO</span>
+              <input type="text" readonly value="R$.....">
+            </div>
+            <div class="range">
+              <div class="range-bar-container-test test2">
+                <input id="range-bar" type="range" min="500" max="1000" step="1">
+                <div id="range-bar-progress"></div>
+              </div>
+              <div class="range-limit">
+                <span id="range-start">R$500</span>
+                <span id="range-end">R$1000</span>
+              </div>
+            </div>
+          </div>
+        </div>
         
       </div>
 
@@ -146,7 +165,7 @@
         <div class="rb">
           <input id="rs-range-line" class="rs-range"
             type="range" value="0" min="0" max="200">
-            <div class="progress"></div>
+          <div class="progress"></div>
         </div>
       </div>
     </section>
