@@ -11,9 +11,34 @@ rangeSlider.addEventListener('input', () => {
 })
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const range_data = {
+    "automovel": {
+        range: {
+            min: 10,
+            max: 2525250,
+            step: 1,
+        }
+    }
+}
+
+
+// button when onclick run update rangeBarssss info function getting index of click or actived
+
 const parcela = document.getElementById('parcela')
 
 parcela.addEventListener('click', () => {
+    const contain = parcela.classList.contains('active')
+    // console.log(contain)
+    const selectButtons = document.getElementsByClassName('tables-select__button')
+    // console.log(selectButtons)
+    for(let i = 0; i < selectButtons.length; i++) {
+        if(!selectButtons.item(i).classList.contains('active')) {
+            continue
+        }
+        const target = range_data[Object.keys(TABLES_DATA)[i]]
+        // console.log(target)
+        console.log(target.range.min)
+    }
     credito.classList.remove('active')
     parcela.classList.add('active')
 })

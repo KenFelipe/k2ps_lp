@@ -105,7 +105,7 @@
         cursor: pointer;
         font-size: 11px;
 
-        &:focus, &.active {
+        &:hover, &.active {
             outline: none;
             background-color: #33beff;
         }

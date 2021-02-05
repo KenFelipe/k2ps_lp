@@ -81,7 +81,7 @@
   cursor: pointer;
   font-size: 11px;
 }
-.toggle-range button:focus, .toggle-range button.active {
+.toggle-range button:hover, .toggle-range button.active {
   outline: none;
   background-color: #33beff;
 }
