@@ -58,13 +58,13 @@
   margin-top: 100px;
 }
 
-.valor-display input, .toggle-range button {
+.valor-display #prefix, .valor-display input, .toggle-range button {
   border: 1px solid #33beff;
   background-color: transparent;
   padding: 10px;
 }
 
-.valor-display input, .valor-display span, .toggle-range button {
+.valor-display #prefix, .valor-display input, .valor-display span, .toggle-range button {
   line-height: 21px;
   letter-spacing: 1.5px;
   font-size: 14px;
@@ -99,9 +99,16 @@
   font-size: 11px;
 }
 .valor-display input {
-  border-radius: 4px;
+  border-radius: 0 4px 4px 0;
   text-align: center;
-  font-size: 12px;
+  font-size: 11px;
+}
+.valor-display #prefix {
+  display: inline-block;
+  font-size: 11px;
+  border-radius: 4px 0 0 4px;
+  border-right: 0;
+  padding: 10px 12px;
   margin-left: 8px;
 }
 
@@ -182,7 +189,6 @@
   display: block;
   position: relative;
   bottom: 6px;
-  z-index: 50;
   border-radius: 1px;
 }
 

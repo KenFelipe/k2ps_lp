@@ -133,9 +133,20 @@
     input {
         @extend %button_temp;
         @extend %font_temp;
-        border-radius: 4px;
+        border-radius: 0 4px 4px 0;
         text-align: center;
-        font-size: 12px;
+        font-size: 11px;
+        // margin-left: 8px;
+    }
+
+    #prefix {
+        display: inline-block;
+        @extend %button_temp;
+        @extend %font_temp;
+        font-size: 11px;
+        border-radius: 4px 0 0 4px;
+        border-right: 0;
+        padding: 10px 12px;
         margin-left: 8px;
     }
 }
@@ -232,7 +243,7 @@ $thumb_size: 40px;
     display: block;
     position: relative;
     bottom: 6px;
-    z-index: 50;
+    // z-index: 50;
     border-radius: 1px;
 }
 

@@ -21,11 +21,46 @@ credito.addEventListener('click', function () {
 });
 var rangeBar = document.getElementById('range-bar');
 console.log(rangeBar);
+rangeBar.value = rangeBar.min;
+rangeBar.min = 1000;
+rangeBar.max = 1250;
+var display = document.getElementById('display-value');
+display.value = rangeBar.value;
 rangeBar.addEventListener('input', function () {
-  // const width = '20px'
   var progress = (rangeBar.value - rangeBar.min) / (rangeBar.max - rangeBar.min) * (rangeBar.offsetWidth - 40) + 20;
-  console.log(progress, rangeBar.offsetWidth); // const width = '80%'
+  var width = "".concat(progress, "px"); // console.log(progress, rangeBar.offsetWidth, rangeBar.value)
 
-  var width = "".concat(progress, "px");
-  document.getElementById('range-bar-progress').style.width = width;
-});
+  document.getElementById('range-bar-progress').style.width = width; // to display
+
+  var display = document.getElementById('display-value'); // console.log(typeof rangeBar.value)
+
+  var transed = rangeBar.value.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.');
+  console.log(transed);
+  display.value = transed;
+}); // Kansei go ni Yaru
+// function test() {
+//     let number = '1234567d'
+//     const lastI = number.length - 1
+//     console.log(lastI, number[lastI])
+//     if(!number[lastI].match(/\d/)) {
+//         // console.log('not number')
+//         number = number.slice(0, lastI)
+//         console.log(number)
+//     }
+//     const input = document.querySelector('[type=number]')
+//     input.addEventListener('focus', () => {
+//         console.log('focus')
+//     })
+//     input.addEventListener('click', () => {
+//         console.log('click')
+//     })
+//     input.addEventListener('keyup', () => {
+//         console.log('keyup')
+//     })
+//     // input.addEventListener('input', () => {
+//     //     input.value = 123
+//     //     console.log(input)
+//     // })
+//     console.log(input)
+// }
+// test()
