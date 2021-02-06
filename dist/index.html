@@ -146,12 +146,12 @@
             </div>
             <div class="range">
               <div class="range-bar-container-test test2">
-                <input id="range-bar" type="range" min="500" max="1000000" step="1">
+                <input id="range-bar" type="range" min="500" max="1000000" step="1" data-selected="credito">
                 <div id="range-bar-progress"></div>
               </div>
               <div class="range-limit">
-                <span id="range-start">R$500</span>
-                <span id="range-end">R$1000</span>
+                <span id="range-min">R$500</span>
+                <span id="range-max">R$1000</span>
               </div>
             </div>
           </div>
@@ -172,8 +172,6 @@
 
 
   </div>
-  <script src="./js/rangeBar.js"></script>
-  
   <!-- script js precisa estar nessa sequencia -->
   <script src="./js/tables_data.js"></script>
   <script src="./js/classname.js"></script>
@@ -195,8 +193,18 @@
   <script src="./js/init_tables.js"></script>
   
   <!-- DEBUG -->
+  <script src="./js/rangeBar.js"></script>
   <script src="./js/range_table.js"></script>
   <!-- debug -->
   <script src="./js/config.js"></script>
+
+  <!-- DEBUG -->
+  <script>
+    const firstButtonDataType = TABLES_DATA[Object.keys(TABLES_DATA)[0]].type
+    if(firstButtonDataType === 'bar') {
+      document.getElementsByClassName('select__button').item(0).click()
+    }
+  </script>
+
 </body>
 </html>

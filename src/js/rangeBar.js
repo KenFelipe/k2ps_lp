@@ -1,75 +1,101 @@
-const rangeSlider = document.getElementById('rs-range-line')
-const rangeBullet = document.getElementById('rs-bullet')
+// button when onclick run update rangeBarssss info function getting index of click or actived
+function updateRangeBar(data) {
+    const rangeBar = document.getElementById('range-bar')
 
-rangeSlider.addEventListener('input', () => {
-    rangeBullet.innerHTML = rangeSlider.value
+    const selected = rangeBar.dataset.selected
+    rangeBar.min = data[selected].min
+    rangeBar.max = data[selected].max
+    rangeBar.step = data[selected].step
 
-    const bulletPosition = `${rangeSlider.value / rangeSlider.max * 578}px`
-    rangeBullet.style.left = bulletPosition
+    rangeBar.value = data[selected].min
 
-    document.getElementsByClassName('progress').item(0).style.width = bulletPosition
-})
+    const display = document.getElementById('display-value')
+    display.value = rangeBar.value
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////
-const range_data = {
-    "automovel": {
-        range: {
-            min: 10,
-            max: 2525250,
-            step: 1,
+    const rangeLimitDisplayMin = document.getElementById('range-min')
+    rangeLimitDisplayMin.innerHTML = `R$${rangeBar.min}`
+
+    const rangeLimitDisplayMax = document.getElementById('range-max')
+    rangeLimitDisplayMax.innerHTML = `R$${rangeBar.max}`
+
+    const progressBar = document.getElementById('range-bar-progress')
+    progressBar.style.width = 0
+}
+
+function getActiveIndex() {
+    // const showBarButtons = document.getElementsByClassName(CLASSNAME.showBarButton)
+    const buttons = document.getElementsByClassName(CLASSNAME.button)
+
+    for(let i = 0; i < buttons.length; i++) {
+        if(!buttons.item(i).classList.contains('active')) {
+            continue
         }
+        return i
     }
 }
 
 
-// button when onclick run update rangeBarssss info function getting index of click or actived
-
-const parcela = document.getElementById('parcela')
-
-parcela.addEventListener('click', () => {
-    const contain = parcela.classList.contains('active')
-    // console.log(contain)
-    const selectButtons = document.getElementsByClassName('tables-select__button')
-    // console.log(selectButtons)
-    for(let i = 0; i < selectButtons.length; i++) {
-        if(!selectButtons.item(i).classList.contains('active')) {
-            continue
+function initRangeBarToggle() {
+    // parcela
+    const parcela = document.getElementById('parcela')
+    parcela.addEventListener('click', () => {
+        if(parcela.classList.contains('active')) {
+            return
         }
-        const target = range_data[Object.keys(TABLES_DATA)[i]]
-        // console.log(target)
-        console.log(target.range.min)
-    }
-    credito.classList.remove('active')
-    parcela.classList.add('active')
-})
 
-const credito = document.getElementById('credito')
+        const rangeBar = document.getElementById('range-bar')
+        rangeBar.dataset.selected = 'parcela'
 
-credito.addEventListener('click', () => {
-    parcela.classList.remove('active')
-    credito.classList.add('active')
-})
+        // rangebar update function()
+        const activeIndex = getActiveIndex()
+        const barData = TABLES_DATA[Object.keys(TABLES_DATA)[activeIndex]].bar
+
+        updateRangeBar(barData)
+
+        credito.classList.remove('active')
+        parcela.classList.add('active')
+    })
+
+    // credito
+    const credito = document.getElementById('credito')
+    credito.addEventListener('click', () => {
+        if(credito.classList.contains('active')) {
+            return
+        }
+
+        const rangeBar = document.getElementById('range-bar')
+        rangeBar.dataset.selected = 'credito'
+
+        const activeIndex = getActiveIndex()
+        const barData = TABLES_DATA[Object.keys(TABLES_DATA)[activeIndex]].bar
+
+        updateRangeBar(barData)
+
+        parcela.classList.remove('active')
+        credito.classList.add('active')
+    })
+}
+
+initRangeBarToggle()
+
+
+////////////////////////////////////////////////
+
 
 const rangeBar = document.getElementById('range-bar')
-// console.log(rangeBar)
-rangeBar.value = rangeBar.min
-rangeBar.min = 1000
-rangeBar.max = 1250
-
-const display = document.getElementById('display-value')
-display.value = rangeBar.value
 
 rangeBar.addEventListener('input', () => {
     const progress = (rangeBar.value - rangeBar.min) / (rangeBar.max - rangeBar.min) * (rangeBar.offsetWidth - 40) + 20
     const width = `${progress}px`
     // console.log(progress, rangeBar.offsetWidth, rangeBar.value)
+
     document.getElementById('range-bar-progress').style.width = width
+
+    // local money expression
+    const transed = rangeBar.value.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.')
 
     // to display
     const display = document.getElementById('display-value')
-    // console.log(typeof rangeBar.value)
-    const transed = rangeBar.value.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.')
-    console.log(transed)
     display.value = transed
 })
 

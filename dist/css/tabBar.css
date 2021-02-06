@@ -77,6 +77,9 @@
   width: calc(100% - 40px);
   right: calc(40px / 2);
 }
+#tabs-container #tabbar-border-bottom.disable {
+  display: none;
+}
 @media (max-width: 774px) {
   #tabs-container #tabbar-border-bottom {
     display: none;

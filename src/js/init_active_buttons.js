@@ -42,6 +42,9 @@ function initActiveButtons() {
             for(let target = 0; target < showBarButtons.length; target++) {
                 showBarButtons.item(target).classList.remove('active')
             }
+
+            //
+            document.getElementById('tabbar-border-bottom').classList.remove('disable')
         })
     }
 }

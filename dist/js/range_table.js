@@ -21,7 +21,23 @@ function rangeTabletest() {
         tabBars.item(_target).classList.remove('active');
         tablesSections.item(_target).classList.remove('active');
       }
+
+      document.getElementById('tabbar-border-bottom').classList.add('disable');
     });
+    showBarButtons.item(i).addEventListener('click', function () {
+      var barData = TABLES_DATA[showBarButtons.item(i).innerHTML].bar;
+      updateRangeBar(barData);
+      var rangeBarContainer = document.getElementById('range-container');
+      rangeBarContainer.classList.add('active');
+    });
+    var tablesSelectButtons = document.getElementsByClassName(CLASSNAME.tablesSelectButton);
+
+    for (var _i = 0; _i < tablesSelectButtons.length; _i++) {
+      tablesSelectButtons.item(_i).addEventListener('click', function () {
+        var rangeBarContainer = document.getElementById('range-container');
+        rangeBarContainer.classList.remove('active');
+      });
+    }
   };
 
   for (var i = 0; i < showBarButtons.length; i++) {

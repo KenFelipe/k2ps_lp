@@ -8,7 +8,6 @@ function rangeTabletest() {
 
     for(let i = 0; i < showBarButtons.length; i++) {
         showBarButtons.item(i).addEventListener('click', () => {
-
             //
             for(let target = 0; target < showBarButtons.length; target++) {
                 showBarButtons.item(target).classList.remove('active')
@@ -22,7 +21,25 @@ function rangeTabletest() {
                 tabBars.item(target).classList.remove('active')
                 tablesSections.item(target).classList.remove('active')
             }
+
+            document.getElementById('tabbar-border-bottom').classList.add('disable')
         })
+
+        showBarButtons.item(i).addEventListener('click', () => {
+            const barData = TABLES_DATA[showBarButtons.item(i).innerHTML].bar
+            updateRangeBar(barData)
+
+            const rangeBarContainer = document.getElementById('range-container')
+            rangeBarContainer.classList.add('active')
+        })
+
+        const tablesSelectButtons = document.getElementsByClassName(CLASSNAME.tablesSelectButton)
+        for(let i = 0; i < tablesSelectButtons.length; i++) {
+            tablesSelectButtons.item(i).addEventListener('click', () => {
+                const rangeBarContainer = document.getElementById('range-container')
+                rangeBarContainer.classList.remove('active')
+            })
+        }
     }
 }
 

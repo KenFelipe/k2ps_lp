@@ -1,65 +1,82 @@
 "use strict";
 
-var rangeSlider = document.getElementById('rs-range-line');
-var rangeBullet = document.getElementById('rs-bullet');
-rangeSlider.addEventListener('input', function () {
-  rangeBullet.innerHTML = rangeSlider.value;
-  var bulletPosition = "".concat(rangeSlider.value / rangeSlider.max * 578, "px");
-  rangeBullet.style.left = bulletPosition;
-  document.getElementsByClassName('progress').item(0).style.width = bulletPosition;
-}); /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// button when onclick run update rangeBarssss info function getting index of click or actived
+function updateRangeBar(data) {
+  var rangeBar = document.getElementById('range-bar');
+  var selected = rangeBar.dataset.selected;
+  rangeBar.min = data[selected].min;
+  rangeBar.max = data[selected].max;
+  rangeBar.step = data[selected].step;
+  rangeBar.value = data[selected].min;
+  var display = document.getElementById('display-value');
+  display.value = rangeBar.value;
+  var rangeLimitDisplayMin = document.getElementById('range-min');
+  rangeLimitDisplayMin.innerHTML = "R$".concat(rangeBar.min);
+  var rangeLimitDisplayMax = document.getElementById('range-max');
+  rangeLimitDisplayMax.innerHTML = "R$".concat(rangeBar.max);
+  var progressBar = document.getElementById('range-bar-progress');
+  progressBar.style.width = 0;
+}
 
-var range_data = {
-  "automovel": {
-    range: {
-      min: 10,
-      max: 2525250,
-      step: 1
-    }
-  }
-}; // button when onclick run update rangeBarssss info function getting index of click or actived
+function getActiveIndex() {
+  // const showBarButtons = document.getElementsByClassName(CLASSNAME.showBarButton)
+  var buttons = document.getElementsByClassName(CLASSNAME.button);
 
-var parcela = document.getElementById('parcela');
-parcela.addEventListener('click', function () {
-  var contain = parcela.classList.contains('active'); // console.log(contain)
-
-  var selectButtons = document.getElementsByClassName('tables-select__button'); // console.log(selectButtons)
-
-  for (var i = 0; i < selectButtons.length; i++) {
-    if (!selectButtons.item(i).classList.contains('active')) {
+  for (var i = 0; i < buttons.length; i++) {
+    if (!buttons.item(i).classList.contains('active')) {
       continue;
     }
 
-    var target = range_data[Object.keys(TABLES_DATA)[i]]; // console.log(target)
-
-    console.log(target.range.min);
+    return i;
   }
+}
 
-  credito.classList.remove('active');
-  parcela.classList.add('active');
-});
-var credito = document.getElementById('credito');
-credito.addEventListener('click', function () {
-  parcela.classList.remove('active');
-  credito.classList.add('active');
-});
-var rangeBar = document.getElementById('range-bar'); // console.log(rangeBar)
+function initRangeBarToggle() {
+  // parcela
+  var parcela = document.getElementById('parcela');
+  parcela.addEventListener('click', function () {
+    if (parcela.classList.contains('active')) {
+      return;
+    }
 
-rangeBar.value = rangeBar.min;
-rangeBar.min = 1000;
-rangeBar.max = 1250;
-var display = document.getElementById('display-value');
-display.value = rangeBar.value;
+    var rangeBar = document.getElementById('range-bar');
+    rangeBar.dataset.selected = 'parcela'; // rangebar update function()
+
+    var activeIndex = getActiveIndex();
+    var barData = TABLES_DATA[Object.keys(TABLES_DATA)[activeIndex]].bar;
+    updateRangeBar(barData);
+    credito.classList.remove('active');
+    parcela.classList.add('active');
+  }); // credito
+
+  var credito = document.getElementById('credito');
+  credito.addEventListener('click', function () {
+    if (credito.classList.contains('active')) {
+      return;
+    }
+
+    var rangeBar = document.getElementById('range-bar');
+    rangeBar.dataset.selected = 'credito';
+    var activeIndex = getActiveIndex();
+    var barData = TABLES_DATA[Object.keys(TABLES_DATA)[activeIndex]].bar;
+    updateRangeBar(barData);
+    parcela.classList.remove('active');
+    credito.classList.add('active');
+  });
+}
+
+initRangeBarToggle(); ////////////////////////////////////////////////
+
+var rangeBar = document.getElementById('range-bar');
 rangeBar.addEventListener('input', function () {
   var progress = (rangeBar.value - rangeBar.min) / (rangeBar.max - rangeBar.min) * (rangeBar.offsetWidth - 40) + 20;
   var width = "".concat(progress, "px"); // console.log(progress, rangeBar.offsetWidth, rangeBar.value)
 
-  document.getElementById('range-bar-progress').style.width = width; // to display
+  document.getElementById('range-bar-progress').style.width = width; // local money expression
 
-  var display = document.getElementById('display-value'); // console.log(typeof rangeBar.value)
+  var transed = rangeBar.value.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.'); // to display
 
-  var transed = rangeBar.value.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.');
-  console.log(transed);
+  var display = document.getElementById('display-value');
   display.value = transed;
 }); // Kansei go ni Yaru
 // function test() {

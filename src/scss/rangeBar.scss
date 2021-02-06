@@ -76,7 +76,14 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 .range-bar-container {
-    margin-top: 100px;
+    margin-top: 20px;
+}
+#range-container {
+    display: none;
+
+    &.active {
+        display: block;
+    }
 }
 
 %button_temp {
@@ -164,10 +171,10 @@
         position: relative;
         // top: 4px;
 
-        &#range-start {
+        &#range-min {
             float: none;
         }
-        &#range-end {
+        &#range-max {
             float: right;
         }
     }

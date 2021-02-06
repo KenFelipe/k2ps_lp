@@ -55,7 +55,14 @@
 }
 
 .range-bar-container {
-  margin-top: 100px;
+  margin-top: 20px;
+}
+
+#range-container {
+  display: none;
+}
+#range-container.active {
+  display: block;
 }
 
 .valor-display #prefix, .valor-display input, .toggle-range button {
@@ -123,10 +130,10 @@
   height: 100%;
   position: relative;
 }
-.range-limit span#range-start {
+.range-limit span#range-min {
   float: none;
 }
-.range-limit span#range-end {
+.range-limit span#range-max {
   float: right;
 }
 

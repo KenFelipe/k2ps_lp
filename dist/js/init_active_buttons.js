@@ -37,7 +37,10 @@ function initActiveButtons() {
 
       for (var _target = 0; _target < showBarButtons.length; _target++) {
         showBarButtons.item(_target).classList.remove('active');
-      }
+      } //
+
+
+      document.getElementById('tabbar-border-bottom').classList.remove('disable');
     });
   };
 

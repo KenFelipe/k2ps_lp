@@ -15,11 +15,40 @@
 // }
 
 const TABLES_DATA = {
+    // "test": { type: "table", table: { "Ate 580mil": { head: ["500mil", "thead"], body: [ ["R$55.000,00", "R$349.00"], ], }, } },
     "TEST3": {
         type: "bar",
+        bar: {
+            parcela: {
+                min: 3333,
+                max: 33333,
+                step: 1,
+                formula: "x / 1000"
+            },
+            credito: {
+                min: 33,
+                max: 333,
+                step: 1,
+                formula: "x * 100"
+            }
+        },
     },
     "TEST4": {
         type: "bar",
+        bar: {
+            parcela: {
+                min: 4444,
+                max: 44444,
+                step: 1,
+                formula: "x / 1000"
+            },
+            credito: {
+                min: 44,
+                max: 444,
+                step: 1,
+                formula: "x * 100"
+            }
+        },
     },
     "automovel": {
         type: "table",
@@ -75,9 +104,6 @@ const TABLES_DATA = {
             },
         }
     },
-    "TEST": {
-        type: "bar",
-    },
     "APOS TEST": {
         type: "table",
         table: {
@@ -107,8 +133,22 @@ const TABLES_DATA = {
             // "3 1453": { head: ["500mil", "thead"], body: [ ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ], },
         }
     },
-    "TEST2": {
+    "TEST5": {
         type: "bar",
+        bar: {
+            parcela: {
+                min: 5555,
+                max: 55555,
+                step: 1,
+                formula: "x / 1000"
+            },
+            credito: {
+                min: 55,
+                max: 555,
+                step: 1,
+                formula: "x * 100"
+            }
+        },
     }
 }
 
