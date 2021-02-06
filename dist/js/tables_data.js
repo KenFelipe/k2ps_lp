@@ -25,15 +25,34 @@ var TABLES_DATA = {
         // max: 33333,
         step: 1,
         // formula: "x / 1000"
-        min: 100000,
-        max: 500000,
-        formula: "(x * (16.5 / 100) + x) / 200 + (x * (16.5 / 100) + x) * (0.031 / 100)"
+        min: 1000,
+        max: 5000,
+        // formula: "(x * (16.5 / 100) + x) / 200 + (x * (16.5 / 100) + x) * (0.031 / 100)",
+        // formula: "x * 1000",
+        formulas: [{
+          min: 1000,
+          max: 2000,
+          formula: "x / 1"
+        }, {
+          min: 2001,
+          max: 5000,
+          formula: "x / 100"
+        }]
       },
       credito: {
-        min: 33,
-        max: 333,
+        min: 100000,
+        max: 500000,
         step: 1,
-        formula: "x * 1000"
+        formula: "x * 1000",
+        formulas: [{
+          min: 100000,
+          max: 200000,
+          formula: "x / 100000"
+        }, {
+          min: 100000,
+          max: 200000,
+          formula: "x / 100"
+        }]
       }
     }
   },

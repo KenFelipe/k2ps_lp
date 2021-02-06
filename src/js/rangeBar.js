@@ -9,7 +9,13 @@ function updateRangeBar(data) {
 
     rangeBar.value = data[selected].min
 
-    rangeBar.dataset.formula = data[selected].formula
+    data[selected].formulas.forEach(formula => {
+        // console.log(formula, rangeBar.value)
+        if(rangeBar.value >= formula.min && rangeBar.value <= formula.max) {
+            rangeBar.dataset.formula = formula.formula
+        }
+    })
+    // rangeBar.dataset.formula = data[selected].formula
 
     const display = document.getElementById('display-value')
     const formula = rangeBar.dataset.formula.replaceAll('x', rangeBar.value)
@@ -21,10 +27,10 @@ function updateRangeBar(data) {
     // display.value = rangeBar.value
 
     const rangeLimitDisplayMin = document.getElementById('range-min')
-    rangeLimitDisplayMin.innerHTML = `R$${rangeBar.min}`
+    rangeLimitDisplayMin.innerHTML = `R$${rangeBar.min.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.')}`
 
     const rangeLimitDisplayMax = document.getElementById('range-max')
-    rangeLimitDisplayMax.innerHTML = `R$${rangeBar.max}`
+    rangeLimitDisplayMax.innerHTML = `R$${rangeBar.max.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.')}`
 
     const progressBar = document.getElementById('range-bar-progress')
     progressBar.style.width = 0
@@ -99,6 +105,14 @@ rangeBar.addEventListener('input', () => {
 
     document.getElementById('range-bar-progress').style.width = width
 
+    const activeIndex = getActiveIndex()
+    const barData = TABLES_DATA[Object.keys(TABLES_DATA)[activeIndex]].bar
+    barData[rangeBar.dataset.selected].formulas.forEach(formula => {
+        // console.log(formula, rangeBar.value)
+        if(rangeBar.value >= formula.min && rangeBar.value <= formula.max) {
+            rangeBar.dataset.formula = formula.formula
+        }
+    })
     const formula = rangeBar.dataset.formula.replaceAll('x', rangeBar.value)
     // console.log(formula)
     const result = `${Math.round(eval(formula)*100)/100}`

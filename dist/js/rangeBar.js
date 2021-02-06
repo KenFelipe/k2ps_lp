@@ -8,7 +8,13 @@ function updateRangeBar(data) {
   rangeBar.max = data[selected].max;
   rangeBar.step = data[selected].step;
   rangeBar.value = data[selected].min;
-  rangeBar.dataset.formula = data[selected].formula;
+  data[selected].formulas.forEach(function (formula) {
+    // console.log(formula, rangeBar.value)
+    if (rangeBar.value >= formula.min && rangeBar.value <= formula.max) {
+      rangeBar.dataset.formula = formula.formula;
+    }
+  }); // rangeBar.dataset.formula = data[selected].formula
+
   var display = document.getElementById('display-value');
   var formula = rangeBar.dataset.formula.replaceAll('x', rangeBar.value); // console.log(formula)
   // const result = `${eval(formula)}`
@@ -18,9 +24,9 @@ function updateRangeBar(data) {
   display.value = transed; // display.value = rangeBar.value
 
   var rangeLimitDisplayMin = document.getElementById('range-min');
-  rangeLimitDisplayMin.innerHTML = "R$".concat(rangeBar.min);
+  rangeLimitDisplayMin.innerHTML = "R$".concat(rangeBar.min.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.'));
   var rangeLimitDisplayMax = document.getElementById('range-max');
-  rangeLimitDisplayMax.innerHTML = "R$".concat(rangeBar.max);
+  rangeLimitDisplayMax.innerHTML = "R$".concat(rangeBar.max.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.'));
   var progressBar = document.getElementById('range-bar-progress');
   progressBar.style.width = 0;
 }
@@ -80,6 +86,14 @@ rangeBar.addEventListener('input', function () {
   var width = "".concat(progress, "px"); // console.log(progress, rangeBar.offsetWidth, rangeBar.value)
 
   document.getElementById('range-bar-progress').style.width = width;
+  var activeIndex = getActiveIndex();
+  var barData = TABLES_DATA[Object.keys(TABLES_DATA)[activeIndex]].bar;
+  barData[rangeBar.dataset.selected].formulas.forEach(function (formula) {
+    // console.log(formula, rangeBar.value)
+    if (rangeBar.value >= formula.min && rangeBar.value <= formula.max) {
+      rangeBar.dataset.formula = formula.formula;
+    }
+  });
   var formula = rangeBar.dataset.formula.replaceAll('x', rangeBar.value); // console.log(formula)
 
   var result = "".concat(Math.round(eval(formula) * 100) / 100); // local money expression
