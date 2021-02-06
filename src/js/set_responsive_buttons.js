@@ -1,5 +1,5 @@
 function setResponsiveButtons() {
-    const buttons = document.getElementsByClassName(CLASSNAME_CONFIG.tablesSelectButton)
+    const buttons = document.getElementsByClassName(CLASSNAME.tablesSelectButton)
 
     if(buttons.length === 5) {
         //

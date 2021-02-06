@@ -123,20 +123,20 @@
 
       <!-- Tables -->
       <!-- criado pelo javascript -->
-      <div class="tables-select container"></div>
+      <div id="buttons-container" class="tables-select container"></div>
 
       <!-- criado pelo javascript -->
       <div class="tabs container">
-        <div class="tabbar-container"></div>
+        <div id="tabbar-container" class="tabbar-container"></div>
         <div class="tabs__bottom-bar"></div>
       </div>
 
       <!-- criado pelo javascript -->
-      <div class="tables container"></div>
+      <div id="tables-container" class="tables container"></div>
 
 
       <!-- RangeBar -->
-      <div class="range-bar-container container">
+      <div id="range-container" class="range-bar-container container">
         <div class="toggle-range">
           <button id="parcela">PARCELA</button><button id="credito">CREDITO</button>
           <div>
@@ -176,22 +176,26 @@
   
   <!-- script js precisa estar nessa sequencia -->
   <script src="./js/tables_data.js"></script>
-  <script src="./js/classname_config.js"></script>
-
+  <script src="./js/classname.js"></script>
+  
+  
   <script src="./js/create_buttons.js""></script>
   <script src="./js/create_tabs.js""></script>
   <script src="./js/create_tables.js""></script>
+  
   
   <script src="./js/init_active_buttons.js"></script>
   <script src="./js/init_active_tabs.js"></script>
   
   <script src="./js/set_active.js"></script>
-
+  
   <script src="./js/set_responsive_tabs.js"></script>
   <script src="./js/set_responsive_buttons.js"></script>
   
   <script src="./js/init_tables.js"></script>
-
+  
+  <!-- DEBUG -->
+  <script src="./js/range_table.js"></script>
   <!-- debug -->
   <script src="./js/config.js"></script>
 </body>

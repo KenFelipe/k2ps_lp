@@ -1,8 +1,8 @@
 "use strict";
 
 function setResponsiveTabs() {
-  var tabBars = document.getElementsByClassName(CLASSNAME_CONFIG.tabBar);
-  var buttons = document.getElementsByClassName(CLASSNAME_CONFIG.tablesSelectButton); //
+  var tabBars = document.getElementsByClassName(CLASSNAME.tabBar);
+  var buttons = document.getElementsByClassName(CLASSNAME.tablesSelectButton); //
 
   var getTabClassName = function getTabClassName(tabs) {
     if (tabs === 5) {
@@ -25,7 +25,7 @@ function setResponsiveTabs() {
     } // tabBar bottom bar
 
 
-    var bottomBarClass = CLASSNAME_CONFIG.tabBarBottomBar;
+    var bottomBarClass = CLASSNAME.tabBarBottomBar;
     var bottomBar = document.getElementsByClassName(bottomBarClass).item(0); //
 
     if (tabBarI === 0) {

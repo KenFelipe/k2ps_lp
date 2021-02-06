@@ -2,34 +2,35 @@
 // configurado em 'config/data.js'
 
 function createTabs() {
-    const tabBarsContainerClass = CLASSNAME_CONFIG.tabBarsContainer
+    const tabClass = CLASSNAME.tab
+    const tabBarClass = CLASSNAME.tabBar
 
-    const tabBarClass = CLASSNAME_CONFIG.tabBar
-    const tabClass = CLASSNAME_CONFIG.tab
-
-    const tabBarsContainer = document.getElementsByClassName(tabBarsContainerClass).item(0)
+    const tabBarsContainer = document.getElementById(ID.tabBarContainer)
 
     Object.keys(TABLES_DATA).forEach(tableName => {
-        const tabBar = document.createElement('div')
-        tabBar.classList.add(tabBarClass)
+        // nao tem tabs no rangeBar
+        if(TABLES_DATA[tableName].type === "table") {
+            const tabBar = document.createElement('div')
+            tabBar.classList.add(tabBarClass)
 
-        Object.keys(TABLES_DATA[tableName]).forEach(tabName => {
-            const tab = document.createElement('button')
-            tab.classList.add(tabClass)
+            Object.keys(TABLES_DATA[tableName].table).forEach(tabName => {
+                const tab = document.createElement('button')
+                tab.classList.add(tabClass)
 
-            const span = document.createElement('span')
-            span.innerHTML = tabName
+                const span = document.createElement('span')
+                span.innerHTML = tabName
 
-            // ***************************************************
-            // PRECISA INSERIR LOGICA PARA
-            // PROCESSAMENTO DE TEXT APOS DA <SPAN> 
-            // (LABEL DO TAB)
-            // ***************************************************
+                // ***************************************************
+                // PRECISA INSERIR LOGICA PARA
+                // PROCESSAMENTO DE TEXT APOS DA <SPAN> 
+                // (LABEL DO TAB)
+                // ***************************************************
 
-            tab.appendChild(span)
-            tabBar.appendChild(tab)
-        })
+                tab.appendChild(span)
+                tabBar.appendChild(tab)
+            })
 
-        tabBarsContainer.appendChild(tabBar)
+            tabBarsContainer.appendChild(tabBar)
+        }
     })
 }

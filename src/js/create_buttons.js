@@ -2,15 +2,22 @@
 // configurado em 'config/data.js'
 
 function createButtons() {
-    const selectTablesContainerClass = CLASSNAME_CONFIG.selectTablesContainer
-    const selectTablesButtonClass = CLASSNAME_CONFIG.selectTablesButton
+    const buttonClass = CLASSNAME.button
 
-    const buttonsContainer = document.getElementsByClassName(selectTablesContainerClass).item(0)
+    const selectTablesButtonClass = CLASSNAME.tablesSelectButton
+    const showBarButtonClass = CLASSNAME.showBarButton
+
+    const buttonsContainer = document.getElementById(ID.buttonsContainer)
 
     Object.keys(TABLES_DATA).forEach(tableName => {
         const button = document.createElement('button')
 
-        button.classList.add(selectTablesButtonClass)
+        button.classList.add(
+            TABLES_DATA[tableName].type === 'table' ? selectTablesButtonClass :
+            TABLES_DATA[tableName].type === 'bar' ? showBarButtonClass : ''
+        )
+
+        button.classList.add(buttonClass)
         button.innerHTML = tableName
 
         buttonsContainer.appendChild(button)

@@ -7,7 +7,7 @@ body {
 }
 
 .tables-select, .tabs, .tables {
-  display: none;
+  margin-top: 40px;
 }
 
 #values__header {

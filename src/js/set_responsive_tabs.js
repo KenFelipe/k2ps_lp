@@ -1,6 +1,6 @@
 function setResponsiveTabs() {
-    const tabBars = document.getElementsByClassName(CLASSNAME_CONFIG.tabBar)
-    const buttons = document.getElementsByClassName(CLASSNAME_CONFIG.tablesSelectButton)
+    const tabBars = document.getElementsByClassName(CLASSNAME.tabBar)
+    const buttons = document.getElementsByClassName(CLASSNAME.tablesSelectButton)
 
     //
     const getTabClassName = tabs => {
@@ -24,7 +24,7 @@ function setResponsiveTabs() {
         }
 
         // tabBar bottom bar
-        const bottomBarClass = CLASSNAME_CONFIG.tabBarBottomBar
+        const bottomBarClass = CLASSNAME.tabBarBottomBar
         const bottomBar = document.getElementsByClassName(bottomBarClass).item(0)
         //
         if(tabBarI === 0) {

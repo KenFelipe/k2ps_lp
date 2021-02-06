@@ -4,12 +4,9 @@
 // pra atribuir class ".active"
 // pra mostrar tabela respectivo dinamicamente
 function initActiveTabs() {
-  var tabClass = CLASSNAME_CONFIG.tab;
-  var tabs = document.getElementsByClassName(tabClass);
-  var tabBarClass = CLASSNAME_CONFIG.tabBar;
-  var tabBars = document.getElementsByClassName(tabBarClass);
-  var tableClass = CLASSNAME_CONFIG.table;
-  var tables = document.getElementsByClassName(tableClass); // ***************************
+  var tabs = document.getElementsByClassName(CLASSNAME.tab);
+  var tabBars = document.getElementsByClassName(CLASSNAME.tabBar);
+  var tables = document.getElementsByClassName(CLASSNAME.table); // ***************************
   // n de tab = n de table
   // ***************************
   // aplicar funcao "onclick" em cada tab

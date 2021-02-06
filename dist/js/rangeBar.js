@@ -43,8 +43,8 @@ credito.addEventListener('click', function () {
   parcela.classList.remove('active');
   credito.classList.add('active');
 });
-var rangeBar = document.getElementById('range-bar');
-console.log(rangeBar);
+var rangeBar = document.getElementById('range-bar'); // console.log(rangeBar)
+
 rangeBar.value = rangeBar.min;
 rangeBar.min = 1000;
 rangeBar.max = 1250;

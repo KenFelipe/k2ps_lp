@@ -3,14 +3,11 @@
 // pra mostrar tabela respectivo dinamicamente
 
 function initActiveTabs() {
-    const tabClass = CLASSNAME_CONFIG.tab
-    const tabs = document.getElementsByClassName(tabClass)
+    const tabs = document.getElementsByClassName(CLASSNAME.tab)
 
-    const tabBarClass = CLASSNAME_CONFIG.tabBar
-    const tabBars = document.getElementsByClassName(tabBarClass)
+    const tabBars = document.getElementsByClassName(CLASSNAME.tabBar)
 
-    const tableClass = CLASSNAME_CONFIG.table
-    const tables = document.getElementsByClassName(tableClass)
+    const tables = document.getElementsByClassName(CLASSNAME.table)
 
     // ***************************
     // n de tab = n de table

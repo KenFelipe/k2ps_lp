@@ -51,7 +51,7 @@ credito.addEventListener('click', () => {
 })
 
 const rangeBar = document.getElementById('range-bar')
-console.log(rangeBar)
+// console.log(rangeBar)
 rangeBar.value = rangeBar.min
 rangeBar.min = 1000
 rangeBar.max = 1250
