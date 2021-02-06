@@ -7,9 +7,11 @@
   <link rel="stylesheet" href="./css/_normalize.css">
 
   <!-- my -->
-  <link rel="stylesheet" href="./css/_style.css">
-
   <link rel="stylesheet" href="./css/main.css">
+
+  <link rel="stylesheet" href="./css/banner.css">
+  <link rel="stylesheet" href="./css/plan.css">
+  <link rel="stylesheet" href="./css/topics.css">
 
   <link rel="stylesheet" href="./css/select_button.css">
   <link rel="stylesheet" href="./css/tabBar.css">
@@ -25,72 +27,14 @@
 <body>
   <div class="wrapper">
 
-    <section class="banner-request">
-      <div class="container">
-        <div class="banner">
-          <img src="./img/banner-auto-imovel.jpg" alt="" />
-          <div class="banner__bg"></div>
-        </div>
-
-        <div class="request-container">
-          <h2 class="request-container__header">
-            Solicite uma <strong>proposta</strong>
-          </h2>
-
-          <div class="request">
-            <label for="request__input--nome">Nome</label>
-            <input id="request__input--nome" class="request__input" type="text" name="name" data-gtm-name="Nome" placeholder="Nome">
-
-            <label for="request__input--email">E-mail</label>
-            <input id="request__input--email" class="request__input" type="email" name="email" data-gtm-name="Email" placeholder="E-mail">
-
-            <label for="request__input--telefone">Telefone</label>
-            <input id="request__input--telefone" class="request__input" type="cel" name="phone" data-gtm-name="Telefone" placeholder="Telefone">
-
-            <label for="request__input--cpf">CPF</label>
-            <input id="request__input--cpf" class="request__input" type="text" name="cpf" data-gtm-name="CPF" placeholder="CPF" maxlength="14">
-
-            <label for="request__input--mensagem">Mensagem</label>
-            <textarea id="request__input--mensagem" name="mensagem" class="request__input" data-gtm-name="Mensagem" placeholder="Deixe sua dúvida, comentário ou sugestão"></textarea>
-          </div>
-
-          <div class="termo">
-            <div>
-              <input id="consentimento" class="termo__checkbox" type="checkbox" name="consentimento" value="sim">
-              <label class="termo__label" for="consentimento">
-                Li e concordo com o Termos de Uso e
-                <a href="https://www.portoseguro.com.br/politica-de-privacidade" target="_blank"> Política de Privacidade</a>.
-              </label>
-            </div>
-
-            <div>
-              <input id="compartilhamento" class="termo__checkbox" type="checkbox" name="compartilhamento" value="sim">
-              <label class="termo__label" for="compartilhamento">
-                Concordo em compartilhar minhas informações com o Grupo Porto Seguro e com o Corretor parceiro para orçamento e comercialização de Produtos e Serviços.
-              </label>
-            </div>
-
-            <div>
-              <input id="comunicacao" class="termo__checkbox" type="checkbox" name="comunicacao" value="não">
-              <label class="termo__label" for="comunicacao">
-                Aceito receber comunicação sobre ofertas e promoções do Corretor Parceiro.
-              </label>
-            </div>
-          </div>
-
-          <div class="request-container__button">
-            <button type="submit" id="btn_continuar" disabled>Solicitar</button>
-          </div>
-
-        </div>
-      </div>
+    <section class="banner container">
+      <!-- <img src="./img/banner-auto-imovel.jpg" alt="" /> -->
+      <!-- <div class="banner__bg"></div> -->
     </section>
   
-    <section class="plan">
-      <div class="container">
-        <h3>Quem faz planos com o Porto Seguro Consórcio, tem o tempo certo para alcançar o que deseja.</h3>
-        <p>Porque o plano é ser feliz.</p>
-      </div>
+    <section class="plan container">
+      <h3>Quem faz planos com o <strong>Porto Seguro Consórcio</strong>, tem o tempo certo para alcançar o que deseja.</h3>
+      <p>Porque o plano é ser feliz.</p>
     </section>
 
     <section class="topics">
@@ -102,7 +46,7 @@
           </div>
           <div class="topics__item">
             <img src="./img/ico-coin.png" alt="">
-            <p>Planos que encaixam no seu bolso</p>
+            <p class="p-3">Planos que encaixam no seu bolso</p>
           </div>
           <div class="topics__item">
             <img src="./img/ico-paper.png" alt="">
@@ -169,6 +113,22 @@
         </div>
       </div>
     </section>
+
+    <section class="taxa container">
+      Taxa de administração total de 21% para créditos de R$ 55 mil a R$ 240 mil. Taxa de administração total de 18% para créditos de R$ 250 mil a R$ 500 mil. Correção anual de acordo com o INCC. Consulte-nos sobre créditos acima de R$ 500 mil. Taxa adesão de 2% no ato da venda. ¹ Parcela inclui seguro de vida de 0,031% sobre saldo devedor. Fundo de reserva de 0,5%. Lei Federal - 12.741 - 08/12/2012 - Tributos incidentes na formação de preço - Este produto é da Porto Seguro Administradora de Consórcios Ltda, CNPJ: 48.041.735/0001-90: Para contratos vigentes anteriores a 31/10/2003: 3,65% Pis e Cofins e 5% ISS calculados sobre a Taxa Administrativa; e Para contratos vigentes após 31/10/2003: 9,25% Pis e Cofins e 5% de ISS calculados sobre a Taxa Administrativa. Porto Seguro Consórcio - Alameda Barão de Piracicaba, 740 - Campos Elíseos, São Paulo - SP, 01216-010 (complemento) 2o andar. Telefones: (11) 3366-3006 - (Grande São Paulo) 0800-721-3006 - (Demais localidades).
+    </section>
+
+    <section class="video container">
+      <div class="video__header">
+        <!-- <img src="" alt="">
+        Assista ao vídeo do Porto Seguro Consórcio e saiba como conquistar seu bem de um jeito seguro e sem pagar juros -->
+      </div>
+      <div class="video__video">
+      </div>
+    </section>
+
+
+
 
 
   </div>

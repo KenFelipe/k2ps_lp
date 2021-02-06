@@ -1,0 +1,44 @@
+.plan {
+  margin-bottom: 40px;
+}
+@media (max-width: 920px) {
+  .plan {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 640px) {
+  .plan {
+    margin-bottom: 10px;
+  }
+}
+.plan h3 {
+  color: #4e4e50;
+  font-size: 19.61px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  line-height: 1.53;
+  text-align: center;
+  margin: 40px 0;
+}
+.plan p {
+  font-size: 25px;
+  font-family: "Open Sans", sans-serif;
+  color: #5a308d;
+  line-height: 1.08;
+  text-align: center;
+  display: table;
+  margin: 0 auto;
+  padding: 15px 36px;
+  border-radius: 5px;
+  background-color: #eeeeee;
+}
+@media (max-width: 640px) {
+  .plan p {
+    background: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+  }
+}
+
+/*# sourceMappingURL=plan.css.map */
