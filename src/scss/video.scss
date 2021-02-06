@@ -1,0 +1,44 @@
+.video {
+    &__header {
+        margin-top: 50px;
+        
+        img {
+            display: block;
+            float: left;
+            width: 96px;
+            height: 95px;
+
+            @media (max-width: 574px) {
+                // text-align: center;
+                float: none;
+                margin: 20px auto;
+            }
+        }
+
+        p {
+            color: #9e9f9f;
+            font-size: 20px;
+            font-family: "Open Sans", sans-serif;
+            line-height: 24px;
+
+            float: left;
+            width: calc(100% - 98px);
+            margin: 0;
+            padding-left: 20px;
+            padding-top: 12px;
+
+            @media (max-width: 574px) {
+                padding: 0;
+                clear: both;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+}

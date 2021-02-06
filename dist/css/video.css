@@ -1,0 +1,41 @@
+.video__header {
+  margin-top: 50px;
+}
+.video__header img {
+  display: block;
+  float: left;
+  width: 96px;
+  height: 95px;
+}
+@media (max-width: 574px) {
+  .video__header img {
+    float: none;
+    margin: 20px auto;
+  }
+}
+.video__header p {
+  color: #9e9f9f;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 24px;
+  float: left;
+  width: calc(100% - 98px);
+  margin: 0;
+  padding-left: 20px;
+  padding-top: 12px;
+}
+@media (max-width: 574px) {
+  .video__header p {
+    padding: 0;
+    clear: both;
+    width: 100%;
+    text-align: center;
+  }
+}
+.video__header::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*# sourceMappingURL=video.css.map */
