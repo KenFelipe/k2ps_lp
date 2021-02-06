@@ -94,8 +94,8 @@ rangeBar.addEventListener('input', function () {
       rangeBar.dataset.formula = formula.formula;
     }
   });
-  var formula = rangeBar.dataset.formula.replaceAll('x', rangeBar.value); // console.log(formula)
-
+  var formula = rangeBar.dataset.formula.replaceAll('x', rangeBar.value);
+  console.log(formula);
   var result = "".concat(Math.round(eval(formula) * 100) / 100); // local money expression
   // const transed = rangeBar.value.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.')
 

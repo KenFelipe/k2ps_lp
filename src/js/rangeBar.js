@@ -114,7 +114,7 @@ rangeBar.addEventListener('input', () => {
         }
     })
     const formula = rangeBar.dataset.formula.replaceAll('x', rangeBar.value)
-    // console.log(formula)
+    console.log(formula)
     const result = `${Math.round(eval(formula)*100)/100}`
     // local money expression
     // const transed = rangeBar.value.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.')
