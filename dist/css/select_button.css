@@ -1,4 +1,4 @@
-.tables-select__button {
+.select__button {
   margin: 0px 4px;
   margin-top: 4px;
   height: 40px;
@@ -13,33 +13,33 @@
   transition: all 0.4s ease;
   width: calc(100% / 4 - 4px * 2);
 }
-.tables-select__button:hover, .tables-select__button.active {
+.select__button:hover, .select__button.active {
   color: #00adef;
   border: 3px solid #00adef;
   background-color: #fff;
 }
 @media (max-width: 774px) {
-  .tables-select__button {
+  .select__button {
     width: calc(100% / 2 - 4px * 2);
   }
 }
 @media (max-width: 490px) {
-  .tables-select__button {
+  .select__button {
     width: 100%;
   }
 }
-.tables-select__button.buttons-5 {
+.select__button.buttons-5 {
   width: calc(100% / 3 - 4px * 2);
 }
 @media (max-width: 774px) {
-  .tables-select__button.buttons-5 {
+  .select__button.buttons-5 {
     width: calc(100% / 2 - 4px * 2);
   }
 }
 @media (max-width: 490px) {
-  .tables-select__button.buttons-5 {
+  .select__button.buttons-5 {
     width: 100%;
   }
 }
 
-/*# sourceMappingURL=tables_select.css.map */
+/*# sourceMappingURL=select_button.css.map */

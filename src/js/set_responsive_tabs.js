@@ -2,6 +2,9 @@ function setResponsiveTabs() {
     const tabBars = document.getElementsByClassName(CLASSNAME.tabBar)
     const buttons = document.getElementsByClassName(CLASSNAME.tablesSelectButton)
 
+    // tabBar bottom bar
+    const bottomBar = document.getElementById(ID.bottomBar)
+
     //
     const getTabClassName = tabs => {
         if(tabs === 5) {
@@ -23,16 +26,13 @@ function setResponsiveTabs() {
             tabs.item(tabI).classList.add(tabClass)
         }
 
-        // tabBar bottom bar
-        const bottomBarClass = CLASSNAME.tabBarBottomBar
-        const bottomBar = document.getElementsByClassName(bottomBarClass).item(0)
         //
         if(tabBarI === 0) {
-            bottomBar.className = `${bottomBarClass} ${tabClass}`
+            bottomBar.className = tabClass
         }
         // 
         buttons.item(tabBarI).addEventListener('click', () => {
-            bottomBar.className = `${bottomBarClass} ${tabClass}`
+            bottomBar.className = tabClass
         })
     }
 }

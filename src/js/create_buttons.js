@@ -4,7 +4,7 @@
 function createButtons() {
     const buttonClass = CLASSNAME.button
 
-    const selectTablesButtonClass = CLASSNAME.tablesSelectButton
+    const tablesSelectButtonClass = CLASSNAME.tablesSelectButton
     const showBarButtonClass = CLASSNAME.showBarButton
 
     const buttonsContainer = document.getElementById(ID.buttonsContainer)
@@ -13,7 +13,7 @@ function createButtons() {
         const button = document.createElement('button')
 
         button.classList.add(
-            TABLES_DATA[tableName].type === 'table' ? selectTablesButtonClass :
+            TABLES_DATA[tableName].type === 'table' ? tablesSelectButtonClass :
             TABLES_DATA[tableName].type === 'bar' ? showBarButtonClass : ''
         )
 

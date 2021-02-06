@@ -2,17 +2,9 @@
 
 var CLASSNAME = {
   // button
-  // old
-  selectTablesContainer: "tables-select",
-  selectTablesButton: "tables-select__button",
-  //
-  // new
-  tablesSelectContainer: "tables-select",
-  tablesSelectButton: "tables-select__button",
-  showBarButton: "bar-button",
-  button: "test-button",
-  // new
-  selectButtonsContainer: "select-buttons",
+  button: "select__button",
+  tablesSelectButton: "select__button--table",
+  showBarButton: "select__button--bar",
   // tab
   tabBarsContainer: "tabbar-container",
   tabBar: "tabbar",
@@ -24,7 +16,8 @@ var CLASSNAME = {
   table: "tables-section__table"
 };
 var ID = {
-  tablesContainer: "tables-container",
   buttonsContainer: "buttons-container",
-  tabBarContainer: "tabbar-container"
+  tabBarContainer: "tabbars-container",
+  bottomBar: "tabbar-border-bottom",
+  tablesContainer: "tables-container"
 };

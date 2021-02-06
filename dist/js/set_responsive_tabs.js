@@ -2,7 +2,9 @@
 
 function setResponsiveTabs() {
   var tabBars = document.getElementsByClassName(CLASSNAME.tabBar);
-  var buttons = document.getElementsByClassName(CLASSNAME.tablesSelectButton); //
+  var buttons = document.getElementsByClassName(CLASSNAME.tablesSelectButton); // tabBar bottom bar
+
+  var bottomBar = document.getElementById(ID.bottomBar); //
 
   var getTabClassName = function getTabClassName(tabs) {
     if (tabs === 5) {
@@ -22,19 +24,16 @@ function setResponsiveTabs() {
 
     for (var tabI = 0; tabI < tabs.length; tabI++) {
       tabs.item(tabI).classList.add(tabClass);
-    } // tabBar bottom bar
+    } //
 
-
-    var bottomBarClass = CLASSNAME.tabBarBottomBar;
-    var bottomBar = document.getElementsByClassName(bottomBarClass).item(0); //
 
     if (tabBarI === 0) {
-      bottomBar.className = "".concat(bottomBarClass, " ").concat(tabClass);
+      bottomBar.className = tabClass;
     } // 
 
 
     buttons.item(tabBarI).addEventListener('click', function () {
-      bottomBar.className = "".concat(bottomBarClass, " ").concat(tabClass);
+      bottomBar.className = tabClass;
     });
   };
 

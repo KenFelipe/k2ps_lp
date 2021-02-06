@@ -1,25 +1,31 @@
 "use strict";
 
 function rangeTabletest() {
-  // const buttonsContainer = document.getElementById('buttons-container')
-  var buttonsbar = document.getElementsByClassName('bar-button');
-  var buttonsT = document.getElementsByClassName(CLASSNAME.tablesSelectButton);
-  var tabBars = document.getElementsByClassName('tabbar');
-  var tablesSectionClass = CLASSNAME.tablesSection;
-  var tablesSections = document.getElementsByClassName(tablesSectionClass);
-  console.log(buttonsbar);
-  console.log(buttonsbar.item(0));
+  var showBarButtons = document.getElementsByClassName(CLASSNAME.showBarButton);
+  var tablesSelectButtons = document.getElementsByClassName(CLASSNAME.tablesSelectButton);
+  var tabBars = document.getElementsByClassName(CLASSNAME.tabBar);
+  var tablesSections = document.getElementsByClassName(CLASSNAME.tablesSection);
 
-  for (var i = 0; i < buttonsbar.length; i++) {
-    buttonsbar.item(i).addEventListener('click', function () {
-      for (var targetIndex = 0; targetIndex < buttonsT.length; targetIndex++) {
-        // nao vai remover classe do proprio elemento clicado
-        // e dos elementos de mesmo index.
-        buttonsT.item(targetIndex).classList.remove('active');
-        tabBars.item(targetIndex).classList.remove('active');
-        tablesSections.item(targetIndex).classList.remove('active');
+  var _loop = function _loop(i) {
+    showBarButtons.item(i).addEventListener('click', function () {
+      //
+      for (var target = 0; target < showBarButtons.length; target++) {
+        showBarButtons.item(target).classList.remove('active');
+      }
+
+      showBarButtons.item(i).classList.add('active'); //
+
+      for (var _target = 0; _target < tablesSelectButtons.length; _target++) {
+        // esconder tabBar e tables
+        tablesSelectButtons.item(_target).classList.remove('active');
+        tabBars.item(_target).classList.remove('active');
+        tablesSections.item(_target).classList.remove('active');
       }
     });
+  };
+
+  for (var i = 0; i < showBarButtons.length; i++) {
+    _loop(i);
   }
 }
 

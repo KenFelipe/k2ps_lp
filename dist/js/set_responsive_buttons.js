@@ -1,7 +1,7 @@
 "use strict";
 
 function setResponsiveButtons() {
-  var buttons = document.getElementsByClassName(CLASSNAME.tablesSelectButton);
+  var buttons = document.getElementsByClassName(CLASSNAME.button);
 
   if (buttons.length === 5) {
     //

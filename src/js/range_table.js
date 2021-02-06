@@ -1,26 +1,29 @@
 function rangeTabletest() {
-    // const buttonsContainer = document.getElementById('buttons-container')
-    const buttonsbar = document.getElementsByClassName('bar-button')
-    const buttonsT = document.getElementsByClassName(CLASSNAME.tablesSelectButton)
-    const tabBars = document.getElementsByClassName('tabbar')
-    const tablesSectionClass = CLASSNAME.tablesSection
-    const tablesSections = document.getElementsByClassName(tablesSectionClass)
+    const showBarButtons = document.getElementsByClassName(CLASSNAME.showBarButton)
 
-    console.log(buttonsbar)
-    console.log(buttonsbar.item(0))
+    const tablesSelectButtons = document.getElementsByClassName(CLASSNAME.tablesSelectButton)
 
-    for(let i = 0; i < buttonsbar.length; i++) {
-        buttonsbar.item(i).addEventListener('click', () => {
+    const tabBars = document.getElementsByClassName(CLASSNAME.tabBar)
+    const tablesSections = document.getElementsByClassName(CLASSNAME.tablesSection)
 
-            for(let targetIndex = 0; targetIndex < buttonsT.length; targetIndex++) {
-                // nao vai remover classe do proprio elemento clicado
-                // e dos elementos de mesmo index.
-                buttonsT.item(targetIndex).classList.remove('active')
-                tabBars.item(targetIndex).classList.remove('active')
+    for(let i = 0; i < showBarButtons.length; i++) {
+        showBarButtons.item(i).addEventListener('click', () => {
 
-                tablesSections.item(targetIndex).classList.remove('active')
+            //
+            for(let target = 0; target < showBarButtons.length; target++) {
+                showBarButtons.item(target).classList.remove('active')
+            }
+            showBarButtons.item(i).classList.add('active')
+
+            //
+            for(let target = 0; target < tablesSelectButtons.length; target++) {
+                // esconder tabBar e tables
+                tablesSelectButtons.item(target).classList.remove('active')
+                tabBars.item(target).classList.remove('active')
+                tablesSections.item(target).classList.remove('active')
             }
         })
     }
 }
+
 rangeTabletest()

@@ -92,11 +92,14 @@ $margin_tab: 4px;
 
 
 ////////////////////////////////////////////////////
-.tabs {
+#tabs-container {
     position: relative;
 
-    // tabBar bottom line
-    &__bottom-bar {
+    #tabbars-container {
+        margin: 20px 0;
+    }
+
+    #tabbar-border-bottom {
         height: 1px;
         border-bottom: 1px solid #ddd;
 
@@ -115,9 +118,5 @@ $margin_tab: 4px;
         &.tabs-5, &.tabs-more-5 {
             display: none;
         }
-    }
-
-    .tabbar-container {
-        margin: 20px 0;
     }
 }

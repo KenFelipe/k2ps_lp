@@ -7,7 +7,8 @@ function initActiveButtons() {
   // buttons que seleta table
   var buttons = document.getElementsByClassName(CLASSNAME.tablesSelectButton);
   var tabBars = document.getElementsByClassName(CLASSNAME.tabBar);
-  var tablesSections = document.getElementsByClassName(CLASSNAME.tablesSection); // *******************************
+  var tablesSections = document.getElementsByClassName(CLASSNAME.tablesSection);
+  var showBarButtons = document.getElementsByClassName(CLASSNAME.showBarButton); // *******************************
   // n de buttons = n de tabBar
   // *******************************
   // aplicar funcao "onclick" em cada botao
@@ -17,6 +18,7 @@ function initActiveButtons() {
 
   var _loop = function _loop(i) {
     buttons.item(i).addEventListener('click', function () {
+      //
       for (var target = 0; target < buttons.length; target++) {
         // nao vai remover classe do proprio elemento clicado
         // e dos elementos de mesmo index.
@@ -31,7 +33,11 @@ function initActiveButtons() {
 
       buttons.item(i).classList.add('active');
       tabBars.item(i).classList.add('active');
-      tablesSections.item(i).classList.add('active');
+      tablesSections.item(i).classList.add('active'); //
+
+      for (var _target = 0; _target < showBarButtons.length; _target++) {
+        showBarButtons.item(_target).classList.remove('active');
+      }
     });
   };
 

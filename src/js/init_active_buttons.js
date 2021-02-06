@@ -10,6 +10,8 @@ function initActiveButtons() {
 
     const tablesSections = document.getElementsByClassName(CLASSNAME.tablesSection)
 
+    const showBarButtons = document.getElementsByClassName(CLASSNAME.showBarButton)
+
     // *******************************
     // n de buttons = n de tabBar
     // *******************************
@@ -19,6 +21,7 @@ function initActiveButtons() {
     // tambem remove .active de outros elementos.
     for(let i = 0; i < buttons.length; i++) {
         buttons.item(i).addEventListener('click', () => {
+            //
             for(let target = 0; target < buttons.length; target++) {
                 // nao vai remover classe do proprio elemento clicado
                 // e dos elementos de mesmo index.
@@ -34,6 +37,11 @@ function initActiveButtons() {
             tabBars.item(i).classList.add('active')
 
             tablesSections.item(i).classList.add('active')
+
+            //
+            for(let target = 0; target < showBarButtons.length; target++) {
+                showBarButtons.item(target).classList.remove('active')
+            }
         })
     }
 }
