@@ -8,6 +8,17 @@ input:focus, textarea:focus, button:focus {
     outline: none;
 }
 
+//////////////////////////////////////////
+// DEBUG
+body{ padding-bottom: 600px }
+
+.tables-select, .tabs, .tables {
+    // display: none;
+    margin-top: 40px;
+}
+
+//////////////////////////////////////////
+
 .container {
     // max-width: 1260px;
     max-width: 1024px;
