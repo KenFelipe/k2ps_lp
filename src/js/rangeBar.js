@@ -9,8 +9,16 @@ function updateRangeBar(data) {
 
     rangeBar.value = data[selected].min
 
+    rangeBar.dataset.formula = data[selected].formula
+
     const display = document.getElementById('display-value')
-    display.value = rangeBar.value
+    const formula = rangeBar.dataset.formula.replaceAll('x', rangeBar.value)
+    // console.log(formula)
+    // const result = `${eval(formula)}`
+    const result = `${Math.round(eval(formula)*100)/100}`
+    const transed = result.replace(/(\.)/g, ',').replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.')
+    display.value = transed
+    // display.value = rangeBar.value
 
     const rangeLimitDisplayMin = document.getElementById('range-min')
     rangeLimitDisplayMin.innerHTML = `R$${rangeBar.min}`
@@ -91,8 +99,13 @@ rangeBar.addEventListener('input', () => {
 
     document.getElementById('range-bar-progress').style.width = width
 
+    const formula = rangeBar.dataset.formula.replaceAll('x', rangeBar.value)
+    // console.log(formula)
+    const result = `${Math.round(eval(formula)*100)/100}`
     // local money expression
-    const transed = rangeBar.value.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.')
+    // const transed = rangeBar.value.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.')
+    const transed = result.replace(/(\.)/g, ',').replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.')
+    // const transed = result.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.')
 
     // to display
     const display = document.getElementById('display-value')

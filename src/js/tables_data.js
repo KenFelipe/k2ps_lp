@@ -20,16 +20,19 @@ const TABLES_DATA = {
         type: "bar",
         bar: {
             parcela: {
-                min: 3333,
-                max: 33333,
+                // min: 3333,
+                // max: 33333,
                 step: 1,
-                formula: "x / 1000"
+                // formula: "x / 1000"
+                min: 100000,
+                max: 500000,
+                formula: "(x * (16.5 / 100) + x) / 200 + (x * (16.5 / 100) + x) * (0.031 / 100)"
             },
             credito: {
                 min: 33,
                 max: 333,
                 step: 1,
-                formula: "x * 100"
+                formula: "x * 1000"
             }
         },
     },
@@ -40,13 +43,13 @@ const TABLES_DATA = {
                 min: 4444,
                 max: 44444,
                 step: 1,
-                formula: "x / 1000"
+                formula: "x / 2"
             },
             credito: {
                 min: 44,
                 max: 444,
                 step: 1,
-                formula: "x * 100"
+                formula: "x * 2"
             }
         },
     },

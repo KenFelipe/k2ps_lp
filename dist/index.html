@@ -200,10 +200,18 @@
 
   <!-- DEBUG -->
   <script>
+    rangeBar.dataset.selected = 'parcela'
+
     const firstButtonDataType = TABLES_DATA[Object.keys(TABLES_DATA)[0]].type
     if(firstButtonDataType === 'bar') {
       document.getElementsByClassName('select__button').item(0).click()
+
+      const parcela = document.getElementById('parcela')
+      // parcela.classList.add('active')
+      parcela.click()
     }
+    const parcela = document.getElementById('parcela')
+    parcela.classList.add('active')
   </script>
 
 </body>

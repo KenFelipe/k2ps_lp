@@ -8,8 +8,15 @@ function updateRangeBar(data) {
   rangeBar.max = data[selected].max;
   rangeBar.step = data[selected].step;
   rangeBar.value = data[selected].min;
+  rangeBar.dataset.formula = data[selected].formula;
   var display = document.getElementById('display-value');
-  display.value = rangeBar.value;
+  var formula = rangeBar.dataset.formula.replaceAll('x', rangeBar.value); // console.log(formula)
+  // const result = `${eval(formula)}`
+
+  var result = "".concat(Math.round(eval(formula) * 100) / 100);
+  var transed = result.replace(/(\.)/g, ',').replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.');
+  display.value = transed; // display.value = rangeBar.value
+
   var rangeLimitDisplayMin = document.getElementById('range-min');
   rangeLimitDisplayMin.innerHTML = "R$".concat(rangeBar.min);
   var rangeLimitDisplayMax = document.getElementById('range-max');
@@ -72,9 +79,14 @@ rangeBar.addEventListener('input', function () {
   var progress = (rangeBar.value - rangeBar.min) / (rangeBar.max - rangeBar.min) * (rangeBar.offsetWidth - 40) + 20;
   var width = "".concat(progress, "px"); // console.log(progress, rangeBar.offsetWidth, rangeBar.value)
 
-  document.getElementById('range-bar-progress').style.width = width; // local money expression
+  document.getElementById('range-bar-progress').style.width = width;
+  var formula = rangeBar.dataset.formula.replaceAll('x', rangeBar.value); // console.log(formula)
 
-  var transed = rangeBar.value.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.'); // to display
+  var result = "".concat(Math.round(eval(formula) * 100) / 100); // local money expression
+  // const transed = rangeBar.value.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.')
+
+  var transed = result.replace(/(\.)/g, ',').replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.'); // const transed = result.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.')
+  // to display
 
   var display = document.getElementById('display-value');
   display.value = transed;
