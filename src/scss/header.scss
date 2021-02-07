@@ -1,0 +1,31 @@
+.header {
+    &__logo {
+        margin: 0;
+
+        &--k2 {
+            display: inline-block;
+            height: 73px;
+            width: 96px;
+            margin: 14px 0 10px;
+
+            background-size: cover;
+            // background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url('../img/k2-logo.png');
+        }
+
+        &--porto {
+            float: right;
+
+            height: 73px;
+            width: 96px;
+            margin: 0;
+
+            background-size: cover;
+            // background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url('../img/portoseguro-logo.png');
+        }
+    }
+
+}
