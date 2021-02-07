@@ -22,6 +22,8 @@ input:focus, textarea:focus, button:focus {
     max-width: 1024px;
     margin: 0 auto;
     padding: 0 30px;
+    padding: 0 35px 0 25px;
+    // padding: 0 20px;
 
     @media(max-width: 774px) {
         padding: 0 20px;

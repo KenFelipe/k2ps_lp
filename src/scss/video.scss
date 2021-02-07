@@ -1,6 +1,20 @@
 .video {
+    &__video {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 56.25%;
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
     &__header {
-        margin-top: 50px;
+        padding: 40px 0 36px;
         
         img {
             display: block;

@@ -1,33 +1,38 @@
-.banner {
-  max-width: 1260px;
+.banner-bg {
   background-image: url("../img/banner-auto-imovel.jpg");
   width: 100%;
   height: 375px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-bottom: 7px solid #5B308C;
+}
+@media (max-width: 1000px) {
+  .banner-bg {
+    background-position: 25% center;
+  }
 }
 @media (max-width: 780px) {
-  .banner {
+  .banner-bg {
     height: 280px;
+    background-position: 25% center;
   }
 }
 @media (max-width: 640px) {
-  .banner {
-    height: 240px;
+  .banner-bg {
+    height: 280px;
+    background-position: 25% center;
   }
 }
 @media (max-width: 520px) {
-  .banner {
-    height: 200px;
-    background-position: 40% center;
+  .banner-bg {
+    height: 240px;
+    background-position: 25% center;
   }
 }
 @media (max-width: 360px) {
-  .banner {
-    height: 180px;
-    background-position: 29% center;
+  .banner-bg {
+    height: 200px;
+    background-position: 24% center;
   }
 }
 

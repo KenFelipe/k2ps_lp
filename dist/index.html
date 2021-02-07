@@ -48,7 +48,8 @@
       </div>
     </header>
 
-    <section class="banner container">
+    <section class="banner">
+      <div class="banner-bg container"></div>
       <!-- <img src="./img/banner-auto-imovel.jpg" alt="" /> -->
       <!-- <div class="banner__bg"></div> -->
     </section>
@@ -145,7 +146,8 @@
         <p>Assista ao vídeo do Porto Seguro Consórcio e saiba como conquistar seu bem de um jeito seguro e sem pagar juros</p>
       </div>
       <div class="video__video">
-        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/M6wLBpzSvqw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <iframe width="853" height="480" src="https://www.youtube.com/embed/M6wLBpzSvqw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- <iframe src="https://www.youtube.com/embed/M6wLBpzSvqw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
       </div>
     </section>
 
@@ -164,7 +166,7 @@
         </p>
         <p class="tel">
           <img src="./svg/artwork-19.svg" alt="mail-icon">
-          <a href="#">k2seguros@k2seguros.com.br</a>
+          <a href="mailto:k2seguros@k2seguros.com.br">k2seguros@k2seguros.com.br</a>
         </p>
       </div>
     </section>
@@ -205,8 +207,9 @@
             </div>
           </div>
           <div class="links links--top">
-            <button class="links__top">
-              <img src="./img/arrow-big.png" alt="">
+            <button class="links__top" 
+              onclick="document.body.scrollIntoView({ behavior: 'smooth', block: 'start' })">
+            <img src="./img/arrow-big.png" alt="">
               <span>TOPO</span>
             </button>
           </div>
@@ -222,6 +225,7 @@
     </footer>
 
   </div>
+
   <!-- script js precisa estar nessa sequencia -->
   <script src="./js/tables_data.js"></script>
   <script src="./js/classname.js"></script>
