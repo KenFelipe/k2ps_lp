@@ -1,6 +1,6 @@
 "use strict";
 
-function getActiveBarData(index) {
+function getActiveBarData() {
   var activeIndex = getActiveIndex();
   var keys = Object.keys(TABLES_DATA);
   var data = TABLES_DATA[keys[activeIndex]];
@@ -44,7 +44,7 @@ function updateRangeBar(data) {
 
   rangeBar.value = data[selected].min; // update formula
 
-  updateRangeBarFormula(data[selected].formulas, rangeBar.value);
+  updateRangeBarFormula(data[selected].formulas);
   var rangeLimitDisplayMin = document.getElementById('range-min');
   rangeLimitDisplayMin.innerHTML = "R$".concat(rangeBar.min.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.'));
   var rangeLimitDisplayMax = document.getElementById('range-max');

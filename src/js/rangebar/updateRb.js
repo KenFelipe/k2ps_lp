@@ -1,4 +1,4 @@
-function getActiveBarData(index) {
+function getActiveBarData() {
     const activeIndex = getActiveIndex()
     const keys = Object.keys(TABLES_DATA)
     const data = TABLES_DATA[keys[activeIndex]]
@@ -43,7 +43,7 @@ function updateRangeBar(data) {
     rangeBar.value = data[selected].min
 
     // update formula
-    updateRangeBarFormula(data[selected].formulas, rangeBar.value)
+    updateRangeBarFormula(data[selected].formulas)
 
     const rangeLimitDisplayMin = document.getElementById('range-min')
     rangeLimitDisplayMin.innerHTML = `R$${rangeBar.min.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.')}`

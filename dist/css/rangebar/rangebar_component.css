@@ -126,11 +126,16 @@
 .range-result__description {
   display: inline-block;
   padding-bottom: 8px;
-  margin-right: 70px;
 }
 .range-result__result {
   display: inline-block;
   padding-bottom: 8px;
+  margin-left: 80px;
+}
+@media (max-width: 340px) {
+  .range-result__result {
+    margin-left: 50px;
+  }
 }
 
 /*# sourceMappingURL=rangebar_component.css.map */

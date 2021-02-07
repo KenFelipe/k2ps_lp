@@ -233,14 +233,14 @@
   </div>
 
   <!-- script js precisa estar nessa sequencia -->
-  <!-- CONFIGS -->
-  <script src="./config/data.js"></script>
   <script src="./config/video_config.js"></script>
+  <!-- <script src="./config/data.js"></script> -->
 
-  <!-- <script src="./js/config/tables_data.js"></script> -->
+  <!-- CONFIGS -->
   <script src="./js/config/classname.js"></script>
+  <script src="./js/config/tables_data.js"></script>
   
-  
+  <!-- TABLE   -->
   <script src="./js/table/create_buttons.js""></script>
   <script src="./js/table/create_tabs.js""></script>
   <script src="./js/table/create_tables.js""></script>
@@ -256,21 +256,28 @@
   
   <script src="./js/table/init_tables.js"></script>
   
-  <!-- DEBUG -->
-  <script src="./js/rangebar/rbUpdateDisplay.js"></script>
-  <script src="./js/rangebar/rbUpdate.js"></script>
-  <script src="./js/rangebar/rangeBar.js"></script>
+  <!-- RANGEBAR -->
+  <script src="./js/rangebar/updateRbDisplay.js"></script>
+  <script src="./js/rangebar/updateRb.js"></script>
+
   <script src="./js/rangebar/range_table.js"></script>
 
-  <!-- debug -->
-  <script src="./js/config/config.js"></script>
+  <script src="./js/rangebar/initRbToggle.js"></script>
+  <script src="./js/rangebar/initRbEvent.js"></script>
+
+  <script src="./js/rangebar/initRangeBar.js"></script>
+
+  <!-- VIDEO -->
   <script src="./js/iframe.js"></script>
+
 
   <!-- DEBUG -->
   <script>
     // console.log(VIDEO_URL)
     const rangeBar = document.getElementById('range-bar')
     rangeBar.dataset.selected = 'parcela'
+    const description = document.getElementById('display-description')
+    description.innerHTML = "PARCELA"
 
     const firstButtonDataType = TABLES_DATA[Object.keys(TABLES_DATA)[0]].type
     if(firstButtonDataType === 'bar') {
