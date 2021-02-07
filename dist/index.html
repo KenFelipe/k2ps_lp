@@ -22,6 +22,9 @@
   <link rel="stylesheet" href="./css/tabBar.css">
   <link rel="stylesheet" href="./css/table.css">
 
+  <link rel="stylesheet" href="./css/rangebar_component.css">
+  <link rel="stylesheet" href="./css/rangeBar.css">
+
   <link rel="stylesheet" href="./css/taxa.css">
   <link rel="stylesheet" href="./css/video.css">
 
@@ -30,8 +33,6 @@
   <link rel="stylesheet" href="./css/links.css">
   <link rel="stylesheet" href="./css/footer.css">
 
-  <!-- !!! -->
-  <link rel="stylesheet" href="./css/rangeBar.css">
 
   <title>Porto Seguro Consórcio - Quem faz planos com o Porto Seguro Consórcio, tem o tempo certo para alcançar o que deseja</title>
 </head>
@@ -102,27 +103,40 @@
 
 
       <!-- RangeBar -->
-      <div id="range-container" class="range-bar-container container">
+      <div id="range-container" class="container">
         <div class="toggle-range">
           <button id="parcela">PARCELA</button><button id="credito">CREDITO</button>
           <div>
+
             <div class="valor-display">
-              <span id="display-description">CREDITO PRETENDIDO</span>
-              <span id="prefix">R$</span><input type="text" id="display-value">
+              <span id="display-description">CREDITO PRETENDIDO:</span>
+              <div class="display-container">
+                <span id="prefix">R$</span><input type="text" id="display-value">
+              </div>
             </div>
+
             <div class="range">
-              <div class="range-bar-container-test test2">
+              <div class="range-bar-container">
                 <input id="range-bar" type="range" min="500" max="1000000" step="1" data-selected="credito">
                 <div id="range-bar-progress"></div>
               </div>
+
               <div class="range-limit">
                 <span id="range-min">R$500</span>
                 <span id="range-max">R$1000</span>
               </div>
             </div>
+
+            <div class="range-result">
+              <div class="range-result__title">PLANOS E TAXAS</div>
+              <div class="range-result__display">
+                <div class="range-result__description">120 MESES</div>
+                <div class="range-result__result">R$<span class="range-result__value">1.000,00</span>/MES</div>
+              </div>
+            </div>
+
           </div>
         </div>
-        
       </div>
 
       <!-- RANGE TEST -->
@@ -146,8 +160,7 @@
         <p>Assista ao vídeo do Porto Seguro Consórcio e saiba como conquistar seu bem de um jeito seguro e sem pagar juros</p>
       </div>
       <div class="video__video">
-        <iframe width="853" height="480" src="https://www.youtube.com/embed/M6wLBpzSvqw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <!-- <iframe src="https://www.youtube.com/embed/M6wLBpzSvqw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/M6wLBpzSvqw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
       </div>
     </section>
 

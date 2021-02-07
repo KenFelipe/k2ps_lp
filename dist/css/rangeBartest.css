@@ -1,0 +1,57 @@
+.container.test {
+  margin-top: 200px;
+  margin-left: 30px;
+  display: none;
+}
+
+.rb {
+  position: relative;
+}
+.rb .progress {
+  content: "";
+  height: 2px;
+  background: #000;
+  display: block;
+  position: absolute;
+  bottom: 4px;
+  border-radius: 1px;
+}
+
+.rs-range {
+  -webkit-appearance: none;
+  width: 600px;
+}
+.rs-range:focus {
+  outline: none;
+}
+.rs-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 1px;
+}
+.rs-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 42px;
+  width: 22px;
+  border-radius: 22px;
+  background-color: #ccc;
+  margin-top: -20px;
+  position: relative;
+  z-index: 10;
+}
+
+.rs-label {
+  display: block;
+  width: 98px;
+  height: 98px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  text-align: center;
+  margin-bottom: 12px;
+  margin-left: calc(-49px + 11px);
+  position: relative;
+}
+
+/*# sourceMappingURL=rangeBartest.css.map */

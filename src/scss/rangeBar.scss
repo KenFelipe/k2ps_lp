@@ -1,213 +1,42 @@
-.container.test {
-    margin-top: 200px;
-    margin-left: 30px;
-    display: none;
+$thumb_size: 30px;
+
+.range {
+    margin-top: 28px;
+    text-align: center;
 }
 
-.rb {
-    position: relative;
-
-    .progress {
-        content: '';
-        // width: 100%;
-        height: 2px;
-        background: #000;
-        display: block;
-        position: absolute;
-        bottom: 4px;
-        border-radius: 1px;
-    }
-}
-
-// span {
-//     display: block;
-// }
-
-.rs-range {
-    // display: block;
+#range-bar {
     -webkit-appearance: none;
-    width: 600px;
+    margin: 0 10px;
+    width: 80%;
 
-    &:focus {
-        outline: none;
+    @media (max-width: 774px) {
+        width: 90%;
+    }
+
+    @media (max-width: 490px) {
+        width: 96%;
     }
 
     &::-webkit-slider-runnable-track {
         width: 100%;
-        height: 1px;
+        height: 2px;
         cursor: pointer;
         background-color: #ccc;
-        // box-shadow: none;
         border-radius: 1px;
-        // border: 0px solid #010101;
-        // overflow: hidden;
     }
+
     &::-webkit-slider-thumb {
         -webkit-appearance: none;
-        height: 42px;
-        width: 22px;
-        border-radius: 22px;
-        background-color: #ccc;
-        margin-top: -20px;
+        width: $thumb_size;
+        height: $thumb_size;
+        // background-color: #000;
+        // background-color: #30c5ff;
+        background-color: #00adef;
+        margin-top: -$thumb_size / 2;
+        border-radius: 50%;
         position: relative;
-        z-index: 10;
-        // box-shadow: -100vw 0px 0px 100vw blue;
-    }
-}
-
-.rs-label {
-    display: block;
-    width: 98px;
-    height: 98px;
-    border-radius: 50%;
-    border: 2px solid #ccc;
-    text-align: center;
-    margin-bottom: 12px;
-
-    // !!!!!!!!!!!!!!!!!!!!!!1
-    // margin-left = 98px / 2 => 49px - (22px / 2) = 38px
-    // !!!!!!!!!!!!!!!!!!!!!!1
-    // margin-left: -38px;
-    margin-left: calc(-49px + 11px);
-    // transform-origin: center center;
-    position: relative;
-}
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
-.range-bar-container {
-    margin-top: 20px;
-}
-#range-container {
-    display: none;
-
-    &.active {
-        display: block;
-    }
-}
-
-%button_temp {
-    border: 1px solid #33beff;
-    background-color: transparent;
-    padding: 10px;
-}
-
-%font_temp {
-    line-height: 21px;
-    letter-spacing: 1.5px;
-    font-size: 14px;
-    font: 600 90% 'Open Sans', Sans-serif, arial, tahoma, sans-serif;
-    -webkit-font-smoothing: antialiased;
-}
-
-.toggle-range {
-    text-align: center;
-
-    button {
-        @extend %button_temp;
-        @extend %font_temp;
-
-        display: inline-block;
-        width: 150px;
-        cursor: pointer;
-        font-size: 11px;
-
-        &:hover, &.active {
-            outline: none;
-            background-color: #33beff;
-        }
-
-        &#parcela {
-            // margin-right: 0px;
-            border-radius: 8px 0 0 8px;
-        }
-
-        &#credito {
-            border-radius: 0 8px 8px 0;
-            // margin-left: -4px;
-        }
-    }
-}
-
-.valor-display {
-    margin-top: 18px;
-
-    span {
-        @extend %font_temp;
-        font-size: 11px;
-    }
-
-    input {
-        @extend %button_temp;
-        @extend %font_temp;
-        border-radius: 0 4px 4px 0;
-        text-align: center;
-        font-size: 11px;
-        // margin-left: 8px;
-    }
-
-    #prefix {
-        display: inline-block;
-        @extend %button_temp;
-        @extend %font_temp;
-        font-size: 11px;
-        border-radius: 4px 0 0 4px;
-        border-right: 0;
-        padding: 10px 12px;
-        margin-left: 8px;
-    }
-}
-
-.range-limit {
-    // width: 85%;
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 22px;
-    text-align: left;
-
-    span {
-        display: inline-block;
-        height: 100%;
-        position: relative;
-        // top: 4px;
-
-        &#range-min {
-            float: none;
-        }
-        &#range-max {
-            float: right;
-        }
-    }
-}
-
-$thumb_size: 40px;
-.range {
-    margin-top: 16px;
-    text-align: center;
-    
-    #range-bar {
-        -webkit-appearance: none;
-        width: 80%;
-        margin: 0 10px;
-
-        &::-webkit-slider-runnable-track {
-            width: 100%;
-            height: 2px;
-            cursor: pointer;
-            background-color: #ccc;
-            border-radius: 1px;
-        }
-
-        &::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width: $thumb_size;
-            height: $thumb_size;
-            background: #000;
-            margin-top: -$thumb_size / 2;
-            border-radius: 50%;
-            position: relative;
-            z-index: 20;
-        }
+        z-index: 20;
     }
 }
 
@@ -220,16 +49,25 @@ $thumb_size: 40px;
     position: absolute;
     // thumb z-index: 20;
     z-index: 10;
+    // for debug
     // z-index: 30;
 }
 
-.range-bar-container-test {
+.range-bar-container {
     position: relative;
 
     &::before {
         @extend %hidden-part;
         margin-left: 10%;
         bottom: 6px;
+
+        @media (max-width: 774px) {
+            margin-left: 5%;
+        }
+
+        @media (max-width: 490px) {
+            margin-left: 2%;
+        }
     }
 
     &::after {
@@ -237,16 +75,34 @@ $thumb_size: 40px;
         margin-right: 10%;
         bottom: 6px;
         right: 0px;
+
+        @media (max-width: 774px) {
+            margin-right: 5%;
+        }
+
+        @media (max-width: 490px) {
+            margin-right: 2%;
+        }
     }
 }
 
 #range-bar-progress {
     content: '';
     // margin: 0 auto;
+
+    // margin = (100% - 80%) / 2 = 10%
     margin-left: 10%;
+    @media (max-width: 774px) {
+        margin-left: 5%;
+    }
+    @media (max-width: 490px) {
+        margin-left: 2%;
+    }
+
     width: 0%;
     height: 2px;
-    background-color: blue;
+    // background-color: blue;
+    background-color: #00adef;
     display: block;
     position: relative;
     bottom: 6px;

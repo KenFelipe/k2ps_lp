@@ -1,0 +1,136 @@
+#range-container {
+  display: none;
+  padding-top: 20px;
+}
+#range-container.active {
+  display: block;
+}
+
+.valor-display #prefix, .valor-display input, .toggle-range button {
+  border: 1px solid #33beff;
+  background-color: transparent;
+  padding: 10px;
+}
+
+.range-result, .range-limit, .valor-display #prefix, .valor-display input, .valor-display span, .toggle-range button {
+  letter-spacing: 1.5px;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  line-height: 1.343;
+}
+
+.toggle-range {
+  text-align: center;
+  padding-top: 40px;
+  border-top: 1px solid #ddd;
+}
+.toggle-range button {
+  color: #fff;
+  display: inline-block;
+  width: 180px;
+  border: 2px solid #00adef;
+  background-color: #00adef;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  padding: 10px 6px;
+}
+.toggle-range button:hover, .toggle-range button.active {
+  outline: none;
+  color: #00adef;
+  background-color: #fff;
+}
+.toggle-range button#parcela {
+  border-radius: 8px 0 0 8px;
+  border-right: 1px;
+}
+.toggle-range button#credito {
+  border-radius: 0 8px 8px 0;
+}
+@media (max-width: 490px) {
+  .toggle-range button {
+    width: 100%;
+    border-radius: 8px !important;
+    margin: 4px 4px 0;
+    border-right: 2px solid #00adef !important;
+  }
+}
+
+.valor-display {
+  padding-top: 24px;
+}
+@media (max-width: 490px) {
+  .valor-display {
+    margin-top: 24px;
+  }
+}
+.valor-display .display-container {
+  display: inline-block;
+  margin-left: 8px;
+}
+@media (max-width: 490px) {
+  .valor-display .display-container {
+    display: block;
+    margin-left: 0;
+    margin-top: 18px;
+  }
+}
+.valor-display input {
+  border-radius: 0 4px 4px 0;
+  text-align: center;
+}
+.valor-display #prefix {
+  display: inline-block;
+  border-right: 0;
+  border-radius: 4px 0 0 4px;
+  padding: 10px 12px;
+}
+
+.range-limit {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 22px;
+  text-align: left;
+}
+@media (max-width: 774px) {
+  .range-limit {
+    width: 95%;
+  }
+}
+@media (max-width: 490px) {
+  .range-limit {
+    width: 100%;
+  }
+}
+.range-limit span {
+  display: inline-block;
+  height: 100%;
+  position: relative;
+}
+.range-limit span#range-min {
+  float: none;
+}
+.range-limit span#range-max {
+  float: right;
+}
+
+.range-result {
+  margin-top: 42px;
+}
+.range-result__display {
+  display: inline-block;
+  margin-top: 28px;
+  border-bottom: 2px solid #ccc;
+  padding: 0 4px;
+}
+.range-result__description {
+  display: inline-block;
+  padding-bottom: 8px;
+  margin-right: 70px;
+}
+.range-result__result {
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+/*# sourceMappingURL=rangebar_component.css.map */
