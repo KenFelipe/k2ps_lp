@@ -7,9 +7,9 @@ function createButtons() {
   var tablesSelectButtonClass = CLASSNAME.tablesSelectButton;
   var showBarButtonClass = CLASSNAME.showBarButton;
   var buttonsContainer = document.getElementById(ID.buttonsContainer);
-  Object.keys(TABLES_DATA).forEach(function (tableName) {
+  Object.keys(DATA).forEach(function (tableName) {
     var button = document.createElement('button');
-    button.classList.add(TABLES_DATA[tableName].type === 'table' ? tablesSelectButtonClass : TABLES_DATA[tableName].type === 'bar' ? showBarButtonClass : '');
+    button.classList.add(DATA[tableName].type === 'table' ? tablesSelectButtonClass : DATA[tableName].type === 'bar' ? showBarButtonClass : '');
     button.classList.add(buttonClass);
     button.innerHTML = tableName;
     buttonsContainer.appendChild(button);

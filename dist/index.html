@@ -109,7 +109,7 @@
           <div>
 
             <div class="valor-display">
-              <span id="display-description">CREDITO PRETENDIDO:</span>
+              <span id="display-description"></span>
               <div class="display-container">
                 <span id="prefix">R$</span><input type="text" id="display-value">
               </div>
@@ -117,13 +117,14 @@
 
             <div class="range">
               <div class="range-bar-container">
-                <input id="range-bar" type="range" min="500" max="1000000" step="1" data-selected="credito">
+                <input id="range-bar" type="range" 
+                  min="500" max="1000000" step="1" data-selected="" data-formula="">
                 <div id="range-bar-progress"></div>
               </div>
 
               <div class="range-limit">
-                <span id="range-min">R$500</span>
-                <span id="range-max">R$1000</span>
+                <span id="range-min"></span>
+                <span id="range-max"></span>
               </div>
             </div>
 
@@ -132,7 +133,7 @@
               <div class="range-result__display">
                 <div class="range-result__description">120 MESES</div>
                 <div class="range-result__result">
-                  R$<span id="display-result" class="range-result__value">1.000,00</span>/MES
+                  R$<span id="display-result" class="range-result__value"></span>/MES
                 </div>
               </div>
             </div>
@@ -240,8 +241,10 @@
   <script src="./js/config/classname.js"></script>
   <script src="./js/config/tables_data.js"></script>
   
+  <!-- COMMON -->
+  <script src="./js/common/create_buttons.js""></script>
+
   <!-- TABLE   -->
-  <script src="./js/table/create_buttons.js""></script>
   <script src="./js/table/create_tabs.js""></script>
   <script src="./js/table/create_tables.js""></script>
   
@@ -263,33 +266,12 @@
   <script src="./js/rangebar/range_table.js"></script>
 
   <script src="./js/rangebar/initRbToggle.js"></script>
-  <script src="./js/rangebar/initRbEvent.js"></script>
+  <script src="./js/rangebar/initRbInputEvent.js"></script>
 
   <script src="./js/rangebar/initRangeBar.js"></script>
 
   <!-- VIDEO -->
   <script src="./js/iframe.js"></script>
-
-
-  <!-- DEBUG -->
-  <script>
-    // console.log(VIDEO_URL)
-    const rangeBar = document.getElementById('range-bar')
-    rangeBar.dataset.selected = 'parcela'
-    const description = document.getElementById('display-description')
-    description.innerHTML = "PARCELA"
-
-    const firstButtonDataType = TABLES_DATA[Object.keys(TABLES_DATA)[0]].type
-    if(firstButtonDataType === 'bar') {
-      document.getElementsByClassName('select__button').item(0).click()
-
-      const parcela = document.getElementById('parcela')
-      // parcela.classList.add('active')
-      parcela.click()
-    }
-    const parcela = document.getElementById('parcela')
-    parcela.classList.add('active')
-  </script>
 
 </body>
 </html>

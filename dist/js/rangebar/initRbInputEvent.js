@@ -1,6 +1,6 @@
 "use strict";
 
-function initRangeBarEvent() {
+function initRangeBarInputEvent() {
   var rangeBar = document.getElementById('range-bar');
   rangeBar.addEventListener('input', function () {
     // update ProgressBar

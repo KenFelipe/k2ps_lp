@@ -3,7 +3,7 @@
 /* ******************* Configurar os dados das tabelas aqui ************************ */
 
 /* Formato */
-// const TABLES_DATA = { 
+// const DATA = { 
 //     "nome_do_botao": {           *nome do botao nao pode repetir*
 //         "nome_da_aba(tab)": {    *nome da aba nao pode repetir dentro de mesmo botao*
 //             head: [ ... ],
@@ -15,7 +15,7 @@
 //         },
 //     }, ...
 // }
-var TABLES_DATA = {
+var DATA = {
   // "test": { type: "table", table: { "Ate 580mil": { head: ["500mil", "thead"], body: [ ["R$55.000,00", "R$349.00"], ], }, } },
   "TEST3": {
     type: "bar",
@@ -171,7 +171,7 @@ var TABLES_DATA = {
   //     },
   // }
 
-}; // const TABLES_DATA = { 
+}; // const DATA = { 
 // "automovel": {
 // type: "bar",
 // bar: {

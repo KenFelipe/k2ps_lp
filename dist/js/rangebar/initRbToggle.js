@@ -27,7 +27,7 @@ function initRangeBarToggle() {
     }
 
     rangeBar.dataset.selected = 'credito';
-    description.innerHTML = 'CREDITO PRETENDIDO:';
+    description.innerHTML = 'CREDITO PRETENDIDO: ';
     var barData = getActiveBarData();
     updateRangeBar(barData);
     parcela.classList.remove('active');

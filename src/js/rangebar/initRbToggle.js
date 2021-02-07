@@ -29,7 +29,7 @@ function initRangeBarToggle() {
         }
 
         rangeBar.dataset.selected = 'credito'
-        description.innerHTML = 'CREDITO PRETENDIDO:' 
+        description.innerHTML = 'CREDITO PRETENDIDO: ' 
 
         const barData = getActiveBarData()
         updateRangeBar(barData)

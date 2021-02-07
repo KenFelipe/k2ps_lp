@@ -30,7 +30,7 @@ function setActive() {
 
 
     //
-    const firstButtonDataType = TABLES_DATA[Object.keys(TABLES_DATA)[0]].type
+    const firstButtonDataType = DATA[Object.keys(DATA)[0]].type
 
     if(firstButtonDataType === 'table') {
         tabBars.item(0).classList.add('active')

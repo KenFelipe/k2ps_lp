@@ -8,16 +8,16 @@ function createTables() {
     const tablesContainer = document.getElementById(ID.tablesContainer)
 
     // tableNames: imovel, automovel, ...
-    const tableNames = Object.keys(TABLES_DATA)
+    const tableNames = Object.keys(DATA)
 
     tableNames.forEach(tableName => {
         // type: "table" or "bar"
         // logica sobre "bar" esta no "rangeBar/....js"
-        if(TABLES_DATA[tableName].type === "table") {
+        if(DATA[tableName].type === "table") {
             const tablesSection = document.createElement('div')
             tablesSection.className = tablesSectionClass
 
-            const tablesData = TABLES_DATA[tableName].table
+            const tablesData = DATA[tableName].table
 
             // tableTabNames: ate 240mil, a partir de 250mil, ...
             const tableTabNames = Object.keys(tablesData)

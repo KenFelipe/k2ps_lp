@@ -7,13 +7,13 @@ function createTabs() {
 
     const tabBarsContainer = document.getElementById(ID.tabBarContainer)
 
-    Object.keys(TABLES_DATA).forEach(tableName => {
+    Object.keys(DATA).forEach(tableName => {
         // nao tem tabs no rangeBar
-        if(TABLES_DATA[tableName].type === "table") {
+        if(DATA[tableName].type === "table") {
             const tabBar = document.createElement('div')
             tabBar.classList.add(tabBarClass)
 
-            Object.keys(TABLES_DATA[tableName].table).forEach(tabName => {
+            Object.keys(DATA[tableName].table).forEach(tabName => {
                 const tab = document.createElement('button')
                 tab.classList.add(tabClass)
 

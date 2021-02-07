@@ -7,14 +7,14 @@ function createTables() {
   var tablesSectionClass = CLASSNAME.tablesSection;
   var tablesContainer = document.getElementById(ID.tablesContainer); // tableNames: imovel, automovel, ...
 
-  var tableNames = Object.keys(TABLES_DATA);
+  var tableNames = Object.keys(DATA);
   tableNames.forEach(function (tableName) {
     // type: "table" or "bar"
     // logica sobre "bar" esta no "rangeBar/....js"
-    if (TABLES_DATA[tableName].type === "table") {
+    if (DATA[tableName].type === "table") {
       var tablesSection = document.createElement('div');
       tablesSection.className = tablesSectionClass;
-      var tablesData = TABLES_DATA[tableName].table; // tableTabNames: ate 240mil, a partir de 250mil, ...
+      var tablesData = DATA[tableName].table; // tableTabNames: ate 240mil, a partir de 250mil, ...
 
       var tableTabNames = Object.keys(tablesData);
       tableTabNames.forEach(function (tableTabName) {

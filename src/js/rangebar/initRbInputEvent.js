@@ -1,4 +1,4 @@
-function initRangeBarEvent() {
+function initRangeBarInputEvent() {
     const rangeBar = document.getElementById('range-bar')
 
     rangeBar.addEventListener('input', () => {

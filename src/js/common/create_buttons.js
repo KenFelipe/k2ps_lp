@@ -9,12 +9,12 @@ function createButtons() {
 
     const buttonsContainer = document.getElementById(ID.buttonsContainer)
 
-    Object.keys(TABLES_DATA).forEach(tableName => {
+    Object.keys(DATA).forEach(tableName => {
         const button = document.createElement('button')
 
         button.classList.add(
-            TABLES_DATA[tableName].type === 'table' ? tablesSelectButtonClass :
-            TABLES_DATA[tableName].type === 'bar' ? showBarButtonClass : ''
+            DATA[tableName].type === 'table' ? tablesSelectButtonClass :
+            DATA[tableName].type === 'bar' ? showBarButtonClass : ''
         )
 
         button.classList.add(buttonClass)

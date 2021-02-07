@@ -1,7 +1,7 @@
 function getActiveBarData() {
     const activeIndex = getActiveIndex()
-    const keys = Object.keys(TABLES_DATA)
-    const data = TABLES_DATA[keys[activeIndex]]
+    const keys = Object.keys(DATA)
+    const data = DATA[keys[activeIndex]]
 
     return data.bar
 }
@@ -19,8 +19,9 @@ function getActiveIndex() {
 
 function updateRangeBarFormula(formulasData) {
     const rangeBar = document.getElementById('range-bar')
+
     formulasData.forEach(formula => {
-        if(!(rangeBar.value >= formula.min) || !(rangeBar.value <= formula.max)) {
+        if(rangeBar.value < formula.min || rangeBar.value > formula.max) {
             return
         }
         if(rangeBar.dataset.formula === formula.formula) {
@@ -42,17 +43,19 @@ function updateRangeBar(data) {
     // iniciar com valor minimo
     rangeBar.value = data[selected].min
 
-    // update formula
-    updateRangeBarFormula(data[selected].formulas)
-
+    //
     const rangeLimitDisplayMin = document.getElementById('range-min')
-    rangeLimitDisplayMin.innerHTML = `R$${rangeBar.min.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.')}`
+    rangeLimitDisplayMin.innerHTML = 'R$' + toBRL(rangeBar.min, false)
 
     const rangeLimitDisplayMax = document.getElementById('range-max')
-    rangeLimitDisplayMax.innerHTML = `R$${rangeBar.max.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.')}`
+    rangeLimitDisplayMax.innerHTML = 'R$' + toBRL(rangeBar.max, false)
 
+    //
     const progressBar = document.getElementById('range-bar-progress')
     progressBar.style.width = 0
+
+    // update formula
+    updateRangeBarFormula(data[selected].formulas)
 
     updateRangeBarDisplay(rangeBar.dataset.formula, rangeBar.value)
 }

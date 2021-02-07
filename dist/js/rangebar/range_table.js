@@ -25,7 +25,7 @@ function rangeTabletest() {
       document.getElementById('tabbar-border-bottom').classList.add('disable');
     });
     showBarButtons.item(i).addEventListener('click', function () {
-      var barData = TABLES_DATA[showBarButtons.item(i).innerHTML].bar;
+      var barData = DATA[showBarButtons.item(i).innerHTML].bar;
       updateRangeBar(barData);
       var rangeBarContainer = document.getElementById('range-container');
       rangeBarContainer.classList.add('active');

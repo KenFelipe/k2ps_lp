@@ -24,7 +24,7 @@ function setActive() {
   } //
 
 
-  var firstButtonDataType = TABLES_DATA[Object.keys(TABLES_DATA)[0]].type;
+  var firstButtonDataType = DATA[Object.keys(DATA)[0]].type;
 
   if (firstButtonDataType === 'table') {
     tabBars.item(0).classList.add('active');

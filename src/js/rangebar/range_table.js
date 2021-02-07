@@ -26,7 +26,7 @@ function rangeTabletest() {
         })
 
         showBarButtons.item(i).addEventListener('click', () => {
-            const barData = TABLES_DATA[showBarButtons.item(i).innerHTML].bar
+            const barData = DATA[showBarButtons.item(i).innerHTML].bar
             updateRangeBar(barData)
 
             const rangeBarContainer = document.getElementById('range-container')
