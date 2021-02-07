@@ -6,10 +6,6 @@ input:focus, textarea:focus, button:focus {
   outline: none;
 }
 
-body {
-  padding-bottom: 600px;
-}
-
 .tables-select, .tabs, .tables {
   margin-top: 40px;
 }

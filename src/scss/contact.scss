@@ -1,0 +1,70 @@
+.contact {
+    margin-top: 50px;
+    text-align: center;
+
+    &__logo {
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        top: 48px;
+
+        @media (max-width: 574px) {
+            position: static;
+            display: block;
+            margin-bottom: 28px;
+        }
+
+        img {
+            width: 96px;
+            height: 73px;
+        }
+    }
+
+    &__info {
+        display: inline-block;
+        margin-left: 56px;
+        text-align: left;
+
+        @media (max-width: 574px) {
+            display: block;
+            margin-left: 0;
+            text-align: center;
+
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        img {
+            width: 31px;
+            height: 31px;
+        }
+
+        span {
+            @media (max-width: 574px) {
+                display: block;
+                margin-bottom: 32px;
+            }
+
+            vertical-align: top;
+            margin-left: 10px;
+            position: relative;
+            top: 6px;
+
+            color: #666;
+            font-family: "Open Sans", sans-serif;
+            font-size: 14px;
+        }
+
+        a {
+            @extend span;
+            color: #00a1df;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+                opacity: 0.5;
+            }
+        }
+    }
+}
