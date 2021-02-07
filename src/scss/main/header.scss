@@ -1,0 +1,75 @@
+.header {
+    &__logo {
+        margin: 0;
+
+        &--k2 {
+            float: left;
+
+            // k2-logo.png
+            // original size:
+            // width: 160px
+            // height: 121px 
+            width: 96px;
+            height: 73px;
+            margin: 14px 0 10px;
+
+            background-size: cover;
+            // background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url('../../img/k2-logo.png');
+
+            @media (max-width: 574px) {
+                width: 77px;
+                height: 58px;
+            }
+
+            @media (max-width: 490px) {
+                width: 62px;
+                height: 46px;
+            } 
+        }
+
+        &--porto {
+            float: right;
+
+            // portoseguro-logo.png
+            // original size:
+            // width: 575px
+            // height: 184px
+            width: 143px;
+            height: 46px;
+            margin: 24px 0 0;
+
+            background-size: cover;
+            // background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url('../../img/portoseguro-logo.png');
+            // background-image: url('../img/portoseguro-logo-eee.png');
+
+            @media (max-width: 574px) {
+                width: 114px;
+                height: 37px;
+            }
+
+            @media (max-width: 490px) {
+                width: 91px;
+                height: 30px;
+                margin: 24px 0px 0 0;
+                // display: none;
+            }
+        }
+    }
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .container {
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+}
