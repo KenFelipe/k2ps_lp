@@ -35,7 +35,7 @@ function createTables() {
     var tr = document.createElement('tr');
     table.head.forEach(function (theadData) {
       var td = document.createElement('td');
-      td.innerHTML = theadData;
+      td.innerHTML = theadData.replaceAll(' ', '&nbsp;');
       tr.appendChild(td);
       thead.appendChild(tr);
     });
@@ -49,7 +49,7 @@ function createTables() {
       var tr = document.createElement('tr');
       tbodyRow.forEach(function (tbodyRowData) {
         var td = document.createElement('td');
-        td.innerHTML = tbodyRowData;
+        td.innerHTML = tbodyRowData.replaceAll(' ', '&nbsp;');
         tr.appendChild(td);
       });
       tbody.appendChild(tr);

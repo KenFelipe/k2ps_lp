@@ -47,7 +47,7 @@ function createTables() {
 
         table.head.forEach(theadData => {
             const td = document.createElement('td')
-            td.innerHTML = theadData
+            td.innerHTML = theadData.replaceAll(' ', '&nbsp;')
 
             tr.appendChild(td)
             thead.appendChild(tr)
@@ -65,7 +65,7 @@ function createTables() {
 
             tbodyRow.forEach(tbodyRowData => {
                 const td = document.createElement('td')
-                td.innerHTML = tbodyRowData
+                td.innerHTML = tbodyRowData.replaceAll(' ', '&nbsp;')
 
                 tr.appendChild(td)
             })

@@ -20,57 +20,32 @@ const TABLES_DATA = {
         type: "bar",
         bar: {
             parcela: {
-                // min: 3333,
-                // max: 33333,
                 step: 1,
-                // formula: "x / 1000"
                 min: 100000,
                 max: 500000,
-                // formula: "(x * (16.5 / 10000) + x) / 20000 + (x * (16.5 / 10000) + x) * (0.031 / 10000)",
-                // formula: "x * 100000",
                 formulas: [{
                     min: 100000,
                     max: 200000,
-                formula: "(x * (16.5 / 100) + x) / 200 + (x * (16.5 / 100) + x) * (0.031 / 100)",
-                    // formula: "x / 1",
+                    formula: "(x * (16.5 / 100) + x) / 200 + (x * (16.5 / 100) + x) * (0.031 / 100)",
                 }, {
                     min: 200001,
                     max: 500000,
-                    // formula: "x / 100",
-                formula: "(x * (16.5 / 100) + x) / 200 + (x * (16.5 / 100) + x) * (0.031 / 100)",
+                    formula: "(x * (16.5 / 100) + x) / 200 + (x * (16.5 / 100) + x) * (0.031 / 100)",
                 }]
             },
             credito: {
-                min: 100000,
-                max: 500000,
+                min: 100,
+                max: 500,
                 step: 1,
-                formula: "x * 1000",
                 formulas: [{
-                    min: 100000,
-                    max: 200000,
-                    formula: "x / 100000",
+                    min: 100,
+                    max: 200,
+                    formula: "x * 1",
                 }, {
-                    min: 100000,
-                    max: 200000,
-                    formula: "x / 100",
+                    min: 201,
+                    max: 500,
+                    formula: "x * 10000",
                 }]
-            }
-        },
-    },
-    "TEST4": {
-        type: "bar",
-        bar: {
-            parcela: {
-                min: 4444,
-                max: 44444,
-                step: 1,
-                formula: "x / 2"
-            },
-            credito: {
-                min: 44,
-                max: 444,
-                step: 1,
-                formula: "x * 2"
             }
         },
     },
@@ -128,7 +103,40 @@ const TABLES_DATA = {
             },
         }
     },
-    "APOS TEST": {
+    "rangeBar2": {
+        type: "bar",
+        bar: {
+            parcela: {
+                min: 0,
+                max: 100,
+                step: 1,
+                formulas: [{
+                    min: 0,
+                    max: 50,
+                    formula: "x * 1",
+                }, {
+                    min: 51,
+                    max: 100,
+                    formula: "x * 10",
+                }]
+            },
+            credito: {
+                min: 44,
+                max: 444,
+                step: 1,
+                formulas: [{
+                    min: 44,
+                    max: 200,
+                    formula: "x * 1",
+                }, {
+                    min: 201,
+                    max: 444,
+                    formula: "x * 2",
+                }]
+            }
+        },
+    },
+    "POSTEST": {
         type: "table",
         table: {
             "Ate 240mil": {
@@ -157,23 +165,40 @@ const TABLES_DATA = {
             // "3 1453": { head: ["500mil", "thead"], body: [ ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ["R$55.000,00", "R$349.00"], ], },
         }
     },
-    "TEST5": {
-        type: "bar",
-        bar: {
-            parcela: {
-                min: 5555,
-                max: 55555,
-                step: 1,
-                formula: "x / 1000"
+    "tabletest": {
+        type: "table",
+        table: {
+            "FLEX50MESES": {
+                head: ["BEN OBJETO", "PLANO", "CREDITO", "PARCELA"],
+                body: [
+                    ["Cobalt_LTZ_1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"],
+                    ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"],
+                    ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"],
+                    ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"],
+                    ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"],
+                    ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"],
+                    ["Cobalt LTZ 1.4 8V Flexpower 4P", "GC", "63.235,00", "942.85"],
+                ]
             },
-            credito: {
-                min: 55,
-                max: 555,
-                step: 1,
-                formula: "x * 100"
-            }
-        },
+        }
     }
+    // "TEST5": {
+    //     type: "bar",
+    //     bar: {
+    //         parcela: {
+    //             min: 5555,
+    //             max: 55555,
+    //             step: 1,
+    //             formula: "x / 1000"
+    //         },
+    //         credito: {
+    //             min: 55,
+    //             max: 555,
+    //             step: 1,
+    //             formula: "x * 100"
+    //         }
+    //     },
+    // }
 }
 
 // const TABLES_DATA = { 

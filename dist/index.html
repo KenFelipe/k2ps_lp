@@ -141,15 +141,6 @@
         </div>
       </div>
 
-      <!-- RANGE TEST -->
-      <!-- <div class="container test">
-        <span id="rs-bullet" class="rs-label">0</span>
-        <div class="rb">
-          <input id="rs-range-line" class="rs-range"
-            type="range" value="0" min="0" max="200">
-          <div class="progress"></div>
-        </div>
-      </div> -->
     </section>
 
     <section class="taxa container">
@@ -161,7 +152,7 @@
         <img src="./img/ico-vid.png" alt="video-icon">
         <p>Assista ao vídeo do Porto Seguro Consórcio e saiba como conquistar seu bem de um jeito seguro e sem pagar juros</p>
       </div>
-      <div class="video__video">
+      <div id="video-iframe" class="video__video">
         <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/M6wLBpzSvqw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
       </div>
     </section>
@@ -242,7 +233,11 @@
   </div>
 
   <!-- script js precisa estar nessa sequencia -->
-  <script src="./js/config/tables_data.js"></script>
+  <!-- CONFIGS -->
+  <script src="./config/data.js"></script>
+  <script src="./config/video_config.js"></script>
+
+  <!-- <script src="./js/config/tables_data.js"></script> -->
   <script src="./js/config/classname.js"></script>
   
   
@@ -262,13 +257,19 @@
   <script src="./js/table/init_tables.js"></script>
   
   <!-- DEBUG -->
+  <script src="./js/rangebar/rbUpdateDisplay.js"></script>
+  <script src="./js/rangebar/rbUpdate.js"></script>
   <script src="./js/rangebar/rangeBar.js"></script>
   <script src="./js/rangebar/range_table.js"></script>
-  <!-- debug --img/>
+
+  <!-- debug -->
   <script src="./js/config/config.js"></script>
+  <script src="./js/iframe.js"></script>
 
   <!-- DEBUG -->
   <script>
+    // console.log(VIDEO_URL)
+    const rangeBar = document.getElementById('range-bar')
     rangeBar.dataset.selected = 'parcela'
 
     const firstButtonDataType = TABLES_DATA[Object.keys(TABLES_DATA)[0]].type
