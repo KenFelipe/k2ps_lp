@@ -1,5 +1,5 @@
-// criar abas(tabs) atraves de dados
-// configurado em 'config/data.js'
+// criar abas(tabs) que seleciona Table 
+// atraves de dados configurado em 'config/data.js'
 
 function createTabs() {
     const tabClass = CLASSNAME.tab
@@ -8,7 +8,8 @@ function createTabs() {
     const tabBarsContainer = document.getElementById(ID.tabBarContainer)
 
     Object.keys(DATA).forEach(tableName => {
-        // nao tem tabs no rangeBar
+        // se dados for configurado pra table
+        // logica sobre "bar" esta no "js/rangebar/"
         if(DATA[tableName].type === "table") {
             const tabBar = document.createElement('div')
             tabBar.classList.add(tabBarClass)

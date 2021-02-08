@@ -5,19 +5,20 @@ function createButtons() {
     const buttonClass = CLASSNAME.button
 
     const tablesSelectButtonClass = CLASSNAME.tablesSelectButton
-    const showBarButtonClass = CLASSNAME.showBarButton
+    const showRbButtonClass = CLASSNAME.showRbButton
 
     const buttonsContainer = document.getElementById(ID.buttonsContainer)
 
     Object.keys(DATA).forEach(tableName => {
         const button = document.createElement('button')
 
+        button.classList.add(buttonClass)
+
         button.classList.add(
             DATA[tableName].type === 'table' ? tablesSelectButtonClass :
-            DATA[tableName].type === 'bar' ? showBarButtonClass : ''
+            DATA[tableName].type === 'bar' ? showRbButtonClass : ''
         )
 
-        button.classList.add(buttonClass)
         button.innerHTML = tableName
 
         buttonsContainer.appendChild(button)

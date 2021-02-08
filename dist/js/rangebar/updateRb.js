@@ -8,7 +8,7 @@ function getActiveBarData() {
 }
 
 function getActiveIndex() {
-  // const showBarButtons = document.getElementsByClassName(CLASSNAME.showBarButton)
+  // const showRbButtons = document.getElementsByClassName(CLASSNAME.showRbButton)
   var buttons = document.getElementsByClassName(CLASSNAME.button);
 
   for (var i = 0; i < buttons.length; i++) {

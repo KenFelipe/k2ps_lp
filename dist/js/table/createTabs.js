@@ -1,13 +1,14 @@
 "use strict";
 
-// criar abas(tabs) atraves de dados
-// configurado em 'config/data.js'
+// criar abas(tabs) que seleciona Table 
+// atraves de dados configurado em 'config/data.js'
 function createTabs() {
   var tabClass = CLASSNAME.tab;
   var tabBarClass = CLASSNAME.tabBar;
   var tabBarsContainer = document.getElementById(ID.tabBarContainer);
   Object.keys(DATA).forEach(function (tableName) {
-    // nao tem tabs no rangeBar
+    // se dados for configurado pra table
+    // logica sobre "bar" esta no "js/rangebar/"
     if (DATA[tableName].type === "table") {
       var tabBar = document.createElement('div');
       tabBar.classList.add(tabBarClass);

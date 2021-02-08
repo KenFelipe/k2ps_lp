@@ -1,20 +1,17 @@
 "use strict";
 
-// seta as funcoes "onclick" nos tabs
-// pra atribuir class ".active"
-// pra mostrar tabela respectivo dinamicamente
-function initActiveTabs() {
+// aplicar funcao "onclick" nos tabs
+// pra mostrar tabela correspondente dinamicamente
+function initTabsClickEvent() {
   var tabs = document.getElementsByClassName(CLASSNAME.tab);
   var tabBars = document.getElementsByClassName(CLASSNAME.tabBar);
   var tables = document.getElementsByClassName(CLASSNAME.table); // ***************************
   // n de tab = n de table
   // ***************************
-  // aplicar funcao "onclick" em cada tab
-  // que atribui class ".active" no tab clicado e no table respectivo
-  // (que corresponde mesmo index).
-  // remove ".active" apenas do tab e table que 
-  // pertence mesmo tabBar do tab q foi clicado.
-  // (nao remove ".active" de outro tabBar, e de outro table)
+  // Atribui class ".active" no tab clicado e no table que corresponde mesmo index.
+  // Remove ".active" apenas do tab e do table que 
+  // pertence mesmo tabBar do tab que foi clicado.
+  // (nao remove ".active" de outro tabBar, e de outro table).
 
   var _loop = function _loop(tabBarIndex, _tabIndexCount) {
     // tabBarChilds: n de tab de um tabBar

@@ -1,7 +1,8 @@
 // iniciar primeiros elementos(botao, tabs, tabelas) ativado
 // (atribui class ".active")
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!! tb para rangeBar
 
-function setActive() {
+function initActive() {
     // botao
     const buttonsContainer = document.getElementById(ID.buttonsContainer)
     buttonsContainer.childNodes.item(0).classList.add('active')

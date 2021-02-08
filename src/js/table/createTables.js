@@ -1,4 +1,4 @@
-// CLASSNAME and ID config in "classname.js" //
+// CLASSNAME and ID in "config/idClassName.js" //
 // DATA in "config/data.js"
 
 function createTables() {
@@ -7,19 +7,19 @@ function createTables() {
 
     const tablesContainer = document.getElementById(ID.tablesContainer)
 
-    // tableNames: imovel, automovel, ...
-    const tableNames = Object.keys(DATA)
+    // items: imovel, automovel, ...
+    const items = Object.keys(DATA)
 
-    tableNames.forEach(tableName => {
+    items.forEach(item => {
         // type: "table" or "bar"
-        // logica sobre "bar" esta no "rangeBar/....js"
-        if(DATA[tableName].type === "table") {
+        // logica sobre "bar" esta no "js/rangebar/"
+        if(DATA[item].type === "table") {
             const tablesSection = document.createElement('div')
             tablesSection.className = tablesSectionClass
 
-            const tablesData = DATA[tableName].table
+            const tablesData = DATA[item].table
 
-            // tableTabNames: ate 240mil, a partir de 250mil, ...
+            // tableTabNames: "ate 240mil", a "partir de 250mil", ...
             const tableTabNames = Object.keys(tablesData)
 
             tableTabNames.forEach(tableTabName => {

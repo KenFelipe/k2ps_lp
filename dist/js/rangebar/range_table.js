@@ -1,19 +1,19 @@
 "use strict";
 
 function rangeTabletest() {
-  var showBarButtons = document.getElementsByClassName(CLASSNAME.showBarButton);
+  var showRbButtons = document.getElementsByClassName(CLASSNAME.showRbButton);
   var tablesSelectButtons = document.getElementsByClassName(CLASSNAME.tablesSelectButton);
   var tabBars = document.getElementsByClassName(CLASSNAME.tabBar);
   var tablesSections = document.getElementsByClassName(CLASSNAME.tablesSection);
 
   var _loop = function _loop(i) {
-    showBarButtons.item(i).addEventListener('click', function () {
+    showRbButtons.item(i).addEventListener('click', function () {
       //
-      for (var target = 0; target < showBarButtons.length; target++) {
-        showBarButtons.item(target).classList.remove('active');
+      for (var target = 0; target < showRbButtons.length; target++) {
+        showRbButtons.item(target).classList.remove('active');
       }
 
-      showBarButtons.item(i).classList.add('active'); //
+      showRbButtons.item(i).classList.add('active'); //
 
       for (var _target = 0; _target < tablesSelectButtons.length; _target++) {
         // esconder tabBar e tables
@@ -24,8 +24,8 @@ function rangeTabletest() {
 
       document.getElementById('tabbar-border-bottom').classList.add('disable');
     });
-    showBarButtons.item(i).addEventListener('click', function () {
-      var barData = DATA[showBarButtons.item(i).innerHTML].bar;
+    showRbButtons.item(i).addEventListener('click', function () {
+      var barData = DATA[showRbButtons.item(i).innerHTML].bar;
       updateRangeBar(barData);
       var rangeBarContainer = document.getElementById('range-container');
       rangeBarContainer.classList.add('active');
@@ -40,7 +40,7 @@ function rangeTabletest() {
     }
   };
 
-  for (var i = 0; i < showBarButtons.length; i++) {
+  for (var i = 0; i < showRbButtons.length; i++) {
     _loop(i);
   }
 }

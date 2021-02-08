@@ -2,7 +2,7 @@ const CLASSNAME = {
     // button
     button: "select__button",
     tablesSelectButton: "select__button--table",
-    showBarButton: "select__button--bar",
+    showRbButton: "select__button--bar",
 
     // tab
     tabBarsContainer: "tabbar-container",

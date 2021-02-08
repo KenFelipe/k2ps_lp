@@ -7,7 +7,7 @@ function getActiveBarData() {
 }
 
 function getActiveIndex() {
-    // const showBarButtons = document.getElementsByClassName(CLASSNAME.showBarButton)
+    // const showRbButtons = document.getElementsByClassName(CLASSNAME.showRbButton)
     const buttons = document.getElementsByClassName(CLASSNAME.button)
     for(let i = 0; i < buttons.length; i++) {
         if(!buttons.item(i).classList.contains('active')) {

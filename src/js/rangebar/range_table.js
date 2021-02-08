@@ -1,18 +1,18 @@
 function rangeTabletest() {
-    const showBarButtons = document.getElementsByClassName(CLASSNAME.showBarButton)
+    const showRbButtons = document.getElementsByClassName(CLASSNAME.showRbButton)
 
     const tablesSelectButtons = document.getElementsByClassName(CLASSNAME.tablesSelectButton)
 
     const tabBars = document.getElementsByClassName(CLASSNAME.tabBar)
     const tablesSections = document.getElementsByClassName(CLASSNAME.tablesSection)
 
-    for(let i = 0; i < showBarButtons.length; i++) {
-        showBarButtons.item(i).addEventListener('click', () => {
+    for(let i = 0; i < showRbButtons.length; i++) {
+        showRbButtons.item(i).addEventListener('click', () => {
             //
-            for(let target = 0; target < showBarButtons.length; target++) {
-                showBarButtons.item(target).classList.remove('active')
+            for(let target = 0; target < showRbButtons.length; target++) {
+                showRbButtons.item(target).classList.remove('active')
             }
-            showBarButtons.item(i).classList.add('active')
+            showRbButtons.item(i).classList.add('active')
 
             //
             for(let target = 0; target < tablesSelectButtons.length; target++) {
@@ -25,8 +25,8 @@ function rangeTabletest() {
             document.getElementById('tabbar-border-bottom').classList.add('disable')
         })
 
-        showBarButtons.item(i).addEventListener('click', () => {
-            const barData = DATA[showBarButtons.item(i).innerHTML].bar
+        showRbButtons.item(i).addEventListener('click', () => {
+            const barData = DATA[showRbButtons.item(i).innerHTML].bar
             updateRangeBar(barData)
 
             const rangeBarContainer = document.getElementById('range-container')

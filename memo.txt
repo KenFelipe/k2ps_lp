@@ -3,3 +3,8 @@ remainder:
 - 2column table
 - tab before <span>
 - rangeBar
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+- common/initTsButtonsClickEvent.js
+- common/initActive
+- table/setReponsiveTabs.js

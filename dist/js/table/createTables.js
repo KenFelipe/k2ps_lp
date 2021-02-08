@@ -1,20 +1,20 @@
 "use strict";
 
-// CLASSNAME and ID config in "classname.js" //
+// CLASSNAME and ID in "config/idClassName.js" //
 // DATA in "config/data.js"
 function createTables() {
   var tableClass = CLASSNAME.table;
   var tablesSectionClass = CLASSNAME.tablesSection;
-  var tablesContainer = document.getElementById(ID.tablesContainer); // tableNames: imovel, automovel, ...
+  var tablesContainer = document.getElementById(ID.tablesContainer); // items: imovel, automovel, ...
 
-  var tableNames = Object.keys(DATA);
-  tableNames.forEach(function (tableName) {
+  var items = Object.keys(DATA);
+  items.forEach(function (item) {
     // type: "table" or "bar"
-    // logica sobre "bar" esta no "rangeBar/....js"
-    if (DATA[tableName].type === "table") {
+    // logica sobre "bar" esta no "js/rangebar/"
+    if (DATA[item].type === "table") {
       var tablesSection = document.createElement('div');
       tablesSection.className = tablesSectionClass;
-      var tablesData = DATA[tableName].table; // tableTabNames: ate 240mil, a partir de 250mil, ...
+      var tablesData = DATA[item].table; // tableTabNames: "ate 240mil", a "partir de 250mil", ...
 
       var tableTabNames = Object.keys(tablesData);
       tableTabNames.forEach(function (tableTabName) {
