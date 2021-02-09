@@ -9,8 +9,6 @@ const CLASSNAME = {
     tabBar: "tabbar",
     tab: "tabbar__tab",
 
-    tabBarBottomBar: "tabs__bottom-bar",
-
     // table
     tablesContainer: "tables",
     tablesSection: "tables-section",
@@ -20,6 +18,7 @@ const CLASSNAME = {
 const ID = {
     buttonsContainer: "buttons-container",
     tabBarContainer: "tabbars-container",
-    bottomBar: "tabbar-border-bottom",
     tablesContainer: "tables-container",
+
+    tabBarBottomBar: "tabbar-border-bottom"
 }

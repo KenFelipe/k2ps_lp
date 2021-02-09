@@ -4,14 +4,18 @@ function initTsButtonsClickEvent() {
     const tsButtons = document.getElementsByClassName(CLASSNAME.tablesSelectButton)
 
     for(let i = 0; i < tsButtons.length; i++) {
-        tsButtons.item(i).addEventListener('click', toggleTsButtonsActive) 
-        tsButtons.item(i).addEventListener('click', removeRbButtonsActive) 
+        tsButtons.item(i).addEventListener('click', toggleTableElementsActive) 
+
         tsButtons.item(i).addEventListener('click', activeTabBarBottomBar) 
+
+        tsButtons.item(i).addEventListener('click', removeRbButtonsActive) 
+
+        tsButtons.item(i).addEventListener('click', disableRangeBar) 
 
         // ***************************************************
         // n de tsButtons = n de tabBar = n de tablesSections
         // ***************************************************
-        function toggleTsButtonsActive() {
+        function toggleTableElementsActive() {
             const tabBars = document.getElementsByClassName(CLASSNAME.tabBar)
             const tablesSections = document.getElementsByClassName(CLASSNAME.tablesSection)
 
@@ -35,6 +39,11 @@ function initTsButtonsClickEvent() {
             tablesSections.item(i).classList.add('active')
         }
 
+        function activeTabBarBottomBar() {
+            const tabBarBottomBar = document.getElementById(ID.tabBarBottomBar)
+            tabBarBottomBar.classList.add('active')
+        }
+
         function removeRbButtonsActive() {
             const showRbButtons = document.getElementsByClassName(CLASSNAME.showRbButton)
 
@@ -43,10 +52,9 @@ function initTsButtonsClickEvent() {
             }
         }
 
-        function activeTabBarBottomBar() {
-            // !!!!!!!!!!!!!!! change to active !!!!!!!!!!!!!!!!
-            // remover .disable pra exibir bottom bar do tabBar
-            document.getElementById('tabbar-border-bottom').classList.remove('disable')
+        function disableRangeBar() {
+            const rangeBarContainer = document.getElementById('range-container')
+            rangeBarContainer.classList.remove('active')
         }
     }
 }

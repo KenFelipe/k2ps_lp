@@ -1,3 +1,12 @@
+function getBarData(index) {
+    const keys = Object.keys(DATA)
+    const keysFiltered = keys.filter(key => DATA[key].type === 'bar')
+
+    const data = DATA[keysFiltered[index]]
+
+    return data.bar
+}
+
 function getActiveBarData() {
     const activeIndex = getActiveIndex()
     const keys = Object.keys(DATA)

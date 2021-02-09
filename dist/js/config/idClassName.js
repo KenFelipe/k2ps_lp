@@ -9,7 +9,6 @@ var CLASSNAME = {
   tabBarsContainer: "tabbar-container",
   tabBar: "tabbar",
   tab: "tabbar__tab",
-  tabBarBottomBar: "tabs__bottom-bar",
   // table
   tablesContainer: "tables",
   tablesSection: "tables-section",
@@ -18,6 +17,6 @@ var CLASSNAME = {
 var ID = {
   buttonsContainer: "buttons-container",
   tabBarContainer: "tabbars-container",
-  bottomBar: "tabbar-border-bottom",
-  tablesContainer: "tables-container"
+  tablesContainer: "tables-container",
+  tabBarBottomBar: "tabbar-border-bottom"
 };

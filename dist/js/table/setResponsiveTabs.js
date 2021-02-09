@@ -4,7 +4,7 @@ function setResponsiveTabs() {
   var tabBars = document.getElementsByClassName(CLASSNAME.tabBar);
   var tsButtons = document.getElementsByClassName(CLASSNAME.tablesSelectButton); // tabBar bottom bar
 
-  var bottomBar = document.getElementById(ID.bottomBar);
+  var tabBarBottomBar = document.getElementById(ID.tabBarBottomBar);
 
   var _loop = function _loop(tabBarI) {
     // classe atribuido depende da quantidade de tabs
@@ -18,14 +18,20 @@ function setResponsiveTabs() {
 
 
     if (tabBarI === 0) {
-      bottomBar.className = tabClass;
+      tabBarBottomBar.className = tabClass;
     } // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
-    // pro bottomBar classe adequado vai ser 
+    // pro tabBarBottomBar classe adequado vai ser 
     // atribuido cada vez que clicar tsButtons
 
 
     tsButtons.item(tabBarI).addEventListener('click', function () {
-      bottomBar.className = tabClass;
+      if (!tabBarBottomBar.classList.contains('active')) {
+        tabBarBottomBar.className = tabClass;
+        return;
+      }
+
+      tabBarBottomBar.className = tabClass;
+      tabBarBottomBar.classList.add('active');
     });
   };
 

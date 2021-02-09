@@ -5,6 +5,10 @@ remainder:
 - rangeBar
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-- common/initTsButtonsClickEvent.js
+- common/initTsButtonsClickEvent.js -----CLEAR-----
 - common/initActive
 - table/setReponsiveTabs.js
+
+- Solicite uma proposta(animation, highlight)
+- track icon/image bottom table/rangeBar
+- banner background

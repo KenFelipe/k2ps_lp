@@ -3,7 +3,7 @@ function setResponsiveTabs() {
     const tsButtons = document.getElementsByClassName(CLASSNAME.tablesSelectButton)
 
     // tabBar bottom bar
-    const bottomBar = document.getElementById(ID.bottomBar)
+    const tabBarBottomBar = document.getElementById(ID.tabBarBottomBar)
 
     for(let tabBarI = 0; tabBarI < tabBars.length; tabBarI++) {
         // classe atribuido depende da quantidade de tabs
@@ -17,14 +17,20 @@ function setResponsiveTabs() {
         // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
         // colocar na logica da init active 
         if(tabBarI === 0) {
-            bottomBar.className = tabClass
+            tabBarBottomBar.className = tabClass
         }
         // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
 
-        // pro bottomBar classe adequado vai ser 
+        // pro tabBarBottomBar classe adequado vai ser 
         // atribuido cada vez que clicar tsButtons
         tsButtons.item(tabBarI).addEventListener('click', () => {
-            bottomBar.className = tabClass
+            if(!tabBarBottomBar.classList.contains('active')) {
+                tabBarBottomBar.className = tabClass
+                return
+            }
+
+            tabBarBottomBar.className = tabClass
+            tabBarBottomBar.classList.add('active')
         })
     }
 

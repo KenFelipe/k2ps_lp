@@ -1,5 +1,14 @@
 "use strict";
 
+function getBarData(index) {
+  var keys = Object.keys(DATA);
+  var keysFiltered = keys.filter(function (key) {
+    return DATA[key].type === 'bar';
+  });
+  var data = DATA[keysFiltered[index]];
+  return data.bar;
+}
+
 function getActiveBarData() {
   var activeIndex = getActiveIndex();
   var keys = Object.keys(DATA);

@@ -100,8 +100,10 @@ $margin_tab: 4px;
     }
 
     #tabbar-border-bottom {
-        &.disable {
-            display: none;
+        display: none;
+
+        &.active {
+            display: block;
         }
 
         height: 1px;

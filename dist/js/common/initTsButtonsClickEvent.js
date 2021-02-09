@@ -6,13 +6,14 @@ function initTsButtonsClickEvent() {
   var tsButtons = document.getElementsByClassName(CLASSNAME.tablesSelectButton);
 
   var _loop = function _loop(i) {
-    tsButtons.item(i).addEventListener('click', toggleTsButtonsActive);
+    tsButtons.item(i).addEventListener('click', toggleTableElementsActive);
+    tsButtons.item(i).addEventListener('click', activeTabBarBottomBar);
     tsButtons.item(i).addEventListener('click', removeRbButtonsActive);
-    tsButtons.item(i).addEventListener('click', activeTabBarBottomBar); // ***************************************************
+    tsButtons.item(i).addEventListener('click', disableRangeBar); // ***************************************************
     // n de tsButtons = n de tabBar = n de tablesSections
     // ***************************************************
 
-    function toggleTsButtonsActive() {
+    function toggleTableElementsActive() {
       var tabBars = document.getElementsByClassName(CLASSNAME.tabBar);
       var tablesSections = document.getElementsByClassName(CLASSNAME.tablesSection); // atribui class ".active" no botao clicado,
       // no tabBar e no tables_section respectivo(que corresponde mesmo index)
@@ -35,6 +36,11 @@ function initTsButtonsClickEvent() {
       tablesSections.item(i).classList.add('active');
     }
 
+    function activeTabBarBottomBar() {
+      var tabBarBottomBar = document.getElementById(ID.tabBarBottomBar);
+      tabBarBottomBar.classList.add('active');
+    }
+
     function removeRbButtonsActive() {
       var showRbButtons = document.getElementsByClassName(CLASSNAME.showRbButton);
 
@@ -43,10 +49,9 @@ function initTsButtonsClickEvent() {
       }
     }
 
-    function activeTabBarBottomBar() {
-      // !!!!!!!!!!!!!!! change to active !!!!!!!!!!!!!!!!
-      // remover .disable pra exibir bottom bar do tabBar
-      document.getElementById('tabbar-border-bottom').classList.remove('disable');
+    function disableRangeBar() {
+      var rangeBarContainer = document.getElementById('range-container');
+      rangeBarContainer.classList.remove('active');
     }
   };
 
