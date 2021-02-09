@@ -1,8 +1,21 @@
 function initRangeBarInputEvent() {
     const rangeBar = document.getElementById('range-bar')
 
+    // console.log('debug')
+    rangeBar.addEventListener('input', updateProgressBar)
+
     rangeBar.addEventListener('input', () => {
-        // update ProgressBar
+        // update formula
+        const barData = getRangeBarData(getActiveRangeBarIndex())
+        const selected = rangeBar.dataset.selected
+
+        updateRangeBarFormula(barData[selected].formulas)
+
+        // update display
+        updateRangeBarDisplay(rangeBar.dataset.formula, rangeBar.value)
+    })
+
+    function updateProgressBar() {
         const rbThumbSize = 30
         const rbRange = rangeBar.max - rangeBar.min
         const rbVisibleWidth = rangeBar.offsetWidth - (rbThumbSize / 2) * 2
@@ -11,14 +24,8 @@ function initRangeBarInputEvent() {
         const rbProgressPercentage = rbProgressValue / rbRange
 
         const progressWidth = `${rbProgressPercentage * rbVisibleWidth + (rbThumbSize / 2)}px`
-        document.getElementById('range-bar-progress').style.width = progressWidth
 
-        // update formula
-        const barData = getActiveBarData()
-        const selected = rangeBar.dataset.selected
-        updateRangeBarFormula(barData[selected].formulas, rangeBar.value)
-
-        // update display
-        updateRangeBarDisplay(rangeBar.dataset.formula, rangeBar.value)
-    })
+        const progressBar = document.getElementById('range-bar-progress')
+        progressBar.style.width = progressWidth
+    }
 }

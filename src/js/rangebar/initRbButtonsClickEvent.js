@@ -22,7 +22,7 @@ function initRbButtonsClickEvent() {
         }
 
         function ActiveRangeBar() {
-            const barData = getBarData(i)
+            const barData = getRangeBarData(i)
             updateRangeBar(barData)
 
             const rangeBarContainer = document.getElementById('range-container')

@@ -1,10 +1,21 @@
-function getBarData(index) {
+function getRangeBarData(index) {
     const keys = Object.keys(DATA)
     const keysFiltered = keys.filter(key => DATA[key].type === 'bar')
 
     const data = DATA[keysFiltered[index]]
 
     return data.bar
+}
+
+function getActiveRangeBarIndex() {
+    const showRbButtons = document.getElementsByClassName(CLASSNAME.showRbButton)
+
+    for(let i = 0; i < showRbButtons.length; i++) {
+        if(!showRbButtons.item(i).classList.contains('active')) {
+            continue
+        }
+        return i
+    }
 }
 
 function getActiveBarData() {

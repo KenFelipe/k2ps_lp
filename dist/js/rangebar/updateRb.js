@@ -1,12 +1,24 @@
 "use strict";
 
-function getBarData(index) {
+function getRangeBarData(index) {
   var keys = Object.keys(DATA);
   var keysFiltered = keys.filter(function (key) {
     return DATA[key].type === 'bar';
   });
   var data = DATA[keysFiltered[index]];
   return data.bar;
+}
+
+function getActiveRangeBarIndex() {
+  var showRbButtons = document.getElementsByClassName(CLASSNAME.showRbButton);
+
+  for (var i = 0; i < showRbButtons.length; i++) {
+    if (!showRbButtons.item(i).classList.contains('active')) {
+      continue;
+    }
+
+    return i;
+  }
 }
 
 function getActiveBarData() {
