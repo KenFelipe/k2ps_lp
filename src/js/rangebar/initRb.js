@@ -2,7 +2,8 @@ function initRangeBar() {
     // toggle parcela-credito
     initRangeBarToggle()
 
-    // event oninput rangebar
+    // event rangebar
+    initRbButtonsClickEvent()
     initRangeBarInputEvent()
 
     activeRangeBar()
@@ -12,10 +13,8 @@ initRangeBar()
 
 function activeRangeBar() {
     const rangeBar = document.getElementById('range-bar')
-    // 'parcela' ou 'credito'
     rangeBar.dataset.selected = 'parcela'
 
-    //
     const firstButtonDataType = DATA[Object.keys(DATA)[0]].type
 
     if(firstButtonDataType === 'bar') {
@@ -24,8 +23,11 @@ function activeRangeBar() {
 
         const parcela = document.getElementById('parcela')
         parcela.click()
-    }
+    } else {
+        const description = document.getElementById('display-description')
+        description.innerHTML = 'VALOR DA PARCELA: '
 
-    const parcela = document.getElementById('parcela')
-    parcela.classList.add('active')
+        const parcela = document.getElementById('parcela')
+        parcela.classList.add('active')
+    }
 }

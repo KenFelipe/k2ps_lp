@@ -6,6 +6,7 @@ function initRbButtonsClickEvent() {
   var _loop = function _loop(i) {
     showRbButtons.item(i).addEventListener('click', toggleRbButtonsActive);
     showRbButtons.item(i).addEventListener('click', ActiveRangeBar);
+    showRbButtons.item(i).addEventListener('click', initRangeBarData);
     showRbButtons.item(i).addEventListener('click', removeTableElementsActive);
     showRbButtons.item(i).addEventListener('click', disableTabbarBottom);
 
@@ -23,10 +24,12 @@ function initRbButtonsClickEvent() {
     }
 
     function ActiveRangeBar() {
-      var barData = getRangeBarData(i);
-      updateRangeBar(barData);
       var rangeBarContainer = document.getElementById('range-container');
       rangeBarContainer.classList.add('active');
+    }
+
+    function initRangeBarData() {
+      updateRangeBar();
     }
 
     function removeTableElementsActive() {
@@ -52,5 +55,3 @@ function initRbButtonsClickEvent() {
     _loop(i);
   }
 }
-
-initRbButtonsClickEvent();

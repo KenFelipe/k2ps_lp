@@ -5,6 +5,7 @@ function initRbButtonsClickEvent() {
         showRbButtons.item(i).addEventListener('click', toggleRbButtonsActive)
 
         showRbButtons.item(i).addEventListener('click', ActiveRangeBar)
+        showRbButtons.item(i).addEventListener('click', initRangeBarData)
 
         showRbButtons.item(i).addEventListener('click', removeTableElementsActive)
 
@@ -22,11 +23,12 @@ function initRbButtonsClickEvent() {
         }
 
         function ActiveRangeBar() {
-            const barData = getRangeBarData(i)
-            updateRangeBar(barData)
-
             const rangeBarContainer = document.getElementById('range-container')
             rangeBarContainer.classList.add('active')
+        }
+        
+        function initRangeBarData() {
+            updateRangeBar()
         }
 
         function removeTableElementsActive() {
@@ -50,5 +52,3 @@ function initRbButtonsClickEvent() {
         }
     }
 }
-
-initRbButtonsClickEvent()

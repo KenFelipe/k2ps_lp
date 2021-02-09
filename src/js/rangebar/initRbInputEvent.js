@@ -1,19 +1,14 @@
 function initRangeBarInputEvent() {
     const rangeBar = document.getElementById('range-bar')
 
-    // console.log('debug')
-    rangeBar.addEventListener('input', updateProgressBar)
+    rangeBar.addEventListener('input', updateValues)
 
-    rangeBar.addEventListener('input', () => {
-        // update formula
-        const barData = getRangeBarData(getActiveRangeBarIndex())
-        const selected = rangeBar.dataset.selected
+    rangeBar.addEventListener('input', updateRangeBarFormula)
 
-        updateRangeBarFormula(barData[selected].formulas)
-
-        // update display
-        updateRangeBarDisplay(rangeBar.dataset.formula, rangeBar.value)
-    })
+    function updateValues() {
+        updateRangeBarDisplayValue()
+        updateProgressBar()
+    }
 
     function updateProgressBar() {
         const rbThumbSize = 30

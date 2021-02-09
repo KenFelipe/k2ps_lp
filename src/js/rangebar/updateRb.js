@@ -18,27 +18,15 @@ function getActiveRangeBarIndex() {
     }
 }
 
-function getActiveBarData() {
-    const activeIndex = getActiveIndex()
-    const keys = Object.keys(DATA)
-    const data = DATA[keys[activeIndex]]
-
-    return data.bar
-}
-
-function getActiveIndex() {
-    // const showRbButtons = document.getElementsByClassName(CLASSNAME.showRbButton)
-    const buttons = document.getElementsByClassName(CLASSNAME.button)
-    for(let i = 0; i < buttons.length; i++) {
-        if(!buttons.item(i).classList.contains('active')) {
-            continue
-        }
-        return i
-    }
-}
-
-function updateRangeBarFormula(formulasData) {
+//
+function updateRangeBarFormula() {
     const rangeBar = document.getElementById('range-bar')
+    const selected = rangeBar.dataset.selected
+
+    const activeRangeBarIndex = getActiveRangeBarIndex()
+    const activeRangeBarData = getRangeBarData(activeRangeBarIndex)
+
+    const formulasData = activeRangeBarData[selected].formulas
 
     formulasData.forEach(formula => {
         if(rangeBar.value < formula.min || rangeBar.value > formula.max) {
@@ -51,17 +39,21 @@ function updateRangeBarFormula(formulasData) {
     })
 }
 
-
-function updateRangeBar(data) {
+// fire on: 
+// rbButton-onclick, parcela/credito-toggle-onclick
+function updateRangeBar() {
     const rangeBar = document.getElementById('range-bar')
-
     const selected = rangeBar.dataset.selected
-    rangeBar.min = data[selected].min
-    rangeBar.max = data[selected].max
-    rangeBar.step = data[selected].step
+
+    const activeRangeBarIndex = getActiveRangeBarIndex()
+    const activeRangeBarData = getRangeBarData(activeRangeBarIndex)
+
+    rangeBar.min = activeRangeBarData[selected].min
+    rangeBar.max = activeRangeBarData[selected].max
+    rangeBar.step = activeRangeBarData[selected].step
 
     // iniciar com valor minimo
-    rangeBar.value = data[selected].min
+    rangeBar.value = activeRangeBarData[selected].min
 
     //
     const rangeLimitDisplayMin = document.getElementById('range-min')
@@ -70,13 +62,13 @@ function updateRangeBar(data) {
     const rangeLimitDisplayMax = document.getElementById('range-max')
     rangeLimitDisplayMax.innerHTML = 'R$' + toBRL(rangeBar.max, false)
 
-    //
+    // reset progressBar
     const progressBar = document.getElementById('range-bar-progress')
     progressBar.style.width = 0
 
     // update formula
-    updateRangeBarFormula(data[selected].formulas)
+    updateRangeBarFormula()
 
-    updateRangeBarDisplay(rangeBar.dataset.formula, rangeBar.value)
+    // calc formula and update display value
+    updateRangeBarDisplayValue()
 }
-

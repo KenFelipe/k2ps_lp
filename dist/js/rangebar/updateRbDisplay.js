@@ -13,17 +13,22 @@ function toBRL(value) {
 } // calc formula replacing x
 
 
-function calcRbFormula(formula, x) {
+function calcRangeBarFormula(formula, x) {
   var formulaReplaced = formula.replaceAll('x', x);
   var result = eval(formulaReplaced);
   return result;
 } // update display
 
 
-function updateRangeBarDisplay(formula, x) {
+function updateRangeBarDisplayValue() {
+  var rangeBar = document.getElementById('range-bar');
+  var currentValue = rangeBar.value;
+  var currentFormula = rangeBar.dataset.formula;
+  var result = calcRangeBarFormula(currentFormula, currentValue); // current value
+
   var displayValue = document.getElementById('display-value');
-  displayValue.value = toBRL(x, false);
-  var result = calcRbFormula(formula, x);
+  displayValue.value = toBRL(currentValue, false); // result calclated
+
   var displayResult = document.getElementById('display-result');
   displayResult.innerHTML = toBRL(result);
 }

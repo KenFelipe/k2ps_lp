@@ -1,17 +1,14 @@
 "use strict";
 
 function initRangeBarInputEvent() {
-  var rangeBar = document.getElementById('range-bar'); // console.log('debug')
+  var rangeBar = document.getElementById('range-bar');
+  rangeBar.addEventListener('input', updateValues);
+  rangeBar.addEventListener('input', updateRangeBarFormula);
 
-  rangeBar.addEventListener('input', updateProgressBar);
-  rangeBar.addEventListener('input', function () {
-    // update formula
-    var barData = getRangeBarData(getActiveRangeBarIndex());
-    var selected = rangeBar.dataset.selected;
-    updateRangeBarFormula(barData[selected].formulas); // update display
-
-    updateRangeBarDisplay(rangeBar.dataset.formula, rangeBar.value);
-  });
+  function updateValues() {
+    updateRangeBarDisplayValue();
+    updateProgressBar();
+  }
 
   function updateProgressBar() {
     var rbThumbSize = 30;

@@ -19,30 +19,15 @@ function getActiveRangeBarIndex() {
 
     return i;
   }
-}
+} //
 
-function getActiveBarData() {
-  var activeIndex = getActiveIndex();
-  var keys = Object.keys(DATA);
-  var data = DATA[keys[activeIndex]];
-  return data.bar;
-}
 
-function getActiveIndex() {
-  // const showRbButtons = document.getElementsByClassName(CLASSNAME.showRbButton)
-  var buttons = document.getElementsByClassName(CLASSNAME.button);
-
-  for (var i = 0; i < buttons.length; i++) {
-    if (!buttons.item(i).classList.contains('active')) {
-      continue;
-    }
-
-    return i;
-  }
-}
-
-function updateRangeBarFormula(formulasData) {
+function updateRangeBarFormula() {
   var rangeBar = document.getElementById('range-bar');
+  var selected = rangeBar.dataset.selected;
+  var activeRangeBarIndex = getActiveRangeBarIndex();
+  var activeRangeBarData = getRangeBarData(activeRangeBarIndex);
+  var formulasData = activeRangeBarData[selected].formulas;
   formulasData.forEach(function (formula) {
     if (rangeBar.value < formula.min || rangeBar.value > formula.max) {
       return;
@@ -54,25 +39,30 @@ function updateRangeBarFormula(formulasData) {
 
     rangeBar.dataset.formula = formula.formula;
   });
-}
+} // fire on: 
+// rbButton-onclick, parcela/credito-toggle-onclick
 
-function updateRangeBar(data) {
+
+function updateRangeBar() {
   var rangeBar = document.getElementById('range-bar');
   var selected = rangeBar.dataset.selected;
-  rangeBar.min = data[selected].min;
-  rangeBar.max = data[selected].max;
-  rangeBar.step = data[selected].step; // iniciar com valor minimo
+  var activeRangeBarIndex = getActiveRangeBarIndex();
+  var activeRangeBarData = getRangeBarData(activeRangeBarIndex);
+  rangeBar.min = activeRangeBarData[selected].min;
+  rangeBar.max = activeRangeBarData[selected].max;
+  rangeBar.step = activeRangeBarData[selected].step; // iniciar com valor minimo
 
-  rangeBar.value = data[selected].min; //
+  rangeBar.value = activeRangeBarData[selected].min; //
 
   var rangeLimitDisplayMin = document.getElementById('range-min');
   rangeLimitDisplayMin.innerHTML = 'R$' + toBRL(rangeBar.min, false);
   var rangeLimitDisplayMax = document.getElementById('range-max');
-  rangeLimitDisplayMax.innerHTML = 'R$' + toBRL(rangeBar.max, false); //
+  rangeLimitDisplayMax.innerHTML = 'R$' + toBRL(rangeBar.max, false); // reset progressBar
 
   var progressBar = document.getElementById('range-bar-progress');
   progressBar.style.width = 0; // update formula
 
-  updateRangeBarFormula(data[selected].formulas);
-  updateRangeBarDisplay(rangeBar.dataset.formula, rangeBar.value);
+  updateRangeBarFormula(); // calc formula and update display value
+
+  updateRangeBarDisplayValue();
 }

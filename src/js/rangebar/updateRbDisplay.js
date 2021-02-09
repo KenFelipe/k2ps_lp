@@ -4,8 +4,8 @@ function toBRL(value, leaveDp = true) {
     const dpRounded = (Math.round(value * 100) / 100).toString()
 
     // ex: 1.26 => 1,26, 1 => 1,00
-    const dpChanged = dpRounded.indexOf('.') === -1 && leaveDp
-        ? (dpRounded + '.00').replaceAll(/(\.)/g, ',') : dpRounded.replaceAll(/(\.)/g, ',')
+    const dpChanged = dpRounded.indexOf('.') === -1 && leaveDp ? 
+        (dpRounded + '.00').replaceAll(/(\.)/g, ',') : dpRounded.replaceAll(/(\.)/g, ',')
 
     // ex: 1000 => 1.000 
     const BRLNotation = dpChanged.replaceAll(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.')
@@ -14,7 +14,7 @@ function toBRL(value, leaveDp = true) {
 }
 
 // calc formula replacing x
-function calcRbFormula(formula, x) {
+function calcRangeBarFormula(formula, x) {
     const formulaReplaced = formula.replaceAll('x', x)
     const result = eval(formulaReplaced)
 
@@ -22,12 +22,19 @@ function calcRbFormula(formula, x) {
 }
 
 // update display
-function updateRangeBarDisplay(formula, x) {
+function updateRangeBarDisplayValue() {
+    const rangeBar = document.getElementById('range-bar')
+
+    const currentValue = rangeBar.value
+    const currentFormula = rangeBar.dataset.formula
+
+    const result = calcRangeBarFormula(currentFormula, currentValue)
+
+    // current value
     const displayValue = document.getElementById('display-value')
-    displayValue.value = toBRL(x, false)
+    displayValue.value = toBRL(currentValue, false)
 
-    const result = calcRbFormula(formula, x)
-
+    // result calclated
     const displayResult = document.getElementById('display-result')
     displayResult.innerHTML = toBRL(result)
 }
