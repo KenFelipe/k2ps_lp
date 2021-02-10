@@ -3,11 +3,12 @@
   padding: 35px 0 25px;
 }
 .footer p {
-  color: #fff;
-  font-size: 12px;
   font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 12px;
   font-weight: 100;
   line-height: 16px;
+  color: #fff;
   margin: 10px 0;
 }
 

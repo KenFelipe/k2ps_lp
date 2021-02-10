@@ -1,9 +1,14 @@
+@use 'font';
+@use 'mixin';
+
 .video {
     &__video {
+        // 16 : 4
+        padding-top: 56.25%;
+
         position: relative;
         width: 100%;
         height: 0;
-        padding-top: 56.25%;
 
         iframe {
             position: absolute;
@@ -15,6 +20,8 @@
     }
 
     &__header {
+        @include mixin.clear;
+
         padding: 40px 0 36px;
         
         img {
@@ -24,36 +31,28 @@
             height: 95px;
 
             @media (max-width: 574px) {
-                // text-align: center;
                 float: none;
                 margin: 20px auto;
             }
         }
 
         p {
+            @include font.OpenSans;
+            @include font.setting(20px, normal, 24px);
             color: #9e9f9f;
-            font-size: 20px;
-            font-family: "Open Sans", sans-serif;
-            line-height: 24px;
 
             float: left;
             width: calc(100% - 98px);
+
             margin: 0;
             padding-left: 20px;
             padding-top: 12px;
 
             @media (max-width: 574px) {
-                padding: 0;
-                clear: both;
                 width: 100%;
+                padding: 0;
                 text-align: center;
             }
-        }
-
-        &::after {
-            content: '';
-            display: block;
-            clear: both;
         }
     }
 }

@@ -1,3 +1,5 @@
+@use 'font';
+
 .contact {
     margin-top: 50px;
     text-align: center;
@@ -51,13 +53,14 @@
             position: relative;
             top: 6px;
 
+            @include font.OpenSans;
+            @include font.setting(14px, normal);
             color: #666;
-            font-family: "Open Sans", sans-serif;
-            font-size: 14px;
         }
 
         a {
             @extend span;
+
             color: #00a1df;
             text-decoration: none;
 

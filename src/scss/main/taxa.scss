@@ -1,9 +1,10 @@
+@use 'font';
+
 .taxa {
     p {
+        @include font.OpenSans;
+        @include font.setting(12px, normal, 1.45);
         color: #989898;
-        font-size: 12px;
-        font-family: "Open Sans", sans-serif;
-        line-height: 1.45;
 
         margin-top: 50px;
         padding: 15px 20px;

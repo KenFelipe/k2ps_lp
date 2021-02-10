@@ -14,18 +14,15 @@
 
     h3 {
         @include font.OpenSans;
+        @include font.setting(19.61px, normal, 1.53);
         color: #4e4e50;
-        font-size: 19.61px;
-        line-height: 1.53;
-
-        text-align: center;
         margin: 40px 0;
     }
 
     p {
-        font-size: 25px;
+        @include font.OpenSans;
+        @include font.setting(25px, normal, 1.08);
         color: #5a308d;
-        line-height: 1.08;
         text-align: center;
 
         display: inline-block;
@@ -35,9 +32,8 @@
         background-color: #eeeeee;
 
         @media (max-width: 640px) {
+            @include font.setting(20px, bold);
             background: none;
-            font-size: 20px;
-            font-weight: bold;
             padding: 15px;
         }
     }

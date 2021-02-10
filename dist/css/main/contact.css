@@ -43,9 +43,12 @@
   margin-left: 10px;
   position: relative;
   top: 6px;
-  color: #666;
   font-family: "Open Sans", sans-serif;
+  font-weight: normal;
   font-size: 14px;
+  font-weight: normal;
+  line-height: inherit;
+  color: #666;
 }
 @media (max-width: 574px) {
   .contact__info span, .contact__info a {

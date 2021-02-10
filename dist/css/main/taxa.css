@@ -1,8 +1,10 @@
 .taxa p {
-  color: #989898;
-  font-size: 12px;
   font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  font-weight: normal;
   line-height: 1.45;
+  color: #989898;
   margin-top: 50px;
   padding: 15px 20px;
   background-color: #eee;

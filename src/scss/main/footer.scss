@@ -1,13 +1,14 @@
+@use 'font';
+
 .footer {
     background-color: #122f4d;
     padding: 35px 0 25px;
 
     p {
+        @include font.OpenSans;
+        @include font.setting(12px, 100, 16px);
         color: #fff;
-        font-size: 12px;
-        font-family: "Open Sans", sans-serif;
-        font-weight: 100;
-        line-height: 16px;
+
         margin: 10px 0;
     }
 }

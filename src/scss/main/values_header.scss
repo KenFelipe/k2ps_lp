@@ -1,27 +1,25 @@
+@use 'font';
+
 .values__header {
     h4 {
-        font-size: 28px;
-        font-family: "Open Sans", sans-serif;
+        @include font.OpenSans;
+        @include font.setting(28px, normal, 1.071);
         color: #5a308d;
-        line-height: 1.071;
         text-align: left;
-        font-weight: normal;
         margin-bottom: 15px;
     }
 
     p {
-        font-size: 16px;
-        font-family: "Open Sans", sans-serif;
+        @include font.OpenSans;
+        @include font.setting(16px, normal, 1.875);
         color: #4e4e50;
-        line-height: 1.875;
         text-align: left;
-        margin: 16px 0 16px 0;
-        padding-left: 1px;
+        text-indent: 1px;
+        margin: 16px 0;
 
         &:last-child {
-            margin-top: 35px;
             font-size: 18px;
-            margin-bottom: 20px;
+            margin: 35px 0 20px;
         }
     }
 }

@@ -1,14 +1,9 @@
-.links-container {
+.link-container {
   margin-top: 50px;
   background-color: #eee;
   padding: 14px 0 26px;
 }
-.links-container::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.links-container .container::after {
+.link-container .container::after {
   content: "";
   display: block;
   clear: both;
@@ -32,10 +27,11 @@
   }
 }
 .links__description {
-  font-size: 14px;
-  line-height: 18px;
   font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
   font-weight: bold;
+  line-height: 18px;
   color: #00a1df;
   margin-bottom: 15px;
 }
@@ -61,14 +57,15 @@
   }
 }
 .links--top button {
-  margin-top: 22px;
-  height: 50px;
-  line-height: 50px;
-  color: white;
-  text-decoration: none;
   font-family: "Open Sans", sans-serif;
+  font-weight: normal;
   font-size: 14px;
   font-weight: bold;
+  line-height: 50px;
+  color: white;
+  height: 50px;
+  margin-top: 22px;
+  text-decoration: none;
   border-radius: 50px;
   background-color: #00a1df;
   cursor: pointer;
