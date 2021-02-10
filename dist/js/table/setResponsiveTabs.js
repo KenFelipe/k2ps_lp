@@ -1,42 +1,36 @@
 "use strict";
 
 function setResponsiveTabs() {
-  var tabBars = document.getElementsByClassName(CLASSNAME.tabBar);
-  var tsButtons = document.getElementsByClassName(CLASSNAME.tablesSelectButton); // tabBar bottom bar
+  var tabbars = document.getElementsByClassName(CLASSNAME.tabbar);
+  var tableSelBtns = document.getElementsByClassName(CLASSNAME.tableSelBtn); // tabbar bottom bar
 
-  var tabBarBottomBar = document.getElementById(ID.tabBarBottomBar);
+  var tabbarUnderline = document.getElementById(ID.tabbarUnderline);
 
-  var _loop = function _loop(tabBarI) {
+  var _loop = function _loop(tabbarI) {
     // classe atribuido depende da quantidade de tabs
-    var tabClass = getTabClassName(tabBars.item(tabBarI).childElementCount);
-    var tabs = tabBars.item(tabBarI).childNodes;
+    var tabClass = getTabClassName(tabbars.item(tabbarI).childElementCount); // adicionar pro tabs
+
+    var tabs = tabbars.item(tabbarI).childNodes;
 
     for (var tabI = 0; tabI < tabs.length; tabI++) {
       tabs.item(tabI).classList.add(tabClass);
-    } // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
-    // colocar na logica da init active 
+    } // pro tabbarUnderline classe adequado vai ser 
+    // atribuido cada vez que clicar tableSelBtns
 
 
-    if (tabBarI === 0) {
-      tabBarBottomBar.className = tabClass;
-    } // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
-    // pro tabBarBottomBar classe adequado vai ser 
-    // atribuido cada vez que clicar tsButtons
-
-
-    tsButtons.item(tabBarI).addEventListener('click', function () {
-      if (!tabBarBottomBar.classList.contains('active')) {
-        tabBarBottomBar.className = tabClass;
+    tableSelBtns.item(tabbarI).addEventListener('click', function () {
+      if (!tabbarUnderline.classList.contains('active')) {
+        tabbarUnderline.className = tabClass;
         return;
       }
 
-      tabBarBottomBar.className = tabClass;
-      tabBarBottomBar.classList.add('active');
+      tabbarUnderline.className = tabClass;
+      tabbarUnderline.classList.add('active');
     });
   };
 
-  for (var tabBarI = 0; tabBarI < tabBars.length; tabBarI++) {
-    _loop(tabBarI);
+  for (var tabbarI = 0; tabbarI < tabbars.length; tabbarI++) {
+    _loop(tabbarI);
   } // classe atribuido depende da quantidade de tabs
 
 

@@ -1,10 +1,10 @@
 // toggle parcela - credito
 function initRangeBarToggle() {
-    const rangeBar = document.getElementById('range-bar')
-    const description = document.getElementById('display-description')
+    const rangeBar = document.getElementById(ID.rangeBar)
+    const displayDescription = document.getElementById(ID.displayDescription)
 
-    const parcela = document.getElementById('parcela')
-    const credito = document.getElementById('credito')
+    const parcela = document.getElementById(ID.parcela)
+    const credito = document.getElementById(ID.credito)
 
     // parcela
     parcela.addEventListener('click', () => {
@@ -13,7 +13,7 @@ function initRangeBarToggle() {
         }
 
         rangeBar.dataset.selected = 'parcela'
-        description.innerHTML = 'VALOR DA PARCELA: '
+        displayDescription.innerHTML = 'VALOR DA PARCELA: '
 
         credito.classList.remove('active')
         parcela.classList.add('active')
@@ -28,7 +28,7 @@ function initRangeBarToggle() {
         }
 
         rangeBar.dataset.selected = 'credito'
-        description.innerHTML = 'CREDITO PRETENDIDO: ' 
+        displayDescription.innerHTML = 'CREDITO PRETENDIDO: ' 
 
         parcela.classList.remove('active')
         credito.classList.add('active')

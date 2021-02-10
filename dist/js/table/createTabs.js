@@ -4,15 +4,15 @@
 // atraves de dados configurado em 'config/data.js'
 function createTabs() {
   var tabClass = CLASSNAME.tab;
-  var tabBarClass = CLASSNAME.tabBar;
-  var tabBarsContainer = document.getElementById(ID.tabBarContainer);
-  Object.keys(DATA).forEach(function (tableName) {
+  var tabbarClass = CLASSNAME.tabbar;
+  var tabbarCtnr = document.getElementById(ID.tabbarCtnr);
+  Object.keys(DATA).forEach(function (dataItemkey) {
     // se dados for configurado pra table
     // logica sobre "bar" esta no "js/rangebar/"
-    if (DATA[tableName].type === "table") {
-      var tabBar = document.createElement('div');
-      tabBar.classList.add(tabBarClass);
-      Object.keys(DATA[tableName].table).forEach(function (tabName) {
+    if (DATA[dataItemkey].type === "table") {
+      var tabbar = document.createElement('div');
+      tabbar.classList.add(tabbarClass);
+      Object.keys(DATA[dataItemkey].table).forEach(function (tabName) {
         var tab = document.createElement('button');
         tab.classList.add(tabClass);
         var span = document.createElement('span');
@@ -23,9 +23,9 @@ function createTabs() {
         // ***************************************************
 
         tab.appendChild(span);
-        tabBar.appendChild(tab);
+        tabbar.appendChild(tab);
       });
-      tabBarsContainer.appendChild(tabBar);
+      tabbarCtnr.appendChild(tabbar);
     }
   });
 }

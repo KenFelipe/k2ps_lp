@@ -10,10 +10,10 @@ function getRangeBarData(index) {
 }
 
 function getActiveRangeBarIndex() {
-  var showRbButtons = document.getElementsByClassName(CLASSNAME.showRbButton);
+  var turnOnRbBtns = document.getElementsByClassName(CLASSNAME.turnOnRbBtn);
 
-  for (var i = 0; i < showRbButtons.length; i++) {
-    if (!showRbButtons.item(i).classList.contains('active')) {
+  for (var i = 0; i < turnOnRbBtns.length; i++) {
+    if (!turnOnRbBtns.item(i).classList.contains('active')) {
       continue;
     }
 
@@ -23,7 +23,7 @@ function getActiveRangeBarIndex() {
 
 
 function updateRangeBarFormula() {
-  var rangeBar = document.getElementById('range-bar');
+  var rangeBar = document.getElementById(ID.rangeBar);
   var selected = rangeBar.dataset.selected;
   var activeRangeBarIndex = getActiveRangeBarIndex();
   var activeRangeBarData = getRangeBarData(activeRangeBarIndex);
@@ -44,7 +44,7 @@ function updateRangeBarFormula() {
 
 
 function updateRangeBar() {
-  var rangeBar = document.getElementById('range-bar');
+  var rangeBar = document.getElementById(ID.rangeBar);
   var selected = rangeBar.dataset.selected;
   var activeRangeBarIndex = getActiveRangeBarIndex();
   var activeRangeBarData = getRangeBarData(activeRangeBarIndex);
@@ -54,12 +54,12 @@ function updateRangeBar() {
 
   rangeBar.value = activeRangeBarData[selected].min; //
 
-  var rangeLimitDisplayMin = document.getElementById('range-min');
+  var rangeLimitDisplayMin = document.getElementById(ID.displayRangeMin);
   rangeLimitDisplayMin.innerHTML = 'R$' + toBRL(rangeBar.min, false);
-  var rangeLimitDisplayMax = document.getElementById('range-max');
+  var rangeLimitDisplayMax = document.getElementById(ID.displayRangeMax);
   rangeLimitDisplayMax.innerHTML = 'R$' + toBRL(rangeBar.max, false); // reset progressBar
 
-  var progressBar = document.getElementById('range-bar-progress');
+  var progressBar = document.getElementById(ID.rbProgressBar);
   progressBar.style.width = 0; // update formula
 
   updateRangeBarFormula(); // calc formula and update display value

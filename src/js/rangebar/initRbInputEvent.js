@@ -1,5 +1,5 @@
 function initRangeBarInputEvent() {
-    const rangeBar = document.getElementById('range-bar')
+    const rangeBar = document.getElementById(ID.rangeBar)
 
     rangeBar.addEventListener('input', updateValues)
 
@@ -18,9 +18,9 @@ function initRangeBarInputEvent() {
         const rbProgressValue = rangeBar.value - rangeBar.min
         const rbProgressPercentage = rbProgressValue / rbRange
 
-        const progressWidth = `${rbProgressPercentage * rbVisibleWidth + (rbThumbSize / 2)}px`
+        const progressBarWidth = `${rbProgressPercentage * rbVisibleWidth + (rbThumbSize / 2)}px`
 
-        const progressBar = document.getElementById('range-bar-progress')
-        progressBar.style.width = progressWidth
+        const progressBar = document.getElementById(ID.rbProgressBar)
+        progressBar.style.width = progressBarWidth
     }
 }

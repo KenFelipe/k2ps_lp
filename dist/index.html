@@ -51,7 +51,6 @@
 
     <section class="banner">
       <div class="banner-bg container"></div>
-      <!-- <img src="./img/banner-auto-imovel.jpg" alt="" /> -->
       <!-- <div class="banner__bg"></div> -->
       <!-- <button class="proposta">Solicite uma proposta</button> -->
     </section>
@@ -88,20 +87,17 @@
         <p><strong>Comece escolhendo o tipo de consórcio abaixo</strong></p>
       </div>
 
+      <!-- button -->
+      <div id="button-container" class="select container"></div>
 
-      <!-- Tables -->
-      <!-- criado pelo javascript -->
-      <div id="buttons-container" class="select container"></div>
-
-      <!-- criado pelo javascript -->
+      <!-- tab -->
       <div id="tabs-container" class="container">
-        <div id="tabbars-container" class="tabbar-container"></div>
-        <div id="tabbar-border-bottom"></div>
+        <div id="tabbar-container" class="tabbar-container"></div>
+        <div id="tabbar-underline"></div>
       </div>
 
-      <!-- criado pelo javascript -->
-      <div id="tables-container" class="tables container"></div>
-
+      <!-- table -->
+      <div id="table-container" class="tables container"></div>
 
       <!-- RangeBar -->
       <div id="range-container" class="container">
@@ -246,33 +242,34 @@
   
   <!-- common -->
   <script src="./js/common/createButtons.js""></script>
-  <script src="./js/common/initTsButtonsClickEvent.js"></script>
   <script src="./js/common/setResponsiveButtons.js"></script>
 
   <!-- table and tab -->
+  <script src="./js/table/initTableSelBtnsClickEvent.js"></script>
+
   <script src="./js/table/createTables.js""></script>
 
   <script src="./js/table/createTabs.js""></script>
   <script src="./js/table/initTabsClickEvent.js"></script>
   <script src="./js/table/setResponsiveTabs.js"></script>
   
-  <script src="./js/common/initActive.js"></script>
-  
-  <script src="./js/common/init.js"></script>
+  <script src="./js/common/activateTableElems.js"></script>
   
   <!-- rangebar -->
+  <script src="./js/rangebar/initRbButtonsClickEvent.js"></script>
+
   <script src="./js/rangebar/updateRbDisplay.js"></script>
   <script src="./js/rangebar/updateRb.js"></script>
 
   <script src="./js/rangebar/initRbToggle.js"></script>
-
-  <script src="./js/rangebar/initRbButtonsClickEvent.js"></script>
   <script src="./js/rangebar/initRbInputEvent.js"></script>
 
-  <script src="./js/rangebar/initRb.js"></script>
+  <script src="./js/rangebar/activateRb.js"></script>
 
   <!-- VIDEO -->
   <script src="./js/common/iframe.js"></script>
 
+  <!-- init -->
+  <script src="./js/common/init.js"></script>
 </body>
 </html>

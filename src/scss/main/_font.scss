@@ -1,0 +1,10 @@
+@mixin OpenSans {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+}
+
+@mixin setting($size: inherit, $weight: inherit, $line_height: inherit) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line_height;
+}

@@ -8,10 +8,10 @@ function getRangeBarData(index) {
 }
 
 function getActiveRangeBarIndex() {
-    const showRbButtons = document.getElementsByClassName(CLASSNAME.showRbButton)
+    const turnOnRbBtns = document.getElementsByClassName(CLASSNAME.turnOnRbBtn)
 
-    for(let i = 0; i < showRbButtons.length; i++) {
-        if(!showRbButtons.item(i).classList.contains('active')) {
+    for(let i = 0; i < turnOnRbBtns.length; i++) {
+        if(!turnOnRbBtns.item(i).classList.contains('active')) {
             continue
         }
         return i
@@ -20,7 +20,7 @@ function getActiveRangeBarIndex() {
 
 //
 function updateRangeBarFormula() {
-    const rangeBar = document.getElementById('range-bar')
+    const rangeBar = document.getElementById(ID.rangeBar)
     const selected = rangeBar.dataset.selected
 
     const activeRangeBarIndex = getActiveRangeBarIndex()
@@ -42,7 +42,7 @@ function updateRangeBarFormula() {
 // fire on: 
 // rbButton-onclick, parcela/credito-toggle-onclick
 function updateRangeBar() {
-    const rangeBar = document.getElementById('range-bar')
+    const rangeBar = document.getElementById(ID.rangeBar)
     const selected = rangeBar.dataset.selected
 
     const activeRangeBarIndex = getActiveRangeBarIndex()
@@ -56,14 +56,14 @@ function updateRangeBar() {
     rangeBar.value = activeRangeBarData[selected].min
 
     //
-    const rangeLimitDisplayMin = document.getElementById('range-min')
+    const rangeLimitDisplayMin = document.getElementById(ID.displayRangeMin)
     rangeLimitDisplayMin.innerHTML = 'R$' + toBRL(rangeBar.min, false)
 
-    const rangeLimitDisplayMax = document.getElementById('range-max')
+    const rangeLimitDisplayMax = document.getElementById(ID.displayRangeMax)
     rangeLimitDisplayMax.innerHTML = 'R$' + toBRL(rangeBar.max, false)
 
     // reset progressBar
-    const progressBar = document.getElementById('range-bar-progress')
+    const progressBar = document.getElementById(ID.rbProgressBar)
     progressBar.style.width = 0
 
     // update formula

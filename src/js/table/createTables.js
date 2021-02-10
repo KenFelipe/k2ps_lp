@@ -2,40 +2,40 @@
 // DATA in "config/data.js"
 
 function createTables() {
-    const tableClass = CLASSNAME.table
-    const tablesSectionClass = CLASSNAME.tablesSection
+    const tableCls = CLASSNAME.table
+    const tableSecCls = CLASSNAME.tableSec
 
-    const tablesContainer = document.getElementById(ID.tablesContainer)
+    const tableCtnr = document.getElementById(ID.tableCtnr)
 
-    // items: imovel, automovel, ...
-    const items = Object.keys(DATA)
+    // itemKeys: imovel, automovel, ...
+    const dataItemKeys = Object.keys(DATA)
 
-    items.forEach(item => {
+    dataItemKeys.forEach(dataItemKey => {
         // type: "table" or "bar"
         // logica sobre "bar" esta no "js/rangebar/"
-        if(DATA[item].type === "table") {
-            const tablesSection = document.createElement('div')
-            tablesSection.className = tablesSectionClass
+        if(DATA[dataItemKey].type === "table") {
+            const tableSec = document.createElement('div')
+            tableSec.className = tableSecCls
 
-            const tablesData = DATA[item].table
+            const tableData = DATA[dataItemKey].table
 
             // tableTabNames: "ate 240mil", a "partir de 250mil", ...
-            const tableTabNames = Object.keys(tablesData)
+            const tabNames = Object.keys(tableData)
 
-            tableTabNames.forEach(tableTabName => {
+            tabNames.forEach(tabName => {
                 const table = document.createElement('table')
-                table.className = tableClass
+                table.className = tableCls
 
-                const thead = createTableHead(tablesData[tableTabName])
-                const tbody = createTableBody(tablesData[tableTabName])
+                const thead = createTableHead(tableData[tabName])
+                const tbody = createTableBody(tableData[tabName])
                 
                 table.appendChild(thead)
                 table.appendChild(tbody)
 
-                tablesSection.appendChild(table)
+                tableSec.appendChild(table)
             })
 
-            tablesContainer.appendChild(tablesSection)
+            tableCtnr.appendChild(tableSec)
         }
     })
 

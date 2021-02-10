@@ -21,14 +21,14 @@ function calcRangeBarFormula(formula, x) {
 
 
 function updateRangeBarDisplayValue() {
-  var rangeBar = document.getElementById('range-bar');
+  var rangeBar = document.getElementById(ID.rangeBar);
   var currentValue = rangeBar.value;
   var currentFormula = rangeBar.dataset.formula;
   var result = calcRangeBarFormula(currentFormula, currentValue); // current value
 
-  var displayValue = document.getElementById('display-value');
+  var displayValue = document.getElementById(ID.displayCurrentValue);
   displayValue.value = toBRL(currentValue, false); // result calclated
 
-  var displayResult = document.getElementById('display-result');
+  var displayResult = document.getElementById(ID.displayResult);
   displayResult.innerHTML = toBRL(result);
 }

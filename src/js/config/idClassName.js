@@ -1,24 +1,41 @@
 const CLASSNAME = {
     // button
     button: "select__button",
-    tablesSelectButton: "select__button--table",
-    showRbButton: "select__button--bar",
+    tableSelBtn: "select__button--table",
+    turnOnRbBtn: "select__button--bar",
 
     // tab
-    tabBarsContainer: "tabbar-container",
-    tabBar: "tabbar",
+    tabbar: "tabbar",
     tab: "tabbar__tab",
 
     // table
-    tablesContainer: "tables",
-    tablesSection: "tables-section",
-    table: "tables-section__table",
+    tableSec: "table-section",
+    table: "table-section__table",
+
+    // rangebar
 }
 
 const ID = {
-    buttonsContainer: "buttons-container",
-    tabBarContainer: "tabbars-container",
-    tablesContainer: "tables-container",
+    // button
+    buttonCtnr: "button-container",
 
-    tabBarBottomBar: "tabbar-border-bottom"
+    // tab
+    tabbarCtnr: "tabbar-container",
+    tabbarUnderline: "tabbar-underline",
+
+    // table
+    tableCtnr: "table-container",
+
+    // rangebar
+    rangeBarCtnr: "range-container",
+    rangeBar: "range-bar",
+    rbProgressBar: "range-bar-progress",
+    displayRangeMin: 'range-min',
+    displayRangeMax: 'range-max',
+    displayResult: "display-result",
+
+    parcela: "parcela",
+    credito: "credito",
+    displayDescription: "display-description",
+    displayCurrentValue: "display-value",
 }

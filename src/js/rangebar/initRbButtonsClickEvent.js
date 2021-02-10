@@ -1,44 +1,44 @@
 function initRbButtonsClickEvent() {
-    const showRbButtons = document.getElementsByClassName(CLASSNAME.showRbButton)
+    const turnOnRbBtns = document.getElementsByClassName(CLASSNAME.turnOnRbBtn)
 
-    for(let i = 0; i < showRbButtons.length; i++) {
-        showRbButtons.item(i).addEventListener('click', toggleRbButtonsActive)
+    for(let i = 0; i < turnOnRbBtns.length; i++) {
+        turnOnRbBtns.item(i).addEventListener('click', toggleRbButtonsActive)
 
-        showRbButtons.item(i).addEventListener('click', ActiveRangeBar)
-        showRbButtons.item(i).addEventListener('click', initRangeBarData)
+        turnOnRbBtns.item(i).addEventListener('click', turnOnRangeBar)
+        turnOnRbBtns.item(i).addEventListener('click', initRangeBarData)
 
-        showRbButtons.item(i).addEventListener('click', removeTableElementsActive)
+        turnOnRbBtns.item(i).addEventListener('click', deactivateTableElements)
 
-        showRbButtons.item(i).addEventListener('click', disableTabbarBottom)
+        turnOnRbBtns.item(i).addEventListener('click', disableTabbarUnderline)
 
         function toggleRbButtonsActive() {
-            for(let target = 0; target < showRbButtons.length; target++) {
+            for(let target = 0; target < turnOnRbBtns.length; target++) {
                 // nao remove do proprio btn clicado
                 if(target === i) {
                     continue
                 }
-                showRbButtons.item(target).classList.remove('active')
+                turnOnRbBtns.item(target).classList.remove('active')
             }
-            showRbButtons.item(i).classList.add('active')
+            turnOnRbBtns.item(i).classList.add('active')
         }
 
-        function ActiveRangeBar() {
-            const rangeBarContainer = document.getElementById('range-container')
-            rangeBarContainer.classList.add('active')
+        function turnOnRangeBar() {
+            const rangeBarCtnr = document.getElementById(ID.rangeBarCtnr)
+            rangeBarCtnr.classList.add('active')
         }
         
         function initRangeBarData() {
             updateRangeBar()
         }
 
-        function removeTableElementsActive() {
-            const tsButtons = document.getElementsByClassName(CLASSNAME.tablesSelectButton)
+        function deactivateTableElements() {
+            const tableSelBtns = document.getElementsByClassName(CLASSNAME.tableSelBtn)
 
-            const tabBars = document.getElementsByClassName(CLASSNAME.tabBar)
-            const tablesSections = document.getElementsByClassName(CLASSNAME.tablesSection)
+            const tabBars = document.getElementsByClassName(CLASSNAME.tabbar)
+            const tablesSections = document.getElementsByClassName(CLASSNAME.tableSec)
 
-            for(let target = 0; target < tsButtons.length; target++) {
-                tsButtons.item(target).classList.remove('active')
+            for(let target = 0; target < tableSelBtns.length; target++) {
+                tableSelBtns.item(target).classList.remove('active')
 
                 // esconder tabBar e tables
                 tabBars.item(target).classList.remove('active')
@@ -46,9 +46,9 @@ function initRbButtonsClickEvent() {
             }
         }
 
-        function disableTabbarBottom() {
-            const tabBarBottomBar = document.getElementById(ID.tabBarBottomBar)
-            tabBarBottomBar.classList.remove('active')
+        function disableTabbarUnderline() {
+            const tabbarUnderline = document.getElementById(ID.tabbarUnderline)
+            tabbarUnderline.classList.remove('active')
         }
     }
 }

@@ -15,7 +15,7 @@
 // }
 
 const DATA = {
-    "test": { type: "table", table: { "Ate 580mil": { head: ["500mil", "thead"], body: [ ["R$55.000,00", "R$349.00"], ], }, } },
+    // "test": { type: "table", table: { "Ate 580mil": { head: ["500mil", "thead"], body: [ ["R$55.000,00", "R$349.00"], ], }, } },
     "TEST3": {
         type: "bar",
         bar: {

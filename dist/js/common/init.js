@@ -1,14 +1,23 @@
 "use strict";
 
 function init() {
+  ////////////// common //////////////
   createButtons();
+  setResponsiveButtons();
+  initTableSelBtnsClickEvent();
+  initRbButtonsClickEvent(); ////////////// table //////////////
+
   createTables();
   createTabs();
-  initTsButtonsClickEvent();
   initTabsClickEvent();
-  initActive();
   setResponsiveTabs();
-  setResponsiveButtons();
+  activateTableElems(); ////////////// rangeBar //////////////
+
+  initRangeBarToggle();
+  initRangeBarInputEvent();
+  activateRangeBar(); ////////////// iframe //////////////
+
+  initIframe();
 }
 
 init();

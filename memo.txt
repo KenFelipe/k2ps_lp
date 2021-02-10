@@ -1,14 +1,19 @@
 remainder:
-- table limit size to scroll(x, y)
+- table limit size to scroll(x, y) -----CLEAR-----
 - 2column table
 - tab before <span>
-- rangeBar
+- rangeBar -----CLEAR-----
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 - common/initTsButtonsClickEvent.js -----CLEAR-----
-- common/initActive
-- table/setReponsiveTabs.js
+- common/initActive -----CLEAR-----
+- table/setReponsiveTabs.js -----CLEAR-----
 
 - Solicite uma proposta(animation, highlight)
 - track icon/image bottom table/rangeBar
 - banner background
+
+- firefox rangeBar, IE support
+- classidname refactoring, scss refactoring
+
+-createButton-disting

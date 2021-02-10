@@ -3,15 +3,18 @@
 // criar botoes atraves de dados
 // configurado em 'config/data.js'
 function createButtons() {
-  var buttonClass = CLASSNAME.button;
-  var tablesSelectButtonClass = CLASSNAME.tablesSelectButton;
-  var showRbButtonClass = CLASSNAME.showRbButton;
-  var buttonsContainer = document.getElementById(ID.buttonsContainer);
-  Object.keys(DATA).forEach(function (tableName) {
+  var buttonCls = CLASSNAME.button; // btns to select table (ts = tableSelect)
+
+  var tableSelBtnCls = CLASSNAME.tableSelBtn; // btns to show rangebar
+
+  var turnOnRbBtnCls = CLASSNAME.turnOnRbBtn;
+  var buttonCtnr = document.getElementById(ID.buttonCtnr);
+  Object.keys(DATA).forEach(function (dataItemKey) {
     var button = document.createElement('button');
-    button.classList.add(buttonClass);
-    button.classList.add(DATA[tableName].type === 'table' ? tablesSelectButtonClass : DATA[tableName].type === 'bar' ? showRbButtonClass : '');
-    button.innerHTML = tableName;
-    buttonsContainer.appendChild(button);
+    button.innerHTML = dataItemKey;
+    button.classList.add(buttonCls);
+    button.classList.add( ////////////////////////////////////////////////////////////////////////////// Kubetsu Disting
+    DATA[dataItemKey].type === 'table' ? tableSelBtnCls : DATA[dataItemKey].type === 'bar' ? turnOnRbBtnCls : '');
+    buttonCtnr.appendChild(button);
   });
 }

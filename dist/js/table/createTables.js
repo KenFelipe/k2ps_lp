@@ -3,30 +3,30 @@
 // CLASSNAME and ID in "config/idClassName.js" //
 // DATA in "config/data.js"
 function createTables() {
-  var tableClass = CLASSNAME.table;
-  var tablesSectionClass = CLASSNAME.tablesSection;
-  var tablesContainer = document.getElementById(ID.tablesContainer); // items: imovel, automovel, ...
+  var tableCls = CLASSNAME.table;
+  var tableSecCls = CLASSNAME.tableSec;
+  var tableCtnr = document.getElementById(ID.tableCtnr); // itemKeys: imovel, automovel, ...
 
-  var items = Object.keys(DATA);
-  items.forEach(function (item) {
+  var dataItemKeys = Object.keys(DATA);
+  dataItemKeys.forEach(function (dataItemKey) {
     // type: "table" or "bar"
     // logica sobre "bar" esta no "js/rangebar/"
-    if (DATA[item].type === "table") {
-      var tablesSection = document.createElement('div');
-      tablesSection.className = tablesSectionClass;
-      var tablesData = DATA[item].table; // tableTabNames: "ate 240mil", a "partir de 250mil", ...
+    if (DATA[dataItemKey].type === "table") {
+      var tableSec = document.createElement('div');
+      tableSec.className = tableSecCls;
+      var tableData = DATA[dataItemKey].table; // tableTabNames: "ate 240mil", a "partir de 250mil", ...
 
-      var tableTabNames = Object.keys(tablesData);
-      tableTabNames.forEach(function (tableTabName) {
+      var tabNames = Object.keys(tableData);
+      tabNames.forEach(function (tabName) {
         var table = document.createElement('table');
-        table.className = tableClass;
-        var thead = createTableHead(tablesData[tableTabName]);
-        var tbody = createTableBody(tablesData[tableTabName]);
+        table.className = tableCls;
+        var thead = createTableHead(tableData[tabName]);
+        var tbody = createTableBody(tableData[tabName]);
         table.appendChild(thead);
         table.appendChild(tbody);
-        tablesSection.appendChild(table);
+        tableSec.appendChild(table);
       });
-      tablesContainer.appendChild(tablesSection);
+      tableCtnr.appendChild(tableSec);
     }
   }); //
 

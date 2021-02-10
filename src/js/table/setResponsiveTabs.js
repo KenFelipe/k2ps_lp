@@ -1,36 +1,29 @@
 function setResponsiveTabs() {
-    const tabBars = document.getElementsByClassName(CLASSNAME.tabBar)
-    const tsButtons = document.getElementsByClassName(CLASSNAME.tablesSelectButton)
+    const tabbars = document.getElementsByClassName(CLASSNAME.tabbar)
+    const tableSelBtns = document.getElementsByClassName(CLASSNAME.tableSelBtn)
 
-    // tabBar bottom bar
-    const tabBarBottomBar = document.getElementById(ID.tabBarBottomBar)
+    // tabbar bottom bar
+    const tabbarUnderline = document.getElementById(ID.tabbarUnderline)
 
-    for(let tabBarI = 0; tabBarI < tabBars.length; tabBarI++) {
+    for(let tabbarI = 0; tabbarI < tabbars.length; tabbarI++) {
         // classe atribuido depende da quantidade de tabs
-        const tabClass = getTabClassName(tabBars.item(tabBarI).childElementCount)
+        const tabClass = getTabClassName(tabbars.item(tabbarI).childElementCount)
 
-        const tabs = tabBars.item(tabBarI).childNodes
+        // adicionar pro tabs
+        const tabs = tabbars.item(tabbarI).childNodes
         for(let tabI = 0; tabI < tabs.length; tabI++) {
             tabs.item(tabI).classList.add(tabClass)
         }
 
-        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
-        // colocar na logica da init active 
-        if(tabBarI === 0) {
-            tabBarBottomBar.className = tabClass
-        }
-        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
-
-        // pro tabBarBottomBar classe adequado vai ser 
-        // atribuido cada vez que clicar tsButtons
-        tsButtons.item(tabBarI).addEventListener('click', () => {
-            if(!tabBarBottomBar.classList.contains('active')) {
-                tabBarBottomBar.className = tabClass
+        // pro tabbarUnderline classe adequado vai ser 
+        // atribuido cada vez que clicar tableSelBtns
+        tableSelBtns.item(tabbarI).addEventListener('click', () => {
+            if(!tabbarUnderline.classList.contains('active')) {
+                tabbarUnderline.className = tabClass
                 return
             }
-
-            tabBarBottomBar.className = tabClass
-            tabBarBottomBar.classList.add('active')
+            tabbarUnderline.className = tabClass
+            tabbarUnderline.classList.add('active')
         })
     }
 

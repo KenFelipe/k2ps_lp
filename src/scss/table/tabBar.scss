@@ -95,11 +95,11 @@ $margin_tab: 4px;
 #tabs-container {
     position: relative;
 
-    #tabbars-container {
+    #tabbar-container {
         margin: 20px 0;
     }
 
-    #tabbar-border-bottom {
+    #tabbar-underline {
         display: none;
 
         &.active {

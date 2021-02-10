@@ -1,7 +1,7 @@
 "use strict";
 
 function initRangeBarInputEvent() {
-  var rangeBar = document.getElementById('range-bar');
+  var rangeBar = document.getElementById(ID.rangeBar);
   rangeBar.addEventListener('input', updateValues);
   rangeBar.addEventListener('input', updateRangeBarFormula);
 
@@ -16,8 +16,8 @@ function initRangeBarInputEvent() {
     var rbVisibleWidth = rangeBar.offsetWidth - rbThumbSize / 2 * 2;
     var rbProgressValue = rangeBar.value - rangeBar.min;
     var rbProgressPercentage = rbProgressValue / rbRange;
-    var progressWidth = "".concat(rbProgressPercentage * rbVisibleWidth + rbThumbSize / 2, "px");
-    var progressBar = document.getElementById('range-bar-progress');
-    progressBar.style.width = progressWidth;
+    var progressBarWidth = "".concat(rbProgressPercentage * rbVisibleWidth + rbThumbSize / 2, "px");
+    var progressBar = document.getElementById(ID.rbProgressBar);
+    progressBar.style.width = progressBarWidth;
   }
 }

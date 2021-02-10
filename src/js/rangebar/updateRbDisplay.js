@@ -23,7 +23,7 @@ function calcRangeBarFormula(formula, x) {
 
 // update display
 function updateRangeBarDisplayValue() {
-    const rangeBar = document.getElementById('range-bar')
+    const rangeBar = document.getElementById(ID.rangeBar)
 
     const currentValue = rangeBar.value
     const currentFormula = rangeBar.dataset.formula
@@ -31,10 +31,10 @@ function updateRangeBarDisplayValue() {
     const result = calcRangeBarFormula(currentFormula, currentValue)
 
     // current value
-    const displayValue = document.getElementById('display-value')
+    const displayValue = document.getElementById(ID.displayCurrentValue)
     displayValue.value = toBRL(currentValue, false)
 
     // result calclated
-    const displayResult = document.getElementById('display-result')
+    const displayResult = document.getElementById(ID.displayResult)
     displayResult.innerHTML = toBRL(result)
 }

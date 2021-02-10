@@ -2,10 +2,10 @@
 
 // toggle parcela - credito
 function initRangeBarToggle() {
-  var rangeBar = document.getElementById('range-bar');
-  var description = document.getElementById('display-description');
-  var parcela = document.getElementById('parcela');
-  var credito = document.getElementById('credito'); // parcela
+  var rangeBar = document.getElementById(ID.rangeBar);
+  var displayDescription = document.getElementById(ID.displayDescription);
+  var parcela = document.getElementById(ID.parcela);
+  var credito = document.getElementById(ID.credito); // parcela
 
   parcela.addEventListener('click', function () {
     if (parcela.classList.contains('active')) {
@@ -13,7 +13,7 @@ function initRangeBarToggle() {
     }
 
     rangeBar.dataset.selected = 'parcela';
-    description.innerHTML = 'VALOR DA PARCELA: ';
+    displayDescription.innerHTML = 'VALOR DA PARCELA: ';
     credito.classList.remove('active');
     parcela.classList.add('active');
     updateRangeBar();
@@ -25,7 +25,7 @@ function initRangeBarToggle() {
     }
 
     rangeBar.dataset.selected = 'credito';
-    description.innerHTML = 'CREDITO PRETENDIDO: ';
+    displayDescription.innerHTML = 'CREDITO PRETENDIDO: ';
     parcela.classList.remove('active');
     credito.classList.add('active');
     updateRangeBar();

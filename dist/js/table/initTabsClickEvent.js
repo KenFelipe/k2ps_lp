@@ -4,27 +4,27 @@
 // pra mostrar tabela correspondente dinamicamente
 function initTabsClickEvent() {
   var tabs = document.getElementsByClassName(CLASSNAME.tab);
-  var tabBars = document.getElementsByClassName(CLASSNAME.tabBar);
+  var tabbars = document.getElementsByClassName(CLASSNAME.tabbar);
   var tables = document.getElementsByClassName(CLASSNAME.table); // ***************************
   // n de tab = n de table
   // ***************************
   // Atribui class ".active" no tab clicado e no table que corresponde mesmo index.
   // Remove ".active" apenas do tab e do table que 
-  // pertence mesmo tabBar do tab que foi clicado.
-  // (nao remove ".active" de outro tabBar, e de outro table).
+  // pertence mesmo tabbar do tab que foi clicado.
+  // (nao remove ".active" de outro tabbar, e de outro table).
 
-  var _loop = function _loop(tabBarIndex, _tabIndexCount) {
-    // tabBarChilds: n de tab de um tabBar
-    // serve pra limitar remocao do ".active" de outro grupo tabBar e table
-    var tabBarChilds = tabBars.item(tabBarIndex).childElementCount;
+  var _loop = function _loop(tabbarIndex, _tabIndexCount) {
+    // tabbarChilds: n de tab de um tabbar
+    // serve pra limitar remocao do ".active" de outro grupo tabbar e table
+    var tabbarChilds = tabbars.item(tabbarIndex).childElementCount;
 
     var _loop2 = function _loop2(tabIndex) {
       // targetStartIndex: primeiro index do
-      // grupo tabBar pra remover ".active"
+      // grupo tabbar pra remover ".active"
       var targetStartIndex = _tabIndexCount;
       tabs.item(tabIndex).addEventListener('click', function () {
-        // nao remove ".active" de outro grupo tabBar e table
-        for (var targetIndex = targetStartIndex; targetIndex < targetStartIndex + tabBarChilds; targetIndex++) {
+        // nao remove ".active" de outro grupo tabbar e table
+        for (var targetIndex = targetStartIndex; targetIndex < targetStartIndex + tabbarChilds; targetIndex++) {
           // nao remove classe do proprio tab clicado
           // e do table do mesmo index
           if (targetIndex === tabIndex) {
@@ -40,15 +40,15 @@ function initTabsClickEvent() {
       });
     };
 
-    for (var tabIndex = _tabIndexCount; tabIndex < _tabIndexCount + tabBarChilds; tabIndex++) {
+    for (var tabIndex = _tabIndexCount; tabIndex < _tabIndexCount + tabbarChilds; tabIndex++) {
       _loop2(tabIndex);
     }
 
-    _tabIndexCount += tabBarChilds;
+    _tabIndexCount += tabbarChilds;
     tabIndexCount = _tabIndexCount;
   };
 
-  for (var tabBarIndex = 0, tabIndexCount = 0; tabBarIndex < tabBars.length; tabBarIndex++) {
-    _loop(tabBarIndex, tabIndexCount);
+  for (var tabbarIndex = 0, tabIndexCount = 0; tabbarIndex < tabbars.length; tabbarIndex++) {
+    _loop(tabbarIndex, tabIndexCount);
   }
 }

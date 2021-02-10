@@ -1,5 +1,6 @@
 .plan {
   margin-bottom: 40px;
+  text-align: center;
 }
 @media (max-width: 920px) {
   .plan {
@@ -12,21 +13,20 @@
   }
 }
 .plan h3 {
-  color: #4e4e50;
-  font-size: 19.61px;
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
+  color: #4e4e50;
+  font-size: 19.61px;
   line-height: 1.53;
   text-align: center;
   margin: 40px 0;
 }
 .plan p {
   font-size: 25px;
-  font-family: "Open Sans", sans-serif;
   color: #5a308d;
   line-height: 1.08;
   text-align: center;
-  display: table;
+  display: inline-block;
   margin: 0 auto;
   padding: 15px 36px;
   border-radius: 5px;

@@ -1,4 +1,10 @@
+@use 'mixin';
+
 .header {
+    .container {
+        @include mixin.clear;
+    }
+
     &__logo {
         margin: 0;
 
@@ -57,19 +63,6 @@
                 margin: 24px 0px 0 0;
                 // display: none;
             }
-        }
-    }
-    &::after {
-        content: '';
-        display: block;
-        clear: both;
-    }
-
-    .container {
-        &::after {
-            content: '';
-            display: block;
-            clear: both;
         }
     }
 }

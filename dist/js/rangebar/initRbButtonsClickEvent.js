@@ -1,57 +1,57 @@
 "use strict";
 
 function initRbButtonsClickEvent() {
-  var showRbButtons = document.getElementsByClassName(CLASSNAME.showRbButton);
+  var turnOnRbBtns = document.getElementsByClassName(CLASSNAME.turnOnRbBtn);
 
   var _loop = function _loop(i) {
-    showRbButtons.item(i).addEventListener('click', toggleRbButtonsActive);
-    showRbButtons.item(i).addEventListener('click', ActiveRangeBar);
-    showRbButtons.item(i).addEventListener('click', initRangeBarData);
-    showRbButtons.item(i).addEventListener('click', removeTableElementsActive);
-    showRbButtons.item(i).addEventListener('click', disableTabbarBottom);
+    turnOnRbBtns.item(i).addEventListener('click', toggleRbButtonsActive);
+    turnOnRbBtns.item(i).addEventListener('click', turnOnRangeBar);
+    turnOnRbBtns.item(i).addEventListener('click', initRangeBarData);
+    turnOnRbBtns.item(i).addEventListener('click', deactivateTableElements);
+    turnOnRbBtns.item(i).addEventListener('click', disableTabbarUnderline);
 
     function toggleRbButtonsActive() {
-      for (var target = 0; target < showRbButtons.length; target++) {
+      for (var target = 0; target < turnOnRbBtns.length; target++) {
         // nao remove do proprio btn clicado
         if (target === i) {
           continue;
         }
 
-        showRbButtons.item(target).classList.remove('active');
+        turnOnRbBtns.item(target).classList.remove('active');
       }
 
-      showRbButtons.item(i).classList.add('active');
+      turnOnRbBtns.item(i).classList.add('active');
     }
 
-    function ActiveRangeBar() {
-      var rangeBarContainer = document.getElementById('range-container');
-      rangeBarContainer.classList.add('active');
+    function turnOnRangeBar() {
+      var rangeBarCtnr = document.getElementById(ID.rangeBarCtnr);
+      rangeBarCtnr.classList.add('active');
     }
 
     function initRangeBarData() {
       updateRangeBar();
     }
 
-    function removeTableElementsActive() {
-      var tsButtons = document.getElementsByClassName(CLASSNAME.tablesSelectButton);
-      var tabBars = document.getElementsByClassName(CLASSNAME.tabBar);
-      var tablesSections = document.getElementsByClassName(CLASSNAME.tablesSection);
+    function deactivateTableElements() {
+      var tableSelBtns = document.getElementsByClassName(CLASSNAME.tableSelBtn);
+      var tabBars = document.getElementsByClassName(CLASSNAME.tabbar);
+      var tablesSections = document.getElementsByClassName(CLASSNAME.tableSec);
 
-      for (var target = 0; target < tsButtons.length; target++) {
-        tsButtons.item(target).classList.remove('active'); // esconder tabBar e tables
+      for (var target = 0; target < tableSelBtns.length; target++) {
+        tableSelBtns.item(target).classList.remove('active'); // esconder tabBar e tables
 
         tabBars.item(target).classList.remove('active');
         tablesSections.item(target).classList.remove('active');
       }
     }
 
-    function disableTabbarBottom() {
-      var tabBarBottomBar = document.getElementById(ID.tabBarBottomBar);
-      tabBarBottomBar.classList.remove('active');
+    function disableTabbarUnderline() {
+      var tabbarUnderline = document.getElementById(ID.tabbarUnderline);
+      tabbarUnderline.classList.remove('active');
     }
   };
 
-  for (var i = 0; i < showRbButtons.length; i++) {
+  for (var i = 0; i < turnOnRbBtns.length; i++) {
     _loop(i);
   }
 }
