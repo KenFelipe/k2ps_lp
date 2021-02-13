@@ -6,12 +6,4 @@ function activateTableElements() {
         // active first tab of tabBar and first table of tableSection
         tabbars.item(i).childNodes.item(0).click()
     }
-
-    //
-    const firstDataType = DATA[Object.keys(DATA)[0]].type
-
-    if(firstDataType === CONFIG.dataTypeName.table) {
-        const firstButton = document.getElementsByClassName(CLASSNAME.button).item(0)
-        firstButton.click()
-    }
 }
