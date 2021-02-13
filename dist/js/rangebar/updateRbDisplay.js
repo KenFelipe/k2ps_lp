@@ -1,6 +1,20 @@
 "use strict";
 
-// to R$ notation
+// update display
+function updateRangeBarDisplayValue() {
+  var rangeBar = document.getElementById(ID.rangeBar);
+  var currentValue = rangeBar.value;
+  var currentFormula = rangeBar.dataset.formula;
+  var result = calcRangeBarFormula(currentFormula, currentValue); // current value
+
+  var displayValue = document.getElementById(ID.displayCurrentValue);
+  displayValue.value = toBRL(currentValue, false); // result calclated
+
+  var displayResult = document.getElementById(ID.displayResult);
+  displayResult.innerHTML = toBRL(result);
+} // to R$ notation
+
+
 function toBRL(value) {
   var leaveDp = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
   // ex: 3.145678 => 3.14, 3.00123 => 3, 3 => 3
@@ -17,18 +31,4 @@ function calcRangeBarFormula(formula, x) {
   var formulaReplaced = formula.replaceAll('x', x);
   var result = eval(formulaReplaced);
   return result;
-} // update display
-
-
-function updateRangeBarDisplayValue() {
-  var rangeBar = document.getElementById(ID.rangeBar);
-  var currentValue = rangeBar.value;
-  var currentFormula = rangeBar.dataset.formula;
-  var result = calcRangeBarFormula(currentFormula, currentValue); // current value
-
-  var displayValue = document.getElementById(ID.displayCurrentValue);
-  displayValue.value = toBRL(currentValue, false); // result calclated
-
-  var displayResult = document.getElementById(ID.displayResult);
-  displayResult.innerHTML = toBRL(result);
 }

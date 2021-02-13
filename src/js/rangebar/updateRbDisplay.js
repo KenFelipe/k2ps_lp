@@ -1,3 +1,21 @@
+// update display
+function updateRangeBarDisplayValue() {
+    const rangeBar = document.getElementById(ID.rangeBar)
+
+    const currentValue = rangeBar.value
+    const currentFormula = rangeBar.dataset.formula
+
+    const result = calcRangeBarFormula(currentFormula, currentValue)
+
+    // current value
+    const displayValue = document.getElementById(ID.displayCurrentValue)
+    displayValue.value = toBRL(currentValue, false)
+
+    // result calclated
+    const displayResult = document.getElementById(ID.displayResult)
+    displayResult.innerHTML = toBRL(result)
+}
+
 // to R$ notation
 function toBRL(value, leaveDp = true) {
     // ex: 3.145678 => 3.14, 3.00123 => 3, 3 => 3
@@ -19,22 +37,4 @@ function calcRangeBarFormula(formula, x) {
     const result = eval(formulaReplaced)
 
     return result
-}
-
-// update display
-function updateRangeBarDisplayValue() {
-    const rangeBar = document.getElementById(ID.rangeBar)
-
-    const currentValue = rangeBar.value
-    const currentFormula = rangeBar.dataset.formula
-
-    const result = calcRangeBarFormula(currentFormula, currentValue)
-
-    // current value
-    const displayValue = document.getElementById(ID.displayCurrentValue)
-    displayValue.value = toBRL(currentValue, false)
-
-    // result calclated
-    const displayResult = document.getElementById(ID.displayResult)
-    displayResult.innerHTML = toBRL(result)
 }

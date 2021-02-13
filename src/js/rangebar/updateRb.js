@@ -1,52 +1,10 @@
-function getRangeBarData(index) {
-    const keys = Object.keys(DATA)
-    const keysFiltered = keys.filter(key => DATA[key].type === CONFIG.dataTypeName.bar)
-
-    const data = DATA[keysFiltered[index]]
-
-    return data.bar
-}
-
-function getActiveRangeBarIndex() {
-    const turnOnRbBtns = document.getElementsByClassName(CLASSNAME.turnOnRbBtn)
-
-    for(let i = 0; i < turnOnRbBtns.length; i++) {
-        if(!turnOnRbBtns.item(i).classList.contains('active')) {
-            continue
-        }
-        return i
-    }
-}
-
-//
-function updateRangeBarFormula() {
-    const rangeBar = document.getElementById(ID.rangeBar)
-    const selected = rangeBar.dataset.selected
-
-    const activeRangeBarIndex = getActiveRangeBarIndex()
-    const activeRangeBarData = getRangeBarData(activeRangeBarIndex)
-
-    const formulas = activeRangeBarData[selected].formulas
-
-    formulas.forEach(formula => {
-        if(rangeBar.value < formula.min || rangeBar.value > formula.max) {
-            return
-        }
-        if(rangeBar.dataset.formula === formula.formula) {
-            return
-        }
-        rangeBar.dataset.formula = formula.formula
-    })
-}
-
 // raise on: 
 // rbButton-onclick, parcela/credito-toggle-onclick
 function updateRangeBar() {
     const rangeBar = document.getElementById(ID.rangeBar)
     const selected = rangeBar.dataset.selected
 
-    const activeRangeBarIndex = getActiveRangeBarIndex()
-    const activeRangeBarData = getRangeBarData(activeRangeBarIndex)
+    const activeRangeBarData = getActiveRangeBarData()
 
     rangeBar.min = activeRangeBarData[selected].min
     rangeBar.max = activeRangeBarData[selected].max
