@@ -3,7 +3,7 @@
 function getRangeBarData(index) {
   var keys = Object.keys(DATA);
   var keysFiltered = keys.filter(function (key) {
-    return DATA[key].type === 'bar';
+    return DATA[key].type === CONFIG.dataTypeName.bar;
   });
   var data = DATA[keysFiltered[index]];
   return data.bar;
@@ -27,8 +27,8 @@ function updateRangeBarFormula() {
   var selected = rangeBar.dataset.selected;
   var activeRangeBarIndex = getActiveRangeBarIndex();
   var activeRangeBarData = getRangeBarData(activeRangeBarIndex);
-  var formulasData = activeRangeBarData[selected].formulas;
-  formulasData.forEach(function (formula) {
+  var formulas = activeRangeBarData[selected].formulas;
+  formulas.forEach(function (formula) {
     if (rangeBar.value < formula.min || rangeBar.value > formula.max) {
       return;
     }

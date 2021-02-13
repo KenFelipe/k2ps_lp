@@ -21,7 +21,7 @@ function init() {
 
     activateRangeBar()
 
-    ////////////// active first elements //////////////
+    ////////////// active first element //////////////
     activateFirstElement()
 
     ////////////// iframe //////////////

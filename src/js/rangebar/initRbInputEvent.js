@@ -1,14 +1,11 @@
 function initRangeBarInputEvent() {
     const rangeBar = document.getElementById(ID.rangeBar)
 
-    rangeBar.addEventListener('input', updateValues)
-
     rangeBar.addEventListener('input', updateRangeBarFormula)
 
-    function updateValues() {
-        updateRangeBarDisplayValue()
-        updateProgressBar()
-    }
+    rangeBar.addEventListener('input', updateRangeBarDisplayValue)
+
+    rangeBar.addEventListener('input', updateProgressBar)
 
     function updateProgressBar() {
         const rbThumbSize = 30

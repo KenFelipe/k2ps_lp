@@ -15,7 +15,7 @@ function init() {
 
   initRangeBarToggle();
   initRangeBarInputEvent();
-  activateRangeBar(); ////////////// active first elements //////////////
+  activateRangeBar(); ////////////// active first element //////////////
 
   activateFirstElement(); ////////////// iframe //////////////
 

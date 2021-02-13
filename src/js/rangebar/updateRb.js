@@ -1,6 +1,6 @@
 function getRangeBarData(index) {
     const keys = Object.keys(DATA)
-    const keysFiltered = keys.filter(key => DATA[key].type === 'bar')
+    const keysFiltered = keys.filter(key => DATA[key].type === CONFIG.dataTypeName.bar)
 
     const data = DATA[keysFiltered[index]]
 
@@ -26,9 +26,9 @@ function updateRangeBarFormula() {
     const activeRangeBarIndex = getActiveRangeBarIndex()
     const activeRangeBarData = getRangeBarData(activeRangeBarIndex)
 
-    const formulasData = activeRangeBarData[selected].formulas
+    const formulas = activeRangeBarData[selected].formulas
 
-    formulasData.forEach(formula => {
+    formulas.forEach(formula => {
         if(rangeBar.value < formula.min || rangeBar.value > formula.max) {
             return
         }
