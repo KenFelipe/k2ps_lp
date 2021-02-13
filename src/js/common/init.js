@@ -13,7 +13,7 @@ function init() {
     initTabsClickEvent()
     setResponsiveTabs()
 
-    activateTableElems()
+    activateTableElements()
 
     ////////////// rangeBar //////////////
     initRangeBarToggle()

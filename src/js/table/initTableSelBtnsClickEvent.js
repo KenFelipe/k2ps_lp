@@ -1,6 +1,6 @@
-// aplicar funcao "onclick" em tablesSelectButtons.
+// aplicar funcao "onclick" em botoes que seleciona tabela.
 function initTableSelBtnsClickEvent() {
-    // table select Buttons
+    // table select buttons
     const tableSelBtns = document.getElementsByClassName(CLASSNAME.tableSelBtn)
 
     for(let i = 0; i < tableSelBtns.length; i++) {
@@ -12,16 +12,14 @@ function initTableSelBtnsClickEvent() {
 
         tableSelBtns.item(i).addEventListener('click', turnOffRangeBar) 
 
-        // ***************************************************
-        // n de tableSelBtns = n de tabBar = n de tablesSections
-        // ***************************************************
+        // n de tableSelBtns = n de tabBar = n de tableSecs
         function toggleTableElementsActive() {
             const tabbars = document.getElementsByClassName(CLASSNAME.tabbar)
             const tableSecs = document.getElementsByClassName(CLASSNAME.tableSec)
 
             // atribui class ".active" no botao clicado,
             // no tabBar e no table section respectivo(que corresponde mesmo index)
-            // e remove .active de outros btn, tabBar e tbls_section.
+            // e remove .active de outros btn, tabbar e table section.
             for(let target = 0; target < tableSelBtns.length; target++) {
                 // nao vai remover classe do proprio elemento clicado
                 // e dos elementos de mesmo index.

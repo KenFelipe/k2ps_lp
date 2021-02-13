@@ -39,7 +39,7 @@ function updateRangeBarFormula() {
     })
 }
 
-// fire on: 
+// raise on: 
 // rbButton-onclick, parcela/credito-toggle-onclick
 function updateRangeBar() {
     const rangeBar = document.getElementById(ID.rangeBar)

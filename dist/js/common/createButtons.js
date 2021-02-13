@@ -13,8 +13,7 @@ function createButtons() {
     var button = document.createElement('button');
     button.innerHTML = dataItemKey;
     button.classList.add(buttonCls);
-    button.classList.add( ////////////////////////////////////////////////////////////////////////////// Kubetsu Disting
-    DATA[dataItemKey].type === 'table' ? tableSelBtnCls : DATA[dataItemKey].type === 'bar' ? turnOnRbBtnCls : '');
+    button.classList.add(DATA[dataItemKey].type === CONFIG.dataTypeName.table ? tableSelBtnCls : DATA[dataItemKey].type === CONFIG.dataTypeName.bar ? turnOnRbBtnCls : '');
     buttonCtnr.appendChild(button);
   });
 }

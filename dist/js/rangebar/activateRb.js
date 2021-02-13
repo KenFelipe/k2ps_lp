@@ -5,7 +5,7 @@ function activateRangeBar() {
   rangeBar.dataset.selected = 'parcela';
   var firstDataType = DATA[Object.keys(DATA)[0]].type;
 
-  if (firstDataType === 'bar') {
+  if (firstDataType === CONFIG.dataTypeName.bar) {
     var firstButton = document.getElementsByClassName(CLASSNAME.button).item(0);
     firstButton.click();
     var parcela = document.getElementById(ID.parcela);

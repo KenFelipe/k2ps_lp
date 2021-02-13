@@ -1,11 +1,7 @@
-// aplicar funcao "onclick" nos tabs
+// aplicar funcao "onclick" nas abas(tabs)
 // pra mostrar tabela correspondente dinamicamente
 function initTabsClickEvent() {
-    const tabs = document.getElementsByClassName(CLASSNAME.tab)
-
     const tabbars = document.getElementsByClassName(CLASSNAME.tabbar)
-
-    const tables = document.getElementsByClassName(CLASSNAME.table)
 
     // ***************************
     // n de tab = n de table
@@ -24,11 +20,14 @@ function initTabsClickEvent() {
             // grupo tabbar pra remover ".active"
             const targetStartIndex = tabIndexCount
 
+            const tabs = document.getElementsByClassName(CLASSNAME.tab)
+            const tables = document.getElementsByClassName(CLASSNAME.table)
+
             tabs.item(tabIndex).addEventListener('click', () => {
                 // nao remove ".active" de outro grupo tabbar e table
                 for(let targetIndex = targetStartIndex; targetIndex < targetStartIndex + tabbarChilds; targetIndex++) {
                     // nao remove classe do proprio tab clicado
-                    // e do table do mesmo index
+                    // e da tabela do mesmo index
                     if(targetIndex === tabIndex) {
                         continue
                     }

@@ -39,7 +39,7 @@ function updateRangeBarFormula() {
 
     rangeBar.dataset.formula = formula.formula;
   });
-} // fire on: 
+} // raise on: 
 // rbButton-onclick, parcela/credito-toggle-onclick
 
 

@@ -4,7 +4,7 @@ function activateRangeBar() {
 
     const firstDataType = DATA[Object.keys(DATA)[0]].type
 
-    if(firstDataType === 'bar') {
+    if(firstDataType === CONFIG.dataTypeName.bar) {
         const firstButton = document.getElementsByClassName(CLASSNAME.button).item(0)
         firstButton.click()
 

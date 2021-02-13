@@ -1,5 +1,6 @@
 "use strict";
 
+// aplicar funcao "onclick" em botoes que mostra barra.
 function initRbButtonsClickEvent() {
   var turnOnRbBtns = document.getElementsByClassName(CLASSNAME.turnOnRbBtn);
 
@@ -34,14 +35,14 @@ function initRbButtonsClickEvent() {
 
     function deactivateTableElements() {
       var tableSelBtns = document.getElementsByClassName(CLASSNAME.tableSelBtn);
-      var tabBars = document.getElementsByClassName(CLASSNAME.tabbar);
-      var tablesSections = document.getElementsByClassName(CLASSNAME.tableSec);
+      var tabbars = document.getElementsByClassName(CLASSNAME.tabbar);
+      var tableSecs = document.getElementsByClassName(CLASSNAME.tableSec);
 
       for (var target = 0; target < tableSelBtns.length; target++) {
-        tableSelBtns.item(target).classList.remove('active'); // esconder tabBar e tables
+        tableSelBtns.item(target).classList.remove('active'); // esconder tabbar e tabelas
 
-        tabBars.item(target).classList.remove('active');
-        tablesSections.item(target).classList.remove('active');
+        tabbars.item(target).classList.remove('active');
+        tableSecs.item(target).classList.remove('active');
       }
     }
 

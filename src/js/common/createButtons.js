@@ -17,9 +17,8 @@ function createButtons() {
 
         button.classList.add(buttonCls)
         button.classList.add(
-            ////////////////////////////////////////////////////////////////////////////// Kubetsu Disting
-            DATA[dataItemKey].type === 'table' ? tableSelBtnCls :
-            DATA[dataItemKey].type === 'bar' ? turnOnRbBtnCls : ''
+            DATA[dataItemKey].type === CONFIG.dataTypeName.table ? tableSelBtnCls :
+            DATA[dataItemKey].type === CONFIG.dataTypeName.bar ? turnOnRbBtnCls : ''
         )
 
         buttonCtnr.appendChild(button)

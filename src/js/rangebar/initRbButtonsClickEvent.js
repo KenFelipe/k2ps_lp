@@ -1,3 +1,4 @@
+// aplicar funcao "onclick" em botoes que mostra barra.
 function initRbButtonsClickEvent() {
     const turnOnRbBtns = document.getElementsByClassName(CLASSNAME.turnOnRbBtn)
 
@@ -5,6 +6,7 @@ function initRbButtonsClickEvent() {
         turnOnRbBtns.item(i).addEventListener('click', toggleRbButtonsActive)
 
         turnOnRbBtns.item(i).addEventListener('click', turnOnRangeBar)
+
         turnOnRbBtns.item(i).addEventListener('click', initRangeBarData)
 
         turnOnRbBtns.item(i).addEventListener('click', deactivateTableElements)
@@ -34,15 +36,15 @@ function initRbButtonsClickEvent() {
         function deactivateTableElements() {
             const tableSelBtns = document.getElementsByClassName(CLASSNAME.tableSelBtn)
 
-            const tabBars = document.getElementsByClassName(CLASSNAME.tabbar)
-            const tablesSections = document.getElementsByClassName(CLASSNAME.tableSec)
+            const tabbars = document.getElementsByClassName(CLASSNAME.tabbar)
+            const tableSecs = document.getElementsByClassName(CLASSNAME.tableSec)
 
             for(let target = 0; target < tableSelBtns.length; target++) {
                 tableSelBtns.item(target).classList.remove('active')
 
-                // esconder tabBar e tables
-                tabBars.item(target).classList.remove('active')
-                tablesSections.item(target).classList.remove('active')
+                // esconder tabbar e tabelas
+                tabbars.item(target).classList.remove('active')
+                tableSecs.item(target).classList.remove('active')
             }
         }
 

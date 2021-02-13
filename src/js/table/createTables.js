@@ -1,4 +1,4 @@
-// CLASSNAME and ID in "config/idClassName.js" //
+// CLASSNAME and ID config in "config/idClassName.js" //
 // DATA in "config/data.js"
 
 function createTables() {
@@ -13,7 +13,7 @@ function createTables() {
     dataItemKeys.forEach(dataItemKey => {
         // type: "table" or "bar"
         // logica sobre "bar" esta no "js/rangebar/"
-        if(DATA[dataItemKey].type === "table") {
+        if(DATA[dataItemKey].type === CONFIG.dataTypeName.table) {
             const tableSec = document.createElement('div')
             tableSec.className = tableSecCls
 

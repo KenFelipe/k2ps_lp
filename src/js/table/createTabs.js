@@ -1,4 +1,4 @@
-// criar abas(tabs) que seleciona Table 
+// criar abas(tabs) que seleciona table 
 // atraves de dados configurado em 'config/data.js'
 
 function createTabs() {
@@ -8,9 +8,9 @@ function createTabs() {
     const tabbarCtnr = document.getElementById(ID.tabbarCtnr)
 
     Object.keys(DATA).forEach(dataItemkey => {
-        // se dados for configurado pra table
+        // se dados for configurado pra tabela
         // logica sobre "bar" esta no "js/rangebar/"
-        if(DATA[dataItemkey].type === "table") {
+        if(DATA[dataItemkey].type === CONFIG.dataTypeName.table) {
             const tabbar = document.createElement('div')
             tabbar.classList.add(tabbarClass)
 
@@ -22,7 +22,7 @@ function createTabs() {
                 span.innerHTML = tabName
 
                 // ***************************************************
-                // PRECISA INSERIR LOGICA PARA
+                // INSERIR LOGICA PARA
                 // PROCESSAMENTO DE TEXT APOS DA <SPAN> 
                 // (LABEL DO TAB)
                 // ***************************************************

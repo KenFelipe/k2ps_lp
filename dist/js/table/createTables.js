@@ -1,6 +1,6 @@
 "use strict";
 
-// CLASSNAME and ID in "config/idClassName.js" //
+// CLASSNAME and ID config in "config/idClassName.js" //
 // DATA in "config/data.js"
 function createTables() {
   var tableCls = CLASSNAME.table;
@@ -11,7 +11,7 @@ function createTables() {
   dataItemKeys.forEach(function (dataItemKey) {
     // type: "table" or "bar"
     // logica sobre "bar" esta no "js/rangebar/"
-    if (DATA[dataItemKey].type === "table") {
+    if (DATA[dataItemKey].type === CONFIG.dataTypeName.table) {
       var tableSec = document.createElement('div');
       tableSec.className = tableSecCls;
       var tableData = DATA[dataItemKey].table; // tableTabNames: "ate 240mil", a "partir de 250mil", ...
