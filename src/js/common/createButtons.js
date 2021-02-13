@@ -4,7 +4,7 @@
 function createButtons() {
     const buttonCls = CLASSNAME.button
 
-    // btns to select table (ts = tableSelect)
+    // btns to show table
     const tableSelBtnCls = CLASSNAME.tableSelBtn
     // btns to show rangebar
     const turnOnRbBtnCls = CLASSNAME.turnOnRbBtn

@@ -3,7 +3,7 @@
 // criar botoes atraves de dados
 // configurado em 'config/data.js'
 function createButtons() {
-  var buttonCls = CLASSNAME.button; // btns to select table (ts = tableSelect)
+  var buttonCls = CLASSNAME.button; // btns to show table
 
   var tableSelBtnCls = CLASSNAME.tableSelBtn; // btns to show rangebar
 
