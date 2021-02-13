@@ -56,6 +56,13 @@ $thumb_size: 30px;
 .range-bar-container {
     position: relative;
 
+    @media (max-width: 774px) {
+        margin: 0 -10px;
+    }
+    @media (max-width: 490px) {
+        margin: 0 -8px;
+    }
+
     &::before {
         @extend %hidden-part;
         margin-left: 10%;
@@ -81,7 +88,7 @@ $thumb_size: 30px;
         }
 
         @media (max-width: 490px) {
-            margin-right: 2%;
+            margin-right: 0%;
         }
     }
 }

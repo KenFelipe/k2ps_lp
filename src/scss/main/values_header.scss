@@ -14,7 +14,8 @@
         @include font.setting(16px, normal, 1.875);
         color: #4e4e50;
         text-align: left;
-        text-indent: 1px;
+        // text-indent: 1px;
+        padding-left: 1px;
         margin: 16px 0;
 
         &:last-child {
