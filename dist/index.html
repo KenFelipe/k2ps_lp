@@ -27,6 +27,8 @@
   <link rel="stylesheet" href="./css/rangebar/rangebar_component.css">
   <link rel="stylesheet" href="./css/rangebar/rangeBar.css">
 
+  <link rel="stylesheet" href="./css/card/plan_card.css">
+
   <link rel="stylesheet" href="./css/main/taxa.css">
   <link rel="stylesheet" href="./css/main/video.css">
 
@@ -34,6 +36,13 @@
 
   <link rel="stylesheet" href="./css/main/links.css">
   <link rel="stylesheet" href="./css/main/footer.css">
+
+  <!-- Swiper -->
+  <!-- CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <title>Porto Seguro Consórcio - Quem faz planos com o Porto Seguro Consórcio, tem o tempo certo para alcançar o que deseja</title>
 </head>
@@ -117,6 +126,7 @@
               </div>
             </div>
 
+            <!--  -->
             <div class="range">
               <div class="range-bar-container">
                 <input id="range-bar" type="range" 
@@ -129,6 +139,7 @@
                 <span id="range-max"></span>
               </div>
             </div>
+            <!--  -->
 
             <div class="range-result">
               <div class="range-result__title">PLANOS E TAXAS</div>
@@ -144,6 +155,58 @@
         </div>
       </div>
 
+    </section>
+
+    <section class="planos">
+      <div class="container">
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <!-- Ex -->
+            <div class="plan-card swiper-slide">
+              <div class="plan-card__imgbg"></div>
+              <div class="plan-card__description">
+                <p class="plan-card__value">R$1.000,00</p>
+              </div>
+            </div>
+            <div class="plan-card swiper-slide">
+              <div class="plan-card__imgbg"></div>
+              <div class="plan-card__description">
+                <p class="plan-card__value">R$1.000,00</p>
+              </div>
+            </div>
+            <div class="plan-card swiper-slide">
+              <div class="plan-card__imgbg"></div>
+              <div class="plan-card__description">
+                <p class="plan-card__value">R$1.000,00</p>
+              </div>
+            </div>
+            <div class="plan-card swiper-slide">
+              <div class="plan-card__imgbg"></div>
+              <div class="plan-card__description">
+                <p class="plan-card__value">R$1.000,00</p>
+              </div>
+            </div>
+            <div class="plan-card swiper-slide">
+              <div class="plan-card__imgbg"></div>
+              <div class="plan-card__description">
+                <p class="plan-card__value">R$1.000,00</p>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+      </div>
     </section>
 
     <section class="taxa container">
@@ -283,5 +346,8 @@
 
   <!-- init -->
   <script src="./js/common/init.js"></script>
+
+  <!-- DEBUG -->
+  <script src="./js/carousel/initCarousel.js"></script>
 </body>
 </html>

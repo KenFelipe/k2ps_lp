@@ -15,5 +15,3 @@ remainder:
 
 - firefox rangeBar, IE support
 - classidname refactoring, scss refactoring
-
--createButton-disting
