@@ -33,6 +33,7 @@
   opacity: 1;
 }
 .request__link:hover::after {
+  opacity: 0;
   animation: none;
 }
 .request__link::before {
