@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+input:focus, textarea:focus, button:focus {
+  outline: none;
+}
+
+.tables-select, .tabs, .tables {
+  margin-top: 40px;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 30px;
+  padding: 0 35px 0 25px;
+}
+@media (max-width: 774px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 490px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

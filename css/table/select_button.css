@@ -1,0 +1,45 @@
+.select__button {
+  margin: 0px 4px;
+  margin-top: 4px;
+  height: 40px;
+  cursor: pointer;
+  color: white;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  line-height: 1.343;
+  border: 3px solid #00adef;
+  background-color: #00adef;
+  transition: all 0.4s ease;
+  width: calc(100% / 4 - 4px * 2);
+}
+.select__button:hover, .select__button.active {
+  color: #00adef;
+  border: 3px solid #00adef;
+  background-color: #fff;
+}
+@media (max-width: 774px) {
+  .select__button {
+    width: calc(100% / 2 - 4px * 2);
+  }
+}
+@media (max-width: 490px) {
+  .select__button {
+    width: 100%;
+  }
+}
+.select__button.buttons-5 {
+  width: calc(100% / 3 - 4px * 2);
+}
+@media (max-width: 774px) {
+  .select__button.buttons-5 {
+    width: calc(100% / 2 - 4px * 2);
+  }
+}
+@media (max-width: 490px) {
+  .select__button.buttons-5 {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=select_button.css.map */

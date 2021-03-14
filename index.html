@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- normalize -->
+  <link rel="stylesheet" href="./css/main/_normalize.css">
+
+  <!-- css -->
+  <link rel="stylesheet" href="./css/main/main.css">
+
+  <link rel="stylesheet" href="./css/main/header.css">
+
+  <link rel="stylesheet" href="./css/main/request.css">
+
+  <link rel="stylesheet" href="./css/main/banner.css">
+  <link rel="stylesheet" href="./css/main/plan.css">
+  <link rel="stylesheet" href="./css/main/topics.css">
+
+  <link rel="stylesheet" href="./css/main/values_header.css">
+
+  <link rel="stylesheet" href="./css/table/select_button.css">
+  <link rel="stylesheet" href="./css/table/tabBar.css">
+  <link rel="stylesheet" href="./css/table/table.css">
+
+  <link rel="stylesheet" href="./css/rangebar/rangebar_component.css">
+  <link rel="stylesheet" href="./css/rangebar/rangeBar.css">
+
+  <link rel="stylesheet" href="./css/card/plan_card.css">
+
+  <link rel="stylesheet" href="./css/main/taxa.css">
+  <link rel="stylesheet" href="./css/main/video.css">
+
+  <link rel="stylesheet" href="./css/main/contact.css">
+
+  <link rel="stylesheet" href="./css/main/links.css">
+  <link rel="stylesheet" href="./css/main/footer.css">
+
+  <!-- Swiper -->
+  <!-- CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <title>Porto Seguro Consórcio - Quem faz planos com o Porto Seguro Consórcio, tem o tempo certo para alcançar o que deseja</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <a href="#">
+          <h1 class="header__logo header__logo--k2"></h1>
+        </a>
+        <a href="#">
+          <h2 class="header__logo header__logo--porto"></h2>
+        </a>
+      </div>
+    </header>
+
+    <section class="banner">
+      <div class="banner-bg container"></div>
+      <!-- <div class="banner__bg"></div> -->
+      <!-- <button class="proposta">Solicite uma proposta</button> -->
+    </section>
+
+    <section class="request container">
+      <a href="https://www.google.com.br" class="request__link">Solicite uma Proposta</a>
+    </section>
+  
+    <section class="plan container">
+      <h3>Quem faz planos com o <strong>Porto Seguro Consórcio</strong>, tem o tempo certo para alcançar o que deseja.</h3>
+      <p>Porque o plano é ser feliz</p>
+    </section>
+
+    <section class="topics">
+      <div class="container">
+        <div class="topics__items">
+          <div class="topics__item">
+            <img src="./img/ico-sack.png" alt="">
+            <p>As parcelas são sem juros</p>
+          </div>
+          <div class="topics__item">
+            <img src="./img/ico-coin.png" alt="">
+            <p class="p-3">Planos que encaixam no seu bolso</p>
+          </div>
+          <div class="topics__item">
+            <img src="./img/ico-paper.png" alt="">
+            <p>Facilidade de contratação</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="values">
+      <div class="values__header container">
+        <h4>Confira o valor do seu consórcio</h4>
+        <p>Escolha o valor que melhor atende à sua necessidade.</p>
+        <p><strong>Comece escolhendo o tipo de consórcio abaixo</strong></p>
+      </div>
+
+      <!-- button -->
+      <div id="button-container" class="select container"></div>
+
+      <!-- tab -->
+      <div id="tabs-container" class="container">
+        <div id="tabbar-container" class="tabbar-container"></div>
+        <div id="tabbar-underline"></div>
+      </div>
+
+      <!-- table -->
+      <div id="table-container" class="tables container"></div>
+
+      <!-- RangeBar -->
+      <div id="range-container" class="container">
+        <div class="toggle-range">
+          <button id="parcela">PARCELA</button><button id="credito">CREDITO</button>
+          <div>
+
+            <div class="valor-display">
+              <span id="display-description"></span>
+              <div class="display-container">
+                <span id="prefix">R$</span><input type="text" id="display-value">
+              </div>
+            </div>
+
+            <!--  -->
+            <div class="range">
+              <div class="range-bar-container">
+                <input id="range-bar" type="range" 
+                  min="500" max="1000000" step="1" data-selected="" data-formula="">
+                <div id="range-bar-progress"></div>
+              </div>
+
+              <div class="range-limit">
+                <span id="range-min"></span>
+                <span id="range-max"></span>
+              </div>
+            </div>
+            <!--  -->
+
+            <div class="range-result">
+              <div class="range-result__title">PLANOS E TAXAS</div>
+              <div class="range-result__display">
+                <div class="range-result__description">120 MESES</div>
+                <div class="range-result__result">
+                  R$<span id="display-result" class="range-result__value"></span>/MES
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="planos">
+      <div class="container">
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <!-- Ex -->
+            <div class="plan-card swiper-slide">
+              <div class="plan-card__imgbg"></div>
+              <div class="plan-card__description">
+                <p class="plan-card__value">R$1.000,00</p>
+              </div>
+            </div>
+            <div class="plan-card swiper-slide">
+              <div class="plan-card__imgbg"></div>
+              <div class="plan-card__description">
+                <p class="plan-card__value">R$1.000,00</p>
+              </div>
+            </div>
+            <div class="plan-card swiper-slide">
+              <div class="plan-card__imgbg"></div>
+              <div class="plan-card__description">
+                <p class="plan-card__value">R$1.000,00</p>
+              </div>
+            </div>
+            <div class="plan-card swiper-slide">
+              <div class="plan-card__imgbg"></div>
+              <div class="plan-card__description">
+                <p class="plan-card__value">R$1.000,00</p>
+              </div>
+            </div>
+            <div class="plan-card swiper-slide">
+              <div class="plan-card__imgbg"></div>
+              <div class="plan-card__description">
+                <p class="plan-card__value">R$1.000,00</p>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="taxa container">
+      <p>Taxa de administração total de 21% para créditos de R$ 55 mil a R$ 240 mil. Taxa de administração total de 18% para créditos de R$ 250 mil a R$ 500 mil. Correção anual de acordo com o INCC. Consulte-nos sobre créditos acima de R$ 500 mil. Taxa adesão de 2% no ato da venda. ¹ Parcela inclui seguro de vida de 0,031% sobre saldo devedor. Fundo de reserva de 0,5%. Lei Federal - 12.741 - 08/12/2012 - Tributos incidentes na formação de preço - Este produto é da Porto Seguro Administradora de Consórcios Ltda, CNPJ: 48.041.735/0001-90: Para contratos vigentes anteriores a 31/10/2003: 3,65% Pis e Cofins e 5% ISS calculados sobre a Taxa Administrativa; e Para contratos vigentes após 31/10/2003: 9,25% Pis e Cofins e 5% de ISS calculados sobre a Taxa Administrativa. Porto Seguro Consórcio - Alameda Barão de Piracicaba, 740 - Campos Elíseos, São Paulo - SP, 01216-010 (complemento) 2o andar. Telefones: (11) 3366-3006 - (Grande São Paulo) 0800-721-3006 - (Demais localidades).</p>
+    </section>
+
+    <section class="video container">
+      <div class="video__header">
+        <img src="./img/ico-vid.png" alt="video-icon">
+        <p>Assista ao vídeo do Porto Seguro Consórcio e saiba como conquistar seu bem de um jeito seguro e sem pagar juros</p>
+      </div>
+      <div id="video-iframe" class="video__video">
+        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/M6wLBpzSvqw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+      </div>
+    </section>
+
+    <section class="contact container">
+      <div class="contact__logo">
+        <img src="./img/k2-logo.png" alt="k2 seguros logo">
+      </div>
+      <div class="contact__info">
+        <p class="tel">
+          <img src="./img/svg/artwork-15.svg" alt="tel-icon">
+          <span>Tel / Cel: &nbsp;(11) 3436-5700</span>
+        </p>
+        <p class="adress">
+          <img src="./img/svg/artwork-18.svg" alt="local-icon">
+          <span>Av Doutor Renato De Andrade Maia, 1305</span>
+        </p>
+        <p class="email">
+          <img src="./img/svg/artwork-19.svg" alt="mail-icon">
+          <a href="mailto:k2seguros@k2seguros.com.br">k2seguros@k2seguros.com.br</a>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <section class="link-container">
+        <div class="container">
+          <div class="links">
+            <div class="links__description">
+              <p>PORTO SEGURO: &nbsp;</p>
+            </div>
+            <div>
+              <a href="https://www.facebook.com/portoseguro" class="links__link">
+                <img src="./img/ico-fb.png" alt="icon-facebook">
+              </a>
+              <a href="https://www.linkedin.com/company/porto-seguro/?trk=hb_tab_compy_id_15740" class="links__link">
+                <img src="./img/ico-in.png" alt="icon-facebook">
+              </a>
+              <a href="https://twitter.com/portoseguro" class="links__link">
+                <img src="./img/ico-tw.png" alt="icon-facebook">
+              </a>
+              <a href="https://www.youtube.com/portoseguro" class="links__link">
+                <img src="./img/ico-yt.png" alt="icon-facebook">
+              </a>
+            </div>
+          </div>
+          <div class="links">
+            <div class="links__description">
+              <p>TRÂNSITO MAIS GENTIL: </p>
+            </div>
+            <div>
+              <a href="https://www.facebook.com/transitomaisgentil" class="links__link">
+                <img src="./img/ico-fb.png" alt="icon-facebook">
+              </a>
+              <a href="https://twitter.com/transitogentil" class="links__link">
+                <img src="./img/ico-tw.png" alt="icon-facebook">
+                </a>
+            </div>
+          </div>
+          <div class="links links--top">
+            <button class="links__top" 
+              onclick="document.body.scrollIntoView({ behavior: 'smooth', block: 'start' })">
+            <img src="./img/arrow-big.png" alt="">
+              <span>TOPO</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer">
+        <div class="container">
+          <p>1. Valores sujeitos a alteração de acordo com a variação da tabela de preços de comercialização de veículos novos divulgados pela tabela Fipe. 2.Parcelas incluem seguro de vida. Plano 80 meses: taxa de administração de 15,5%. Taxa de amortização mensal de 1,25%. Fundo de reserva de 0,5%. Seguro de vida sobre saldo devedor de 0,035%. Plano 72 meses: taxa de administração de 18%. Taxa de amortização mensal de 1,39%. Fundo de reserva de 0,5%. Seguro de vida sobre saldo devedor de 0,035%. Plano 50 meses: taxa de administração de 16,5%. Taxa de amortização mensal de 2%. Fundo de reserva de 0,5%. Seguro de vida sobre o saldo devedor de 0,035%. 3. Lance embutido com possibilidade de utilizar até 20% do crédito como lance nos planos de 72 meses. 4. Para a compra do carro seminovo de até 4 anos de uso. Informações válidas para grupos a partir do A290.</p>
+          <p>Porto Seguro Consórcio - Alameda Barão de Piracicaba, 740 - Campos Elíseos, São Paulo - SP, 01216-010 (complemento) 2o andar. Telefones: (11) 3366-3006 - (Grande São Paulo) 0800-721-3006 - (Demais localidades). © 2017 Porto Seguro - Todos os direitos reservados.</p>
+        </div>
+      </section>
+    </footer>
+
+  </div>
+
+  <!-- script js precisa estar nessa sequencia -->
+  <script src="./config/video_config.js"></script>
+
+  <!-- <script src="./config/data.js"></script> -->
+
+
+  <!-- config -->
+  <script src="./js/config/config.js"></script>
+  <script src="./js/config/idClassName.js"></script>
+  <script src="./js/config/data.js"></script>
+  
+  <!-- common -->
+  <script src="./js/common/createButtons.js""></script>
+  <script src="./js/common/setResponsiveButtons.js"></script>
+
+  <!-- table and tab -->
+  <script src="./js/table/initTableSelBtnsClickEvent.js"></script>
+
+  <script src="./js/table/createTables.js""></script>
+
+  <script src="./js/table/createTabs.js""></script>
+  <script src="./js/table/initTabsClickEvent.js"></script>
+  <script src="./js/table/setResponsiveTabs.js"></script>
+  
+  <script src="./js/table/activateTableElements.js"></script>
+  
+  <!-- rangebar -->
+  <script src="./js/rangebar/getRbData.js"></script>
+
+  <script src="./js/rangebar/initRbButtonsClickEvent.js"></script>
+
+  <script src="./js/rangebar/updateRbDisplay.js"></script>
+  <script src="./js/rangebar/updateRbFormula.js"></script>
+  <script src="./js/rangebar/updateRb.js"></script>
+
+  <script src="./js/rangebar/initRbToggle.js"></script>
+  <script src="./js/rangebar/initRbInputEvent.js"></script>
+
+  <script src="./js/rangebar/activateRb.js"></script>
+
+  <!-- activate -->
+  <script src="./js/common/activateFirstElement.js"></script>
+
+  <!-- VIDEO -->
+  <script src="./js/common/iframe.js"></script>
+
+  <!-- init -->
+  <script src="./js/common/init.js"></script>
+
+  <!-- DEBUG -->
+  <script src="./js/carousel/initCarousel.js"></script>
+</body>
+</html>

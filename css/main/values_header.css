@@ -1,0 +1,27 @@
+.values__header h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 1.071;
+  color: #5a308d;
+  text-align: left;
+  margin-bottom: 15px;
+}
+.values__header p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.875;
+  color: #4e4e50;
+  text-align: left;
+  padding-left: 1px;
+  margin: 16px 0;
+}
+.values__header p:last-child {
+  font-size: 18px;
+  margin: 35px 0 20px;
+}
+
+/*# sourceMappingURL=values_header.css.map */
