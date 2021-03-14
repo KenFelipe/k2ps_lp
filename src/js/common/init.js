@@ -1,3 +1,16 @@
+const DATA = {}
+
+fetch('./config/data.json')
+    .then(resp => resp.text())
+    .then(text => JSON.parse(text))
+    .then(data => {
+        Object.assign(DATA, data)
+        console.log('DATA: \n', DATA)
+
+        init()
+    })
+    .catch(error => console.log('Error:', error))
+
 function init() {
     ////////////// common //////////////
     createButtons()
@@ -27,12 +40,3 @@ function init() {
     ////////////// iframe //////////////
     initIframe()
 }
-
-// fetch('./config/data.js')
-//     .then(resp => resp.text())
-//     .then(resp => console.log(resp))
-//     .then(jsontext => JSON.parse(jsontext))
-//     .then(data => console.log(data))
-//     .catch(error => console.log('Error:', error))
-
-init()

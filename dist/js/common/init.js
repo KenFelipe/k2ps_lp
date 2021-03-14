@@ -1,5 +1,18 @@
 "use strict";
 
+var DATA = {};
+fetch('./config/data.json').then(function (resp) {
+  return resp.text();
+}).then(function (text) {
+  return JSON.parse(text);
+}).then(function (data) {
+  Object.assign(DATA, data);
+  console.log('DATA: \n', DATA);
+  init();
+})["catch"](function (error) {
+  return console.log('Error:', error);
+});
+
 function init() {
   ////////////// common //////////////
   createButtons();
@@ -20,12 +33,4 @@ function init() {
   activateFirstElement(); ////////////// iframe //////////////
 
   initIframe();
-} // fetch('./config/data.js')
-//     .then(resp => resp.text())
-//     .then(resp => console.log(resp))
-//     .then(jsontext => JSON.parse(jsontext))
-//     .then(data => console.log(data))
-//     .catch(error => console.log('Error:', error))
-
-
-init();
+}
