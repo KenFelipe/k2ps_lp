@@ -87,7 +87,7 @@
 }
 @media (max-width: 774px) {
   #tabs-container #tabbar-underline {
-    display: none;
+    display: none !important;
   }
 }
 #tabs-container #tabbar-underline.tabs-5, #tabs-container #tabbar-underline.tabs-more-5 {

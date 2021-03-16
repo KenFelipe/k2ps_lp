@@ -23,8 +23,7 @@ $margin_button: 4px;
         vertical-align: bottom;
         overflow: hidden;
 
-        margin: 0px $margin_button;
-        margin-top: 4px;
+        margin: 4px $margin_button 0;
         // min-width: 224px;
 
         height: 40px;

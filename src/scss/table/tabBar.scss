@@ -121,7 +121,7 @@ $margin_tab: 4px;
 
         // responsive
         @include media.tablet_response {
-            display: none;
+            display: none !important;
         }
 
         // quando tem mais que 5 tabs

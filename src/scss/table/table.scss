@@ -1,14 +1,23 @@
+@use './../main/media';
+
+#table-container.container {
+    padding: 0 27.5px;
+
+    @include media.tablet_response {
+        padding: 0 22.5px;
+    }
+
+    @include media.smartphone_response {
+        padding: 0 15px;
+    }
+}
+
 .table-section {
     display: none;
+    overflow-x: auto;
 
     &.active {
         display: block;
-    }
-
-    overflow-x: auto;
-
-    @media (max-width: 490px) {
-        //
     }
 
     &__table {
@@ -26,10 +35,11 @@
 
         thead {
             color: #272727;
-            font-size: 14px;
+            font-size: 13px;
             font-family: "Open Sans", sans-serif;
             // line-height: 2.143;
             line-height: 1.543;
+            font-weight: 600;
 
             border-bottom: 1px solid #cecece;
             background-color: #dcdcdc;
