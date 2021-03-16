@@ -28,6 +28,7 @@
 @media (max-width: 490px) {
   .select__button {
     width: 100%;
+    margin: 4px 0 0;
   }
 }
 .select__button.buttons-5 {
@@ -41,6 +42,7 @@
 @media (max-width: 490px) {
   .select__button.buttons-5 {
     width: 100%;
+    margin: 4px 0 0;
   }
 }
 

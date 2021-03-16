@@ -1,5 +1,10 @@
 .values__header {
-  padding: 0 25px;
+  padding: 0 26px;
+}
+@media (max-width: 490px) {
+  .values__header {
+    padding: 0 20px;
+  }
 }
 .values__header h4 {
   font-family: "Open Sans", sans-serif;

@@ -41,6 +41,7 @@
 @media (max-width: 490px) {
   .tabbar__tab {
     width: 100%;
+    margin: 4px 0 0;
   }
 }
 .tabbar__tab.tabs-5 {
@@ -54,6 +55,7 @@
 @media (max-width: 490px) {
   .tabbar__tab.tabs-5 {
     width: 100%;
+    margin: 4px 0 0;
   }
 }
 .tabbar__tab.tabs-5:hover, .tabbar__tab.tabs-5.active, .tabbar__tab.tabs-more-5:hover, .tabbar__tab.tabs-more-5.active {
