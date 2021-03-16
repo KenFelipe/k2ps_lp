@@ -11,6 +11,7 @@ fetch('./config/data.json')
     })
     .catch(error => console.log('Error:', error))
 
+
 function init() {
     ////////////// common //////////////
     createButtons()
