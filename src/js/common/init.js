@@ -1,3 +1,4 @@
+/////////// init table and rangeBar ///////////
 const DATA = {}
 
 fetch('./config/data.json')
@@ -5,39 +6,46 @@ fetch('./config/data.json')
     .then(text => JSON.parse(text))
     .then(data => {
         Object.assign(DATA, data)
-        console.log('DATA: \n', DATA)
+        console.log('data: ', DATA)
 
-        init()
+        initTableAndRB()
     })
     .catch(error => console.log('Error:', error))
 
 
-function init() {
-    ////////////// common //////////////
-    createButtons()
-    setResponsiveButtons()
 
-    initTableSelBtnsClickEvent()
-    initRbButtonsClickEvent()
+/////////// init iframe ///////////
+fetch('./config/video_url.json')
+    .then(resp => resp.text())
+    .then(text => JSON.parse(text))
+    .then(data => {
+        // initIframe(data.url)
 
-    ////////////// table //////////////
-    createTables()
+        console.log('video url: ', data.url)
+    })
+    .catch(error => console.log('Error:', error))
 
-    createTabs()
-    initTabsClickEvent()
-    setResponsiveTabs()
 
-    activateTableElements()
 
-    ////////////// rangeBar //////////////
-    initRangeBarToggle()
-    initRangeBarInputEvent()
+/////////// init links ///////////
+fetch('./config/links.json')
+    .then(resp => resp.text())
+    .then(text => JSON.parse(text))
+    .then(data => {
+        console.log('links: ', data)
 
-    activateRangeBar()
+        setLogoLinks(data)
+        setLinks(data)
+    })
 
-    ////////////// active first element //////////////
-    activateFirstElement()
 
-    ////////////// iframe //////////////
-    initIframe()
-}
+
+/////////// init contact ///////////
+fetch('./config/contact.json')
+    .then(resp => resp.text())
+    .then(text => JSON.parse(text))
+    .then(data => {
+        console.log('contact: ', data)
+
+        setContact(data)
+    })

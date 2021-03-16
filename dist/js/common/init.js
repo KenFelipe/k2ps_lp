@@ -1,5 +1,6 @@
 "use strict";
 
+/////////// init table and rangeBar ///////////
 var DATA = {};
 fetch('./config/data.json').then(function (resp) {
   return resp.text();
@@ -7,30 +8,38 @@ fetch('./config/data.json').then(function (resp) {
   return JSON.parse(text);
 }).then(function (data) {
   Object.assign(DATA, data);
-  console.log('DATA: \n', DATA);
-  init();
+  console.log('data: ', DATA);
+  initTableAndRB();
 })["catch"](function (error) {
   return console.log('Error:', error);
+}); /////////// init iframe ///////////
+
+fetch('./config/video_url.json').then(function (resp) {
+  return resp.text();
+}).then(function (text) {
+  return JSON.parse(text);
+}).then(function (data) {
+  // initIframe(data.url)
+  console.log('video url: ', data.url);
+})["catch"](function (error) {
+  return console.log('Error:', error);
+}); /////////// init links ///////////
+
+fetch('./config/links.json').then(function (resp) {
+  return resp.text();
+}).then(function (text) {
+  return JSON.parse(text);
+}).then(function (data) {
+  console.log('links: ', data);
+  setLogoLinks(data);
+  setLinks(data);
+}); /////////// init contact ///////////
+
+fetch('./config/contact.json').then(function (resp) {
+  return resp.text();
+}).then(function (text) {
+  return JSON.parse(text);
+}).then(function (data) {
+  console.log('contact: ', data);
+  setContact(data);
 });
-
-function init() {
-  ////////////// common //////////////
-  createButtons();
-  setResponsiveButtons();
-  initTableSelBtnsClickEvent();
-  initRbButtonsClickEvent(); ////////////// table //////////////
-
-  createTables();
-  createTabs();
-  initTabsClickEvent();
-  setResponsiveTabs();
-  activateTableElements(); ////////////// rangeBar //////////////
-
-  initRangeBarToggle();
-  initRangeBarInputEvent();
-  activateRangeBar(); ////////////// active first element //////////////
-
-  activateFirstElement(); ////////////// iframe //////////////
-
-  initIframe();
-}
