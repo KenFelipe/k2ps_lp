@@ -13,6 +13,7 @@ $margin_button: 4px;
 
     @include media.smartphone_response {
         width: 100%;
+        margin: 4px 0 0;
     }
 }
 

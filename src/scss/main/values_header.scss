@@ -1,7 +1,12 @@
 @use 'font';
+@use './media';
 
 .values__header {
-    padding: 0 25px;
+    padding: 0 26px;
+
+    @include media.smartphone_response {
+        padding: 0 20px;
+    }
 
     h4 {
         @include font.OpenSans;

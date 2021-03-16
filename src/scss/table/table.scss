@@ -6,10 +6,9 @@
     }
 
     overflow-x: auto;
-    margin: 0 4px;
 
     @media (max-width: 490px) {
-        margin-right: -4px;
+        //
     }
 
     &__table {
