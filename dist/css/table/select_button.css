@@ -1,4 +1,6 @@
 .select__button {
+  vertical-align: bottom;
+  overflow: hidden;
   margin: 0px 4px;
   margin-top: 4px;
   height: 40px;

@@ -19,6 +19,9 @@ $margin_button: 4px;
 ////////////////////////////////////////////////////
 .select {
     &__button {
+        vertical-align: bottom;
+        overflow: hidden;
+
         margin: 0px $margin_button;
         margin-top: 4px;
         // min-width: 224px;

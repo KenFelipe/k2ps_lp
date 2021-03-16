@@ -1,6 +1,8 @@
 @use 'font';
 
 .values__header {
+    padding: 0 25px;
+
     h4 {
         @include font.OpenSans;
         @include font.setting(28px, normal, 1.071);

@@ -19,7 +19,7 @@ fetch('./config/video_url.json').then(function (resp) {
 }).then(function (text) {
   return JSON.parse(text);
 }).then(function (data) {
-  // initIframe(data.url)
+  initIframe(data.url);
   console.log('video url: ', data.url);
 })["catch"](function (error) {
   return console.log('Error:', error);
@@ -33,6 +33,8 @@ fetch('./config/links.json').then(function (resp) {
   console.log('links: ', data);
   setLogoLinks(data);
   setLinks(data);
+})["catch"](function (error) {
+  return console.log('Error:', error);
 }); /////////// init contact ///////////
 
 fetch('./config/contact.json').then(function (resp) {
@@ -42,4 +44,6 @@ fetch('./config/contact.json').then(function (resp) {
 }).then(function (data) {
   console.log('contact: ', data);
   setContact(data);
+})["catch"](function (error) {
+  return console.log('Error:', error);
 });

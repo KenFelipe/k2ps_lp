@@ -13,7 +13,7 @@ function createButtons() {
 
     Object.keys(DATA).forEach(dataItemKey => {
         const button = document.createElement('button')
-        button.innerHTML = dataItemKey
+        button.innerHTML = dataItemKey.replace('\\', '<br/>')
 
         button.classList.add(buttonCls)
         button.classList.add(

@@ -157,7 +157,7 @@
             }
         }
     },
-    "Veículos Pesados e Máquinas Agrícolas": {
+    "Veículos Pesados e\\Máquinas Agrícolas": {
         "type": "table",
         "table": {
             "PLANOS DE 120 MESES": {

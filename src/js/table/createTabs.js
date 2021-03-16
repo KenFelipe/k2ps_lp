@@ -19,7 +19,7 @@ function createTabs() {
                 tab.classList.add(tabClass)
 
                 const span = document.createElement('span')
-                span.innerHTML = tabName
+                span.innerHTML = tabName.replace('\\', '<br/>')
 
                 // ***************************************************
                 // INSERIR LOGICA PARA

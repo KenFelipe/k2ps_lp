@@ -27,6 +27,9 @@ $margin_tab: 4px;
     }
 
     &__tab {
+        vertical-align: bottom;
+        overflow: hidden;
+
         margin: 0px $margin_tab;
         margin-top: 4px;
         // min-width: 224px;

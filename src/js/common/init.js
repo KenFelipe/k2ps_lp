@@ -19,7 +19,7 @@ fetch('./config/video_url.json')
     .then(resp => resp.text())
     .then(text => JSON.parse(text))
     .then(data => {
-        // initIframe(data.url)
+        initIframe(data.url)
 
         console.log('video url: ', data.url)
     })
@@ -37,6 +37,7 @@ fetch('./config/links.json')
         setLogoLinks(data)
         setLinks(data)
     })
+    .catch(error => console.log('Error:', error))
 
 
 
@@ -49,3 +50,4 @@ fetch('./config/contact.json')
 
         setContact(data)
     })
+    .catch(error => console.log('Error:', error))
