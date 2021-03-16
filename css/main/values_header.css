@@ -1,3 +1,6 @@
+.values__header {
+  padding: 0 25px;
+}
 .values__header h4 {
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
