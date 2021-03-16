@@ -2,7 +2,7 @@
     "Imóveis": {
         "type": "table",
         "table": {
-            "Até 240mil": {
+            "Até 240 MIL": {
                 "head": ["CRÉDITO", "PARCELA"],
 				"body": [
 					["R$55.000,00", "R$349,00"],
@@ -31,7 +31,7 @@
 					["R$240.000,00", "R$1.522,91"]
 				]
             },
-            "A PARTIR DE 250mil": {
+            "A PARTIR DE 250 MIL": {
                 "head": ["CRÉDITO", "PARCELA"],
 				"body": [
 					["R$250.000,00", "R$1.546,54"],
@@ -63,7 +63,7 @@
 					["R$500.000,00", "R$3.093,08"]
 				]
             },
-            "A PARTIR DE 250mil COM REDUTOR": {
+            "A PARTIR DE 250 MIL COM REDUTOR": {
                 "head": ["CRÉDITO", "PARCELA"],
 				"body": [
 					["R$250.000,00", "R$1.109,66"],
