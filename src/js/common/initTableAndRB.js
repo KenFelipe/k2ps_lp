@@ -1,7 +1,7 @@
 function initTableAndRB() {
     ////////////// common //////////////
     createButtons()
-    setResponsiveButtons()
+    // setResponsiveButtons()
 
     initTableSelBtnsClickEvent()
     initRbButtonsClickEvent()
@@ -11,7 +11,7 @@ function initTableAndRB() {
 
     createTabs()
     initTabsClickEvent()
-    setResponsiveTabs()
+    // setResponsiveTabs()
 
     activateTableElements()
 

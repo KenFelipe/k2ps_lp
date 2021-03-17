@@ -19,7 +19,7 @@ fetch('./config/video_url.json')
     .then(resp => resp.text())
     .then(text => JSON.parse(text))
     .then(data => {
-        // initIframe(data.url)
+        initIframe(data.url)
 
         console.log('video url: ', data.url)
     })
@@ -49,5 +49,18 @@ fetch('./config/contact.json')
         console.log('contact: ', data)
 
         setContact(data)
+    })
+    .catch(error => console.log('Error:', error))
+
+
+
+/////////// init card ///////////
+fetch('./config/prices_card.json')
+    .then(resp => resp.text())
+    .then(text => JSON.parse(text))
+    .then(data => {
+        console.log('prices: ', data)
+
+        initCarousel(data)
     })
     .catch(error => console.log('Error:', error))

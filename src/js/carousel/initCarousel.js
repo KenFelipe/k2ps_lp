@@ -1,62 +1,64 @@
-const initSwiper = () => {
-    const swiper = new Swiper('.swiper-container', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    grabCursor: true,
-    // autoplay: {
-    //   delay: 1700,
-    //   disableOnInteraction: false,
-    // },
-    slidesPerView: 1,
-    spaceBetween: 30,
-    breakpoints: {
-        490: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-        },
-        720: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-        },
-        721: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-        }
+function initCarousel(pricesData) {
+    setSlideItems()
+    initSwiper()
+
+    function setSlideItems() {
+        const sliderWrapper = document.getElementById('plans-swiper-wrapper')
+
+        pricesData.data.forEach(data => {
+            const src = data.imgUrl
+            const header = data.header
+            const price = data.content.replace(/<(.+?)>/gs, '<p>$1</p>')
+
+            const cardTemplate = `    
+                <div class="card swiper-slide">
+                    <img src="${src}" alt="" class="card__img">
+                    <div class="card-content">
+                        <div class="card-content__header">${header}</div>
+                        <div class="card-content__text">${price}</div>
+                    </div>
+                </div>
+            `
+            sliderWrapper.innerHTML += cardTemplate
+        })
     }
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
-    }); 
-    return swiper
-}
 
-const initSlideItems = () => {
-    const sliderWrapper = document.getElementsByClassName('swiper-wrapper').item(0)
+    function initSwiper() {
+        const autoplayInterval = pricesData.autoplayIntervalMilliSec
 
-    const n = 14
+        const autoplayConfig = autoplayInterval != 0 ? { 
+            autoplay: {
+                delay: autoplayInterval,
+                disableOnInteraction: false,
+            } 
+        } : {}
 
-    for(let i = 0; i < n; i++) {
-        const item = document.createElement('div')
-        item.className = 'swiper-slide'
-        item.innerHTML = `Slide ${i + 1}`
-        // const [red, blue, green] = Array(3).fill(0).map(() => Math.random() * 255)
-        // const bgStyle =`background-color: rgb(${red}, ${blue}, ${green});` 
-        // item.style = `background: url('https://picsum.photos/400/400?grayscale&random=${i + 1}');`
-        sliderWrapper.appendChild(item)
+        const swiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+            centeredSlides: true,
+            grabCursor: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            // autoplay: {
+                // delay: 1300,
+                // disableOnInteraction: false,
+            // },
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+            // breakpoints: {}
+            // scrollbar: {
+            //   el: '.swiper-scrollbar',
+            // },
+            ...autoplayConfig
+        }) 
+
+        return swiper
     }
 }
-
-// initSlideItems()
-initSwiper()

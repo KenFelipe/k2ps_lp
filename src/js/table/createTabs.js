@@ -21,12 +21,6 @@ function createTabs() {
                 const span = document.createElement('span')
                 span.innerHTML = tabName.replace('\\', '<br/>')
 
-                // ***************************************************
-                // INSERIR LOGICA PARA
-                // PROCESSAMENTO DE TEXT APOS DA <SPAN> 
-                // (LABEL DO TAB)
-                // ***************************************************
-
                 tab.appendChild(span)
                 tabbar.appendChild(tab)
             })

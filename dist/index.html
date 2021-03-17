@@ -27,6 +27,7 @@
   <link rel="stylesheet" href="./css/rangebar/rangebar_component.css">
   <link rel="stylesheet" href="./css/rangebar/rangeBar.css">
 
+  <link rel="stylesheet" href="./css/card/carousel.css">
   <link rel="stylesheet" href="./css/card/plan_card.css">
 
   <link rel="stylesheet" href="./css/main/taxa.css">
@@ -65,7 +66,9 @@
     </section>
 
     <section class="request container">
-      <a href="#" id="request-link" class="request__link">Solicite uma Proposta</a>
+      <a href="#" target="_blank" 
+        id="request-link" class="request__link"
+      >Solicite uma Proposta</a>
     </section>
   
     <section class="plan container">
@@ -153,47 +156,26 @@
       </div>
     </section>
 
+    <!-- <section class="container" style="margin-top: 44px;">
+      <div class="card">
+        <img src="https://www.portoseguro.com.br/novoinstitucional/static_files/images/thumbnail/consorcio-reforma-casa-de-praia.jpg" alt="" class="card__img">
+        <div class="card-content">
+          <div class="card-content__header">consórcio para reforma da casa na praia no valor de r$100,00 mil: </div>
+          <div class="card-content__text">parcelas de<p>r$1.000.000</p>no plano de 208 meses</div>
+        </div>
+      </div>
+    </section> -->
+
     <section class="planos">
       <div class="container">
         <!-- Slider main container -->
         <div class="swiper-container">
           <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper" id="plans-swiper-wrapper">
             <!-- Slides -->
-            <!-- Ex -->
-            <div class="plan-card swiper-slide">
-              <div class="plan-card__imgbg"></div>
-              <div class="plan-card__description">
-                <p class="plan-card__value">R$1.000,00</p>
-              </div>
-            </div>
-            <div class="plan-card swiper-slide">
-              <div class="plan-card__imgbg"></div>
-              <div class="plan-card__description">
-                <p class="plan-card__value">R$1.000,00</p>
-              </div>
-            </div>
-            <div class="plan-card swiper-slide">
-              <div class="plan-card__imgbg"></div>
-              <div class="plan-card__description">
-                <p class="plan-card__value">R$1.000,00</p>
-              </div>
-            </div>
-            <div class="plan-card swiper-slide">
-              <div class="plan-card__imgbg"></div>
-              <div class="plan-card__description">
-                <p class="plan-card__value">R$1.000,00</p>
-              </div>
-            </div>
-            <div class="plan-card swiper-slide">
-              <div class="plan-card__imgbg"></div>
-              <div class="plan-card__description">
-                <p class="plan-card__value">R$1.000,00</p>
-              </div>
-            </div>
           </div>
           <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination" id="swiper-pagination-div"></div>
 
           <!-- If we need navigation buttons -->
           <div class="swiper-button-prev"></div>
@@ -316,13 +298,11 @@
   <script src="./js/common/activateFirstElement.js"></script>
 
   <!-- init -->
+  <script src="./js/carousel/initCarousel.js"></script>
   <script src="./js/common/initTableAndRB.js"></script>
   <script src="./js/common/initIframe.js"></script>
   <script src="./js/common/initLinks.js"></script>
   <script src="./js/common/initContact.js"></script>
   <script src="./js/common/init.js"></script>
-
-  <!-- DEBUG -->
-  <script src="./js/carousel/initCarousel.js"></script>
 </body>
 </html>

@@ -2,15 +2,15 @@
 
 function initTableAndRB() {
   ////////////// common //////////////
-  createButtons();
-  setResponsiveButtons();
+  createButtons(); // setResponsiveButtons()
+
   initTableSelBtnsClickEvent();
   initRbButtonsClickEvent(); ////////////// table //////////////
 
   createTables();
   createTabs();
-  initTabsClickEvent();
-  setResponsiveTabs();
+  initTabsClickEvent(); // setResponsiveTabs()
+
   activateTableElements(); ////////////// rangeBar //////////////
 
   initRangeBarToggle();

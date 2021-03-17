@@ -19,7 +19,7 @@ fetch('./config/video_url.json').then(function (resp) {
 }).then(function (text) {
   return JSON.parse(text);
 }).then(function (data) {
-  // initIframe(data.url)
+  initIframe(data.url);
   console.log('video url: ', data.url);
 })["catch"](function (error) {
   return console.log('Error:', error);
@@ -44,6 +44,17 @@ fetch('./config/contact.json').then(function (resp) {
 }).then(function (data) {
   console.log('contact: ', data);
   setContact(data);
+})["catch"](function (error) {
+  return console.log('Error:', error);
+}); /////////// init card ///////////
+
+fetch('./config/prices_card.json').then(function (resp) {
+  return resp.text();
+}).then(function (text) {
+  return JSON.parse(text);
+}).then(function (data) {
+  console.log('prices: ', data);
+  initCarousel(data);
 })["catch"](function (error) {
   return console.log('Error:', error);
 });
