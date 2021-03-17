@@ -3,7 +3,7 @@
         "type": "table",
         "table": {
             "ATÉ 240 MIL": {
-                "head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA"],
+                "head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA¹"],
 				"body": [
 					["R$55.000,00", "R$349,00"],
 					["R$60.000,00", "R$380,73"],

@@ -6,14 +6,22 @@ function setLinks(linksData) {
         youtube:  "./img/ico-yt.png",
     }
 
+    const div1Description = document.getElementById('link-description-1')
+    div1Description.innerHTML = 
+        linksData.footerLinks.div1.title.replace(' ', '&nbsp;')
+
     const div1 = document.getElementById('links-ctnr-1')
-    linksData.footerLinks.div1.forEach(data => {
+    linksData.footerLinks.div1.linkdata.forEach(data => {
         div1.append(createLinkTag(data))
     })
     // console.log(div1)
 
+    const div2Description = document.getElementById('link-description-2')
+    div2Description.innerHTML = 
+        linksData.footerLinks.div2.title.replace(' ', '&nbsp;')
+
     const div2 = document.getElementById('links-ctnr-2')
-    linksData.footerLinks.div2.forEach(data => {
+    linksData.footerLinks.div2.linkdata.forEach(data => {
         div2.append(createLinkTag(data))
     })
     // console.log(div2)
