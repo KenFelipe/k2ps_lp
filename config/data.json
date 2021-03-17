@@ -2,8 +2,8 @@
     "Imóveis": {
         "type": "table",
         "table": {
-            "Até 240 MIL": {
-                "head": ["CRÉDITO", "PARCELA"],
+            "ATÉ 240 MIL": {
+                "head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA¹"],
 				"body": [
 					["R$55.000,00", "R$349,00"],
 					["R$60.000,00", "R$380,73"],
@@ -32,7 +32,7 @@
 				]
             },
             "A PARTIR DE 250 MIL": {
-                "head": ["CRÉDITO", "PARCELA"],
+                "head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA"],
 				"body": [
 					["R$250.000,00", "R$1.546,54"],
 					["R$260.000,00", "R$1.608,40"],
@@ -64,7 +64,7 @@
 				]
             },
             "A PARTIR DE 250 MIL COM REDUTOR": {
-                "head": ["CRÉDITO", "PARCELA"],
+                "head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA"],
 				"body": [
 					["R$250.000,00", "R$1.109,66"],
 					["R$260.000,00", "R$1.154,05"],
@@ -101,7 +101,7 @@
         "type": "table",
         "table": {
             "PLANOS DE 80 MESES": {
-                "head": ["CRÉDITO", "PARCELA"],
+                "head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA"],
 				"body": [
 					["R$62.500,00", "R$931,63"],
 					["R$67.500,00", "R$1.006,16"],
@@ -121,7 +121,7 @@
 				]
             },
             "PLANOS DE 72 MESES": {
-                "head": ["CRÉDITO", "PARCELA"],
+                "head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA"],
 				"body": [
 					["R$34.000,00", "R$573,68"],
 					["R$35.000,00", "R$590,56"],
@@ -140,7 +140,7 @@
 				]
             },
             "PLANOS DE 50 MESES": {
-                "head": ["CRÉDITO", "PARCELA"],
+                "head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA"],
 				"body": [
 					["R$25.000,00", "R$595,24"],
 					["R$27.500,00", "R$654,76"],
@@ -161,7 +161,7 @@
         "type": "table",
         "table": {
             "PLANOS DE 120 MESES": {
-                "head": ["CRÉDITO", "PARCELA"],
+                "head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA"],
                 "body": [
 					["R$151.198,94", "R$1.503,28"],
 					["R$159.625,41", "R$1.587,06"],
@@ -187,7 +187,7 @@
         "type": "table",
         "table": {
             "PLANOS DE 50 MESES": {
-                "head": ["CRÉDITO", "PARCELA"],
+                "head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA"],
 			    "body": [
 					["R$25.000,00", "R$595,24"],
 					["R$27.500,00", "R$654,76"],

@@ -3,41 +3,47 @@
     "portoSeguroLogo": "https://google.com",
     "solicitarProposta": "https://youtube.com",
     "footerLinks": {
-        "div1": [
-            {
-                "icon": "facebook",
-                "url": "https://www.facebook.com/portoseguro"
-            },
-            {
-                "icon": "linkedin",
-                "url": "https://www.linkedin.com/company/porto-seguro/?trk=hb_tab_compy_id_15740"
-            },
-            {
-                "icon": "twitter",
-                "url": "https://twitter.com/portoseguro"
-            },
-            {
-                "icon": "youtube",
-                "url": "https://www.youtube.com/portoseguro"
-            }
-        ],
-        "div2": [
-            {
-                "icon": "youtube",
-                "url": "https://youtube.com"
-            },
-            {
-                "icon": "youtube",
-                "url": "https://youtube.com"
-            },
-            {
-                "icon": "youtube",
-                "url": "https://youtube.com"
-            },
-            {
-                "icon": "youtube",
-                "url": "https://youtube.com"
-            }
-        ]
+        "div1": {
+            "title": " PORTO SEGURO:   ",
+            "linkdata": [
+                {
+                    "icon": "facebook",
+                    "url": "https://www.facebook.com/portoseguro"
+                },
+                {
+                    "icon": "linkedin",
+                    "url": "https://www.linkedin.com/company/porto-seguro/?trk=hb_tab_compy_id_15740"
+                },
+                {
+                    "icon": "twitter",
+                    "url": "https://twitter.com/portoseguro"
+                },
+                {
+                    "icon": "youtube",
+                    "url": "https://www.youtube.com/portoseguro"
+                }
+            ]
+        },
+        "div2": {
+            "title": "TRÂNSITO MAIS GENTIL: ",
+            "linkdata": [
+                {
+                    "icon": "youtube",
+                    "url": "https://youtube.com"
+                },
+                {
+                    "icon": "youtube",
+                    "url": "https://youtube.com"
+                },
+                {
+                    "icon": "youtube",
+                    "url": "https://youtube.com"
+                },
+                {
+                    "icon": "youtube",
+                    "url": "https://youtube.com"
+                }
+            ]
+        }
     }
 }

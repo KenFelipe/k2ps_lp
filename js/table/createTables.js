@@ -35,7 +35,8 @@ function createTables() {
     var tr = document.createElement('tr');
     table.head.forEach(function (theadData) {
       var td = document.createElement('td');
-      td.innerHTML = theadData.replaceAll(' ', '&nbsp;');
+      td.innerHTML = theadData.replaceAll('\\', '&nbsp;'); // td.innerHTML = theadData.replaceAll(' ', '&nbsp;')
+
       tr.appendChild(td);
       thead.appendChild(tr);
     });

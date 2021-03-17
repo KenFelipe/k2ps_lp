@@ -1,8 +1,7 @@
 .select__button {
   vertical-align: bottom;
   overflow: hidden;
-  margin: 0px 4px;
-  margin-top: 4px;
+  margin: 4px 4px 0;
   height: 40px;
   cursor: pointer;
   color: white;

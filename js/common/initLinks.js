@@ -7,13 +7,17 @@ function setLinks(linksData) {
     linkedin: "./img/ico-in.png",
     youtube: "./img/ico-yt.png"
   };
+  var div1Description = document.getElementById('link-description-1');
+  div1Description.innerHTML = linksData.footerLinks.div1.title.replace(' ', '&nbsp;');
   var div1 = document.getElementById('links-ctnr-1');
-  linksData.footerLinks.div1.forEach(function (data) {
+  linksData.footerLinks.div1.linkdata.forEach(function (data) {
     div1.append(createLinkTag(data));
   }); // console.log(div1)
 
+  var div2Description = document.getElementById('link-description-2');
+  div2Description.innerHTML = linksData.footerLinks.div2.title.replace(' ', '&nbsp;');
   var div2 = document.getElementById('links-ctnr-2');
-  linksData.footerLinks.div2.forEach(function (data) {
+  linksData.footerLinks.div2.linkdata.forEach(function (data) {
     div2.append(createLinkTag(data));
   }); // console.log(div2)
 
