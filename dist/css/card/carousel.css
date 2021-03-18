@@ -1,0 +1,26 @@
+.swiper-container {
+  height: 360px;
+}
+
+.swiper-wrapper {
+  height: auto !important;
+}
+
+.swiper-pagination {
+  bottom: 0px !important;
+}
+.swiper-pagination .swiper-pagination-bullet {
+  width: 9.5px !important;
+  height: 9.5px !important;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 28px !important;
+}
+@media (max-width: 490px) {
+  .swiper-button-next:after, .swiper-button-prev:after {
+    display: none !important;
+  }
+}
+
+/*# sourceMappingURL=carousel.css.map */

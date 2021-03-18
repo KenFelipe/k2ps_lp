@@ -1,6 +1,7 @@
 .select__button {
-  margin: 0px 4px;
-  margin-top: 4px;
+  vertical-align: bottom;
+  overflow: hidden;
+  margin: 4px 4px 0;
   height: 40px;
   cursor: pointer;
   color: white;
@@ -26,6 +27,7 @@
 @media (max-width: 490px) {
   .select__button {
     width: 100%;
+    margin: 4px 0 0;
   }
 }
 .select__button.buttons-5 {
@@ -39,6 +41,7 @@
 @media (max-width: 490px) {
   .select__button.buttons-5 {
     width: 100%;
+    margin: 4px 0 0;
   }
 }
 

@@ -13,6 +13,7 @@ $margin_tab: 4px;
 
     @include media.smartphone_response {
         width: 100%;
+        margin: 4px 0 0;
     }
 }
 
@@ -27,6 +28,9 @@ $margin_tab: 4px;
     }
 
     &__tab {
+        vertical-align: bottom;
+        overflow: hidden;
+
         margin: 0px $margin_tab;
         margin-top: 4px;
         // min-width: 224px;
@@ -117,7 +121,7 @@ $margin_tab: 4px;
 
         // responsive
         @include media.tablet_response {
-            display: none;
+            display: none !important;
         }
 
         // quando tem mais que 5 tabs

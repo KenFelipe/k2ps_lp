@@ -49,6 +49,7 @@ $margin-top-bottom: (($button_width - $button_height) / 2) - ($animation_ring_of
             }
 
             &::after {
+                opacity: 0;
                 animation: none;
             }
         }

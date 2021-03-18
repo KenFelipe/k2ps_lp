@@ -5,6 +5,8 @@
   display: block;
 }
 .tabbar__tab {
+  vertical-align: bottom;
+  overflow: hidden;
   margin: 0px 4px;
   margin-top: 4px;
   height: 40px;
@@ -39,6 +41,7 @@
 @media (max-width: 490px) {
   .tabbar__tab {
     width: 100%;
+    margin: 4px 0 0;
   }
 }
 .tabbar__tab.tabs-5 {
@@ -52,6 +55,7 @@
 @media (max-width: 490px) {
   .tabbar__tab.tabs-5 {
     width: 100%;
+    margin: 4px 0 0;
   }
 }
 .tabbar__tab.tabs-5:hover, .tabbar__tab.tabs-5.active, .tabbar__tab.tabs-more-5:hover, .tabbar__tab.tabs-more-5.active {
@@ -83,7 +87,7 @@
 }
 @media (max-width: 774px) {
   #tabs-container #tabbar-underline {
-    display: none;
+    display: none !important;
   }
 }
 #tabs-container #tabbar-underline.tabs-5, #tabs-container #tabbar-underline.tabs-more-5 {

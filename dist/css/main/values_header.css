@@ -1,9 +1,17 @@
+.values__header {
+  padding: 0 26px;
+}
+@media (max-width: 490px) {
+  .values__header {
+    padding: 0 20px;
+  }
+}
 .values__header h4 {
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
   font-size: 28px;
   font-weight: normal;
-  line-height: 1.071;
+  line-height: 1.271;
   color: #5a308d;
   text-align: left;
   margin-bottom: 15px;
@@ -13,7 +21,7 @@
   font-weight: normal;
   font-size: 16px;
   font-weight: normal;
-  line-height: 1.875;
+  line-height: 1.475;
   color: #4e4e50;
   text-align: left;
   padding-left: 1px;

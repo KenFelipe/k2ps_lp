@@ -1,38 +1,66 @@
-function init() {
-    ////////////// common //////////////
-    createButtons()
-    setResponsiveButtons()
+/////////// init table and rangeBar ///////////
+const DATA = {}
 
-    initTableSelBtnsClickEvent()
-    initRbButtonsClickEvent()
+fetch('./config/data.json')
+    .then(resp => resp.text())
+    .then(text => JSON.parse(text))
+    .then(data => {
+        Object.assign(DATA, data)
+        console.log('data: ', DATA)
 
-    ////////////// table //////////////
-    createTables()
+        initTableAndRB()
+    })
+    .catch(error => console.log('Error:', error))
 
-    createTabs()
-    initTabsClickEvent()
-    setResponsiveTabs()
 
-    activateTableElements()
 
-    ////////////// rangeBar //////////////
-    initRangeBarToggle()
-    initRangeBarInputEvent()
+/////////// init iframe ///////////
+fetch('./config/video_url.json')
+    .then(resp => resp.text())
+    .then(text => JSON.parse(text))
+    .then(data => {
+        // initIframe(data.url)
 
-    activateRangeBar()
+        console.log('video url: ', data.url)
+    })
+    .catch(error => console.log('Error:', error))
 
-    ////////////// active first element //////////////
-    activateFirstElement()
 
-    ////////////// iframe //////////////
-    initIframe()
-}
 
-// fetch('./config/data.js')
-//     .then(resp => resp.text())
-//     .then(resp => console.log(resp))
-//     .then(jsontext => JSON.parse(jsontext))
-//     .then(data => console.log(data))
-//     .catch(error => console.log('Error:', error))
+/////////// init links ///////////
+fetch('./config/links.json')
+    .then(resp => resp.text())
+    .then(text => JSON.parse(text))
+    .then(data => {
+        console.log('links: ', data)
 
-init()
+        setLogoLinks(data)
+        setLinks(data)
+    })
+    .catch(error => console.log('Error:', error))
+
+
+
+/////////// init contact ///////////
+fetch('./config/contact.json')
+    .then(resp => resp.text())
+    .then(text => JSON.parse(text))
+    .then(data => {
+        console.log('contact: ', data)
+
+        setContact(data)
+    })
+    .catch(error => console.log('Error:', error))
+
+
+
+/////////// init card ///////////
+fetch('./config/prices_card.json')
+    .then(resp => resp.text())
+    .then(text => JSON.parse(text))
+    .then(data => {
+        console.log('prices: ', data)
+
+        initCarousel(data)
+    })
+    .catch(error => console.log('Error:', error))

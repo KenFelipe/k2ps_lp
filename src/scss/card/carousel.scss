@@ -1,0 +1,28 @@
+@use '../main/media';
+
+.swiper-container {
+    height: 360px;
+}
+
+.swiper-wrapper {
+    height: auto !important;
+}
+
+.swiper-pagination {
+    bottom: 0px !important;
+
+    .swiper-pagination-bullet {
+        width: 9.5px !important;
+        height: 9.5px !important;
+    }
+}
+
+.swiper-button {
+    &-next:after, &-prev:after {
+        font-size: 28px !important;
+
+        @include media.smartphone_response {
+            display: none !important;
+        }
+    }
+}

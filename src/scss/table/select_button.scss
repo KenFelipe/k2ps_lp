@@ -13,14 +13,17 @@ $margin_button: 4px;
 
     @include media.smartphone_response {
         width: 100%;
+        margin: 4px 0 0;
     }
 }
 
 ////////////////////////////////////////////////////
 .select {
     &__button {
-        margin: 0px $margin_button;
-        margin-top: 4px;
+        vertical-align: bottom;
+        overflow: hidden;
+
+        margin: 4px $margin_button 0;
         // min-width: 224px;
 
         height: 40px;
