@@ -19,7 +19,7 @@ fetch('./config/video_url.json').then(function (resp) {
 }).then(function (text) {
   return JSON.parse(text);
 }).then(function (data) {
-  initIframe(data.url);
+  // initIframe(data.url)
   console.log('video url: ', data.url);
 })["catch"](function (error) {
   return console.log('Error:', error);

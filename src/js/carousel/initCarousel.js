@@ -29,7 +29,7 @@ function initCarousel(pricesData) {
         const autoplayConfig = autoplayInterval != 0 ? { 
             autoplay: {
                 delay: autoplayInterval,
-                disableOnInteraction: false,
+                disableOnInteraction: true,
             } 
         } : {}
 
@@ -48,7 +48,7 @@ function initCarousel(pricesData) {
             },
             // autoplay: {
                 // delay: 1300,
-                // disableOnInteraction: false,
+                // disableOnInteraction: true,
             // },
             slidesPerView: 'auto',
             spaceBetween: 10,

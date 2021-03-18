@@ -26,7 +26,7 @@ function initCarousel(pricesData) {
     var autoplayConfig = autoplayInterval != 0 ? {
       autoplay: {
         delay: autoplayInterval,
-        disableOnInteraction: false
+        disableOnInteraction: true
       }
     } : {};
     var swiper = new Swiper('.swiper-container', _objectSpread({
@@ -44,7 +44,7 @@ function initCarousel(pricesData) {
       },
       // autoplay: {
       // delay: 1300,
-      // disableOnInteraction: false,
+      // disableOnInteraction: true,
       // },
       slidesPerView: 'auto',
       spaceBetween: 10
