@@ -3,17 +3,17 @@ function initTableAndRB() {
     createButtons()
     // setResponsiveButtons()
 
-    initTableSelBtnsClickEvent() // no change
+    initTableSelBtnsClickEvent()
     initRbButtonsClickEvent()
 
     ////////////// table //////////////
     createTables()
 
     createTabs()
-    initTabsClickEvent() // no change
+    initTabsClickEvent()
     // setResponsiveTabs()
 
-    activateTableElements() // no change
+    activateTableElements()
 
     ////////////// rangeBar //////////////
     initRangeBarToggle()
