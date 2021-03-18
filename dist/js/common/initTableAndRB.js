@@ -4,14 +4,17 @@ function initTableAndRB() {
   ////////////// common //////////////
   createButtons(); // setResponsiveButtons()
 
-  initTableSelBtnsClickEvent();
+  initTableSelBtnsClickEvent(); // no change
+
   initRbButtonsClickEvent(); ////////////// table //////////////
 
   createTables();
   createTabs();
-  initTabsClickEvent(); // setResponsiveTabs()
+  initTabsClickEvent(); // no change
+  // setResponsiveTabs()
 
-  activateTableElements(); ////////////// rangeBar //////////////
+  activateTableElements(); // no change
+  ////////////// rangeBar //////////////
 
   initRangeBarToggle();
   initRangeBarInputEvent();

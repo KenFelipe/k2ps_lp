@@ -7,25 +7,25 @@ function createTabs() {
 
     const tabbarCtnr = document.getElementById(ID.tabbarCtnr)
 
-    Object.keys(DATA).forEach(dataItemkey => {
-        // se dados for configurado pra tabela
-        // logica sobre "bar" esta no "js/rangebar/"
-        if(DATA[dataItemkey].type === CONFIG.dataTypeName.table) {
-            const tabbar = document.createElement('div')
-            tabbar.classList.add(tabbarClass)
-
-            Object.keys(DATA[dataItemkey].table).forEach(tabName => {
-                const tab = document.createElement('button')
-                tab.classList.add(tabClass)
-
-                const span = document.createElement('span')
-                span.innerHTML = tabName.replace('\\', '<br/>')
-
-                tab.appendChild(span)
-                tabbar.appendChild(tab)
-            })
-
-            tabbarCtnr.appendChild(tabbar)
+    DATA.forEach(data => {
+        if(data.dataType !== CONFIG.dataTypeName.table) {
+            return
         }
+
+        const tabbar = document.createElement('div')
+        tabbar.classList.add(tabbarClass)
+
+        data.tableDataList.forEach(tableData => {
+            const tab = document.createElement('button')
+            tab.classList.add(tabClass)
+
+            const span = document.createElement('span')
+            span.innerHTML = tableData.tabName.replace('\\', '<br/>')
+
+            tab.appendChild(span)
+            tabbar.appendChild(tab)
+        })
+
+        tabbarCtnr.appendChild(tabbar)
     })
 }

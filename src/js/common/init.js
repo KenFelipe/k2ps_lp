@@ -1,13 +1,12 @@
 /////////// init table and rangeBar ///////////
-const DATA = {}
+let DATA = []
 
 fetch('./config/data.json')
     .then(resp => resp.text())
     .then(text => JSON.parse(text))
     .then(data => {
-        Object.assign(DATA, data)
-        console.log('data: ', DATA)
-
+        DATA = data
+        // console.log('DATA: ', DATA)
         initTableAndRB()
     })
     .catch(error => console.log('Error:', error))
@@ -19,9 +18,8 @@ fetch('./config/video_url.json')
     .then(resp => resp.text())
     .then(text => JSON.parse(text))
     .then(data => {
-        // initIframe(data.url)
-
-        console.log('video url: ', data.url)
+        // console.log('video url: ', data.url)
+        initIframe(data.url)
     })
     .catch(error => console.log('Error:', error))
 
@@ -32,8 +30,7 @@ fetch('./config/links.json')
     .then(resp => resp.text())
     .then(text => JSON.parse(text))
     .then(data => {
-        console.log('links: ', data)
-
+        // console.log('links: ', data)
         setLogoLinks(data)
         setLinks(data)
     })
@@ -46,8 +43,7 @@ fetch('./config/contact.json')
     .then(resp => resp.text())
     .then(text => JSON.parse(text))
     .then(data => {
-        console.log('contact: ', data)
-
+        // console.log('contact: ', data)
         setContact(data)
     })
     .catch(error => console.log('Error:', error))
@@ -59,8 +55,7 @@ fetch('./config/prices_card.json')
     .then(resp => resp.text())
     .then(text => JSON.parse(text))
     .then(data => {
-        console.log('prices: ', data)
-
+        // console.log('prices: ', data)
         initCarousel(data)
     })
     .catch(error => console.log('Error:', error))
