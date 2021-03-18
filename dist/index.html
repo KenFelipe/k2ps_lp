@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- normalize -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
-  <link rel="stylesheet" href="./css/main/_normalize.css">
+  <link rel="stylesheet" href="./css/reset/normalize.css">
 
-  <!-- my -->
+  <!-- css -->
   <link rel="stylesheet" href="./css/main/main.css">
 
   <link rel="stylesheet" href="./css/main/header.css">
+
+  <link rel="stylesheet" href="./css/main/request.css">
 
   <link rel="stylesheet" href="./css/main/banner.css">
   <link rel="stylesheet" href="./css/main/plan.css">
@@ -26,6 +27,9 @@
   <link rel="stylesheet" href="./css/rangebar/rangebar_component.css">
   <link rel="stylesheet" href="./css/rangebar/rangeBar.css">
 
+  <link rel="stylesheet" href="./css/card/carousel.css">
+  <link rel="stylesheet" href="./css/card/plan_card.css">
+
   <link rel="stylesheet" href="./css/main/taxa.css">
   <link rel="stylesheet" href="./css/main/video.css">
 
@@ -34,16 +38,23 @@
   <link rel="stylesheet" href="./css/main/links.css">
   <link rel="stylesheet" href="./css/main/footer.css">
 
+  <!-- Swiper -->
+  <!-- CDN -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" /> -->
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   <title>Porto Seguro Consórcio - Quem faz planos com o Porto Seguro Consórcio, tem o tempo certo para alcançar o que deseja</title>
 </head>
 <body>
   <div class="wrapper">
     <header class="header">
       <div class="container">
-        <a href="#">
+        <a href="#" id="k2-logo-link">
           <h1 class="header__logo header__logo--k2"></h1>
         </a>
-        <a href="#">
+        <a href="#" id="porto-logo-link">
           <h2 class="header__logo header__logo--porto"></h2>
         </a>
       </div>
@@ -52,7 +63,12 @@
     <section class="banner">
       <div class="banner-bg container"></div>
       <!-- <div class="banner__bg"></div> -->
-      <!-- <button class="proposta">Solicite uma proposta</button> -->
+    </section>
+
+    <section class="request container">
+      <a href="#" target="_blank" 
+        id="request-link" class="request__link"
+      >Solicite uma Proposta</a>
     </section>
   
     <section class="plan container">
@@ -138,7 +154,37 @@
           </div>
         </div>
       </div>
+    </section>
 
+    <!-- <section class="container" style="margin-top: 44px;">
+      <div class="card">
+        <img src="https://www.portoseguro.com.br/novoinstitucional/static_files/images/thumbnail/consorcio-reforma-casa-de-praia.jpg" alt="" class="card__img">
+        <div class="card-content">
+          <div class="card-content__header">consórcio para reforma da casa na praia no valor de r$100,00 mil: </div>
+          <div class="card-content__text">parcelas de<p>r$1.000.000</p>no plano de 208 meses</div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="planos">
+      <div class="container">
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper" id="plans-swiper-wrapper">
+            <!-- Slides -->
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination" id="swiper-pagination-div"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+      </div>
     </section>
 
     <section class="taxa container">
@@ -151,7 +197,7 @@
         <p>Assista ao vídeo do Porto Seguro Consórcio e saiba como conquistar seu bem de um jeito seguro e sem pagar juros</p>
       </div>
       <div id="video-iframe" class="video__video">
-        <!-- <iframe width="853" height="480" src="https://www.youtube.com/embed/M6wLBpzSvqw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <!-- inserido pelo script -->
       </div>
     </section>
 
@@ -162,15 +208,15 @@
       <div class="contact__info">
         <p class="tel">
           <img src="./img/svg/artwork-15.svg" alt="tel-icon">
-          <span>Tel / Cel: &nbsp;(11) 3436-5700</span>
+          <span id="contact-tel"></span>
         </p>
         <p class="adress">
           <img src="./img/svg/artwork-18.svg" alt="local-icon">
-          <span>Av Doutor Renato De Andrade Maia, 1305</span>
+          <span id="contact-adress"></span>
         </p>
         <p class="email">
           <img src="./img/svg/artwork-19.svg" alt="mail-icon">
-          <a href="mailto:k2seguros@k2seguros.com.br">k2seguros@k2seguros.com.br</a>
+          <a href="" id="contact-email"></a>
         </p>
       </div>
     </section>
@@ -180,34 +226,18 @@
         <div class="container">
           <div class="links">
             <div class="links__description">
-              <p>PORTO SEGURO: &nbsp;</p>
+              <p id="link-description-1"></p>
             </div>
-            <div>
-              <a href="https://www.facebook.com/portoseguro" class="links__link">
-                <img src="./img/ico-fb.png" alt="icon-facebook">
-              </a>
-              <a href="https://www.linkedin.com/company/porto-seguro/?trk=hb_tab_compy_id_15740" class="links__link">
-                <img src="./img/ico-in.png" alt="icon-facebook">
-              </a>
-              <a href="https://twitter.com/portoseguro" class="links__link">
-                <img src="./img/ico-tw.png" alt="icon-facebook">
-              </a>
-              <a href="https://www.youtube.com/portoseguro" class="links__link">
-                <img src="./img/ico-yt.png" alt="icon-facebook">
-              </a>
+            <div id="links-ctnr-1">
+              <!-- criado pelo script -->
             </div>
           </div>
           <div class="links">
             <div class="links__description">
-              <p>TRÂNSITO MAIS GENTIL: </p>
+              <p id="link-description-2"></p>
             </div>
-            <div>
-              <a href="https://www.facebook.com/transitomaisgentil" class="links__link">
-                <img src="./img/ico-fb.png" alt="icon-facebook">
-              </a>
-              <a href="https://twitter.com/transitogentil" class="links__link">
-                <img src="./img/ico-tw.png" alt="icon-facebook">
-                </a>
+            <div id="links-ctnr-2">
+              <!-- criado pelo script -->
             </div>
           </div>
           <div class="links links--top">
@@ -231,26 +261,20 @@
   </div>
 
   <!-- script js precisa estar nessa sequencia -->
-  <script src="./config/video_config.js"></script>
-
-  <!-- <script src="./config/data.js"></script> -->
-
-
   <!-- config -->
   <script src="./js/config/config.js"></script>
   <script src="./js/config/idClassName.js"></script>
-  <script src="./js/config/data.js"></script>
   
   <!-- common -->
-  <script src="./js/common/createButtons.js""></script>
+  <script src="./js/common/createButtons.js"></script>
   <script src="./js/common/setResponsiveButtons.js"></script>
 
   <!-- table and tab -->
   <script src="./js/table/initTableSelBtnsClickEvent.js"></script>
 
-  <script src="./js/table/createTables.js""></script>
+  <script src="./js/table/createTables.js"></script>
 
-  <script src="./js/table/createTabs.js""></script>
+  <script src="./js/table/createTabs.js"></script>
   <script src="./js/table/initTabsClickEvent.js"></script>
   <script src="./js/table/setResponsiveTabs.js"></script>
   
@@ -273,10 +297,12 @@
   <!-- activate -->
   <script src="./js/common/activateFirstElement.js"></script>
 
-  <!-- VIDEO -->
-  <script src="./js/common/iframe.js"></script>
-
   <!-- init -->
+  <script src="./js/carousel/initCarousel.js"></script>
+  <script src="./js/common/initTableAndRB.js"></script>
+  <script src="./js/common/initIframe.js"></script>
+  <script src="./js/common/initLinks.js"></script>
+  <script src="./js/common/initContact.js"></script>
   <script src="./js/common/init.js"></script>
 </body>
 </html>

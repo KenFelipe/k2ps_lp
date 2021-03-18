@@ -1,9 +1,16 @@
 @use 'font';
+@use './media';
 
 .values__header {
+    padding: 0 26px;
+
+    @include media.smartphone_response {
+        padding: 0 20px;
+    }
+
     h4 {
         @include font.OpenSans;
-        @include font.setting(28px, normal, 1.071);
+        @include font.setting(28px, normal, 1.271);
         color: #5a308d;
         text-align: left;
         margin-bottom: 15px;
@@ -11,10 +18,11 @@
 
     p {
         @include font.OpenSans;
-        @include font.setting(16px, normal, 1.875);
+        @include font.setting(16px, normal, 1.475);
         color: #4e4e50;
         text-align: left;
-        text-indent: 1px;
+        // text-indent: 1px;
+        padding-left: 1px;
         margin: 16px 0;
 
         &:last-child {

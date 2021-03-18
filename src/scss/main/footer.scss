@@ -8,6 +8,7 @@
         @include font.OpenSans;
         @include font.setting(12px, 100, 16px);
         color: #fff;
+        text-align: justify;
 
         margin: 10px 0;
     }

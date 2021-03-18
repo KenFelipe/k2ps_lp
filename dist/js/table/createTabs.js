@@ -16,12 +16,7 @@ function createTabs() {
         var tab = document.createElement('button');
         tab.classList.add(tabClass);
         var span = document.createElement('span');
-        span.innerHTML = tabName; // ***************************************************
-        // INSERIR LOGICA PARA
-        // PROCESSAMENTO DE TEXT APOS DA <SPAN> 
-        // (LABEL DO TAB)
-        // ***************************************************
-
+        span.innerHTML = tabName.replace('\\', '<br/>');
         tab.appendChild(span);
         tabbar.appendChild(tab);
       });

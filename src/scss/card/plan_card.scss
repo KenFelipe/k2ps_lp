@@ -1,0 +1,58 @@
+.planos {
+    margin-top: 100px;
+}
+
+.card {
+    font-family: "Open Sans", sans-serif;
+    box-shadow: 0px 45px 40px -50px rgb(0 0 0 / 40%);
+    max-width: 288px;
+    height: 315px;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow: hidden;
+    box-sizing: content-box;
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: 130px;
+    }
+
+    &-content {
+        width: 100%;
+        height: 185px;
+        padding: 15px 30px;
+        text-align: center;
+
+        &__header {
+            display: table-cell;
+            vertical-align: middle;
+
+            width: 230px;
+            height: 63px;
+            margin: 0 auto;
+            color: #1c1c1c;
+            font-size: 11px;
+            font-weight: 600;
+            line-height: 21px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        &__text {
+            color: rgba(28,28,28,.6);
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            margin-top: 14px;
+            line-height: 6px;
+
+            p {
+                font-size: 34px;
+                line-height: 44px;
+                letter-spacing: .5px;
+                margin: 0 0 5px;
+            }
+        }
+    }
+}

@@ -49,6 +49,16 @@
 .range-bar-container {
   position: relative;
 }
+@media (max-width: 774px) {
+  .range-bar-container {
+    margin: 0 -10px;
+  }
+}
+@media (max-width: 490px) {
+  .range-bar-container {
+    margin: 0 -8px;
+  }
+}
 .range-bar-container::before {
   margin-left: 10%;
   bottom: 6px;
@@ -75,7 +85,7 @@
 }
 @media (max-width: 490px) {
   .range-bar-container::after {
-    margin-right: 2%;
+    margin-right: 0%;
   }
 }
 
