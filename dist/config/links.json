@@ -19,7 +19,7 @@
                     "url": "https://twitter.com/portoseguro"
                 },
                 {
-                    "icon": "youtube",
+                    "icon": "./img/ico-coin.png",
                     "url": "https://www.youtube.com/portoseguro"
                 }
             ]
@@ -27,10 +27,6 @@
         "div2": {
             "title": "TRÂNSITO MAIS GENTIL: ",
             "linkdata": [
-                {
-                    "icon": "youtube",
-                    "url": "https://youtube.com"
-                },
                 {
                     "icon": "youtube",
                     "url": "https://youtube.com"

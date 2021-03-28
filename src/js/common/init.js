@@ -1,7 +1,7 @@
 /////////// init table and rangeBar ///////////
 const DATA = {}
 
-fetch('./config/data.json')
+fetch('./config/data_.json')
     .then(resp => resp.text())
     .then(text => JSON.parse(text))
     .then(data => {
