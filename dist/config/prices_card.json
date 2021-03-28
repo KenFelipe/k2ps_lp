@@ -2,7 +2,7 @@
     "autoplayIntervalMilliSec": 1000,
     "data": [
         {
-            "imgUrl": "https://www.portoseguro.com.br/NovoInstitucional/static_files/images/thumbnail/consorcio-reforma-casa-de-praia.jpg",
+            "imgUrl": "./img/ONIX.png",
             "header": "CONSÓRCIO PARA REFORMA DA CASA NA PRAIA NO VALOR DE R$55 MIL:",
             "content": "PARCELAS DE <R$349,00> NO PLANO DE 200 MESES"
         },
