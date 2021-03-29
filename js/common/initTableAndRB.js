@@ -9,7 +9,9 @@ function initTableAndRB() {
 
   createTables();
   createTabs();
-  initTabsClickEvent(); // setResponsiveTabs()
+  initTabsClickEvent(); //
+
+  setResponsiveTabs(); //
 
   activateTableElements(); ////////////// rangeBar //////////////
 
