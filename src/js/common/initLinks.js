@@ -50,6 +50,7 @@ function setLinks(linksData) {
 function setLogoLinks(linkData) {
     const k2Logo = document.getElementById('k2-logo-link')
     k2Logo.href = linkData.mainLogo || '#'
+    k2Logo.target = '_blank'
 
     const portoLogo = document.getElementById('porto-logo-link')
     portoLogo.href = linkData.portoSeguroLogo || '#'

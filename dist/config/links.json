@@ -1,5 +1,5 @@
 {
-    "mainLogo": "",
+    "mainLogo": "https://google.com",
     "portoSeguroLogo": "https://google.com",
     "solicitarProposta": "https://www.k2seguros.com.br/Proposta-Online.html",
     "footerLinks": {
@@ -19,7 +19,7 @@
                     "url": "https://twitter.com/portoseguro"
                 },
                 {
-                    "icon": "./img/ico-coin.png",
+                    "icon": "youtube",
                     "url": "https://www.youtube.com/portoseguro"
                 }
             ]

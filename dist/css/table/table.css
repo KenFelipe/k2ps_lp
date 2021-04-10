@@ -36,7 +36,7 @@
   font-weight: 600;
   border-bottom: 1px solid #cecece;
   background-color: #dcdcdc;
-  text-align: left;
+  text-align: center;
 }
 .table-section__table thead td {
   height: 50px;
@@ -54,9 +54,9 @@
 .table-section__table tbody td {
   color: #272727;
   font-size: 14px;
-  font-family: "PT Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.543;
-  text-align: left;
+  text-align: center;
   padding: 6px 20px 6px 20px;
 }
 

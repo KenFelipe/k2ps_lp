@@ -2,7 +2,7 @@
 
 /////////// init table and rangeBar ///////////
 var DATA = [];
-fetch('./config/data.json').then(function (resp) {
+fetch('./config/data_.json').then(function (resp) {
   return resp.text();
 }).then(function (text) {
   return JSON.parse(text);
