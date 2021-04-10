@@ -9,11 +9,20 @@ function createButtons() {
 
   var turnOnRbBtnCls = CLASSNAME.turnOnRbBtn;
   var buttonCtnr = document.getElementById(ID.buttonCtnr);
-  Object.keys(DATA).forEach(function (dataItemKey) {
+  DATA.forEach(function (data) {
     var button = document.createElement('button');
-    button.innerHTML = dataItemKey.replace('\\', '<br/>');
+    button.innerHTML = data.sectionName.replace('\\', '<br/>');
     button.classList.add(buttonCls);
-    button.classList.add(DATA[dataItemKey].type === CONFIG.dataTypeName.table ? tableSelBtnCls : DATA[dataItemKey].type === CONFIG.dataTypeName.bar ? turnOnRbBtnCls : '');
+    button.classList.add(data.dataType === CONFIG.dataTypeName.table ? tableSelBtnCls : data.dataType === CONFIG.dataTypeName.bar ? turnOnRbBtnCls : 'error');
     buttonCtnr.appendChild(button);
-  });
+  }); // Object.keys(DATA).forEach(dataItemKey => {
+  //     const button = document.createElement('button')
+  //     button.innerHTML = dataItemKey.replace('\\', '<br/>')
+  //     button.classList.add(buttonCls)
+  //     button.classList.add(
+  //         DATA[dataItemKey].type === CONFIG.dataTypeName.table ? tableSelBtnCls :
+  //         DATA[dataItemKey].type === CONFIG.dataTypeName.bar ? turnOnRbBtnCls : ''
+  //     )
+  //     buttonCtnr.appendChild(button)
+  // })
 }

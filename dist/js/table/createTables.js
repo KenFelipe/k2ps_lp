@@ -1,33 +1,29 @@
 "use strict";
 
 // CLASSNAME and ID config in "config/idClassName.js" //
-// DATA in "config/data.js"
 function createTables() {
   var tableCls = CLASSNAME.table;
   var tableSecCls = CLASSNAME.tableSec;
-  var tableCtnr = document.getElementById(ID.tableCtnr); // itemKeys: imovel, automovel, ...
-
-  var dataItemKeys = Object.keys(DATA);
-  dataItemKeys.forEach(function (dataItemKey) {
-    // type: "table" or "bar"
+  var tableCtnr = document.getElementById(ID.tableCtnr);
+  DATA.forEach(function (data) {
+    // type: "table" or "rangeBar"
     // logica sobre "bar" esta no "js/rangebar/"
-    if (DATA[dataItemKey].type === CONFIG.dataTypeName.table) {
-      var tableSec = document.createElement('div');
-      tableSec.className = tableSecCls;
-      var tableData = DATA[dataItemKey].table; // tableTabNames: "ate 240mil", a "partir de 250mil", ...
-
-      var tabNames = Object.keys(tableData);
-      tabNames.forEach(function (tabName) {
-        var table = document.createElement('table');
-        table.className = tableCls;
-        var thead = createTableHead(tableData[tabName]);
-        var tbody = createTableBody(tableData[tabName]);
-        table.appendChild(thead);
-        table.appendChild(tbody);
-        tableSec.appendChild(table);
-      });
-      tableCtnr.appendChild(tableSec);
+    if (data.dataType !== CONFIG.dataTypeName.table) {
+      return;
     }
+
+    var tableSec = document.createElement('div');
+    tableSec.className = tableSecCls;
+    data.tableDataList.forEach(function (tableData) {
+      var table = document.createElement('table');
+      table.className = tableCls;
+      var thead = createTableHead(tableData.tableData);
+      var tbody = createTableBody(tableData.tableData);
+      table.appendChild(thead);
+      table.appendChild(tbody);
+      tableSec.appendChild(table);
+    });
+    tableCtnr.appendChild(tableSec);
   }); //
 
   function createTableHead(table) {
