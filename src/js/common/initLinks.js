@@ -29,13 +29,17 @@ function setLinks(linksData) {
     function createLinkTag(data) {
         const link = document.createElement('a')
         link.href = data.url || '#'
+        link.target = '_blank'
         link.classList.add('links__link')
 
         const img = document.createElement('img')
-        img.src = iconUrl[
-            iconUrl.hasOwnProperty(data.icon) ? 
-            data.icon : '' 
-        ]
+        // img.src = iconUrl[
+        //     iconUrl.hasOwnProperty(data.icon) ? 
+        //     data.icon : '' 
+        // ]
+        img.src = iconUrl.hasOwnProperty(data.icon) ? 
+            iconUrl[data.icon] : data.icon
+
         img.alt = `icon-${data.icon}`
 
         link.appendChild(img)
