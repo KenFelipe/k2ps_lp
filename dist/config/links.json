@@ -1,13 +1,13 @@
 {
     "mainLogo": "",
     "portoSeguroLogo": "https://google.com",
-    "solicitarProposta": "https://youtube.com",
+    "solicitarProposta": "https://www.k2seguros.com.br/Proposta-Online.html",
     "footerLinks": {
         "div1": {
             "title": " PORTO SEGURO:   ",
             "linkdata": [
                 {
-                    "icon": "facebook",
+                    "icon": "./img/ico-fb.png",
                     "url": "https://www.facebook.com/portoseguro"
                 },
                 {

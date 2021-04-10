@@ -11,7 +11,10 @@ function initTableAndRB() {
 
     createTabs()
     initTabsClickEvent()
-    // setResponsiveTabs()
+
+    //
+    setResponsiveTabs()
+    //
 
     activateTableElements()
 

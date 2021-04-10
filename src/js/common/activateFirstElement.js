@@ -1,5 +1,5 @@
 function activateFirstElement() {
-    const firstDataType = DATA[Object.keys(DATA)[0]].type
+    const firstDataType = DATA[0].dataType
 
     const firstButton = document.getElementsByClassName(CLASSNAME.button).item(0)
     firstButton.click()

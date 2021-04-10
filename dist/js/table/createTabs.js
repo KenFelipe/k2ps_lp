@@ -6,21 +6,21 @@ function createTabs() {
   var tabClass = CLASSNAME.tab;
   var tabbarClass = CLASSNAME.tabbar;
   var tabbarCtnr = document.getElementById(ID.tabbarCtnr);
-  Object.keys(DATA).forEach(function (dataItemkey) {
-    // se dados for configurado pra tabela
-    // logica sobre "bar" esta no "js/rangebar/"
-    if (DATA[dataItemkey].type === CONFIG.dataTypeName.table) {
-      var tabbar = document.createElement('div');
-      tabbar.classList.add(tabbarClass);
-      Object.keys(DATA[dataItemkey].table).forEach(function (tabName) {
-        var tab = document.createElement('button');
-        tab.classList.add(tabClass);
-        var span = document.createElement('span');
-        span.innerHTML = tabName.replace('\\', '<br/>');
-        tab.appendChild(span);
-        tabbar.appendChild(tab);
-      });
-      tabbarCtnr.appendChild(tabbar);
+  DATA.forEach(function (data) {
+    if (data.dataType !== CONFIG.dataTypeName.table) {
+      return;
     }
+
+    var tabbar = document.createElement('div');
+    tabbar.classList.add(tabbarClass);
+    data.tableDataList.forEach(function (tableData) {
+      var tab = document.createElement('button');
+      tab.classList.add(tabClass);
+      var span = document.createElement('span');
+      span.innerHTML = tableData.tabName.replace('\\', '<br/>');
+      tab.appendChild(span);
+      tabbar.appendChild(tab);
+    });
+    tabbarCtnr.appendChild(tabbar);
   });
 }

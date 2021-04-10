@@ -1,7 +1,7 @@
 "use strict";
 
 function activateFirstElement() {
-  var firstDataType = DATA[Object.keys(DATA)[0]].type;
+  var firstDataType = DATA[0].dataType;
   var firstButton = document.getElementsByClassName(CLASSNAME.button).item(0);
   firstButton.click(); // if(firstDataType === CONFIG.dataTypeName.table) {
   // }
