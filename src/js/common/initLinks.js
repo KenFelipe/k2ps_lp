@@ -14,7 +14,6 @@ function setLinks(linksData) {
     linksData.footerLinks.div1.linkdata.forEach(data => {
         div1.append(createLinkTag(data))
     })
-    // console.log(div1)
 
     const div2Description = document.getElementById('link-description-2')
     div2Description.innerHTML = 
@@ -24,7 +23,6 @@ function setLinks(linksData) {
     linksData.footerLinks.div2.linkdata.forEach(data => {
         div2.append(createLinkTag(data))
     })
-    // console.log(div2)
 
     function createLinkTag(data) {
         const link = document.createElement('a')
@@ -33,10 +31,6 @@ function setLinks(linksData) {
         link.classList.add('links__link')
 
         const img = document.createElement('img')
-        // img.src = iconUrl[
-        //     iconUrl.hasOwnProperty(data.icon) ? 
-        //     data.icon : '' 
-        // ]
         img.src = iconUrl.hasOwnProperty(data.icon) ? 
             iconUrl[data.icon] : data.icon
 
