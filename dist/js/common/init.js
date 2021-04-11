@@ -7,8 +7,7 @@ fetch('./config/data.json').then(function (resp) {
 }).then(function (text) {
   return JSON.parse(text);
 }).then(function (data) {
-  DATA = data; // console.log('DATA: ', DATA)
-
+  DATA = data;
   initTableAndRB();
 })["catch"](function (error) {
   return console.log('Error:', error);
@@ -19,7 +18,6 @@ fetch('./config/video_url.json').then(function (resp) {
 }).then(function (text) {
   return JSON.parse(text);
 }).then(function (data) {
-  // console.log('video url: ', data.url)
   initIframe(data.url);
 })["catch"](function (error) {
   return console.log('Error:', error);
@@ -30,7 +28,6 @@ fetch('./config/links.json').then(function (resp) {
 }).then(function (text) {
   return JSON.parse(text);
 }).then(function (data) {
-  // console.log('links: ', data)
   setLogoLinks(data);
   setLinks(data);
 })["catch"](function (error) {
@@ -42,7 +39,6 @@ fetch('./config/contact.json').then(function (resp) {
 }).then(function (text) {
   return JSON.parse(text);
 }).then(function (data) {
-  // console.log('contact: ', data)
   setContact(data);
 })["catch"](function (error) {
   return console.log('Error:', error);
@@ -53,7 +49,6 @@ fetch('./config/prices_card.json').then(function (resp) {
 }).then(function (text) {
   return JSON.parse(text);
 }).then(function (data) {
-  // console.log('prices: ', data)
   initCarousel(data);
 })["catch"](function (error) {
   return console.log('Error:', error);
