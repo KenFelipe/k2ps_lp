@@ -33,10 +33,6 @@ function setLinks(linksData) {
         link.classList.add('links__link')
 
         const img = document.createElement('img')
-        // img.src = iconUrl[
-        //     iconUrl.hasOwnProperty(data.icon) ? 
-        //     data.icon : '' 
-        // ]
         img.src = iconUrl.hasOwnProperty(data.icon) ? 
             iconUrl[data.icon] : data.icon
 
