@@ -1,2 +1,1 @@
-portseg
-https://kenfelipe.github.io/portoseg/
+url: https://kenfelipe.github.io/k2ps_lp/
