@@ -14,7 +14,7 @@ function createDescs() {
 								<span class="desc-icon">
 									<i 
 										class="${desc.icon}"
-										style="color: ${desc.color};"
+										style="color: #008def;"
 									></i>
 								</span>
 								<span class="desc-text">${desc.text}</span>

@@ -4,22 +4,24 @@
 		"dataType": "table",
     "descriptions": [
       {
-        "icon": "fas fa-ad",
-        "text": "<strong>PARCELA REDUZIDA</strong> DE <b>25%</b> ATE A COMTEMPLACAO.",
-        "color": "blue"
+        "icon": "fas fa-calendar",
+        "text": "<strong>PLANOS 200 MESES</strong>"
       },
       {
-        "icon": "fas fa-camera",
-        "text": "LOREM IPSUM <b>DOLOR</b> SIT AMET CONSECTETUR, ADIPISICING ELIT!.",
-        "color": "#da2345"
+        "icon": "fas fa-sort-amount-down",
+        "text": "<strong>PARCELA REDUZIDA</strong> DE <b>25%</b> ATE A COMTEMPLACAO"
       },
       {
-        "icon": "fas fa-ambulance",
-        "text": "LANCE EMBUTIDO DE ATE 30%."
+        "icon": "fas fa-hand-holding-usd",
+        "text": "<strong>LANCE EMBUTIDO</strong> DE ATE <b>30%</b>"
       },
       {
-        "icon": "fas fa-apple-alt",
-        "text": "CONTEMPLACOES MENSAIS POR SORTEIO E LANCE FIXO E LIVRE."
+        "icon": "fas fa-stamp",
+        "text": "CONTEMPLACOES MENSAIS POR <strong>SORTEIO E LANCE FIXO E LIVRE</strong>"
+      },
+      {
+        "icon": "fas fa-home",
+        "text": "FLEXIBILIDADE PARA COMPRAR <strong>IMÓVEIS RESIDENCIAIS E COMERCIAIS, IMÓVEIS RURAIS OU DE VERANEIO, LOTES, CONSTRUIR E REFORMAR E QUITAR FINANCIAMENTO PRÓPRIO</strong>"
       }
     ],
 		"tableDataList": [

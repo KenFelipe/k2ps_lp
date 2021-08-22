@@ -56,11 +56,14 @@
   color: #272727;
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
-  line-height: 1.25;
+  line-height: 1.4;
   letter-spacing: 0.2px;
 }
 #val-desc-ctn #tbl-desc-ctn ul li span.desc-text strong {
   color: #00adef;
+}
+#val-desc-ctn #tbl-desc-ctn ul li span.desc-text b {
+  color: #000;
 }
 
 .table-section {
