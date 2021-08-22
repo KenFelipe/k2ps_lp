@@ -5,21 +5,21 @@
     "descriptions": [
       {
         "icon": "fas fa-ad",
-        "text": "<strong>PARCELA REDUZIDA</strong> DE <b>25%</b> ATE A COMTEMPLACAO",
+        "text": "<strong>PARCELA REDUZIDA</strong> DE <b>25%</b> ATE A COMTEMPLACAO.",
         "color": "blue"
       },
       {
         "icon": "fas fa-camera",
-        "text": "Lorem ipsum <b>dolor</b> sit amet consectetur, adipisicing elit!",
+        "text": "LOREM IPSUM <b>DOLOR</b> SIT AMET CONSECTETUR, ADIPISICING ELIT!.",
         "color": "#da2345"
       },
       {
         "icon": "fas fa-ambulance",
-        "text": "LANCE EMBUTIDO DE ATE 30%"
+        "text": "LANCE EMBUTIDO DE ATE 30%."
       },
       {
         "icon": "fas fa-apple-alt",
-        "text": "CONTEMPLACOES MENSAIS POR SORTEIO E LANCE FIXO E LIVRE"
+        "text": "CONTEMPLACOES MENSAIS POR SORTEIO E LANCE FIXO E LIVRE."
       }
     ],
 		"tableDataList": [
