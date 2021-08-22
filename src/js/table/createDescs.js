@@ -5,9 +5,6 @@ function createDescs() {
         const descDev = document.createElement('ul')
         descDev.className = 'desc-col'
 
-				if(!data.descriptions) {
-					return
-				}
         data.descriptions.forEach(desc => {
 						const li = `
 							<li>
@@ -20,9 +17,17 @@ function createDescs() {
 								<span class="desc-text">${desc.text}</span>
 							</li>
 						`
-
 						descDev.innerHTML += li
         })
+
+				if(data.aside) {
+						const li = `
+							<li>
+								<span class="desc-aside">${data.aside}</span>
+							</li>
+						`
+						descDev.innerHTML += li
+				}
 
         descCtn.appendChild(descDev)
     })

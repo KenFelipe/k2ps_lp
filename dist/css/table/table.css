@@ -65,6 +65,15 @@
 #val-desc-ctn #tbl-desc-ctn ul li span.desc-text b {
   color: #000;
 }
+#val-desc-ctn #tbl-desc-ctn ul li span.desc-aside {
+  color: #272727;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.3;
+  letter-spacing: 0.3px;
+  text-align: center;
+  padding: 16px 26px 0;
+}
 
 .table-section {
   display: none;
