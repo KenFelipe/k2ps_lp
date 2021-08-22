@@ -32,6 +32,7 @@ function initTableSelBtnsClickEvent() {
                 tabbars.item(target).classList.remove('active')
                 tableSecs.item(target).classList.remove('active')
 
+                // debug
                 if(target < 2) {
                     descCtns.item(target).classList.remove('active')
                 }
@@ -41,6 +42,7 @@ function initTableSelBtnsClickEvent() {
             tabbars.item(i).classList.add('active')
             tableSecs.item(i).classList.add('active')
 
+            // debug
             if(i < 2) {
                 descCtns.item(i).classList.add('active')
             }

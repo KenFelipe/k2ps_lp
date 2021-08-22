@@ -9,11 +9,17 @@ function createDescs() {
 					return
 				}
         data.descriptions.forEach(desc => {
-            const li = document.createElement('li')
-						li.innerText = desc.text
+						const li = `
+							<li>
+								<i 
+									class="${desc.icon}"
+									style="color: ${desc.color};"
+								></i>
+								<span>${desc.text}</span>
+							</li>
+						`
 
-            descDev.appendChild(li)
-
+						descDev.innerHTML += li
         })
 
         descCtn.appendChild(descDev)

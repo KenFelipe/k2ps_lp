@@ -4,19 +4,20 @@
 		"dataType": "table",
     "descriptions": [
       {
-        "icon": "",
-        "text": "desc_1"
+        "icon": "fas fa-ad",
+        "text": "desc_1",
+        "color": "blue"
       },
       {
-        "icon": "",
-        "text": "desc_2"
+        "icon": "fas fa-camera",
+        "text": "Lorem ipsum <b>dolor</b> sit amet consectetur, adipisicing elit!"
       },
       {
-        "icon": "",
+        "icon": "fas fa-ambulance",
         "text": "desc_3"
       },
       {
-        "icon": "",
+        "icon": "fas fa-apple-alt",
         "text": "desc_4"
       }
     ],

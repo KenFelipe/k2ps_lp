@@ -21,9 +21,25 @@
     padding-left: 0 15px;
   }
 }
-#val-desc-ctn #tbl-desc {
+#val-desc-ctn #tbl-desc-ctn {
+  width: 30%;
   margin-top: 40px;
+  padding: 30px 15px;
   background-color: #272727;
+}
+#val-desc-ctn #tbl-desc-ctn ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#val-desc-ctn #tbl-desc-ctn ul li {
+  display: flex;
+}
+#val-desc-ctn #tbl-desc-ctn ul li span {
+  margin-left: 8px;
+}
+#val-desc-ctn #tbl-desc-ctn ul li span b {
+  color: red;
 }
 
 .table-section {
