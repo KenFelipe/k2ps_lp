@@ -2,6 +2,25 @@
 	{
 		"sectionName": "Imóveis",
 		"dataType": "table",
+    "descriptions": [
+      {
+        "icon": "fas fa-sort-amount-down",
+        "text": "<strong>PARCELA REDUZIDA</strong> DE <b>25%</b> ATÉ À CONTEMPLAÇÃO"
+      },
+      {
+        "icon": "fas fa-hand-holding-usd",
+        "text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>30%</b>"
+      },
+      {
+        "icon": "fas fa-stamp",
+        "text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE FIXO E LIVRE</strong>"
+      },
+      {
+        "icon": "fas fa-home",
+        "text": "FLEXIBILIDADE PARA COMPRAR <strong>IMÓVEIS RESIDENCIAIS E COMERCIAIS, IMÓVEIS RURAIS OU DE VERANEIO, LOTES, CONSTRUIR E REFORMAR E QUITAR FINANCIAMENTO PRÓPRIO</strong>"
+      }
+    ],
+    "aside": "",
 		"tableDataList": [
 			{
 				"tabName": "ATÉ 240 MIL",
@@ -110,6 +129,24 @@
 	{
 		"sectionName": "Veículos",
 		"dataType": "table",
+    "descriptions": [
+      {
+        "icon": "fas fa-sort-amount-down",
+        "text": "<strong>PARCELA REDUZIDA</strong> DE <b>20%</b> ATÉ À CONTEMPLAÇÃO"
+      },
+      {
+        "icon": "fas fa-hand-holding-usd",
+        "text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>15%</b>"
+      },
+      {
+        "icon": "fas fa-stamp",
+        "text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE</strong>"
+      },
+      {
+        "icon": "fas fa-car",
+        "text": "COMPRE <strong>AUTOMÓVEIS, MOTOS OU NÁUTICOS</strong> COM ATÉ 6 ANOS DE FABRICAÇÃO"
+      }
+    ],
 		"tableDataList": [
 			{
 				"tabName": "PLANOS DE 80 MESES",
@@ -180,6 +217,20 @@
 	{
 		"sectionName": "Veículos Pesados e\\Máquinas Agrícolas",
 		"dataType": "table",
+    "descriptions": [
+      {
+        "icon": "fas fa-hand-holding-usd",
+        "text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>30%</b>"
+      },
+      {
+        "icon": "fas fa-stamp",
+        "text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE FIXO E LIVRE</strong>"
+      },
+      {
+        "icon": "fas fa-car",
+        "text": "COMPRE <strong>AUTOMÓVEIS VANS, ÔNIBUS, CAMINHÕES, MAQUINÁRIO AGRICOLA, E DE CONSTRUÇÃO CIVIL</strong>"
+      }
+    ],
 		"tableDataList": [
 			{
 				"tabName": "PLANOS DE 120 MESES",
@@ -210,6 +261,21 @@
 	{
 		"sectionName": "Placa Solar",
 		"dataType": "table",
+    "descriptions": [
+      {
+        "icon": "fas fa-hand-holding-usd",
+        "text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>30%</b>"
+      },
+      {
+        "icon": "fas fa-stamp",
+        "text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE FIXO E LIVRE</strong>"
+      },
+      {
+        "icon": "fas fa-car",
+        "text": "COMPRE <strong>AUTOMÓVEIS VANS, ÔNIBUS, CAMINHÕES, MAQUINÁRIO AGRICOLA, E DE CONSTRUÇÃO CIVIL</strong>"
+      }
+    ],
+    "aside": "LIMITE DE ANO DO BEMDE 6 ANOS PARA AUTOMÓVEIS E 2 ANOS PARA MÁQUINAS",
 		"tableDataList": [
 			{
 				"tabName": "PLANOS DE 50 MESES",
