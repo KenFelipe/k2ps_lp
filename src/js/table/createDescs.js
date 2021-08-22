@@ -11,11 +11,13 @@ function createDescs() {
         data.descriptions.forEach(desc => {
 						const li = `
 							<li>
-								<i 
-									class="${desc.icon}"
-									style="color: ${desc.color};"
-								></i>
-								<span>${desc.text}</span>
+								<span class="desc-icon">
+									<i 
+										class="${desc.icon}"
+										style="color: ${desc.color};"
+									></i>
+								</span>
+								<span class="desc-text">${desc.text}</span>
 							</li>
 						`
 

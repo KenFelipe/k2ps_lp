@@ -3,7 +3,7 @@
 #val-desc-ctn {
     display: flex;
 
-    @include media.smartphone_response {
+    @include media.tablet_response {
         flex-direction: column;
     }
 
@@ -12,11 +12,11 @@
         padding-left: 0 27.5px;
 
         @include media.tablet_response {
+            width: 100%;
             padding-left: 0 22.5px;
         }
 
         @include media.smartphone_response {
-            width: 100%;
             padding-left: 0 15px;
         }
     }
@@ -24,8 +24,14 @@
     #tbl-desc-ctn {
         width: 30%;
         margin-top: 40px;
-        padding: 30px 15px;
-        background-color: #272727;
+        padding: 30px 4px 30px 22px;
+        // background-color: #272727;
+
+        @include media.tablet_response {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px 6px;
+        }
 
         ul {
             margin: 0;
@@ -34,9 +40,24 @@
 
             li {
                 display: flex;
+                margin-bottom: 10px;
 
-                span {
-                    margin-left: 8px;
+                span.desc-icon {
+                    min-width: 34px;
+
+                    i {
+                        font-size: 25px;
+                    }
+                }
+
+                span.desc-text {
+                    margin-left: 2px;
+
+                    color: #272727;
+                    font-size: 14px;
+                    font-family: "Open Sans", sans-serif;
+                    line-height: 1.25;
+                    letter-spacing: 0.3px;
 
                     b {
                         color: red;

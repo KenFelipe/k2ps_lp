@@ -5,20 +5,21 @@
     "descriptions": [
       {
         "icon": "fas fa-ad",
-        "text": "desc_1",
+        "text": "PARCELA REDUZIDA DE 25% ATE A COMTEMPLACAO",
         "color": "blue"
       },
       {
         "icon": "fas fa-camera",
-        "text": "Lorem ipsum <b>dolor</b> sit amet consectetur, adipisicing elit!"
+        "text": "Lorem ipsum <b>dolor</b> sit amet consectetur, adipisicing elit!",
+        "color": "#da2345"
       },
       {
         "icon": "fas fa-ambulance",
-        "text": "desc_3"
+        "text": "LANCE EMBUTIDO DE ATE 30%"
       },
       {
         "icon": "fas fa-apple-alt",
-        "text": "desc_4"
+        "text": "CONTEMPLACOES MENSAIS POR SORTEIO E LANCE FIXO E LIVRE"
       }
     ],
 		"tableDataList": [
