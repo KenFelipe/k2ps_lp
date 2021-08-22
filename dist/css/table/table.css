@@ -56,8 +56,8 @@
   line-height: 1.25;
   letter-spacing: 0.3px;
 }
-#val-desc-ctn #tbl-desc-ctn ul li span.desc-text b {
-  color: red;
+#val-desc-ctn #tbl-desc-ctn ul li span.desc-text strong {
+  color: #00adef;
 }
 
 .table-section {
