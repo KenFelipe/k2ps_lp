@@ -24,7 +24,7 @@
 }
 #val-desc-ctn #tbl-desc-ctn {
   width: 30%;
-  margin: 84px 0 0 10px;
+  margin: 44px 0 0 10px;
   padding: 22px 12px 12px 12px;
   border: 1px solid #00adef;
   border-radius: 7px;
@@ -86,6 +86,13 @@
   text-align: center;
   padding: 16px 26px 0;
 }
+#val-desc-ctn #tbl-desc-ctn .desc-col {
+  display: none;
+  overflow-x: auto;
+}
+#val-desc-ctn #tbl-desc-ctn .desc-col.active {
+  display: block;
+}
 
 .table-section {
   display: none;
@@ -133,14 +140,6 @@
   line-height: 1.543;
   text-align: center;
   padding: 6px 20px 6px 20px;
-}
-
-.desc-col {
-  display: none;
-  overflow-x: auto;
-}
-.desc-col.active {
-  display: block;
 }
 
 /*# sourceMappingURL=table.css.map */
