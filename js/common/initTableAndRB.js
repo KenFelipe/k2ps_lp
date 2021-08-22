@@ -8,6 +8,7 @@ function initTableAndRB() {
   initRbButtonsClickEvent(); ////////////// table //////////////
 
   createTables();
+  createDescs();
   createTabs();
   initTabsClickEvent(); //
 

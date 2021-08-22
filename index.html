@@ -39,11 +39,11 @@
   <link rel="stylesheet" href="./css/main/footer.css">
 
   <!-- Swiper -->
-  <!-- CDN -->
-  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" /> -->
-  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/56cda3019b.js" crossorigin="anonymous"></script>
 
   <title>Porto Seguro Consórcio - Quem faz planos com o Porto Seguro Consórcio, tem o tempo certo para alcançar o que deseja</title>
 </head>
@@ -62,7 +62,6 @@
 
     <section class="banner">
       <div class="banner-bg container"></div>
-      <!-- <div class="banner__bg"></div> -->
     </section>
 
     <section class="request container">
@@ -113,7 +112,10 @@
       </div>
 
       <!-- table -->
-      <div id="table-container" class="tables container"></div>
+      <div id="val-desc-ctn" class="container">
+        <div id="table-container" class="tables"></div>
+        <div id="tbl-desc-ctn"></div>
+      </div>
 
       <!-- RangeBar -->
       <div id="range-container" class="container">
@@ -155,16 +157,6 @@
         </div>
       </div>
     </section>
-
-    <!-- <section class="container" style="margin-top: 44px;">
-      <div class="card">
-        <img src="https://www.portoseguro.com.br/novoinstitucional/static_files/images/thumbnail/consorcio-reforma-casa-de-praia.jpg" alt="" class="card__img">
-        <div class="card-content">
-          <div class="card-content__header">consórcio para reforma da casa na praia no valor de r$100,00 mil: </div>
-          <div class="card-content__text">parcelas de<p>r$1.000.000</p>no plano de 208 meses</div>
-        </div>
-      </div>
-    </section> -->
 
     <section class="planos">
       <div class="container">
@@ -260,7 +252,6 @@
 
   </div>
 
-  <!-- script js precisa estar nessa sequencia -->
   <!-- config -->
   <script src="./js/config/config.js"></script>
   <script src="./js/config/idClassName.js"></script>
@@ -273,6 +264,7 @@
   <script src="./js/table/initTableSelBtnsClickEvent.js"></script>
 
   <script src="./js/table/createTables.js"></script>
+  <script src="./js/table/createDescs.js"></script>
 
   <script src="./js/table/createTabs.js"></script>
   <script src="./js/table/initTabsClickEvent.js"></script>
