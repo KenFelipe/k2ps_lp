@@ -11,7 +11,7 @@ function createDescs() {
     });
 
     if (data.aside) {
-      var li = "\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<span class=\"desc-aside\">".concat(data.aside, "</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t");
+      var li = "\n\t\t\t\t\t\t\t<li class=\"desc-aside-li\">\n\t\t\t\t\t\t\t\t<span class=\"desc-aside\">".concat(data.aside, "</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t");
       descDev.innerHTML += li;
     }
 

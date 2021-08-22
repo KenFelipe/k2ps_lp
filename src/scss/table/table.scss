@@ -47,6 +47,7 @@
 
                 span.desc-icon {
                     min-width: 34px;
+                    padding-top: 2px;
 
                     i {
                         font-size: 25px;
@@ -69,6 +70,17 @@
                     b {
                         color: #000;
                     }
+                }
+            }
+
+            li.desc-aside-li {
+                margin-bottom: 0;
+                overflow: hidden;
+
+                @include media.tablet_response {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 6px;
                 }
 
                 span.desc-aside {

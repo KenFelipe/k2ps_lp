@@ -20,6 +20,7 @@
         "text": "FLEXIBILIDADE PARA COMPRAR <strong>IMÓVEIS RESIDENCIAIS E COMERCIAIS, IMÓVEIS RURAIS OU DE VERANEIO, LOTES, CONSTRUIR E REFORMAR E QUITAR FINANCIAMENTO PRÓPRIO</strong>"
       }
     ],
+    "aside": "",
 		"tableDataList": [
 			{
 				"tabName": "ATÉ 240 MIL",
@@ -142,7 +143,7 @@
         "text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE</strong>"
       },
       {
-        "icon": "fas fa-car-side",
+        "icon": "fas fa-car",
         "text": "COMPRE <strong>AUTOMÓVEIS, MOTOS OU NÁUTICOS</strong> COM ATÉ 6 ANOS DE FABRICAÇÃO"
       }
     ],
@@ -226,7 +227,7 @@
         "text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE FIXO E LIVRE</strong>"
       },
       {
-        "icon": "fas fa-truck",
+        "icon": "fas fa-car",
         "text": "COMPRE <strong>AUTOMÓVEIS VANS, ÔNIBUS, CAMINHÕES, MAQUINÁRIO AGRICOLA, E DE CONSTRUÇÃO CIVIL</strong>"
       }
     ],
@@ -270,7 +271,7 @@
         "text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE FIXO E LIVRE</strong>"
       },
       {
-        "icon": "fas fa-truck",
+        "icon": "fas fa-car",
         "text": "COMPRE <strong>AUTOMÓVEIS VANS, ÔNIBUS, CAMINHÕES, MAQUINÁRIO AGRICOLA, E DE CONSTRUÇÃO CIVIL</strong>"
       }
     ],

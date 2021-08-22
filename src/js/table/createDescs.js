@@ -22,7 +22,7 @@ function createDescs() {
 
 				if(data.aside) {
 						const li = `
-							<li>
+							<li class="desc-aside-li">
 								<span class="desc-aside">${data.aside}</span>
 							</li>
 						`

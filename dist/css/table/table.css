@@ -47,6 +47,7 @@
 }
 #val-desc-ctn #tbl-desc-ctn ul li span.desc-icon {
   min-width: 34px;
+  padding-top: 2px;
 }
 #val-desc-ctn #tbl-desc-ctn ul li span.desc-icon i {
   font-size: 25px;
@@ -65,7 +66,18 @@
 #val-desc-ctn #tbl-desc-ctn ul li span.desc-text b {
   color: #000;
 }
-#val-desc-ctn #tbl-desc-ctn ul li span.desc-aside {
+#val-desc-ctn #tbl-desc-ctn ul li.desc-aside-li {
+  margin-bottom: 0;
+  overflow: hidden;
+}
+@media (max-width: 774px) {
+  #val-desc-ctn #tbl-desc-ctn ul li.desc-aside-li {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6px;
+  }
+}
+#val-desc-ctn #tbl-desc-ctn ul li.desc-aside-li span.desc-aside {
   color: #272727;
   font-size: 12px;
   font-family: "Open Sans", sans-serif;
