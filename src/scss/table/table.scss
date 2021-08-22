@@ -96,3 +96,12 @@
         }
     }
 }
+
+.desc-col {
+    display: none;
+    overflow-x: auto;
+
+    &.active {
+        display: block;
+    }
+}

@@ -74,4 +74,12 @@
   padding: 6px 20px 6px 20px;
 }
 
+.desc-col {
+  display: none;
+  overflow-x: auto;
+}
+.desc-col.active {
+  display: block;
+}
+
 /*# sourceMappingURL=table.css.map */
