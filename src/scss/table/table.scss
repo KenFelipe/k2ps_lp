@@ -1,14 +1,29 @@
 @use './../main/media';
 
-#table-container.container {
-    padding: 0 27.5px;
-
-    @include media.tablet_response {
-        padding: 0 22.5px;
-    }
+#val-desc-ctn {
+    display: flex;
 
     @include media.smartphone_response {
-        padding: 0 15px;
+        flex-direction: column;
+    }
+
+    #table-container {
+        width: 70%;
+        padding-left: 0 27.5px;
+
+        @include media.tablet_response {
+            padding-left: 0 22.5px;
+        }
+
+        @include media.smartphone_response {
+            width: 100%;
+            padding-left: 0 15px;
+        }
+    }
+
+    #tbl-desc {
+        margin-top: 40px;
+        background-color: #272727;
     }
 }
 

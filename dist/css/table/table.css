@@ -1,15 +1,29 @@
-#table-container.container {
-  padding: 0 27.5px;
+#val-desc-ctn {
+  display: flex;
+}
+@media (max-width: 490px) {
+  #val-desc-ctn {
+    flex-direction: column;
+  }
+}
+#val-desc-ctn #table-container {
+  width: 70%;
+  padding-left: 0 27.5px;
 }
 @media (max-width: 774px) {
-  #table-container.container {
-    padding: 0 22.5px;
+  #val-desc-ctn #table-container {
+    padding-left: 0 22.5px;
   }
 }
 @media (max-width: 490px) {
-  #table-container.container {
-    padding: 0 15px;
+  #val-desc-ctn #table-container {
+    width: 100%;
+    padding-left: 0 15px;
   }
+}
+#val-desc-ctn #tbl-desc {
+  margin-top: 40px;
+  background-color: #272727;
 }
 
 .table-section {

@@ -2,6 +2,24 @@
 	{
 		"sectionName": "Imóveis",
 		"dataType": "table",
+    "descriptions": [
+      {
+        "icon": "",
+        "text": "desc_1"
+      },
+      {
+        "icon": "",
+        "text": "desc_2"
+      },
+      {
+        "icon": "",
+        "text": "desc_3"
+      },
+      {
+        "icon": "",
+        "text": "desc_4"
+      }
+    ],
 		"tableDataList": [
 			{
 				"tabName": "ATÉ 240 MIL",
@@ -110,6 +128,20 @@
 	{
 		"sectionName": "Veículos",
 		"dataType": "table",
+    "descriptions": [
+      {
+        "icon": "",
+        "text": "desc_veiculos_1"
+      },
+      {
+        "icon": "",
+        "text": "desc_veiculos_2"
+      },
+      {
+        "icon": "",
+        "text": "desc_veiculos_3"
+      }
+    ],
 		"tableDataList": [
 			{
 				"tabName": "PLANOS DE 80 MESES",
