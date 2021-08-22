@@ -4,20 +4,16 @@
 		"dataType": "table",
     "descriptions": [
       {
-        "icon": "fas fa-calendar",
-        "text": "<strong>PLANOS 200 MESES</strong>"
-      },
-      {
         "icon": "fas fa-sort-amount-down",
-        "text": "<strong>PARCELA REDUZIDA</strong> DE <b>25%</b> ATE A COMTEMPLACAO"
+        "text": "<strong>PARCELA REDUZIDA</strong> DE <b>25%</b> ATÉ À CONTEMPLAÇÃO"
       },
       {
         "icon": "fas fa-hand-holding-usd",
-        "text": "<strong>LANCE EMBUTIDO</strong> DE ATE <b>30%</b>"
+        "text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>30%</b>"
       },
       {
         "icon": "fas fa-stamp",
-        "text": "CONTEMPLACOES MENSAIS POR <strong>SORTEIO E LANCE FIXO E LIVRE</strong>"
+        "text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE FIXO E LIVRE</strong>"
       },
       {
         "icon": "fas fa-home",
@@ -134,16 +130,20 @@
 		"dataType": "table",
     "descriptions": [
       {
-        "icon": "",
-        "text": "desc_veiculos_1"
+        "icon": "fas fa-sort-amount-down",
+        "text": "<strong>PARCELA REDUZIDA</strong> DE <b>20%</b> ATÉ À CONTEMPLAÇÃO"
       },
       {
-        "icon": "",
-        "text": "desc_veiculos_2"
+        "icon": "fas fa-hand-holding-usd",
+        "text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>15%</b>"
       },
       {
-        "icon": "",
-        "text": "desc_veiculos_3"
+        "icon": "fas fa-stamp",
+        "text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE</strong>"
+      },
+      {
+        "icon": "fas fa-car-side",
+        "text": "COMPRE <strong>AUTOMÓVEIS, MOTOS OU NÁUTICOS</strong> COM ATÉ 6 ANOS DE FABRICAÇÃO"
       }
     ],
 		"tableDataList": [
@@ -216,6 +216,20 @@
 	{
 		"sectionName": "Veículos Pesados e\\Máquinas Agrícolas",
 		"dataType": "table",
+    "descriptions": [
+      {
+        "icon": "fas fa-hand-holding-usd",
+        "text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>30%</b>"
+      },
+      {
+        "icon": "fas fa-stamp",
+        "text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE FIXO E LIVRE</strong>"
+      },
+      {
+        "icon": "fas fa-truck",
+        "text": "COMPRE <strong>AUTOMÓVEIS VANS, ÔNIBUS, CAMINHÕES, MAQUINÁRIO AGRICOLA, E DE CONSTRUÇÃO CIVIL</strong>"
+      }
+    ],
 		"tableDataList": [
 			{
 				"tabName": "PLANOS DE 120 MESES",
@@ -246,6 +260,20 @@
 	{
 		"sectionName": "Placa Solar",
 		"dataType": "table",
+    "descriptions": [
+      {
+        "icon": "fas fa-hand-holding-usd",
+        "text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>30%</b>"
+      },
+      {
+        "icon": "fas fa-stamp",
+        "text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE FIXO E LIVRE</strong>"
+      },
+      {
+        "icon": "fas fa-truck",
+        "text": "COMPRE <strong>AUTOMÓVEIS VANS, ÔNIBUS, CAMINHÕES, MAQUINÁRIO AGRICOLA, E DE CONSTRUÇÃO CIVIL</strong>"
+      }
+    ],
 		"tableDataList": [
 			{
 				"tabName": "PLANOS DE 50 MESES",

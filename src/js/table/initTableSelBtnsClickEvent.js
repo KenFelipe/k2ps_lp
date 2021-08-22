@@ -28,24 +28,16 @@ function initTableSelBtnsClickEvent() {
                     continue
                 }
                 tableSelBtns.item(target).classList.remove('active')
+                descCtns.item(target).classList.remove('active')
 
                 tabbars.item(target).classList.remove('active')
                 tableSecs.item(target).classList.remove('active')
-
-                // debug
-                if(target < 2) {
-                    descCtns.item(target).classList.remove('active')
-                }
             }
             tableSelBtns.item(i).classList.add('active')
+            descCtns.item(i).classList.add('active')
 
             tabbars.item(i).classList.add('active')
             tableSecs.item(i).classList.add('active')
-
-            // debug
-            if(i < 2) {
-                descCtns.item(i).classList.add('active')
-            }
         }
 
         function enableTabbarUnderline() {
