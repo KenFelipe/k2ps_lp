@@ -1,6 +1,9 @@
 .planos {
   margin-top: 100px;
 }
+.planos .container {
+  position: relative;
+}
 
 .card {
   font-family: "Open Sans", sans-serif;
