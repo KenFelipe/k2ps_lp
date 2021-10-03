@@ -42,10 +42,6 @@ function initCarousel(pricesData) {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
       },
-      // autoplay: {
-      // delay: 1300,
-      // disableOnInteraction: true,
-      // },
       slidesPerView: 'auto',
       spaceBetween: 10
     }, autoplayConfig));

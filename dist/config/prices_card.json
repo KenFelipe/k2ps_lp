@@ -1,25 +1,25 @@
 {
-    "autoplayIntervalMilliSec": 1000,
-    "data": [
-        {
-            "imgUrl": "./img/ONIX.png",
-            "header": "CONSÓRCIO PARA REFORMA DA CASA NA PRAIA NO VALOR DE R$55 MIL:",
-            "content": "PARCELAS DE <R$349,00> NO PLANO DE 200 MESES"
-        },
-        {
-            "imgUrl": "https://www.portoseguro.com.br/NovoInstitucional/static_files/images/thumbnail/consorcio-terreno.jpg",
-            "header": "CONSÓRCIO DE TERRENO NO VALOR DE R$ 240 MIL: ",
-            "content": "PARCELAS DE <R$1.522,91> NO PLANO DE 200 MESES"
-        },
-        {
-            "imgUrl": "https://www.portoseguro.com.br/NovoInstitucional/static_files/images/thumbnail/consorcio-apartamento.jpg",
-            "header": "CONSÓRCIO DE APARTAMENTO NO VALOR DE R$300 MIL: ",
-            "content": "PARCELAS DE <R$1.855,85> NO PLANO DE 200 MESES"
-        },
-        {
-            "imgUrl": "https://www.portoseguro.com.br/NovoInstitucional/static_files/images/thumbnail/consorcio-casa.jpg",
-            "header": " CONSÓRCIO DE CASA NO VALOR DE R$500 MIL: ",
-            "content": "PARCELAS DE <R$3.093,08> NO PLANO DE 200 MESES"
-        }
-    ]
+  "autoplayIntervalMilliSec": 1000,
+  "data": [
+    {
+      "imgUrl": "./img/ONIX.png",
+      "header": "CONSÓRCIO PARA REFORMA DA CASA NA PRAIA NO VALOR DE R$55 MIL:",
+      "content": "PARCELAS DE <R$349,00> NO PLANO DE 200 MESES"
+    },
+    {
+      "imgUrl": "https://www.portoseguro.com.br/NovoInstitucional/static_files/images/thumbnail/consorcio-terreno.jpg",
+      "header": "CONSÓRCIO DE TERRENO NO VALOR DE R$ 240 MIL: ",
+      "content": "PARCELAS DE <R$1.522,91> NO PLANO DE 200 MESES"
+    },
+    {
+      "imgUrl": "https://www.portoseguro.com.br/NovoInstitucional/static_files/images/thumbnail/consorcio-apartamento.jpg",
+      "header": "CONSÓRCIO DE APARTAMENTO NO VALOR DE R$300 MIL: ",
+      "content": "PARCELAS DE <R$1.855,85> NO PLANO DE 200 MESES"
+    },
+    {
+      "imgUrl": "https://www.portoseguro.com.br/NovoInstitucional/static_files/images/thumbnail/consorcio-casa.jpg",
+      "header": " CONSÓRCIO DE CASA NO VALOR DE R$500 MIL: ",
+      "content": "PARCELAS DE <R$3.093,08> NO PLANO DE 200 MESES"
+    }
+  ]
 }

@@ -1,45 +1,61 @@
 {
-    "mainLogo": "https://google.com",
-    "portoSeguroLogo": "https://google.com",
-    "solicitarProposta": "https://www.k2seguros.com.br/Proposta-Online.html",
-    "footerLinks": {
-        "div1": {
-            "title": " PORTO SEGURO:   ",
-            "linkdata": [
-                {
-                    "icon": "./img/ico-fb.png",
-                    "url": "https://www.facebook.com/portoseguro"
-                },
-                {
-                    "icon": "linkedin",
-                    "url": "https://www.linkedin.com/company/porto-seguro/?trk=hb_tab_compy_id_15740"
-                },
-                {
-                    "icon": "twitter",
-                    "url": "https://twitter.com/portoseguro"
-                },
-                {
-                    "icon": "youtube",
-                    "url": "https://www.youtube.com/portoseguro"
-                }
-            ]
+  "mainLogo": {
+    "url": "https://google.com/#mainLogo",
+    "newtab": true
+  },
+  "portoSeguroLogo": {
+    "url": "https://google.com/#portoSeguroLogo",
+    "newtab": true
+  },
+  "solicitarProposta": {
+    "url": "https://www.k2seguros.com.br/Proposta-Online.html",
+    "newtab": true
+  },
+  "footerLinks": {
+    "div1": {
+      "title": " PORTO SEGURO:   ",
+      "linkdata": [
+        {
+          "icon": "./img/ico-fb.png",
+          "url": "https://www.facebook.com/portoseguro",
+          "newtab": true
         },
-        "div2": {
-            "title": "TRÂNSITO MAIS GENTIL: ",
-            "linkdata": [
-                {
-                    "icon": "youtube",
-                    "url": "https://youtube.com"
-                },
-                {
-                    "icon": "youtube",
-                    "url": "https://youtube.com"
-                },
-                {
-                    "icon": "youtube",
-                    "url": "https://youtube.com"
-                }
-            ]
+        {
+          "icon": "linkedin",
+          "url": "https://www.linkedin.com/company/porto-seguro/?trk=hb_tab_compy_id_15740",
+          "newtab": true
+        },
+        {
+          "icon": "twitter",
+          "url": "https://twitter.com/portoseguro",
+          "newtab": true
+        },
+        {
+          "icon": "youtube",
+          "url": "https://www.youtube.com/portoseguro",
+          "newtab": true
         }
+      ]
+    },
+    "div2": {
+      "title": "TRÂNSITO MAIS GENTIL: ",
+      "linkdata": [
+        {
+          "icon": "youtube",
+          "url": "https://youtube.com",
+          "newtab": true
+        },
+        {
+          "icon": "youtube",
+          "url": "https://youtube.com",
+          "newtab": true
+        },
+        {
+          "icon": "youtube",
+          "url": "https://youtube.com",
+          "newtab": true
+        }
+      ]
     }
+  }
 }
