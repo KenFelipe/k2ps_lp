@@ -27,7 +27,7 @@ function setLinks(linksData) {
     function createLinkTag(data) {
         const link = document.createElement('a')
         link.href = data.url || '#'
-        link.target = '_blank'
+        link.target = data.newtab ? '_blank' : ''
         link.classList.add('links__link')
 
         const img = document.createElement('img')
@@ -43,12 +43,14 @@ function setLinks(linksData) {
 
 function setLogoLinks(linkData) {
     const k2Logo = document.getElementById('k2-logo-link')
-    k2Logo.href = linkData.mainLogo || '#'
-    k2Logo.target = '_blank'
+    k2Logo.href = linkData.mainLogo.url || '#'
+    k2Logo.target = linkData.mainLogo.newtab ? '_blank' : ''
 
     const portoLogo = document.getElementById('porto-logo-link')
-    portoLogo.href = linkData.portoSeguroLogo || '#'
+    portoLogo.href = linkData.portoSeguroLogo.url || '#'
+    portoLogo.target = linkData.portoSeguroLogo.newtab ? '_blank' : ''
 
     const requestLink = document.getElementById('request-link')
-    requestLink.href = linkData.solicitarProposta || '#'
+    requestLink.href = linkData.solicitarProposta.url || '#'
+    requestLink.target = linkData.solicitarProposta.newtab ? '_blank' : ''
 }

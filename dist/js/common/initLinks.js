@@ -23,7 +23,7 @@ function setLinks(linksData) {
   function createLinkTag(data) {
     var link = document.createElement('a');
     link.href = data.url || '#';
-    link.target = '_blank';
+    link.target = data.newtab ? '_blank' : '';
     link.classList.add('links__link');
     var img = document.createElement('img');
     img.src = iconUrl.hasOwnProperty(data.icon) ? iconUrl[data.icon] : data.icon;
@@ -35,10 +35,12 @@ function setLinks(linksData) {
 
 function setLogoLinks(linkData) {
   var k2Logo = document.getElementById('k2-logo-link');
-  k2Logo.href = linkData.mainLogo || '#';
-  k2Logo.target = '_blank';
+  k2Logo.href = linkData.mainLogo.url || '#';
+  k2Logo.target = linkData.mainLogo.newtab ? '_blank' : '';
   var portoLogo = document.getElementById('porto-logo-link');
-  portoLogo.href = linkData.portoSeguroLogo || '#';
+  portoLogo.href = linkData.portoSeguroLogo.url || '#';
+  portoLogo.target = linkData.portoSeguroLogo.newtab ? '_blank' : '';
   var requestLink = document.getElementById('request-link');
-  requestLink.href = linkData.solicitarProposta || '#';
+  requestLink.href = linkData.solicitarProposta.url || '#';
+  requestLink.target = linkData.solicitarProposta.newtab ? '_blank' : '';
 }
