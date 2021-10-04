@@ -1,216 +1,325 @@
 [
 	{
-		"sectionName": "Imóveis",
+		"sectionName": "IMÓVEIS",
 		"dataType": "table",
-    "descriptions": [
-      {
-        "icon": "fas fa-sort-amount-down",
-        "text": "<strong>PARCELA REDUZIDA</strong> DE <b>25%</b> ATÉ À CONTEMPLAÇÃO"
-      },
-      {
-        "icon": "fas fa-hand-holding-usd",
-        "text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>30%</b>"
-      },
-      {
-        "icon": "fas fa-stamp",
-        "text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE FIXO E LIVRE</strong>"
-      },
-      {
-        "icon": "fas fa-home",
-        "text": "FLEXIBILIDADE PARA COMPRAR <strong>IMÓVEIS RESIDENCIAIS E COMERCIAIS, IMÓVEIS RURAIS OU DE VERANEIO, LOTES, CONSTRUIR E REFORMAR E QUITAR FINANCIAMENTO PRÓPRIO</strong>"
-      }
-    ],
-    "aside": "",
 		"tableDataList": [
 			{
-				"tabName": "ATÉ 240 MIL",
+				"tabName": "CRÉDITO BAIXO",
 				"tableData": {
-					"head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA¹"],
+					"head": ["PARCELA COM<br/>REDUÇÂO", "PARCELA<br/>CONVENCIONAL"],
+					"headTextColor": ["#fff", "#154063"],
+					"headBackground": ["#315D81", "#D3D3D3"],
 					"body": [
-						["R$55.000,00", "R$349,00"],
-						["R$60.000,00", "R$380,73"],
-						["R$65.000,00", "R$412,46"],
-						["R$70.000,00", "R$444,18"],
-						["R$75.000,00", "R$475,91"],
-						["R$80.000,00", "R$507,64"],
-						["R$85.000,00", "R$539,37"],
-						["R$90.000,00", "R$571,09"],
-						["R$95.000,00", "R$602,82"],
-						["R$100.000,00", "R$634,55"],
-						["R$110.000,00", "R$698,00"],
-						["R$120.000,00", "R$761,45"],
-						["R$130.000,00", "R$824,91"],
-						["R$140.000,00", "R$888,36"],
-						["R$150.000,00", "R$951,82"],
-						["R$160.000,00", "R$1.015,27"],
-						["R$170.000,00", "R$1.078,73"],
-						["R$180.000,00", "R$1.142,18"],
-						["R$190.000,00", "R$1.205,64"],
-						["R$200.000,00", "R$1.269,09"],
-						["R$210.000,00", "R$1.332,54"],
-						["R$220.000,00", "R$1.396,00"],
-						["R$230.000,00", "R$1.459,45"],
-						["R$240.000,00", "R$1.522,91"]
+						["R$ 345,31", "R$ 451,62"],
+						["R$ 369,97", "R$ 483,87"],
+						["R$ 394,63", "R$ 516,13"],
+						["R$ 419,30", "R$ 548,39"],
+						["R$ 443,97", "R$ 580,65"],
+						["R$ 468,62", "R$ 612,91"],
+						["R$ 493,30", "R$ 645,17"],
+						["R$ 517,96", "R$ 677,42"],
+						["R$ 542,62", "R$ 709,68"],
+						["R$ 567,28", "R$ 741,94"],
+						["R$ 591,95", "R$ 774,20"],
+						["R$ 616,61", "R$ 806,46"],
+						["R$ 641,28", "R$ 838,71"],
+						["R$ 665,94", "R$ 870,97"],
+						["R$ 690,61", "R$ 903,23"]
 					]
-				}
+				},
+				"descriptions": [
+					{
+						"icon": "fas fa-calendar",
+						"text": "<em>PLANO 200 MESES</em>"
+					},
+					{
+						"icon": "fas fa-sort-amount-down",
+						"text": "<strong>PARCELA REDUZIDA</strong> DE <b>25%</b> ATÉ À CONTEMPLAÇÃO"
+					},
+					{
+						"icon": "fas fa-hand-holding-usd",
+						"text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>30%</b>"
+					},
+					{
+						"icon": "fas fa-stamp",
+						"text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE FIXO E LIVRE</strong>"
+					},
+					{
+						"icon": "fas fa-home",
+						"text": "FLEXIBILIDADE PARA COMPRAR <strong>IMÓVEIS RESIDENCIAIS E COMERCIAIS, IMÓVEIS RURAIS OU DE VERANEIO, LOTES, CONSTRUIR E REFORMAR E QUITAR FINANCIAMENTO PRÓPRIO</strong>"
+					}
+				],
+				"aside": "Taxa de administração 21% e fundo de reserva de 0,5% diluido no prazo de 200 meses.<br/><br/> Taxa de 2% de adesão inclusos nas 12 primeiras parcelas.<br/><br/> Parcela PF incluem seguro de vida prestamista de 0,031% calculado sobre saldo devedor.<br/><br/> Plano com 20% de redução no valor da parcela até a comtemplação, a direfença será compensada nas parcelas seguintes a comtempação."
 			},
 			{
-				"tabName": "A PARTIR DE 250 MIL",
+				"tabName": "CRÉDITO MÉDIO",
 				"tableData": {
-					"head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA"],
+					"head": ["PARCELA COM<br/>REDUÇÂO", "PARCELA<br/>CONVENCIONAL"],
+					"headTextColor": ["#fff", "#154063"],
+					"headBackground": ["#315D81", "#D3D3D3"],
 					"body": [
-						["R$250.000,00", "R$1.546,54"],
-						["R$260.000,00", "R$1.608,40"],
-						["R$270.000,00", "R$1.670,26"],
-						["R$280.000,00", "R$1.732,12"],
-						["R$290.000,00", "R$1.793,98"],
-						["R$300.000,00", "R$1.855,85"],
-						["R$310.000,00", "R$1.917,71"],
-						["R$320.000,00", "R$1.979,57"],
-						["R$330.000,00", "R$2.041,43"],
-						["R$340.000,00", "R$2.103,29"],
-						["R$350.000,00", "R$2.165,15"],
-						["R$360.000,00", "R$2.227,01"],
-						["R$370.000,00", "R$2.288,88"],
-						["R$370.000,00", "R$2.288,88"],
-						["R$380.000,00", "R$2.350,74"],
-						["R$390.000,00", "R$2.412,60"],
-						["R$400.000,00", "R$2.474,46"],
-						["R$410.000,00", "R$2.536,32"],
-						["R$420.000,00", "R$2.598,18"],
-						["R$430.000,00", "R$2.660,04"],
-						["R$440.000,00", "R$2.721,91"],
-						["R$450.000,00", "R$2.783,77"],
-						["R$460.000,00", "R$2.845,63"],
-						["R$470.000,00", "R$2.907,49"],
-						["R$480.000,00", "R$2.969,35"],
-						["R$490.000,00", "R$3.031,21"],
-						["R$500.000,00", "R$3.093,08"]
+						["R$ 679,24", "R$ 888,36"],
+						["R$ 727,76", "R$ 951,82"],
+						["R$ 776,27", "R$ 1.015,27"],
+						["R$ 824,80", "R$ 1.078,73"],
+						["R$ 873,31", "R$ 1.142,18"],
+						["R$ 921,83", "R$ 1.205,64"],
+						["R$ 970,34", "R$ 1.269,09"],
+						["R$ 1.018,86", "R$ 1.332,54"],
+						["R$ 1.067,38", "R$ 1.396,00"],
+						["R$ 1.115,89", "R$ 1.459,45"],
+						["R$ 1.164.41", "R$ 1.522,91"],
+						["R$ 1.212,93", "R$ 1.586,36"],
+						["R$ 1.261,45", "R$ 1.649,82"],
+						["R$ 1.309,96", "R$ 1.713,27"],
+						["R$ 1.358.48", "R$ 1.776,73"]
 					]
-				}
+				},
+				"descriptions": [
+					{
+						"icon": "fas fa-calendar",
+						"text": "<em>PLANO 200 MESES</em>"
+					},
+					{
+						"icon": "fas fa-sort-amount-down",
+						"text": "<strong>PARCELA REDUZIDA</strong> DE <b>25%</b> ATÉ À CONTEMPLAÇÃO"
+					},
+					{
+						"icon": "fas fa-hand-holding-usd",
+						"text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>30%</b>"
+					},
+					{
+						"icon": "fas fa-stamp",
+						"text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE FIXO E LIVRE</strong>"
+					},
+					{
+						"icon": "fas fa-home",
+						"text": "FLEXIBILIDADE PARA COMPRAR <strong>IMÓVEIS RESIDENCIAIS E COMERCIAIS, IMÓVEIS RURAIS OU DE VERANEIO, LOTES, CONSTRUIR E REFORMAR E QUITAR FINANCIAMENTO PRÓPRIO</strong>"
+					}
+				],
+				"aside": "Taxa de administração 19% e fundo de reserva de 0,5% diluido no prazo de 200 meses.<br/><br/> Taxa de 2% de adesão inclusos nas 12 primeiras parcelas.<br/><br/> Parcela PF incluem seguro de vida prestamista de 0,031% calculado sobre saldo devedor.<br/><br/> Plano com 20% de redução no valor da parcela até a comtemplação, a direfença será compensada nas parcelas seguintes a comtempação."
 			},
 			{
-				"tabName": "A PARTIR DE 250 MIL COM REDUTOR",
+				"tabName": "CRÉDITO ALTO",
 				"tableData": {
-					"head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA"],
+					"head": ["PARCELA COM<br/>REDUÇÂO", "PARCELA<br/>CONVENCIONAL"],
+					"headTextColor": ["#fff", "#154063"],
+					"headBackground": ["#315D81", "#D3D3D3"],
 					"body": [
-						["R$250.000,00", "R$1.109,66"],
-						["R$260.000,00", "R$1.154,05"],
-						["R$270.000,00", "R$1.198,44"],
-						["R$280.000,00", "R$1.242,82"],
-						["R$290.000,00", "R$1.287,21"],
-						["R$300.000,00", "R$1.331,60"],
-						["R$310.000,00", "R$1.375,98"],
-						["R$320.000,00", "R$1.420,37"],
-						["R$330.000,00", "R$1.464,75"],
-						["R$340.000,00", "R$1.509,14"],
-						["R$350.000,00", "R$1.553,53"],
-						["R$360.000,00", "R$1.597,91"],
-						["R$370.000,00", "R$1.642,30"],
-						["R$380.000,00", "R$1.686,69"],
-						["R$380.000,00", "R$1.686,69"],
-						["R$390.000,00", "R$1.731,07"],
-						["R$400.000,00", "R$1.775,46"],
-						["R$410.000,00", "R$1.819,85"],
-						["R$420.000,00", "R$1.864,23"],
-						["R$430.000,00", "R$1.908,62"],
-						["R$440.000,00", "R$1.953,01"],
-						["R$450.000,00", "R$1.997,39"],
-						["R$460.000,00", "R$2.041,78"],
-						["R$470.000,00", "R$2.086,17"],
-						["R$480.000,00", "R$2.130,55"],
-						["R$490.000,00", "R$2.174,94"],
-						["R$500.000,00", "R$2.219,33"]
 					]
-				}
+				},
+				"descriptions": [
+					{
+						"icon": "fas fa-calendar",
+						"text": "<em>PLANO 200 MESES</em>"
+					},
+					{
+						"icon": "fas fa-sort-amount-down",
+						"text": "<strong>PARCELA REDUZIDA</strong> DE <b>25%</b> ATÉ À CONTEMPLAÇÃO"
+					},
+					{
+						"icon": "fas fa-hand-holding-usd",
+						"text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>30%</b>"
+					},
+					{
+						"icon": "fas fa-stamp",
+						"text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE FIXO E LIVRE</strong>"
+					},
+					{
+						"icon": "fas fa-home",
+						"text": "FLEXIBILIDADE PARA COMPRAR <strong>IMÓVEIS RESIDENCIAIS E COMERCIAIS, IMÓVEIS RURAIS OU DE VERANEIO, LOTES, CONSTRUIR E REFORMAR E QUITAR FINANCIAMENTO PRÓPRIO</strong>"
+					}
+				],
+				"aside": "Taxa de administração 17% e fundo de reserva de 0,5% diluido no prazo de 200 meses.<br/><br/> Taxa de 2% de adesão inclusos nas 5 primeiras parcelas.<br/><br/> Parcela PF incluem seguro de vida prestamista de 0,031% calculado sobre saldo devedor.<br/><br/> Plano com 20% de redução no valor da parcela até a comtemplação, a direfença será compensada nas parcelas seguintes a comtempação."
 			}
 		]
 	},
 	{
-		"sectionName": "Veículos",
+		"sectionName": "AUTO",
 		"dataType": "table",
-    "descriptions": [
-      {
-        "icon": "fas fa-sort-amount-down",
-        "text": "<strong>PARCELA REDUZIDA</strong> DE <b>20%</b> ATÉ À CONTEMPLAÇÃO"
-      },
-      {
-        "icon": "fas fa-hand-holding-usd",
-        "text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>15%</b>"
-      },
-      {
-        "icon": "fas fa-stamp",
-        "text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE</strong>"
-      },
-      {
-        "icon": "fas fa-car",
-        "text": "COMPRE <strong>AUTOMÓVEIS, MOTOS OU NÁUTICOS</strong> COM ATÉ 6 ANOS DE FABRICAÇÃO"
-      }
-    ],
 		"tableDataList": [
 			{
-				"tabName": "PLANOS DE 80 MESES",
+				"tabName": "PLANO 50 MESES",
 				"tableData": {
-					"head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA"],
+					"head": [
+						["CRÉDITO", "PARCELA CONVENCIONAL", "PARCELA COM REDUÇÂO"],
+						["CRÉDITO", "PJ", "PF", "PJ", "PF"]
+					],
+					"headStructure": { 
+						"column": [ 
+							[1, 2, 2],
+							[1, 1, 1, 1, 1]
+						],
+						"row": [
+							[2, 1, 1],
+							["skip", 1, 1]
+						]
+					},
+					"headTextColor": [
+						["#fff", "#154063", "#fff"],
+						["", "#154063", "#154063", "#fff", "#fff"]
+					],
+					"headBackground": [
+						["#315D81", "#D3D3D3", "#315D81"],
+						["", "#D3D3D3", "#D3D3D3", "#315D81", "#315D81"]
+					],
 					"body": [
-						["R$62.500,00", "R$931,63"],
-						["R$67.500,00", "R$1.006,16"],
-						["R$72.500,00", "R$1.080,69"],
-						["R$77.500,00", "R$1.155,22"],
-						["R$82.500,00", "R$1.229,75"],
-						["R$87.500,00", "R$1.304,28"],
-						["R$92.500,00", "R$1.378,81"],
-						["R$97.500,00", "R$1.453,34"],
-						["R$97.500,00", "R$1.453,34"],
-						["R$102.500,00", "R$1.527,87"],
-						["R$107.500,00", "R$1.602,40"],
-						["R$112.500,00", "R$1.676,93"],
-						["R$117.500,00", "R$1.751,46"],
-						["R$122.500,00", "R$1.825,99"],
-						["R$125.000,00", "R$1.863,25"]
+						["R$ 25.000,00", "R$ 592,50", "R$ 602,87", "R$ 474,00", "R$ 484,37"],
+						["R$ 27.500,00", "R$ 651,75", "R$ 663,16", "R$ 521,40", "R$ 532,81"],
+						["R$ 30.000,00", "R$ 711,00", "R$ 723,44", "R$ 568,80", "R$ 581,24"],
+						["R$ 32.500,00", "R$ 770,25", "R$ 783,73", "R$ 616,20", "R$ 629,68"],
+						["R$ 35.000,00", "R$ 829,50", "R$ 844,02", "R$ 663,60", "R$ 678,12"],
+						["R$ 37.500,00", "R$ 888,75", "R$ 904,30", "R$ 711,00", "R$ 726,55"],
+						["R$ 40.000,00", "R$ 948,00", "R$ 964,59", "R$ 758,40", "R$ 774,99"],
+						["R$ 42.500,00", "R$ 1.007,25", "R$ 1.024,88", "R$ 805,80", "R$ 823,43"],
+						["R$ 45.000,00", "R$ 1.066,50", "R$ 1.085,16", "R$ 853,20", "R$ 871,86"],
+						["R$ 47.500,00", "R$ 1.125,75", "R$ 1.145,45", "R$ 900,60", "R$ 920,30"],
+						["R$ 50.000,00", "R$ 1.185,00", "R$ 1.205,74", "R$ 948,00", "R$ 968,74"]
 					]
-				}
+				},
+				"descriptions": [
+					{
+						"icon": "fas fa-sort-amount-down",
+						"text": "<strong>PARCELA REDUZIDA</strong> DE <b>20%</b> ATÉ À CONTEMPLAÇÃO"
+					},
+					{
+						"icon": "fas fa-hand-holding-usd",
+						"text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>15%</b>"
+					},
+					{
+						"icon": "fas fa-stamp",
+						"text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE</strong>"
+					},
+					{
+						"icon": "fas fa-car",
+						"text": "COMPRE <strong>AUTOMÓVEIS, MOTOS OU NÁUTICOS</strong> COM ATÉ 6 ANOS DE FABRICAÇÃO"
+					}
+				],
+				"aside": "Taxa de administração 17% e fundo de reserva de 0,5% diluido no prazo de 50 meses.<br/><br/> Taxa de 2% de adesão inclusos nas 5 primeiras parcelas.<br/><br/> Parcela PF incluem seguro de vida prestamista de 0,031% calculado sobre saldo devedor.<br/><br/> Plano com 20% de redução no valor da parcela até a comtemplação, a direfença será compensada nas parcelas seguintes a comtempação."
 			},
 			{
-				"tabName": "PLANOS DE 72 MESES",
+				"tabName": "PLANOS 72 MESES",
 				"tableData": {
-					"head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA"],
+					"head": [
+						["CRÉDITO", "PARCELA CONVENCIONAL", "PARCELA COM REDUÇÂO"],
+						["CRÉDITO", "PJ", "PF", "PJ", "PF"]
+					],
+					"headStructure": { 
+						"column": [ 
+							[1, 2, 2],
+							[1, 1, 1, 1, 1]
+						],
+						"row": [
+							[2, 1, 1],
+							["skip", 1, 1]
+						]
+					},
+					"headTextColor": [
+						["#fff", "#154063", "#fff"],
+						["", "#154063", "#154063", "#fff", "#fff"]
+					],
+					"headBackground": [
+						["#315D81", "#D3D3D3", "#315D81"],
+						["", "#D3D3D3", "#D3D3D3", "#315D81", "#315D81"]
+					],
 					"body": [
-						["R$34.000,00", "R$573,68"],
-						["R$35.000,00", "R$590,56"],
-						["R$37.500,00", "R$632,74"],
-						["R$40.000,00", "R$674,92"],
-						["R$42.500,00", "R$717,11"],
-						["R$45.000,00", "R$759,29"],
-						["R$47.500,00", "R$801,47"],
-						["R$50.000,00", "R$843,65"],
-						["R$52.500,00", "R$885,84"],
-						["R$55.000,00", "R$928,02"],
-						["R$57.500,00", "R$970,20"],
-						["R$60.000,00", "R$1.012,39"],
-						["R$62.500,00", "R$1.054,57"],
-						["R$65.000,00", "R$1.096,75"]
+						["R$ 34.000.00", "R$ 559,58", "R$ 573,68", "R$ 447,67", "R$ 461,77"],
+						["R$ 35.000,00", "R$ 576,04", "R$ 590,56", "R$ 460,83", "R$ 475,35"],
+						["R$ 37.500,00", "R$ 617,19", "R$ 632,74", "R$ 493,75", "R$ 509,30"],
+						["R$ 40.000,00", "R$ 658,33", "R$ 674,92", "R$ 526,67", "R$ 543,26"],
+						["R$ 42.500,00", "R$ 699,48", "R$ 717,11", "R$ 559,58", "R$ 577,21"],
+						["R$ 45.000,00", "R$ 740,63", "R$ 759,29", "R$ 592,50", "R$ 611,16"],
+						["R$ 47.000,00", "R$ 781,77", "R$ 801,47", "R$ 625,42", "R$ 645,12"],
+						["R$ 50.000,00", "R$ 822,92", "R$ 843,65", "R$ 658,33", "R$ 679,07"],
+						["R$ 52.500,00", "R$ 864,06", "R$ 885,84", "R$ 691,25", "R$ 713,02"],
+						["R$ 55.000,00", "R$ 905,21", "R$ 928,02", "R$ 724,17", "R$ 746,98"],
+						["R$ 57.500,00", "R$ 946,35", "R$ 970,20", "R$ 757,08", "R$ 780,93"],
+						["R$ 60.000,00", "R$ 987,50", "R$ 1.012,39", "R$ 790,00", "R$ 814,89"],
+						["R$ 62.500,00", "R$ 1.028,65", "R$ 1.054,57", "R$ 822,92", "R$ 848,84"],
+						["R$ 65.000,00", "R$ 1.069,79", "R$ 1.096,75", "R$ 855,83", "R$ 882,79"]
 					]
-				}
+				},
+				"descriptions": [
+					{
+						"icon": "fas fa-sort-amount-down",
+						"text": "<strong>PARCELA REDUZIDA</strong> DE <b>20%</b> ATÉ À CONTEMPLAÇÃO"
+					},
+					{
+						"icon": "fas fa-hand-holding-usd",
+						"text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>15%</b>"
+					},
+					{
+						"icon": "fas fa-stamp",
+						"text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE</strong>"
+					},
+					{
+						"icon": "fas fa-car",
+						"text": "COMPRE <strong>AUTOMÓVEIS, MOTOS OU NÁUTICOS</strong> COM ATÉ 6 ANOS DE FABRICAÇÃO"
+					}
+				],
+				"aside": "Taxa de administração 17% e fundo de reserva de 0,5% diluido no prazo de 72 meses.<br/><br/> Taxa de 2% de adesão inclusos nas 5 primeiras parcelas.<br/><br/> Parcela PF incluem seguro de vida prestamista de 0,031% calculado sobre saldo devedor.<br/><br/> Plano com 20% de redução no valor da parcela até a comtemplação, a direfença será compensada nas parcelas seguintes a comtempação."
 			},
 			{
-				"tabName": "PLANOS DE 50 MESES",
+				"tabName": "PLANOS 80 MESES",
 				"tableData": {
-					"head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA"],
+					"head": [
+						["CRÉDITO", "PARCELA CONVENCIONAL", "PARCELA COM REDUÇÂO"],
+						["CRÉDITO", "PJ", "PF", "PJ", "PF"]
+					],
+					"headStructure": { 
+						"column": [ 
+							[1, 2, 2],
+							[1, 1, 1, 1, 1]
+						],
+						"row": [
+							[2, 1, 1],
+							["skip", 1, 1]
+						]
+					},
+					"headTextColor": [
+						["#fff", "#154063", "#fff"],
+						["", "#154063", "#154063", "#fff", "#fff"]
+					],
+					"headBackground": [
+						["#315D81", "#D3D3D3", "#315D81"],
+						["", "#D3D3D3", "#D3D3D3", "#315D81", "#315D81"]
+					],
 					"body": [
-						["R$25.000,00", "R$595,24"],
-						["R$27.500,00", "R$654,76"],
-						["R$30.000,00", "R$714,29"],
-						["R$32.500,00", "R$773,81"],
-						["R$35.000,00", "R$833,33"],
-						["R$37.500,00", "R$892,86"],
-						["R$40.000,00", "R$952,38"],
-						["R$42.500,00", "R$1.011,90"],
-						["R$45.000,00", "R$1.071,43"],
-						["R$47.500,00", "R$1.130,95"],
-						["R$50.000,00", "R$1.190,48"]
+						["R$ 62.500,00", "R$ 910,16", "R$ 935,64", "R$ 728,13", "R$ 753,61"],
+						["R$ 67.500,00", "R$ 982,97", "R$ 1010,49", "R$ 786,38", "R$ 813,90"],
+						["R$ 72.500,00", "R$ 1.055,78", "R$ 1.085,34", "R$ 844,63", "R$ 874,19"],
+						["R$ 77.500,00", "R$ 1.128,59", "RS 1.160,19", "R$ 902,88", "R$ 934,48"],
+						["R$ 82.500,00", "R$ 1.201,41", "RS 1.235,05", "R$ 961,13", "R$ 994,76"],
+						["R$ 87.500,00", "R$ 1.274,22", "RS 1.309,90", "R$ 1.019,38", "R$ 1.055,05"],
+						["R$ 92.500,00", "R$ 1.347,03", "R$ 1.384,75", "R$ 1.077,63", "R$ 1.115,34"],
+						["R$ 97.500,00", "RS 1.419,84", "R$ 1.459,60", "R$ 1.135,88", "R$ 1.175,63"],
+						["R$ 102.500,00", "RS 1.492,66", "RS 1.534,45", "R$ 1.194,13", "R$ 1.235,92"],
+						["R$ 107.500,00", "R$ 1.565,47", "RS 1.609,30", "R$ 1.252,38", "R$ 1.296,21"],
+						["R$ 112.500,00", "R$ 1.638,28", "RS 1.684,15", "R$ 1.310,63", "R$ 1.356,50"],
+						["R$ 117.500,00", "R$ 1.711,09", "RS 1.759,00", "R$ 1.368,88", "R$ 1.416,79"],
+						["R$ 122.500,00", "R$ 1.783,91", "RS 1.833,86", "R$ 1.427,13", "R$ 1.477,07"],
+						["R$ 125.000,00", "R$ 1.820,31", "RS 1.871,28", "R$ 1.456,25", "R$ 1.507,22"]
 					]
-				}
+				},
+				"descriptions": [
+					{
+						"icon": "fas fa-sort-amount-down",
+						"text": "<strong>PARCELA REDUZIDA</strong> DE <b>20%</b> ATÉ À CONTEMPLAÇÃO"
+					},
+					{
+						"icon": "fas fa-hand-holding-usd",
+						"text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>15%</b>"
+					},
+					{
+						"icon": "fas fa-stamp",
+						"text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE</strong>"
+					},
+					{
+						"icon": "fas fa-car",
+						"text": "COMPRE <strong>AUTOMÓVEIS, MOTOS OU NÁUTICOS</strong> COM ATÉ 6 ANOS DE FABRICAÇÃO"
+					}
+				],
+				"aside": "Taxa de administração 17% e fundo de reserva de 0,5% diluido no prazo de 80 meses.<br/><br/> Taxa de 2% de adesão inclusos nas 5 primeiras parcelas.<br/><br/> Parcela PF incluem seguro de vida prestamista de 0,031% calculado sobre saldo devedor.<br/><br/> Plano com 20% de redução no valor da parcela até a comtemplação, a direfença será compensada nas parcelas seguintes a comtempação."
 			}
 		]
 	},
@@ -254,7 +363,14 @@
 						["R$288.452,68", "R$2.867,92"],
 						["R$296.237,74", "R$2.945,32"]
 					]
-				}
+				},
+				"descriptions": [
+					{
+						"icon": "fas fa-calendar",
+						"text": "<em>PLANO 200 MESES</em>"
+					}
+				],
+				"aside": "aside 1"
 			}
 		]
 	},
@@ -294,7 +410,14 @@
 						["R$47.500,00", "R$1.130,95"],
 						["R$50.000,00", "R$1.190,48"]
 					]
-				}
+				},
+				"descriptions": [
+					{
+						"icon": "fas fa-calendar",
+						"text": "<em>PLANO 200 MESES</em>"
+					}
+				],
+				"aside": "aside 1"
 			}
 		]
 	}

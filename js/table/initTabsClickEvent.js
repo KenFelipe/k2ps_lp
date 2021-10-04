@@ -3,7 +3,8 @@
 // aplicar funcao "onclick" nas abas(tabs)
 // pra mostrar tabela correspondente dinamicamente
 function initTabsClickEvent() {
-  var tabbars = document.getElementsByClassName(CLASSNAME.tabbar); // ***************************
+  var tabbars = document.getElementsByClassName(CLASSNAME.tabbar);
+  var descCtns = document.getElementsByClassName('desc-col'); // ***************************
   // n de tab = n de table
   // ***************************
   // Atribui class ".active" no tab clicado e no table que corresponde mesmo index.
@@ -33,10 +34,12 @@ function initTabsClickEvent() {
 
           tabs.item(targetIndex).classList.remove('active');
           tables.item(targetIndex).classList.remove('active');
+          descCtns.item(targetIndex).classList.remove('active');
         }
 
         tabs.item(tabIndex).classList.add('active');
         tables.item(tabIndex).classList.add('active');
+        descCtns.item(tabIndex).classList.add('active');
       });
     };
 
