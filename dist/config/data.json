@@ -1,10 +1,10 @@
 [
 	{
-		"sectionName": "Imóveis",
+		"sectionName": "IMÓVEIS",
 		"dataType": "table",
 		"tableDataList": [
 			{
-				"tabName": "PLANO 200 MESES",
+				"tabName": "CRÉDITO BAIXO",
 				"tableData": {
 					"head": ["PARCELA COM<br/>REDUÇÂO", "PARCELA<br/>CONVENCIONAL"],
 					"headTextColor": ["#fff", "#154063"],
@@ -52,7 +52,7 @@
 				"aside": "Taxa de administração 21% e fundo de reserva de 0,5% diluido no prazo de 200 meses.<br/><br/> Taxa de 2% de adesão inclusos nas 12 primeiras parcelas.<br/><br/> Parcela PF incluem seguro de vida prestamista de 0,031% calculado sobre saldo devedor.<br/><br/> Plano com 20% de redução no valor da parcela até a comtemplação, a direfença será compensada nas parcelas seguintes a comtempação."
 			},
 			{
-				"tabName": "A PARTIR DE 250 MIL",
+				"tabName": "CRÉDITO MÉDIO",
 				"tableData": {
 					"head": ["PARCELA COM<br/>REDUÇÂO", "PARCELA<br/>CONVENCIONAL"],
 					"headTextColor": ["#fff", "#154063"],
@@ -100,7 +100,7 @@
 				"aside": "Taxa de administração 19% e fundo de reserva de 0,5% diluido no prazo de 200 meses.<br/><br/> Taxa de 2% de adesão inclusos nas 12 primeiras parcelas.<br/><br/> Parcela PF incluem seguro de vida prestamista de 0,031% calculado sobre saldo devedor.<br/><br/> Plano com 20% de redução no valor da parcela até a comtemplação, a direfença será compensada nas parcelas seguintes a comtempação."
 			},
 			{
-				"tabName": "A PARTIR DE 250 MIL COM REDUTOR",
+				"tabName": "CRÉDITO ALTO",
 				"tableData": {
 					"head": ["PARCELA COM<br/>REDUÇÂO", "PARCELA<br/>CONVENCIONAL"],
 					"headTextColor": ["#fff", "#154063"],
@@ -135,11 +135,11 @@
 		]
 	},
 	{
-		"sectionName": "Veículos",
+		"sectionName": "AUTO",
 		"dataType": "table",
 		"tableDataList": [
 			{
-				"tabName": "PLANOS DE 80 MESES",
+				"tabName": "PLANO 50 MESES",
 				"tableData": {
 					"head": [
 						["CRÉDITO", "PARCELA CONVENCIONAL", "PARCELA COM REDUÇÂO"],
@@ -198,24 +198,45 @@
 				"aside": "Taxa de administração 17% e fundo de reserva de 0,5% diluido no prazo de 50 meses.<br/><br/> Taxa de 2% de adesão inclusos nas 5 primeiras parcelas.<br/><br/> Parcela PF incluem seguro de vida prestamista de 0,031% calculado sobre saldo devedor.<br/><br/> Plano com 20% de redução no valor da parcela até a comtemplação, a direfença será compensada nas parcelas seguintes a comtempação."
 			},
 			{
-				"tabName": "PLANOS DE 72 MESES",
+				"tabName": "PLANOS 72 MESES",
 				"tableData": {
-					"head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA"],
+					"head": [
+						["CRÉDITO", "PARCELA CONVENCIONAL", "PARCELA COM REDUÇÂO"],
+						["CRÉDITO", "PJ", "PF", "PJ", "PF"]
+					],
+					"headStructure": { 
+						"column": [ 
+							[1, 2, 2],
+							[1, 1, 1, 1, 1]
+						],
+						"row": [
+							[2, 1, 1],
+							["skip", 1, 1]
+						]
+					},
+					"headTextColor": [
+						["#fff", "#154063", "#fff"],
+						["", "#154063", "#154063", "#fff", "#fff"]
+					],
+					"headBackground": [
+						["#315D81", "#D3D3D3", "#315D81"],
+						["", "#D3D3D3", "#D3D3D3", "#315D81", "#315D81"]
+					],
 					"body": [
-						["R$34.000,00", "R$573,68"],
-						["R$35.000,00", "R$590,56"],
-						["R$37.500,00", "R$632,74"],
-						["R$40.000,00", "R$674,92"],
-						["R$42.500,00", "R$717,11"],
-						["R$45.000,00", "R$759,29"],
-						["R$47.500,00", "R$801,47"],
-						["R$50.000,00", "R$843,65"],
-						["R$52.500,00", "R$885,84"],
-						["R$55.000,00", "R$928,02"],
-						["R$57.500,00", "R$970,20"],
-						["R$60.000,00", "R$1.012,39"],
-						["R$62.500,00", "R$1.054,57"],
-						["R$65.000,00", "R$1.096,75"]
+						["R$ 34.000.00", "R$ 559,58", "R$ 573,68", "R$ 447,67", "R$ 461,77"],
+						["R$ 35.000,00", "R$ 576,04", "R$ 590,56", "R$ 460,83", "R$ 475,35"],
+						["R$ 37.500,00", "R$ 617,19", "R$ 632,74", "R$ 493,75", "R$ 509,30"],
+						["R$ 40.000,00", "R$ 658,33", "R$ 674,92", "R$ 526,67", "R$ 543,26"],
+						["R$ 42.500,00", "R$ 699,48", "R$ 717,11", "R$ 559,58", "R$ 577,21"],
+						["R$ 45.000,00", "R$ 740,63", "R$ 759,29", "R$ 592,50", "R$ 611,16"],
+						["R$ 47.000,00", "R$ 781,77", "R$ 801,47", "R$ 625,42", "R$ 645,12"],
+						["R$ 50.000,00", "R$ 822,92", "R$ 843,65", "R$ 658,33", "R$ 679,07"],
+						["R$ 52.500,00", "R$ 864,06", "R$ 885,84", "R$ 691,25", "R$ 713,02"],
+						["R$ 55.000,00", "R$ 905,21", "R$ 928,02", "R$ 724,17", "R$ 746,98"],
+						["R$ 57.500,00", "R$ 946,35", "R$ 970,20", "R$ 757,08", "R$ 780,93"],
+						["R$ 60.000,00", "R$ 987,50", "R$ 1.012,39", "R$ 790,00", "R$ 814,89"],
+						["R$ 62.500,00", "R$ 1.028,65", "R$ 1.054,57", "R$ 822,92", "R$ 848,84"],
+						["R$ 65.000,00", "R$ 1.069,79", "R$ 1.096,75", "R$ 855,83", "R$ 882,79"]
 					]
 				},
 				"descriptions": [
@@ -239,21 +260,45 @@
 				"aside": "Taxa de administração 17% e fundo de reserva de 0,5% diluido no prazo de 72 meses.<br/><br/> Taxa de 2% de adesão inclusos nas 5 primeiras parcelas.<br/><br/> Parcela PF incluem seguro de vida prestamista de 0,031% calculado sobre saldo devedor.<br/><br/> Plano com 20% de redução no valor da parcela até a comtemplação, a direfença será compensada nas parcelas seguintes a comtempação."
 			},
 			{
-				"tabName": "PLANOS DE 50 MESES",
+				"tabName": "PLANOS 80 MESES",
 				"tableData": {
-					"head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA"],
+					"head": [
+						["CRÉDITO", "PARCELA CONVENCIONAL", "PARCELA COM REDUÇÂO"],
+						["CRÉDITO", "PJ", "PF", "PJ", "PF"]
+					],
+					"headStructure": { 
+						"column": [ 
+							[1, 2, 2],
+							[1, 1, 1, 1, 1]
+						],
+						"row": [
+							[2, 1, 1],
+							["skip", 1, 1]
+						]
+					},
+					"headTextColor": [
+						["#fff", "#154063", "#fff"],
+						["", "#154063", "#154063", "#fff", "#fff"]
+					],
+					"headBackground": [
+						["#315D81", "#D3D3D3", "#315D81"],
+						["", "#D3D3D3", "#D3D3D3", "#315D81", "#315D81"]
+					],
 					"body": [
-						["R$25.000,00", "R$595,24"],
-						["R$27.500,00", "R$654,76"],
-						["R$30.000,00", "R$714,29"],
-						["R$32.500,00", "R$773,81"],
-						["R$35.000,00", "R$833,33"],
-						["R$37.500,00", "R$892,86"],
-						["R$40.000,00", "R$952,38"],
-						["R$42.500,00", "R$1.011,90"],
-						["R$45.000,00", "R$1.071,43"],
-						["R$47.500,00", "R$1.130,95"],
-						["R$50.000,00", "R$1.190,48"]
+						["R$ 62.500,00", "R$ 910,16", "R$ 935,64", "R$ 728,13", "R$ 753,61"],
+						["R$ 67.500,00", "R$ 982,97", "R$ 1010,49", "R$ 786,38", "R$ 813,90"],
+						["R$ 72.500,00", "R$ 1.055,78", "R$ 1.085,34", "R$ 844,63", "R$ 874,19"],
+						["R$ 77.500,00", "R$ 1.128,59", "RS 1.160,19", "R$ 902,88", "R$ 934,48"],
+						["R$ 82.500,00", "R$ 1.201,41", "RS 1.235,05", "R$ 961,13", "R$ 994,76"],
+						["R$ 87.500,00", "R$ 1.274,22", "RS 1.309,90", "R$ 1.019,38", "R$ 1.055,05"],
+						["R$ 92.500,00", "R$ 1.347,03", "R$ 1.384,75", "R$ 1.077,63", "R$ 1.115,34"],
+						["R$ 97.500,00", "RS 1.419,84", "R$ 1.459,60", "R$ 1.135,88", "R$ 1.175,63"],
+						["R$ 102.500,00", "RS 1.492,66", "RS 1.534,45", "R$ 1.194,13", "R$ 1.235,92"],
+						["R$ 107.500,00", "R$ 1.565,47", "RS 1.609,30", "R$ 1.252,38", "R$ 1.296,21"],
+						["R$ 112.500,00", "R$ 1.638,28", "RS 1.684,15", "R$ 1.310,63", "R$ 1.356,50"],
+						["R$ 117.500,00", "R$ 1.711,09", "RS 1.759,00", "R$ 1.368,88", "R$ 1.416,79"],
+						["R$ 122.500,00", "R$ 1.783,91", "RS 1.833,86", "R$ 1.427,13", "R$ 1.477,07"],
+						["R$ 125.000,00", "R$ 1.820,31", "RS 1.871,28", "R$ 1.456,25", "R$ 1.507,22"]
 					]
 				},
 				"descriptions": [
