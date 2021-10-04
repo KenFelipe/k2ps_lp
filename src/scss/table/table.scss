@@ -162,11 +162,24 @@
             text-align: center;
             // text-transform: uppercase;
 
-            td {
-                height: 50px;
-                padding: 24px 20px 24px 20px;
-                border-radius: 10px 10px 0 0;
-                box-shadow: rgb(0 0 0 / 45%) 1px 0px 6px 0px;
+            tr {
+                td {
+                    height: 50px;
+                    padding: 24px 20px 24px 20px;
+                }
+
+                &:first-child {
+                    td {
+                        border-radius: 10px 10px 0 0;
+                        box-shadow: rgb(0 0 0 / 45%) 1px 0px 6px 0px;
+                    }
+                }
+
+                & + tr {
+                    td {
+                        border-top: 1px solid #fff;
+                    }
+                }
             }
         }
 
