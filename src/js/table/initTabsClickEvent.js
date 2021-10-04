@@ -2,6 +2,7 @@
 // pra mostrar tabela correspondente dinamicamente
 function initTabsClickEvent() {
     const tabbars = document.getElementsByClassName(CLASSNAME.tabbar)
+    const descCtns = document.getElementsByClassName('desc-col')
 
     // ***************************
     // n de tab = n de table
@@ -33,10 +34,12 @@ function initTabsClickEvent() {
                     }
                     tabs.item(targetIndex).classList.remove('active')
                     tables.item(targetIndex).classList.remove('active')
+                    descCtns.item(targetIndex).classList.remove('active')
                 }
 
                 tabs.item(tabIndex).classList.add('active')
                 tables.item(tabIndex).classList.add('active')
+                descCtns.item(tabIndex).classList.add('active')
             })
         }
 

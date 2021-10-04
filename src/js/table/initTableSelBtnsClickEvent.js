@@ -16,7 +16,7 @@ function initTableSelBtnsClickEvent() {
         function toggleTableElementsActive() {
             const tabbars = document.getElementsByClassName(CLASSNAME.tabbar)
             const tableSecs = document.getElementsByClassName(CLASSNAME.tableSec)
-            const descCtns = document.getElementsByClassName('desc-col')
+            const descSecs = document.getElementsByClassName('desc-div')
 
             // atribui class ".active" no botao clicado,
             // no tabBar e no table section respectivo(que corresponde mesmo index)
@@ -28,16 +28,16 @@ function initTableSelBtnsClickEvent() {
                     continue
                 }
                 tableSelBtns.item(target).classList.remove('active')
-                descCtns.item(target).classList.remove('active')
 
                 tabbars.item(target).classList.remove('active')
                 tableSecs.item(target).classList.remove('active')
+                descSecs.item(target).classList.remove('active')
             }
             tableSelBtns.item(i).classList.add('active')
-            descCtns.item(i).classList.add('active')
 
             tabbars.item(i).classList.add('active')
             tableSecs.item(i).classList.add('active')
+            descSecs.item(i).classList.add('active')
         }
 
         function enableTabbarUnderline() {

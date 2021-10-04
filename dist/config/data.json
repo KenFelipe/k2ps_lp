@@ -2,29 +2,7 @@
 	{
 		"sectionName": "Imóveis",
 		"dataType": "table",
-    "descriptions": [
-      {
-        "icon": "fas fa-calendar",
-        "text": "<em>PLANO 200 MESES</em>"
-      },
-      {
-        "icon": "fas fa-sort-amount-down",
-        "text": "<strong>PARCELA REDUZIDA</strong> DE <b>25%</b> ATÉ À CONTEMPLAÇÃO"
-      },
-      {
-        "icon": "fas fa-hand-holding-usd",
-        "text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>30%</b>"
-      },
-      {
-        "icon": "fas fa-stamp",
-        "text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE FIXO E LIVRE</strong>"
-      },
-      {
-        "icon": "fas fa-home",
-        "text": "FLEXIBILIDADE PARA COMPRAR <strong>IMÓVEIS RESIDENCIAIS E COMERCIAIS, IMÓVEIS RURAIS OU DE VERANEIO, LOTES, CONSTRUIR E REFORMAR E QUITAR FINANCIAMENTO PRÓPRIO</strong>"
-      }
-    ],
-    "aside": "",
+    "aside": "Taxa de administração 21% e fundo de reserva de 0,5% diluido no prazo de 200 meses.<br/><br/> Taxa de 2% de adesão inclusos nas 12 primeiras parcelas.<br/><br/> Parcela PF incluem seguro de vida prestamista de 0,031% calculado sobre saldo devedor.<br/><br/> Plano com 20% de redução no valor da parcela até a comtemplação, a direfença será compensada nas parcelas seguintes a comtempação.",
 		"tableDataList": [
 			{
 				"tabName": "PLANO 200 MESES",
@@ -49,7 +27,30 @@
 						["R$ 665,94", "R$ 870,97"],
 						["R$ 690,61", "R$ 903,23"]
 					]
-				}
+				},
+				"descriptions": [
+					{
+						"icon": "fas fa-calendar",
+						"text": "<em>PLANO 200 MESES</em>"
+					},
+					{
+						"icon": "fas fa-sort-amount-down",
+						"text": "<strong>PARCELA REDUZIDA</strong> DE <b>25%</b> ATÉ À CONTEMPLAÇÃO"
+					},
+					{
+						"icon": "fas fa-hand-holding-usd",
+						"text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>30%</b>"
+					},
+					{
+						"icon": "fas fa-stamp",
+						"text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE FIXO E LIVRE</strong>"
+					},
+					{
+						"icon": "fas fa-home",
+						"text": "FLEXIBILIDADE PARA COMPRAR <strong>IMÓVEIS RESIDENCIAIS E COMERCIAIS, IMÓVEIS RURAIS OU DE VERANEIO, LOTES, CONSTRUIR E REFORMAR E QUITAR FINANCIAMENTO PRÓPRIO</strong>"
+					}
+				],
+				"aside": "aside 1"
 			},
 			{
 				"tabName": "A PARTIR DE 250 MIL",
@@ -84,7 +85,18 @@
 						["R$490.000,00", "R$3.031,21"],
 						["R$500.000,00", "R$3.093,08"]
 					]
-				}
+				},
+				"descriptions": [
+					{
+						"icon": "fas fa-calendar",
+						"text": "<em>PLANO 200 MESES</em>"
+					},
+					{
+						"icon": "fas fa-sort-amount-down",
+						"text": "<strong>PARCELA REDUZIDA</strong> DE <b>25%</b> ATÉ À CONTEMPLAÇÃO"
+					}
+				],
+				"aside": "aside 2"
 			},
 			{
 				"tabName": "A PARTIR DE 250 MIL COM REDUTOR",
@@ -119,7 +131,18 @@
 						["R$490.000,00", "R$2.174,94"],
 						["R$500.000,00", "R$2.219,33"]
 					]
-				}
+				},
+				"descriptions": [
+					{
+						"icon": "fas fa-calendar",
+						"text": "<em>PLANO 200 MESES</em>"
+					},
+					{
+						"icon": "fas fa-sort-amount-down",
+						"text": "<strong>PARCELA REDUZIDA</strong> DE <b>25%</b> ATÉ À CONTEMPLAÇÃO"
+					}
+				],
+				"aside": "aside 3"
 			}
 		]
 	},
@@ -166,7 +189,14 @@
 						["R$122.500,00", "R$1.825,99"],
 						["R$125.000,00", "R$1.863,25"]
 					]
-				}
+				},
+				"descriptions": [
+					{
+						"icon": "fas fa-calendar",
+						"text": "<em>PLANO 200 MESES</em>"
+					}
+				],
+				"aside": "aside 1"
 			},
 			{
 				"tabName": "PLANOS DE 72 MESES",
@@ -188,7 +218,14 @@
 						["R$62.500,00", "R$1.054,57"],
 						["R$65.000,00", "R$1.096,75"]
 					]
-				}
+				},
+				"descriptions": [
+					{
+						"icon": "fas fa-calendar",
+						"text": "<em>PLANO 200 MESES</em>"
+					}
+				],
+				"aside": "aside 1"
 			},
 			{
 				"tabName": "PLANOS DE 50 MESES",
@@ -207,7 +244,14 @@
 						["R$47.500,00", "R$1.130,95"],
 						["R$50.000,00", "R$1.190,48"]
 					]
-				}
+				},
+				"descriptions": [
+					{
+						"icon": "fas fa-calendar",
+						"text": "<em>PLANO 200 MESES</em>"
+					}
+				],
+				"aside": "aside 1"
 			}
 		]
 	},
@@ -251,7 +295,14 @@
 						["R$288.452,68", "R$2.867,92"],
 						["R$296.237,74", "R$2.945,32"]
 					]
-				}
+				},
+				"descriptions": [
+					{
+						"icon": "fas fa-calendar",
+						"text": "<em>PLANO 200 MESES</em>"
+					}
+				],
+				"aside": "aside 1"
 			}
 		]
 	},
@@ -291,7 +342,14 @@
 						["R$47.500,00", "R$1.130,95"],
 						["R$50.000,00", "R$1.190,48"]
 					]
-				}
+				},
+				"descriptions": [
+					{
+						"icon": "fas fa-calendar",
+						"text": "<em>PLANO 200 MESES</em>"
+					}
+				],
+				"aside": "aside 1"
 			}
 		]
 	}
