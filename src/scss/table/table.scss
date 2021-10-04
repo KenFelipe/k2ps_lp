@@ -143,6 +143,8 @@
         border-spacing: 0px;
 
         display: none;
+        // box-shadow: rgb(0 0 0 / 45%) 1px 0px 6px 0px;
+        // box-shadow: 2px -2px 12px -2px #000000;
 
         &.active {
             display: table;
@@ -168,16 +170,16 @@
                     padding: 24px 20px 24px 20px;
                 }
 
-                &:first-child {
-                    td {
-                        border-radius: 10px 10px 0 0;
-                        box-shadow: rgb(0 0 0 / 45%) 1px 0px 6px 0px;
-                    }
-                }
-
                 & + tr {
                     td {
                         border-top: 1px solid #fff;
+                    }
+                }
+
+                &:first-child {
+                    td {
+                        border-radius: 10px 10px 0 0;
+                        // box-shadow: rgb(0 0 0 / 45%) 1px 0px 6px 0px;
                     }
                 }
             }
@@ -187,7 +189,7 @@
             position: relative;
             z-index: -1;
             border-radius: 0 0 10px 10px;
-            box-shadow: rgb(0 0 0 / 45%) 1px 0px 6px 0px;
+            // box-shadow: rgb(0 0 0 / 45%) 1px 0px 6px 0px;
 
             tr {
                 height: 40px;

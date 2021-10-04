@@ -137,18 +137,16 @@
   height: 50px;
   padding: 24px 20px 24px 20px;
 }
-.table-section__table thead tr:first-child td {
-  border-radius: 10px 10px 0 0;
-  box-shadow: rgba(0, 0, 0, 0.45) 1px 0px 6px 0px;
-}
 .table-section__table thead tr + tr td {
   border-top: 1px solid #fff;
+}
+.table-section__table thead tr:first-child td {
+  border-radius: 10px 10px 0 0;
 }
 .table-section__table tbody {
   position: relative;
   z-index: -1;
   border-radius: 0 0 10px 10px;
-  box-shadow: rgba(0, 0, 0, 0.45) 1px 0px 6px 0px;
 }
 .table-section__table tbody tr {
   height: 40px;
