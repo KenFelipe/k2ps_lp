@@ -35,21 +35,53 @@ function createTables() {
     //
     function createTableHead(table) {
         const thead = document.createElement('thead')
-        const tr = document.createElement('tr')
 
-        table.head.forEach((theadData, i) => {
-            const td = document.createElement('td')
-            td.innerHTML = theadData.replaceAll('\\', '&nbsp;')
-            // td.innerHTML = theadData.replaceAll(' ', '&nbsp;')
+        if(!Array.isArray(table.head[0])) {
+            // isNotArray
+            const tr = document.createElement('tr')
 
-            td.style.color = table.headTextColor && table.headTextColor[i] || 'inherit'
-            td.style.backgroundColor = table.headBackground && table.headBackground[i] || 'inherit'
+            table.head.forEach((theadData, i) => {
+                const td = document.createElement('td')
+                td.innerHTML = theadData.replaceAll('\\', '&nbsp;')
 
-            tr.appendChild(td)
-            thead.appendChild(tr)
-        })
+                td.style.color = table.headTextColor && table.headTextColor[i] || 'inherit'
+                td.style.backgroundColor = table.headBackground && table.headBackground[i] || 'inherit'
 
-        return thead
+                tr.appendChild(td)
+                thead.appendChild(tr)
+            })
+
+            return thead
+        }
+        else {
+            // isArray
+            table.head.forEach((theadrow, ir) => {
+                const tr = document.createElement('tr')
+
+                theadrow.forEach((theadrow, id) => {
+                    if(table.headStructure.row && table.headStructure.row[ir][id] === 'skip') return
+
+                    const td = document.createElement('td')
+                    td.innerHTML = theadrow.replaceAll('\\', '&nbsp;')
+
+                    if(table.headStructure.column) {
+                        td.colSpan = table.headStructure.column[ir][id]
+                    }
+                    if(table.headStructure.row) {
+                        td.rowSpan = table.headStructure.row[ir][id]
+                    }
+
+                    // td.style.color = table.headTextColor && table.headTextColor[i] || 'inherit'
+                    // td.style.backgroundColor = table.headBackground && table.headBackground[i] || 'inherit'
+
+                    tr.appendChild(td)
+                })
+
+                thead.appendChild(tr)
+            })
+
+            return thead
+        }
     }
 
     //

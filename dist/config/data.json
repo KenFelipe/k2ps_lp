@@ -6,7 +6,20 @@
 			{
 				"tabName": "PLANO 200 MESES",
 				"tableData": {
-					"head": ["PARCELA COM<br/>REDUÇÂO", "PARCELA<br/>CONVENCIONAL"],
+					"head": [
+						["CRÉDITO", "PARCELA CONVENCIONAL", "PARCELA COM REDUÇÂO"],
+						["CRÉDITO", "PJ", "PF", "PJ", "PF"]
+					],
+					"headStructure": { 
+						"column": [ 
+							[1, 2, 2],
+							[1, 1, 1, 1, 1]
+						],
+						"row": [
+							[2, 1, 1],
+							["skip", 1, 1]
+						]
+					},
 					"headTextColor": ["#fff", "#154063"],
 					"headBackground": ["#315D81", "#D3D3D3"],
 					"body": [

@@ -28,17 +28,44 @@ function createTables() {
 
   function createTableHead(table) {
     var thead = document.createElement('thead');
-    var tr = document.createElement('tr');
-    table.head.forEach(function (theadData, i) {
-      var td = document.createElement('td');
-      td.innerHTML = theadData.replaceAll('\\', '&nbsp;'); // td.innerHTML = theadData.replaceAll(' ', '&nbsp;')
 
-      td.style.color = table.headTextColor && table.headTextColor[i] || 'inherit';
-      td.style.backgroundColor = table.headBackground && table.headBackground[i] || 'inherit';
-      tr.appendChild(td);
-      thead.appendChild(tr);
-    });
-    return thead;
+    if (!Array.isArray(table.head[0])) {
+      // isNotArray
+      var tr = document.createElement('tr');
+      table.head.forEach(function (theadData, i) {
+        var td = document.createElement('td');
+        td.innerHTML = theadData.replaceAll('\\', '&nbsp;');
+        td.style.color = table.headTextColor && table.headTextColor[i] || 'inherit';
+        td.style.backgroundColor = table.headBackground && table.headBackground[i] || 'inherit';
+        tr.appendChild(td);
+        thead.appendChild(tr);
+      });
+      return thead;
+    } else {
+      // isArray
+      table.head.forEach(function (theadrow, ir) {
+        var tr = document.createElement('tr');
+        theadrow.forEach(function (theadrow, id) {
+          if (table.headStructure.row && table.headStructure.row[ir][id] === 'skip') return;
+          var td = document.createElement('td');
+          td.innerHTML = theadrow.replaceAll('\\', '&nbsp;');
+
+          if (table.headStructure.column) {
+            td.colSpan = table.headStructure.column[ir][id];
+          }
+
+          if (table.headStructure.row) {
+            td.rowSpan = table.headStructure.row[ir][id];
+          } // td.style.color = table.headTextColor && table.headTextColor[i] || 'inherit'
+          // td.style.backgroundColor = table.headBackground && table.headBackground[i] || 'inherit'
+
+
+          tr.appendChild(td);
+        });
+        thead.appendChild(tr);
+      });
+      return thead;
+    }
   } //
 
 
