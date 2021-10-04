@@ -106,6 +106,23 @@
 					"headTextColor": ["#fff", "#154063"],
 					"headBackground": ["#315D81", "#D3D3D3"],
 					"body": [
+						["R$ 1.335,74", "R$ 1.746,99"],
+						["R$ 1.431,16", "R$ 1.871,78"],
+						["R$ 1.526,56", "R$ 1.996,56"],
+						["R$ 1.621,98", "R$ 2.121,35"],
+						["R$ 1.669,68", "R$ 2.183,74"],
+						["R$ 1.717,38", "R$ 2.246,13"],
+						["R$ 1.812,80", "R$ 2.370,92"],
+						["R$ 1.908,20", "R$ 2.495,70"],
+						["R$ 2.003,62", "R$ 2.620,49"],
+						["R$ 2.099,02", "R$ 2.745,27"],
+						["R$ 2.146,73", "R$ 2.807,66"],
+						["R$ 2.194.44", "R$ 2.870,06"],
+						["R$ 2.289,84", "R$ 2.994,84"],
+						["R$ 2.385,26", "R$ 3.119,63"],
+						["R$ 2.480,66", "R$ 3.244,41"],
+						["R$ 2.576,08", "R$ 3.369,20"],
+						["R$ 2.671,48", "R$ 3.493,98"]
 					]
 				},
 				"descriptions": [
@@ -192,7 +209,7 @@
 					},
 					{
 						"icon": "fas fa-car",
-						"text": "COMPRE <strong>AUTOMÓVEIS, MOTOS OU NÁUTICOS</strong> COM ATÉ 6 ANOS DE FABRICAÇÃO"
+						"text": "COMPRE <strong>AUTOMÓVEIS, MOTOS OU NÁUTICOS</strong> COM ATÉ <b>6 ANOS</b> DE FABRICAÇÃO"
 					}
 				],
 				"aside": "Taxa de administração 17% e fundo de reserva de 0,5% diluido no prazo de 50 meses.<br/><br/> Taxa de 2% de adesão inclusos nas 5 primeiras parcelas.<br/><br/> Parcela PF incluem seguro de vida prestamista de 0,031% calculado sobre saldo devedor.<br/><br/> Plano com 20% de redução no valor da parcela até a comtemplação, a direfença será compensada nas parcelas seguintes a comtempação."
@@ -254,7 +271,7 @@
 					},
 					{
 						"icon": "fas fa-car",
-						"text": "COMPRE <strong>AUTOMÓVEIS, MOTOS OU NÁUTICOS</strong> COM ATÉ 6 ANOS DE FABRICAÇÃO"
+						"text": "COMPRE <strong>AUTOMÓVEIS, MOTOS OU NÁUTICOS</strong> COM ATÉ <b>6 ANOS</b> DE FABRICAÇÃO"
 					}
 				],
 				"aside": "Taxa de administração 17% e fundo de reserva de 0,5% diluido no prazo de 72 meses.<br/><br/> Taxa de 2% de adesão inclusos nas 5 primeiras parcelas.<br/><br/> Parcela PF incluem seguro de vida prestamista de 0,031% calculado sobre saldo devedor.<br/><br/> Plano com 20% de redução no valor da parcela até a comtemplação, a direfença será compensada nas parcelas seguintes a comtempação."
@@ -316,7 +333,7 @@
 					},
 					{
 						"icon": "fas fa-car",
-						"text": "COMPRE <strong>AUTOMÓVEIS, MOTOS OU NÁUTICOS</strong> COM ATÉ 6 ANOS DE FABRICAÇÃO"
+						"text": "COMPRE <strong>AUTOMÓVEIS, MOTOS OU NÁUTICOS</strong> COM ATÉ <b>6 ANOS</b> DE FABRICAÇÃO"
 					}
 				],
 				"aside": "Taxa de administração 17% e fundo de reserva de 0,5% diluido no prazo de 80 meses.<br/><br/> Taxa de 2% de adesão inclusos nas 5 primeiras parcelas.<br/><br/> Parcela PF incluem seguro de vida prestamista de 0,031% calculado sobre saldo devedor.<br/><br/> Plano com 20% de redução no valor da parcela até a comtemplação, a direfença será compensada nas parcelas seguintes a comtempação."
@@ -324,74 +341,73 @@
 		]
 	},
 	{
-		"sectionName": "Veículos Pesados e\\Máquinas Agrícolas",
+		"sectionName": "VEÍCULOS PESADOS",
 		"dataType": "table",
-    "descriptions": [
-      {
-        "icon": "fas fa-hand-holding-usd",
-        "text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>30%</b>"
-      },
-      {
-        "icon": "fas fa-stamp",
-        "text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE FIXO E LIVRE</strong>"
-      },
-      {
-        "icon": "fas fa-car",
-        "text": "COMPRE <strong>AUTOMÓVEIS VANS, ÔNIBUS, CAMINHÕES, MAQUINÁRIO AGRICOLA, E DE CONSTRUÇÃO CIVIL</strong>"
-      }
-    ],
 		"tableDataList": [
 			{
 				"tabName": "PLANOS DE 120 MESES",
 				"tableData": {
-					"head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA"],
+					"head": [
+						["Veículos Pesados | Grupo VP11"],
+						["Crédito", "Parcela PF",  "Parcela PJ"]
+					],
+					"headStructure": { 
+						"column": [
+							[3],
+							[1, 1, 1]
+						]
+					},
+					"headTextColor": [
+						["#fff"],
+						["#fff", "#fff", "#fff"]
+					],
+					"headBackground": [
+						["#315D81"],
+						["#315D81", "#315D81", "#315D81"]
+					],
 					"body": [
-						["R$151.198,94", "R$1.503,28"],
-						["R$159.625,41", "R$1.587,06"],
-						["R$170.461,26", "R$1.694,80"],
-						["R$176.498,25", "R$1.754,82"],
-						["R$185.877,32", "R$1.848,07"],
-						["R$194.571,24", "R$1.934,51"],
-						["R$206.984,31", "R$2.057,92"],
-						["R$214.701,08", "R$2.134,65"],
-						["R$222.003,45", "R$2.207,25"],
-						["R$232.265,41", "R$2.309,28"],
-						["R$241.425,38", "R$2.400,35"],
-						["R$252.144,64", "R$2.506,93"],
-						["R$265.375,09", "R$2.638,47"],
-						["R$277.681,65", "R$2.760,83"],
-						["R$288.452,68", "R$2.867,92"],
-						["R$296.237,74", "R$2.945,32"]
+						["R$ 180.000", "R$ 1.446,14", "R$ 1.374,00"],
+						["R$ 190.000", "R$ 1.526,48", "R$ 1.450,33"],
+						["R$ 200.000", "R$ 1.606,82", "R$ 1.526,67"],
+						["R$ 210.000", "R$ 1.687,16", "R$ 1.603,00"],
+						["R$ 220.000", "R$ 1.767,50", "R$ 1.679,33"],
+						["R$ 230.000", "R$ 1.847,84", "R$ 1.755,67"],
+						["R$ 240.000", "R$ 1.928,18", "R$ 1.832,00"],
+						["R$ 250.000", "R$ 2.008,52", "R$ 1.908,33"],
+						["R$ 260.000", "R$ 2.088,86", "R$ 1.984,67"],
+						["R$ 270.000", "R$ 2.169,20", "R$ 2.061,00"],
+						["R$ 280.000", "R$ 2.249,54", "R$ 2.137,33"],
+						["R$ 290.000", "R$ 2.329,88", "R$ 2.213,67"],
+						["R$ 300.000", "R$ 2.410,23", "R$ 2.290,00"],
+						["R$ 310.000", "R$ 2.490,57", "R$ 2.366,33"],
+						["R$ 320.000", "R$ 2.570,91", "R$ 2.442,67"],
+						["R$ 330.000", "R$ 2.651,25", "R$ 2.519,00"],
+						["R$ 340.000", "R$ 2.731,59", "R$ 2.595,33"],
+						["R$ 350.000", "R$ 2.811,93", "R$ 2.671,67"],
+						["R$ 360.000", "R$ 2.892,27", "R$ 2.748,00"]
 					]
 				},
 				"descriptions": [
 					{
-						"icon": "fas fa-calendar",
-						"text": "<em>PLANO 200 MESES</em>"
+						"icon": "fas fa-sort-amount-down",
+						"text": "<strong>PARCELA REDUZIDA</strong> ATÉ À CONTEMPLAÇÃO"
+					},
+					{
+						"icon": "fas fa-hand-holding-usd",
+						"text": "<strong>LANCE LIVRE EMBUTIDO</strong> (<b>30%</b>)"
+					},
+					{
+						"icon": "fas fa-car",
+						"text": "COMPRA DE <strong>VEÍCULOS</strong> COM ATÉ <b>10 ANOS</b> *<br/>*caminhões, ônibus e implementos rodoviários"
 					}
 				],
-				"aside": "aside 1"
+				"aside": "Plano 120 meses: para compra de caminhões, tratores e linha amarela.<br/><br/> Taxa de administração de 14%. Parcelas incluem fundo de reserva de 0,50% e seguro de vida de 0,035% sobre o saldo devedor, para pessoas físicas.<br/><br/> Sujeito à aprovação de crédito.<br/><br/> Valores sujeitos a alteração de acordo com a tabela do fabricante."
 			}
 		]
 	},
 	{
-		"sectionName": "Placa Solar",
+		"sectionName": "PLACA SOLAR",
 		"dataType": "table",
-    "descriptions": [
-      {
-        "icon": "fas fa-hand-holding-usd",
-        "text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>30%</b>"
-      },
-      {
-        "icon": "fas fa-stamp",
-        "text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE FIXO E LIVRE</strong>"
-      },
-      {
-        "icon": "fas fa-car",
-        "text": "COMPRE <strong>AUTOMÓVEIS VANS, ÔNIBUS, CAMINHÕES, MAQUINÁRIO AGRICOLA, E DE CONSTRUÇÃO CIVIL</strong>"
-      }
-    ],
-    "aside": "LIMITE DE ANO DO BEMDE 6 ANOS PARA AUTOMÓVEIS E 2 ANOS PARA MÁQUINAS",
 		"tableDataList": [
 			{
 				"tabName": "PLANOS DE 50 MESES",
@@ -413,11 +429,19 @@
 				},
 				"descriptions": [
 					{
-						"icon": "fas fa-calendar",
-						"text": "<em>PLANO 200 MESES</em>"
+						"icon": "fas fa-hand-holding-usd",
+						"text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>30%</b>"
+					},
+					{
+						"icon": "fas fa-stamp",
+						"text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE FIXO E LIVRE</strong>"
+					},
+					{
+						"icon": "fas fa-car",
+						"text": "COMPRE <strong>AUTOMÓVEIS VANS, ÔNIBUS, CAMINHÕES, MAQUINÁRIO AGRICOLA, E DE CONSTRUÇÃO CIVIL</strong>"
 					}
 				],
-				"aside": "aside 1"
+				"aside": "Limite de ano do bem de 6 anos para automóveis e 2 anos para máquinários"
 			}
 		]
 	}
