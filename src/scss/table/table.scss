@@ -28,6 +28,8 @@
         padding: 22px 12px 12px 12px;
 
         border: 1px solid #00adef;
+        // border: 1px solid #194682;
+                        
         border-radius: 7px;
 
         @include media.tablet_response {
@@ -63,8 +65,17 @@
                     line-height: 1.4;
                     letter-spacing: 0.2px;
 
+                    em {
+                        color: #00adef;
+                        // color: #194682;
+                        font-weight: bolder;
+                        font-style: normal;
+                        font-size: 16px;
+                    }
+
                     strong {
                         color: #00adef;
+                        // color: #194682;
                     }
 
                     b {

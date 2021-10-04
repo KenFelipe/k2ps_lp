@@ -60,6 +60,12 @@
   line-height: 1.4;
   letter-spacing: 0.2px;
 }
+#val-desc-ctn #tbl-desc-ctn ul li span.desc-text em {
+  color: #00adef;
+  font-weight: bolder;
+  font-style: normal;
+  font-size: 16px;
+}
 #val-desc-ctn #tbl-desc-ctn ul li span.desc-text strong {
   color: #00adef;
 }
