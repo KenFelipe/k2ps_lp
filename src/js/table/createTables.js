@@ -71,8 +71,8 @@ function createTables() {
                         td.rowSpan = table.headStructure.row[ir][id]
                     }
 
-                    // td.style.color = table.headTextColor && table.headTextColor[i] || 'inherit'
-                    // td.style.backgroundColor = table.headBackground && table.headBackground[i] || 'inherit'
+                    td.style.color = table.headTextColor && table.headTextColor[ir][id] || 'inherit'
+                    td.style.backgroundColor = table.headBackground && table.headBackground[ir][id] || 'inherit'
 
                     tr.appendChild(td)
                 })
