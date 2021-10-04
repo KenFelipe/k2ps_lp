@@ -9,8 +9,6 @@ function createDescs() {
 						const descDev = document.createElement('ul')
 						descDev.className = 'desc-col'
 
-						console.log(tableData)
-
 						tableData.descriptions.forEach(desc => {
 								const li = `
 									<li>

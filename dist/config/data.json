@@ -2,7 +2,6 @@
 	{
 		"sectionName": "Imóveis",
 		"dataType": "table",
-    "aside": "Taxa de administração 21% e fundo de reserva de 0,5% diluido no prazo de 200 meses.<br/><br/> Taxa de 2% de adesão inclusos nas 12 primeiras parcelas.<br/><br/> Parcela PF incluem seguro de vida prestamista de 0,031% calculado sobre saldo devedor.<br/><br/> Plano com 20% de redução no valor da parcela até a comtemplação, a direfença será compensada nas parcelas seguintes a comtempação.",
 		"tableDataList": [
 			{
 				"tabName": "PLANO 200 MESES",
@@ -50,40 +49,30 @@
 						"text": "FLEXIBILIDADE PARA COMPRAR <strong>IMÓVEIS RESIDENCIAIS E COMERCIAIS, IMÓVEIS RURAIS OU DE VERANEIO, LOTES, CONSTRUIR E REFORMAR E QUITAR FINANCIAMENTO PRÓPRIO</strong>"
 					}
 				],
-				"aside": "aside 1"
+				"aside": "Taxa de administração 21% e fundo de reserva de 0,5% diluido no prazo de 200 meses.<br/><br/> Taxa de 2% de adesão inclusos nas 12 primeiras parcelas.<br/><br/> Parcela PF incluem seguro de vida prestamista de 0,031% calculado sobre saldo devedor.<br/><br/> Plano com 20% de redução no valor da parcela até a comtemplação, a direfença será compensada nas parcelas seguintes a comtempação."
 			},
 			{
 				"tabName": "A PARTIR DE 250 MIL",
 				"tableData": {
-					"head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA"],
+					"head": ["PARCELA COM<br/>REDUÇÂO", "PARCELA<br/>CONVENCIONAL"],
+					"headTextColor": ["#fff", "#154063"],
+					"headBackground": ["#315D81", "#D3D3D3"],
 					"body": [
-						["R$250.000,00", "R$1.546,54"],
-						["R$260.000,00", "R$1.608,40"],
-						["R$270.000,00", "R$1.670,26"],
-						["R$280.000,00", "R$1.732,12"],
-						["R$290.000,00", "R$1.793,98"],
-						["R$300.000,00", "R$1.855,85"],
-						["R$310.000,00", "R$1.917,71"],
-						["R$320.000,00", "R$1.979,57"],
-						["R$330.000,00", "R$2.041,43"],
-						["R$340.000,00", "R$2.103,29"],
-						["R$350.000,00", "R$2.165,15"],
-						["R$360.000,00", "R$2.227,01"],
-						["R$370.000,00", "R$2.288,88"],
-						["R$370.000,00", "R$2.288,88"],
-						["R$380.000,00", "R$2.350,74"],
-						["R$390.000,00", "R$2.412,60"],
-						["R$400.000,00", "R$2.474,46"],
-						["R$410.000,00", "R$2.536,32"],
-						["R$420.000,00", "R$2.598,18"],
-						["R$430.000,00", "R$2.660,04"],
-						["R$440.000,00", "R$2.721,91"],
-						["R$450.000,00", "R$2.783,77"],
-						["R$460.000,00", "R$2.845,63"],
-						["R$470.000,00", "R$2.907,49"],
-						["R$480.000,00", "R$2.969,35"],
-						["R$490.000,00", "R$3.031,21"],
-						["R$500.000,00", "R$3.093,08"]
+						["R$ 679,24", "R$ 888,36"],
+						["R$ 727,76", "R$ 951,82"],
+						["R$ 776,27", "R$ 1.015,27"],
+						["R$ 824,80", "R$ 1.078,73"],
+						["R$ 873,31", "R$ 1.142,18"],
+						["R$ 921,83", "R$ 1.205,64"],
+						["R$ 970,34", "R$ 1.269,09"],
+						["R$ 1.018,86", "R$ 1.332,54"],
+						["R$ 1.067,38", "R$ 1.396,00"],
+						["R$ 1.115,89", "R$ 1.459,45"],
+						["R$ 1.164.41", "R$ 1.522,91"],
+						["R$ 1.212,93", "R$ 1.586,36"],
+						["R$ 1.261,45", "R$ 1.649,82"],
+						["R$ 1.309,96", "R$ 1.713,27"],
+						["R$ 1.358.48", "R$ 1.776,73"]
 					]
 				},
 				"descriptions": [
@@ -94,42 +83,29 @@
 					{
 						"icon": "fas fa-sort-amount-down",
 						"text": "<strong>PARCELA REDUZIDA</strong> DE <b>25%</b> ATÉ À CONTEMPLAÇÃO"
+					},
+					{
+						"icon": "fas fa-hand-holding-usd",
+						"text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>30%</b>"
+					},
+					{
+						"icon": "fas fa-stamp",
+						"text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE FIXO E LIVRE</strong>"
+					},
+					{
+						"icon": "fas fa-home",
+						"text": "FLEXIBILIDADE PARA COMPRAR <strong>IMÓVEIS RESIDENCIAIS E COMERCIAIS, IMÓVEIS RURAIS OU DE VERANEIO, LOTES, CONSTRUIR E REFORMAR E QUITAR FINANCIAMENTO PRÓPRIO</strong>"
 					}
 				],
-				"aside": "aside 2"
+				"aside": "Taxa de administração 19% e fundo de reserva de 0,5% diluido no prazo de 200 meses.<br/><br/> Taxa de 2% de adesão inclusos nas 12 primeiras parcelas.<br/><br/> Parcela PF incluem seguro de vida prestamista de 0,031% calculado sobre saldo devedor.<br/><br/> Plano com 20% de redução no valor da parcela até a comtemplação, a direfença será compensada nas parcelas seguintes a comtempação."
 			},
 			{
 				"tabName": "A PARTIR DE 250 MIL COM REDUTOR",
 				"tableData": {
-					"head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA"],
+					"head": ["PARCELA COM<br/>REDUÇÂO", "PARCELA<br/>CONVENCIONAL"],
+					"headTextColor": ["#fff", "#154063"],
+					"headBackground": ["#315D81", "#D3D3D3"],
 					"body": [
-						["R$250.000,00", "R$1.109,66"],
-						["R$260.000,00", "R$1.154,05"],
-						["R$270.000,00", "R$1.198,44"],
-						["R$280.000,00", "R$1.242,82"],
-						["R$290.000,00", "R$1.287,21"],
-						["R$300.000,00", "R$1.331,60"],
-						["R$310.000,00", "R$1.375,98"],
-						["R$320.000,00", "R$1.420,37"],
-						["R$330.000,00", "R$1.464,75"],
-						["R$340.000,00", "R$1.509,14"],
-						["R$350.000,00", "R$1.553,53"],
-						["R$360.000,00", "R$1.597,91"],
-						["R$370.000,00", "R$1.642,30"],
-						["R$380.000,00", "R$1.686,69"],
-						["R$380.000,00", "R$1.686,69"],
-						["R$390.000,00", "R$1.731,07"],
-						["R$400.000,00", "R$1.775,46"],
-						["R$410.000,00", "R$1.819,85"],
-						["R$420.000,00", "R$1.864,23"],
-						["R$430.000,00", "R$1.908,62"],
-						["R$440.000,00", "R$1.953,01"],
-						["R$450.000,00", "R$1.997,39"],
-						["R$460.000,00", "R$2.041,78"],
-						["R$470.000,00", "R$2.086,17"],
-						["R$480.000,00", "R$2.130,55"],
-						["R$490.000,00", "R$2.174,94"],
-						["R$500.000,00", "R$2.219,33"]
 					]
 				},
 				"descriptions": [
@@ -140,38 +116,34 @@
 					{
 						"icon": "fas fa-sort-amount-down",
 						"text": "<strong>PARCELA REDUZIDA</strong> DE <b>25%</b> ATÉ À CONTEMPLAÇÃO"
+					},
+					{
+						"icon": "fas fa-hand-holding-usd",
+						"text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>30%</b>"
+					},
+					{
+						"icon": "fas fa-stamp",
+						"text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE FIXO E LIVRE</strong>"
+					},
+					{
+						"icon": "fas fa-home",
+						"text": "FLEXIBILIDADE PARA COMPRAR <strong>IMÓVEIS RESIDENCIAIS E COMERCIAIS, IMÓVEIS RURAIS OU DE VERANEIO, LOTES, CONSTRUIR E REFORMAR E QUITAR FINANCIAMENTO PRÓPRIO</strong>"
 					}
 				],
-				"aside": "aside 3"
+				"aside": "Taxa de administração 17% e fundo de reserva de 0,5% diluido no prazo de 200 meses.<br/><br/> Taxa de 2% de adesão inclusos nas 5 primeiras parcelas.<br/><br/> Parcela PF incluem seguro de vida prestamista de 0,031% calculado sobre saldo devedor.<br/><br/> Plano com 20% de redução no valor da parcela até a comtemplação, a direfença será compensada nas parcelas seguintes a comtempação."
 			}
 		]
 	},
 	{
 		"sectionName": "Veículos",
 		"dataType": "table",
-    "descriptions": [
-      {
-        "icon": "fas fa-sort-amount-down",
-        "text": "<strong>PARCELA REDUZIDA</strong> DE <b>20%</b> ATÉ À CONTEMPLAÇÃO"
-      },
-      {
-        "icon": "fas fa-hand-holding-usd",
-        "text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>15%</b>"
-      },
-      {
-        "icon": "fas fa-stamp",
-        "text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE</strong>"
-      },
-      {
-        "icon": "fas fa-car",
-        "text": "COMPRE <strong>AUTOMÓVEIS, MOTOS OU NÁUTICOS</strong> COM ATÉ 6 ANOS DE FABRICAÇÃO"
-      }
-    ],
 		"tableDataList": [
 			{
 				"tabName": "PLANOS DE 80 MESES",
 				"tableData": {
-					"head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA"],
+					"head": ["PARCELA COM<br/>REDUÇÂO", "PARCELA<br/>CONVENCIONAL"],
+					"headTextColor": ["#fff", "#154063"],
+					"headBackground": ["#315D81", "#D3D3D3"],
 					"body": [
 						["R$62.500,00", "R$931,63"],
 						["R$67.500,00", "R$1.006,16"],
@@ -192,11 +164,23 @@
 				},
 				"descriptions": [
 					{
-						"icon": "fas fa-calendar",
-						"text": "<em>PLANO 200 MESES</em>"
+						"icon": "fas fa-sort-amount-down",
+						"text": "<strong>PARCELA REDUZIDA</strong> DE <b>20%</b> ATÉ À CONTEMPLAÇÃO"
+					},
+					{
+						"icon": "fas fa-hand-holding-usd",
+						"text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>15%</b>"
+					},
+					{
+						"icon": "fas fa-stamp",
+						"text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE</strong>"
+					},
+					{
+						"icon": "fas fa-car",
+						"text": "COMPRE <strong>AUTOMÓVEIS, MOTOS OU NÁUTICOS</strong> COM ATÉ 6 ANOS DE FABRICAÇÃO"
 					}
 				],
-				"aside": "aside 1"
+				"aside": "Taxa de administração 17% e fundo de reserva de 0,5% diluido no prazo de 50 meses.<br/><br/> Taxa de 2% de adesão inclusos nas 5 primeiras parcelas.<br/><br/> Parcela PF incluem seguro de vida prestamista de 0,031% calculado sobre saldo devedor.<br/><br/> Plano com 20% de redução no valor da parcela até a comtemplação, a direfença será compensada nas parcelas seguintes a comtempação."
 			},
 			{
 				"tabName": "PLANOS DE 72 MESES",
@@ -221,11 +205,23 @@
 				},
 				"descriptions": [
 					{
-						"icon": "fas fa-calendar",
-						"text": "<em>PLANO 200 MESES</em>"
+						"icon": "fas fa-sort-amount-down",
+						"text": "<strong>PARCELA REDUZIDA</strong> DE <b>20%</b> ATÉ À CONTEMPLAÇÃO"
+					},
+					{
+						"icon": "fas fa-hand-holding-usd",
+						"text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>15%</b>"
+					},
+					{
+						"icon": "fas fa-stamp",
+						"text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE</strong>"
+					},
+					{
+						"icon": "fas fa-car",
+						"text": "COMPRE <strong>AUTOMÓVEIS, MOTOS OU NÁUTICOS</strong> COM ATÉ 6 ANOS DE FABRICAÇÃO"
 					}
 				],
-				"aside": "aside 1"
+				"aside": "Taxa de administração 17% e fundo de reserva de 0,5% diluido no prazo de 72 meses.<br/><br/> Taxa de 2% de adesão inclusos nas 5 primeiras parcelas.<br/><br/> Parcela PF incluem seguro de vida prestamista de 0,031% calculado sobre saldo devedor.<br/><br/> Plano com 20% de redução no valor da parcela até a comtemplação, a direfença será compensada nas parcelas seguintes a comtempação."
 			},
 			{
 				"tabName": "PLANOS DE 50 MESES",
@@ -247,11 +243,23 @@
 				},
 				"descriptions": [
 					{
-						"icon": "fas fa-calendar",
-						"text": "<em>PLANO 200 MESES</em>"
+						"icon": "fas fa-sort-amount-down",
+						"text": "<strong>PARCELA REDUZIDA</strong> DE <b>20%</b> ATÉ À CONTEMPLAÇÃO"
+					},
+					{
+						"icon": "fas fa-hand-holding-usd",
+						"text": "<strong>LANCE EMBUTIDO</strong> DE ATÉ <b>15%</b>"
+					},
+					{
+						"icon": "fas fa-stamp",
+						"text": "CONTEMPLAÇÕES  MENSAIS POR <strong>SORTEIO E LANCE</strong>"
+					},
+					{
+						"icon": "fas fa-car",
+						"text": "COMPRE <strong>AUTOMÓVEIS, MOTOS OU NÁUTICOS</strong> COM ATÉ 6 ANOS DE FABRICAÇÃO"
 					}
 				],
-				"aside": "aside 1"
+				"aside": "Taxa de administração 17% e fundo de reserva de 0,5% diluido no prazo de 80 meses.<br/><br/> Taxa de 2% de adesão inclusos nas 5 primeiras parcelas.<br/><br/> Parcela PF incluem seguro de vida prestamista de 0,031% calculado sobre saldo devedor.<br/><br/> Plano com 20% de redução no valor da parcela até a comtemplação, a direfença será compensada nas parcelas seguintes a comtempação."
 			}
 		]
 	},
