@@ -37,10 +37,13 @@ function createTables() {
         const thead = document.createElement('thead')
         const tr = document.createElement('tr')
 
-        table.head.forEach(theadData => {
+        table.head.forEach((theadData, i) => {
             const td = document.createElement('td')
             td.innerHTML = theadData.replaceAll('\\', '&nbsp;')
             // td.innerHTML = theadData.replaceAll(' ', '&nbsp;')
+
+            td.style.color = table.headTextColor && table.headTextColor[i] || 'inherit'
+            td.style.backgroundColor = table.headBackground && table.headBackground[i] || 'inherit'
 
             tr.appendChild(td)
             thead.appendChild(tr)

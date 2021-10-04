@@ -25,7 +25,9 @@
 			{
 				"tabName": "ATÉ 240 MIL",
 				"tableData": {
-					"head": ["VALOR DO\\CRÉDITO", "VALOR DA\\PARCELA¹"],
+					"head": ["PARCELA COM<br/>REDUÇÂO", "PARCELA<br/>CONVENCIONAL"],
+					"headTextColor": ["#fff", "#154063"],
+					"headBackground": ["#315D81", "#D3D3D3"],
 					"body": [
 						["R$55.000,00", "R$349,00"],
 						["R$60.000,00", "R$380,73"],

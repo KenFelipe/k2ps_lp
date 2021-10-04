@@ -29,10 +29,12 @@ function createTables() {
   function createTableHead(table) {
     var thead = document.createElement('thead');
     var tr = document.createElement('tr');
-    table.head.forEach(function (theadData) {
+    table.head.forEach(function (theadData, i) {
       var td = document.createElement('td');
       td.innerHTML = theadData.replaceAll('\\', '&nbsp;'); // td.innerHTML = theadData.replaceAll(' ', '&nbsp;')
 
+      td.style.color = table.headTextColor && table.headTextColor[i] || 'inherit';
+      td.style.backgroundColor = table.headBackground && table.headBackground[i] || 'inherit';
       tr.appendChild(td);
       thead.appendChild(tr);
     });
